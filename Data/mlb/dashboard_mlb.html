@@ -83,7 +83,7 @@
 <body>
 <div class="topbar">
   <div class="logo">MLB<span>.</span>MODEL</div>
-  <div class="topbar-meta">Monday, March 30 2026<br>Updated 10:14 PM PT</div>
+  <div class="topbar-meta">Tuesday, March 31 2026<br>Updated 06:23 AM PT</div>
 </div>
 <div class="tabs">
   <button class="tab-btn active" onclick="showTab('today',this)">Today's Plays</button>
@@ -96,7 +96,2689 @@
     <div class="tab-title">Today's MLB Plays</div>
     <div class="tab-subtitle">Player props · Filter by stat, side, rating, EV%, matchup</div>
   </div>
-  <p class="empty-msg">No plays found. Run compute_ev_mlb.py first.</p>
+  
+    <div class="filter-bar">
+      <select id="f-stat" class="filter-select" onchange="applyFilters()">
+        <option value="">All Stats</option><option value="hits">Hits</option><option value="k">Strikeouts</option><option value="rbi">RBI</option><option value="runs">Runs</option><option value="tb">Total Bases</option>
+      </select>
+      <select id="f-side" class="filter-select" onchange="applyFilters()">
+        <option value="">All Sides</option>
+        <option value="OVER">OVER</option><option value="UNDER">UNDER</option>
+      </select>
+      <select id="f-rating" class="filter-select" onchange="applyFilters()">
+        <option value="">All Ratings</option>
+        <option value="ELITE">ELITE</option><option value="STRONG">STRONG</option>
+        <option value="GOOD">GOOD</option><option value="AVERAGE">AVERAGE</option>
+      </select>
+      <select id="f-ev" class="filter-select" onchange="applyFilters()">
+        <option value="">Min EV%</option>
+        <option value="2">2%+</option><option value="4">4%+</option>
+        <option value="6">6%+</option><option value="8">8%+</option>
+      </select>
+      <select id="f-matchup" class="filter-select" onchange="applyFilters()">
+        <option value="">All Games</option><option value="BOS @ HOU">BOS @ HOU</option><option value="CLE @ LAD">CLE @ LAD</option><option value="COL @ TOR">COL @ TOR</option><option value="CWS @ MIA">CWS @ MIA</option><option value="DET @ ARI">DET @ ARI</option><option value="LAA @ CHC">LAA @ CHC</option><option value="NYM @ STL">NYM @ STL</option><option value="NYY @ SEA">NYY @ SEA</option><option value="OAK @ ATL">OAK @ ATL</option><option value="PIT @ CIN">PIT @ CIN</option><option value="SF @ SD">SF @ SD</option><option value="TB @ MIL">TB @ MIL</option><option value="TEX @ BAL">TEX @ BAL</option><option value="WSH @ PHI">WSH @ PHI</option>
+      </select>
+      <button class="filter-reset" onclick="resetFilters()">Reset</button>
+    </div>
+    <div class="pick6-box">
+      <div class="pick6-header">✦ Top Plays &nbsp;·&nbsp; 38 plays today</div>
+      <div class="table-wrap" style="margin-bottom:0.75rem">
+        <table class="data-table"><thead><tr>
+          <th>Player</th><th>Stat</th><th>Line</th><th>Projection</th>
+          <th>Edge</th><th>Fair%</th><th>EV%</th><th>Rating</th><th>Track</th>
+        </tr></thead><tbody>
+            <tr data-stat="rbi" data-side="OVER" data-rating="✅ STRONG" data-ev="97.83" data-matchup="LAA @ CHC" class="top-play-row">
+              <td><strong>Michael Busch</strong></td>
+              <td><span class="stat-pill">RBI</span></td>
+              <td>0.5</td>
+              <td style="color:#3d8ef8;font-weight:600">1.22</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.72</td>
+              <td>62.8%</td>
+              <td class="ev-cell">97.8%</td>
+              <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Michael Busch|RBI|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Michael Busch','RBI','0.5','OVER','+215','LAA @ CHC','04:41 PM PT','MLB')"
+                    id="tb_Michael Busch|RBI|0.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="rbi" data-side="OVER" data-rating="👍 GOOD" data-ev="87.79" data-matchup="SF @ SD" class="top-play-row">
+              <td><strong>Heliot Ramos</strong></td>
+              <td><span class="stat-pill">RBI</span></td>
+              <td>0.5</td>
+              <td style="color:#3d8ef8;font-weight:600">1.10</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.60</td>
+              <td>62.0%</td>
+              <td class="ev-cell">87.8%</td>
+              <td><span class="bet-rating rating-good">👍 GOOD</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Heliot Ramos|RBI|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Heliot Ramos','RBI','0.5','OVER','+203','SF @ SD','06:41 PM PT','MLB')"
+                    id="tb_Heliot Ramos|RBI|0.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="rbi" data-side="OVER" data-rating="✅ STRONG" data-ev="77.06" data-matchup="NYY @ SEA" class="top-play-row">
+              <td><strong>Giancarlo Stanton</strong></td>
+              <td><span class="stat-pill">RBI</span></td>
+              <td>0.5</td>
+              <td style="color:#3d8ef8;font-weight:600">1.56</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.06</td>
+              <td>64.4%</td>
+              <td class="ev-cell">77.1%</td>
+              <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Giancarlo Stanton|RBI|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Giancarlo Stanton','RBI','0.5','OVER','+175','NYY @ SEA','06:41 PM PT','MLB')"
+                    id="tb_Giancarlo Stanton|RBI|0.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="rbi" data-side="OVER" data-rating="✅ STRONG" data-ev="74.1" data-matchup="TB @ MIL" class="top-play-row">
+              <td><strong>Gary Sanchez</strong></td>
+              <td><span class="stat-pill">RBI</span></td>
+              <td>0.5</td>
+              <td style="color:#3d8ef8;font-weight:600">1.13</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.63</td>
+              <td>62.2%</td>
+              <td class="ev-cell">74.1%</td>
+              <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Gary Sanchez|RBI|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Gary Sanchez','RBI','0.5','OVER','+180','TB @ MIL','04:41 PM PT','MLB')"
+                    id="tb_Gary Sanchez|RBI|0.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="runs" data-side="OVER" data-rating="✅ STRONG" data-ev="65.38" data-matchup="LAA @ CHC" class="top-play-row">
+              <td><strong>Nico Hoerner</strong></td>
+              <td><span class="stat-pill">Runs</span></td>
+              <td>0.5</td>
+              <td style="color:#3d8ef8;font-weight:600">1.16</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.66</td>
+              <td>62.4%</td>
+              <td class="ev-cell">65.4%</td>
+              <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Nico Hoerner|Runs|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Nico Hoerner','Runs','0.5','OVER','+165','LAA @ CHC','04:41 PM PT','MLB')"
+                    id="tb_Nico Hoerner|Runs|0.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="rbi" data-side="OVER" data-rating="✅ STRONG" data-ev="63.81" data-matchup="NYM @ STL" class="top-play-row">
+              <td><strong>Bo Bichette</strong></td>
+              <td><span class="stat-pill">RBI</span></td>
+              <td>0.5</td>
+              <td style="color:#3d8ef8;font-weight:600">1.30</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.80</td>
+              <td>63.2%</td>
+              <td class="ev-cell">63.8%</td>
+              <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Bo Bichette|RBI|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Bo Bichette','RBI','0.5','OVER','+159','NYM @ STL','04:46 PM PT','MLB')"
+                    id="tb_Bo Bichette|RBI|0.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="rbi" data-side="OVER" data-rating="✅ STRONG" data-ev="62.63" data-matchup="NYY @ SEA" class="top-play-row">
+              <td><strong>Aaron Judge</strong></td>
+              <td><span class="stat-pill">RBI</span></td>
+              <td>0.5</td>
+              <td style="color:#3d8ef8;font-weight:600">1.40</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.90</td>
+              <td>63.8%</td>
+              <td class="ev-cell">62.6%</td>
+              <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Aaron Judge|RBI|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Aaron Judge','RBI','0.5','OVER','+155','NYY @ SEA','06:41 PM PT','MLB')"
+                    id="tb_Aaron Judge|RBI|0.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="tb" data-side="OVER" data-rating="👍 GOOD" data-ev="49.98" data-matchup="SF @ SD" class="top-play-row">
+              <td><strong>Heliot Ramos</strong></td>
+              <td><span class="stat-pill">Total Bases</span></td>
+              <td>1.5</td>
+              <td style="color:#3d8ef8;font-weight:600">2.71</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.21</td>
+              <td>61.2%</td>
+              <td class="ev-cell">50.0%</td>
+              <td><span class="bet-rating rating-good">👍 GOOD</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Heliot Ramos|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Heliot Ramos','Total Bases','1.5','OVER','+145','SF @ SD','06:41 PM PT','MLB')"
+                    id="tb_Heliot Ramos|Total Bases|1.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="tb" data-side="OVER" data-rating="✅ STRONG" data-ev="48.02" data-matchup="LAA @ CHC" class="top-play-row">
+              <td><strong>Michael Busch</strong></td>
+              <td><span class="stat-pill">Total Bases</span></td>
+              <td>1.5</td>
+              <td style="color:#3d8ef8;font-weight:600">3.73</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+2.23</td>
+              <td>64.4%</td>
+              <td class="ev-cell">48.0%</td>
+              <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Michael Busch|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Michael Busch','Total Bases','1.5','OVER','+130','LAA @ CHC','04:41 PM PT','MLB')"
+                    id="tb_Michael Busch|Total Bases|1.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="tb" data-side="OVER" data-rating="✅ STRONG" data-ev="45.08" data-matchup="CWS @ MIA" class="top-play-row">
+              <td><strong>Colson Montgomery</strong></td>
+              <td><span class="stat-pill">Total Bases</span></td>
+              <td>1.5</td>
+              <td style="color:#3d8ef8;font-weight:600">3.22</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.72</td>
+              <td>63.1%</td>
+              <td class="ev-cell">45.1%</td>
+              <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Colson Montgomery|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Colson Montgomery','Total Bases','1.5','OVER','+130','CWS @ MIA','03:41 PM PT','MLB')"
+                    id="tb_Colson Montgomery|Total Bases|1.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="tb" data-side="OVER" data-rating="✅ STRONG" data-ev="42.67" data-matchup="OAK @ ATL" class="top-play-row">
+              <td><strong>Michael Harris II</strong></td>
+              <td><span class="stat-pill">Total Bases</span></td>
+              <td>1.5</td>
+              <td style="color:#3d8ef8;font-weight:600">3.23</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.73</td>
+              <td>63.1%</td>
+              <td class="ev-cell">42.7%</td>
+              <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Michael Harris II|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Michael Harris II','Total Bases','1.5','OVER','+126','OAK @ ATL','04:16 PM PT','MLB')"
+                    id="tb_Michael Harris II|Total Bases|1.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="runs" data-side="OVER" data-rating="👍 GOOD" data-ev="38.18" data-matchup="SF @ SD" class="top-play-row">
+              <td><strong>Fernando Tatis Jr.</strong></td>
+              <td><span class="stat-pill">Runs</span></td>
+              <td>0.5</td>
+              <td style="color:#3d8ef8;font-weight:600">1.03</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.53</td>
+              <td>61.4%</td>
+              <td class="ev-cell">38.2%</td>
+              <td><span class="bet-rating rating-good">👍 GOOD</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Fernando Tatis Jr.|Runs|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Fernando Tatis Jr.','Runs','0.5','OVER','+125','SF @ SD','06:41 PM PT','MLB')"
+                    id="tb_Fernando Tatis Jr.|Runs|0.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="tb" data-side="OVER" data-rating="✅ STRONG" data-ev="38.17" data-matchup="WSH @ PHI" class="top-play-row">
+              <td><strong>James Wood</strong></td>
+              <td><span class="stat-pill">Total Bases</span></td>
+              <td>1.5</td>
+              <td style="color:#3d8ef8;font-weight:600">3.13</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.63</td>
+              <td>62.8%</td>
+              <td class="ev-cell">38.2%</td>
+              <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_James Wood|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('James Wood','Total Bases','1.5','OVER','+120','WSH @ PHI','03:41 PM PT','MLB')"
+                    id="tb_James Wood|Total Bases|1.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="tb" data-side="OVER" data-rating="✅ STRONG" data-ev="34.37" data-matchup="NYY @ SEA" class="top-play-row">
+              <td><strong>Aaron Judge</strong></td>
+              <td><span class="stat-pill">Total Bases</span></td>
+              <td>1.5</td>
+              <td style="color:#3d8ef8;font-weight:600">3.56</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+2.06</td>
+              <td>64.0%</td>
+              <td class="ev-cell">34.4%</td>
+              <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Aaron Judge|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Aaron Judge','Total Bases','1.5','OVER','+110','NYY @ SEA','06:41 PM PT','MLB')"
+                    id="tb_Aaron Judge|Total Bases|1.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="tb" data-side="OVER" data-rating="✅ STRONG" data-ev="33.58" data-matchup="OAK @ ATL" class="top-play-row">
+              <td><strong>Drake Baldwin</strong></td>
+              <td><span class="stat-pill">Total Bases</span></td>
+              <td>1.5</td>
+              <td style="color:#3d8ef8;font-weight:600">2.93</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.43</td>
+              <td>62.1%</td>
+              <td class="ev-cell">33.6%</td>
+              <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Drake Baldwin|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Drake Baldwin','Total Bases','1.5','OVER','+115','OAK @ ATL','04:16 PM PT','MLB')"
+                    id="tb_Drake Baldwin|Total Bases|1.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="runs" data-side="OVER" data-rating="👍 GOOD" data-ev="31.86" data-matchup="OAK @ ATL" class="top-play-row">
+              <td><strong>Nick Kurtz</strong></td>
+              <td><span class="stat-pill">Runs</span></td>
+              <td>0.5</td>
+              <td style="color:#3d8ef8;font-weight:600">1.02</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.52</td>
+              <td>61.3%</td>
+              <td class="ev-cell">31.9%</td>
+              <td><span class="bet-rating rating-good">👍 GOOD</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Nick Kurtz|Runs|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Nick Kurtz','Runs','0.5','OVER','+115','OAK @ ATL','04:16 PM PT','MLB')"
+                    id="tb_Nick Kurtz|Runs|0.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="k" data-side="OVER" data-rating="✅ STRONG" data-ev="30.63" data-matchup="DET @ ARI" class="top-play-row">
+              <td><strong>Casey Mize</strong></td>
+              <td><span class="stat-pill">Strikeouts</span></td>
+              <td>4.5</td>
+              <td style="color:#3d8ef8;font-weight:600">6.11</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.61</td>
+              <td>63.7%</td>
+              <td class="ev-cell">30.6%</td>
+              <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Casey Mize|Strikeouts|4.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Casey Mize','Strikeouts','4.5','OVER','+105','DET @ ARI','06:40 PM PT','MLB')"
+                    id="tb_Casey Mize|Strikeouts|4.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="tb" data-side="OVER" data-rating="👍 GOOD" data-ev="29.9" data-matchup="DET @ ARI" class="top-play-row">
+              <td><strong>Ketel Marte</strong></td>
+              <td><span class="stat-pill">Total Bases</span></td>
+              <td>1.5</td>
+              <td style="color:#3d8ef8;font-weight:600">2.55</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.05</td>
+              <td>60.4%</td>
+              <td class="ev-cell">29.9%</td>
+              <td><span class="bet-rating rating-good">👍 GOOD</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Ketel Marte|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Ketel Marte','Total Bases','1.5','OVER','+115','DET @ ARI','06:40 PM PT','MLB')"
+                    id="tb_Ketel Marte|Total Bases|1.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="tb" data-side="OVER" data-rating="👍 GOOD" data-ev="29.1" data-matchup="NYM @ STL" class="top-play-row">
+              <td><strong>Francisco Lindor</strong></td>
+              <td><span class="stat-pill">Total Bases</span></td>
+              <td>1.5</td>
+              <td style="color:#3d8ef8;font-weight:600">2.48</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.98</td>
+              <td>60.1%</td>
+              <td class="ev-cell">29.1%</td>
+              <td><span class="bet-rating rating-good">👍 GOOD</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Francisco Lindor|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Francisco Lindor','Total Bases','1.5','OVER','+115','NYM @ STL','04:46 PM PT','MLB')"
+                    id="tb_Francisco Lindor|Total Bases|1.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="tb" data-side="OVER" data-rating="✅ STRONG" data-ev="27.29" data-matchup="NYM @ STL" class="top-play-row">
+              <td><strong>Bo Bichette</strong></td>
+              <td><span class="stat-pill">Total Bases</span></td>
+              <td>1.5</td>
+              <td style="color:#3d8ef8;font-weight:600">2.92</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.42</td>
+              <td>62.1%</td>
+              <td class="ev-cell">27.3%</td>
+              <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Bo Bichette|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Bo Bichette','Total Bases','1.5','OVER','+105','NYM @ STL','04:46 PM PT','MLB')"
+                    id="tb_Bo Bichette|Total Bases|1.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="runs" data-side="OVER" data-rating="👍 GOOD" data-ev="26.63" data-matchup="BOS @ HOU" class="top-play-row">
+              <td><strong>Jeremy Pena</strong></td>
+              <td><span class="stat-pill">Runs</span></td>
+              <td>0.5</td>
+              <td style="color:#3d8ef8;font-weight:600">1.08</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.58</td>
+              <td>61.8%</td>
+              <td class="ev-cell">26.6%</td>
+              <td><span class="bet-rating rating-good">👍 GOOD</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Jeremy Pena|Runs|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Jeremy Pena','Runs','0.5','OVER','+105','BOS @ HOU','05:11 PM PT','MLB')"
+                    id="tb_Jeremy Pena|Runs|0.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="tb" data-side="OVER" data-rating="👍 GOOD" data-ev="25.94" data-matchup="OAK @ ATL" class="top-play-row">
+              <td><strong>Shea Langeliers</strong></td>
+              <td><span class="stat-pill">Total Bases</span></td>
+              <td>1.5</td>
+              <td style="color:#3d8ef8;font-weight:600">2.69</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.19</td>
+              <td>61.1%</td>
+              <td class="ev-cell">25.9%</td>
+              <td><span class="bet-rating rating-good">👍 GOOD</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Shea Langeliers|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Shea Langeliers','Total Bases','1.5','OVER','+106','OAK @ ATL','04:16 PM PT','MLB')"
+                    id="tb_Shea Langeliers|Total Bases|1.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="runs" data-side="OVER" data-rating="👍 GOOD" data-ev="23.98" data-matchup="NYY @ SEA" class="top-play-row">
+              <td><strong>Aaron Judge</strong></td>
+              <td><span class="stat-pill">Runs</span></td>
+              <td>0.5</td>
+              <td style="color:#3d8ef8;font-weight:600">1.10</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.60</td>
+              <td>62.0%</td>
+              <td class="ev-cell">24.0%</td>
+              <td><span class="bet-rating rating-good">👍 GOOD</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Aaron Judge|Runs|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Aaron Judge','Runs','0.5','OVER','+100','NYY @ SEA','06:41 PM PT','MLB')"
+                    id="tb_Aaron Judge|Runs|0.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="tb" data-side="OVER" data-rating="👍 GOOD" data-ev="23.1" data-matchup="WSH @ PHI" class="top-play-row">
+              <td><strong>Daylen Lile</strong></td>
+              <td><span class="stat-pill">Total Bases</span></td>
+              <td>1.5</td>
+              <td style="color:#3d8ef8;font-weight:600">2.79</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.29</td>
+              <td>61.6%</td>
+              <td class="ev-cell">23.1%</td>
+              <td><span class="bet-rating rating-good">👍 GOOD</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Daylen Lile|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Daylen Lile','Total Bases','1.5','OVER','+100','WSH @ PHI','03:41 PM PT','MLB')"
+                    id="tb_Daylen Lile|Total Bases|1.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="tb" data-side="OVER" data-rating="👍 GOOD" data-ev="20.46" data-matchup="WSH @ PHI" class="top-play-row">
+              <td><strong>Kyle Schwarber</strong></td>
+              <td><span class="stat-pill">Total Bases</span></td>
+              <td>1.5</td>
+              <td style="color:#3d8ef8;font-weight:600">2.51</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.01</td>
+              <td>60.2%</td>
+              <td class="ev-cell">20.5%</td>
+              <td><span class="bet-rating rating-good">👍 GOOD</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Kyle Schwarber|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Kyle Schwarber','Total Bases','1.5','OVER','+100','WSH @ PHI','03:41 PM PT','MLB')"
+                    id="tb_Kyle Schwarber|Total Bases|1.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="hits" data-side="OVER" data-rating="✅ STRONG" data-ev="18.99" data-matchup="NYY @ SEA" class="top-play-row">
+              <td><strong>Austin Wells</strong></td>
+              <td><span class="stat-pill">Hits</span></td>
+              <td>0.5</td>
+              <td style="color:#3d8ef8;font-weight:600">1.07</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.57</td>
+              <td>62.3%</td>
+              <td class="ev-cell">19.0%</td>
+              <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Austin Wells|Hits|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Austin Wells','Hits','0.5','OVER','-110','NYY @ SEA','06:41 PM PT','MLB')"
+                    id="tb_Austin Wells|Hits|0.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="hits" data-side="OVER" data-rating="✅ STRONG" data-ev="14.08" data-matchup="COL @ TOR" class="top-play-row">
+              <td><strong>Edouard Julien</strong></td>
+              <td><span class="stat-pill">Hits</span></td>
+              <td>0.5</td>
+              <td style="color:#3d8ef8;font-weight:600">1.20</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.70</td>
+              <td>63.4%</td>
+              <td class="ev-cell">14.1%</td>
+              <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Edouard Julien|Hits|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Edouard Julien','Hits','0.5','OVER','-125','COL @ TOR','04:07 PM PT','MLB')"
+                    id="tb_Edouard Julien|Hits|0.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="k" data-side="OVER" data-rating="✅ STRONG" data-ev="12.53" data-matchup="CLE @ LAD" class="top-play-row">
+              <td><strong>Tanner Bibee</strong></td>
+              <td><span class="stat-pill">Strikeouts</span></td>
+              <td>4.5</td>
+              <td style="color:#3d8ef8;font-weight:600">6.30</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.80</td>
+              <td>64.6%</td>
+              <td class="ev-cell">12.5%</td>
+              <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Tanner Bibee|Strikeouts|4.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Tanner Bibee','Strikeouts','4.5','OVER','-135','CLE @ LAD','07:11 PM PT','MLB')"
+                    id="tb_Tanner Bibee|Strikeouts|4.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="tb" data-side="OVER" data-rating="👍 GOOD" data-ev="12.34" data-matchup="WSH @ PHI" class="top-play-row">
+              <td><strong>Trea Turner</strong></td>
+              <td><span class="stat-pill">Total Bases</span></td>
+              <td>1.5</td>
+              <td style="color:#3d8ef8;font-weight:600">2.72</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.22</td>
+              <td>61.3%</td>
+              <td class="ev-cell">12.3%</td>
+              <td><span class="bet-rating rating-good">👍 GOOD</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Trea Turner|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Trea Turner','Total Bases','1.5','OVER','-120','WSH @ PHI','03:41 PM PT','MLB')"
+                    id="tb_Trea Turner|Total Bases|1.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="hits" data-side="OVER" data-rating="✅ STRONG" data-ev="12.08" data-matchup="NYM @ STL" class="top-play-row">
+              <td><strong>Pedro Pages</strong></td>
+              <td><span class="stat-pill">Hits</span></td>
+              <td>0.5</td>
+              <td style="color:#3d8ef8;font-weight:600">1.20</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.70</td>
+              <td>63.3%</td>
+              <td class="ev-cell">12.1%</td>
+              <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Pedro Pages|Hits|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Pedro Pages','Hits','0.5','OVER','-130','NYM @ STL','04:46 PM PT','MLB')"
+                    id="tb_Pedro Pages|Hits|0.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="k" data-side="OVER" data-rating="✅ STRONG" data-ev="11.61" data-matchup="NYY @ SEA" class="top-play-row">
+              <td><strong>Max Fried</strong></td>
+              <td><span class="stat-pill">Strikeouts</span></td>
+              <td>5.5</td>
+              <td style="color:#3d8ef8;font-weight:600">7.10</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.60</td>
+              <td>62.0%</td>
+              <td class="ev-cell">11.6%</td>
+              <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Max Fried|Strikeouts|5.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Max Fried','Strikeouts','5.5','OVER','-125','NYY @ SEA','06:41 PM PT','MLB')"
+                    id="tb_Max Fried|Strikeouts|5.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="hits" data-side="OVER" data-rating="✅ STRONG" data-ev="6.74" data-matchup="OAK @ ATL" class="top-play-row">
+              <td><strong>Denzel Clarke</strong></td>
+              <td><span class="stat-pill">Hits</span></td>
+              <td>0.5</td>
+              <td style="color:#3d8ef8;font-weight:600">1.08</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.58</td>
+              <td>62.5%</td>
+              <td class="ev-cell">6.7%</td>
+              <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Denzel Clarke|Hits|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Denzel Clarke','Hits','0.5','OVER','-141','OAK @ ATL','04:16 PM PT','MLB')"
+                    id="tb_Denzel Clarke|Hits|0.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="hits" data-side="OVER" data-rating="✅ STRONG" data-ev="6.69" data-matchup="OAK @ ATL" class="top-play-row">
+              <td><strong>Dominic Smith</strong></td>
+              <td><span class="stat-pill">Hits</span></td>
+              <td>0.5</td>
+              <td style="color:#3d8ef8;font-weight:600">1.17</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.67</td>
+              <td>63.1%</td>
+              <td class="ev-cell">6.7%</td>
+              <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Dominic Smith|Hits|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Dominic Smith','Hits','0.5','OVER','-145','OAK @ ATL','04:16 PM PT','MLB')"
+                    id="tb_Dominic Smith|Hits|0.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="hits" data-side="OVER" data-rating="✅ STRONG" data-ev="6.33" data-matchup="TEX @ BAL" class="top-play-row">
+              <td><strong>Coby Mayo</strong></td>
+              <td><span class="stat-pill">Hits</span></td>
+              <td>0.5</td>
+              <td style="color:#3d8ef8;font-weight:600">1.14</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.64</td>
+              <td>62.9%</td>
+              <td class="ev-cell">6.3%</td>
+              <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Coby Mayo|Hits|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Coby Mayo','Hits','0.5','OVER','-145','TEX @ BAL','03:36 PM PT','MLB')"
+                    id="tb_Coby Mayo|Hits|0.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="hits" data-side="OVER" data-rating="✅ STRONG" data-ev="5.77" data-matchup="NYY @ SEA" class="top-play-row">
+              <td><strong>Randy Arozarena</strong></td>
+              <td><span class="stat-pill">Hits</span></td>
+              <td>0.5</td>
+              <td style="color:#3d8ef8;font-weight:600">1.22</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.72</td>
+              <td>63.5%</td>
+              <td class="ev-cell">5.8%</td>
+              <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Randy Arozarena|Hits|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Randy Arozarena','Hits','0.5','OVER','-150','NYY @ SEA','06:41 PM PT','MLB')"
+                    id="tb_Randy Arozarena|Hits|0.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="hits" data-side="OVER" data-rating="✅ STRONG" data-ev="5.75" data-matchup="NYY @ SEA" class="top-play-row">
+              <td><strong>Brendan Donovan</strong></td>
+              <td><span class="stat-pill">Hits</span></td>
+              <td>0.5</td>
+              <td style="color:#3d8ef8;font-weight:600">1.80</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.30</td>
+              <td>65.8%</td>
+              <td class="ev-cell">5.8%</td>
+              <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Brendan Donovan|Hits|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Brendan Donovan','Hits','0.5','OVER','-165','NYY @ SEA','06:41 PM PT','MLB')"
+                    id="tb_Brendan Donovan|Hits|0.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="hits" data-side="OVER" data-rating="✅ STRONG" data-ev="4.55" data-matchup="NYY @ SEA" class="top-play-row">
+              <td><strong>Ben Rice</strong></td>
+              <td><span class="stat-pill">Hits</span></td>
+              <td>0.5</td>
+              <td style="color:#3d8ef8;font-weight:600">1.37</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.87</td>
+              <td>64.3%</td>
+              <td class="ev-cell">4.5%</td>
+              <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Ben Rice|Hits|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Ben Rice','Hits','0.5','OVER','-160','NYY @ SEA','06:41 PM PT','MLB')"
+                    id="tb_Ben Rice|Hits|0.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr data-stat="hits" data-side="OVER" data-rating="✅ STRONG" data-ev="4.1" data-matchup="NYY @ SEA" class="top-play-row">
+              <td><strong>Giancarlo Stanton</strong></td>
+              <td><span class="stat-pill">Hits</span></td>
+              <td>0.5</td>
+              <td style="color:#3d8ef8;font-weight:600">1.08</td>
+              <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.58</td>
+              <td>62.5%</td>
+              <td class="ev-cell">4.1%</td>
+              <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:4px">
+                  <select id="u_Giancarlo Stanton|Hits|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                    <option value="1">1u</option><option value="2">2u</option>
+                    <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+                  </select>
+                  <button onclick="trackBet('Giancarlo Stanton','Hits','0.5','OVER','-150','NYY @ SEA','06:41 PM PT','MLB')"
+                    id="tb_Giancarlo Stanton|Hits|0.5|OVER"
+                    style="background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);color:#00e5a0;border-radius:4px;padding:0.22rem 0.6rem;font-size:0.72rem;cursor:pointer;font-family:monospace;white-space:nowrap;font-weight:600">
+                    Track
+                  </button>
+                </div>
+              </td>
+            </tr></tbody></table>
+      </div>
+      <div class="pick6-tip">Select units and click Track to record your bet in Results History.</div>
+    </div>
+    <h3 class="section-label" style="margin:1.5rem 0 0.75rem">All Positive EV Picks</h3>
+    <div class="table-wrap">
+      <table class="data-table" id="mlb-table"><thead><tr>
+        <th>Rating</th><th>Top</th><th>Player</th><th>Stat</th><th>Line</th>
+        <th>Projection</th><th>Edge</th><th>Pick</th><th>Odds</th>
+        <th>Fair%</th><th>EV%</th><th>Matchup</th><th>Time</th><th>Track</th>
+      </tr></thead><tbody>
+        <tr data-stat="rbi" data-side="OVER" data-rating="✅ STRONG" data-ev="97.83" data-matchup="LAA @ CHC"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Michael Busch</strong></td>
+          <td><span class="stat-pill">RBI</span></td>
+          <td>0.5</td>
+          <td style="color:#3d8ef8;font-weight:600">1.22</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.72</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+215</td>
+          <td>62.8%</td>
+          <td class="ev-cell">97.8%</td>
+          <td class="muted">LAA @ CHC</td>
+          <td class="muted">04:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Michael Busch|RBI|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Michael Busch','RBI','0.5','OVER','+215','LAA @ CHC','04:41 PM PT','MLB')"
+                id="tb_Michael Busch|RBI|0.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="rbi" data-side="OVER" data-rating="👍 GOOD" data-ev="87.79" data-matchup="SF @ SD"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-good">👍 GOOD</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Heliot Ramos</strong></td>
+          <td><span class="stat-pill">RBI</span></td>
+          <td>0.5</td>
+          <td style="color:#3d8ef8;font-weight:600">1.10</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.60</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+203</td>
+          <td>62.0%</td>
+          <td class="ev-cell">87.8%</td>
+          <td class="muted">SF @ SD</td>
+          <td class="muted">06:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Heliot Ramos|RBI|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Heliot Ramos','RBI','0.5','OVER','+203','SF @ SD','06:41 PM PT','MLB')"
+                id="tb_Heliot Ramos|RBI|0.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="rbi" data-side="OVER" data-rating="✅ STRONG" data-ev="77.06" data-matchup="NYY @ SEA"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Giancarlo Stanton</strong></td>
+          <td><span class="stat-pill">RBI</span></td>
+          <td>0.5</td>
+          <td style="color:#3d8ef8;font-weight:600">1.56</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.06</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+175</td>
+          <td>64.4%</td>
+          <td class="ev-cell">77.1%</td>
+          <td class="muted">NYY @ SEA</td>
+          <td class="muted">06:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Giancarlo Stanton|RBI|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Giancarlo Stanton','RBI','0.5','OVER','+175','NYY @ SEA','06:41 PM PT','MLB')"
+                id="tb_Giancarlo Stanton|RBI|0.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="rbi" data-side="OVER" data-rating="✅ STRONG" data-ev="74.1" data-matchup="TB @ MIL"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Gary Sanchez</strong></td>
+          <td><span class="stat-pill">RBI</span></td>
+          <td>0.5</td>
+          <td style="color:#3d8ef8;font-weight:600">1.13</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.63</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+180</td>
+          <td>62.2%</td>
+          <td class="ev-cell">74.1%</td>
+          <td class="muted">TB @ MIL</td>
+          <td class="muted">04:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Gary Sanchez|RBI|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Gary Sanchez','RBI','0.5','OVER','+180','TB @ MIL','04:41 PM PT','MLB')"
+                id="tb_Gary Sanchez|RBI|0.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="runs" data-side="OVER" data-rating="✅ STRONG" data-ev="65.38" data-matchup="LAA @ CHC"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Nico Hoerner</strong></td>
+          <td><span class="stat-pill">Runs</span></td>
+          <td>0.5</td>
+          <td style="color:#3d8ef8;font-weight:600">1.16</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.66</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+165</td>
+          <td>62.4%</td>
+          <td class="ev-cell">65.4%</td>
+          <td class="muted">LAA @ CHC</td>
+          <td class="muted">04:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Nico Hoerner|Runs|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Nico Hoerner','Runs','0.5','OVER','+165','LAA @ CHC','04:41 PM PT','MLB')"
+                id="tb_Nico Hoerner|Runs|0.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="rbi" data-side="OVER" data-rating="✅ STRONG" data-ev="63.81" data-matchup="NYM @ STL"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Bo Bichette</strong></td>
+          <td><span class="stat-pill">RBI</span></td>
+          <td>0.5</td>
+          <td style="color:#3d8ef8;font-weight:600">1.30</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.80</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+159</td>
+          <td>63.2%</td>
+          <td class="ev-cell">63.8%</td>
+          <td class="muted">NYM @ STL</td>
+          <td class="muted">04:46 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Bo Bichette|RBI|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Bo Bichette','RBI','0.5','OVER','+159','NYM @ STL','04:46 PM PT','MLB')"
+                id="tb_Bo Bichette|RBI|0.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="rbi" data-side="OVER" data-rating="✅ STRONG" data-ev="62.63" data-matchup="NYY @ SEA"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Aaron Judge</strong></td>
+          <td><span class="stat-pill">RBI</span></td>
+          <td>0.5</td>
+          <td style="color:#3d8ef8;font-weight:600">1.40</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.90</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+155</td>
+          <td>63.8%</td>
+          <td class="ev-cell">62.6%</td>
+          <td class="muted">NYY @ SEA</td>
+          <td class="muted">06:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Aaron Judge|RBI|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Aaron Judge','RBI','0.5','OVER','+155','NYY @ SEA','06:41 PM PT','MLB')"
+                id="tb_Aaron Judge|RBI|0.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="tb" data-side="OVER" data-rating="👍 GOOD" data-ev="49.98" data-matchup="SF @ SD"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-good">👍 GOOD</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Heliot Ramos</strong></td>
+          <td><span class="stat-pill">Total Bases</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">2.71</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.21</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+145</td>
+          <td>61.2%</td>
+          <td class="ev-cell">50.0%</td>
+          <td class="muted">SF @ SD</td>
+          <td class="muted">06:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Heliot Ramos|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Heliot Ramos','Total Bases','1.5','OVER','+145','SF @ SD','06:41 PM PT','MLB')"
+                id="tb_Heliot Ramos|Total Bases|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="tb" data-side="OVER" data-rating="✅ STRONG" data-ev="48.02" data-matchup="LAA @ CHC"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Michael Busch</strong></td>
+          <td><span class="stat-pill">Total Bases</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">3.73</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+2.23</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+130</td>
+          <td>64.4%</td>
+          <td class="ev-cell">48.0%</td>
+          <td class="muted">LAA @ CHC</td>
+          <td class="muted">04:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Michael Busch|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Michael Busch','Total Bases','1.5','OVER','+130','LAA @ CHC','04:41 PM PT','MLB')"
+                id="tb_Michael Busch|Total Bases|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="tb" data-side="OVER" data-rating="✅ STRONG" data-ev="45.08" data-matchup="CWS @ MIA"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Colson Montgomery</strong></td>
+          <td><span class="stat-pill">Total Bases</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">3.22</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.72</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+130</td>
+          <td>63.1%</td>
+          <td class="ev-cell">45.1%</td>
+          <td class="muted">CWS @ MIA</td>
+          <td class="muted">03:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Colson Montgomery|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Colson Montgomery','Total Bases','1.5','OVER','+130','CWS @ MIA','03:41 PM PT','MLB')"
+                id="tb_Colson Montgomery|Total Bases|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="tb" data-side="OVER" data-rating="➖ AVERAGE" data-ev="44.02" data-matchup="OAK @ ATL">
+          <td><span class="bet-rating rating-average">➖ AVERAGE</span></td>
+          <td></td>
+          <td><strong>Nick Kurtz</strong></td>
+          <td><span class="stat-pill">Total Bases</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">2.24</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.74</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+146</td>
+          <td>58.5%</td>
+          <td class="ev-cell">44.0%</td>
+          <td class="muted">OAK @ ATL</td>
+          <td class="muted">04:16 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Nick Kurtz|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Nick Kurtz','Total Bases','1.5','OVER','+146','OAK @ ATL','04:16 PM PT','MLB')"
+                id="tb_Nick Kurtz|Total Bases|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="tb" data-side="OVER" data-rating="✅ STRONG" data-ev="42.67" data-matchup="OAK @ ATL"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Michael Harris II</strong></td>
+          <td><span class="stat-pill">Total Bases</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">3.23</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.73</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+126</td>
+          <td>63.1%</td>
+          <td class="ev-cell">42.7%</td>
+          <td class="muted">OAK @ ATL</td>
+          <td class="muted">04:16 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Michael Harris II|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Michael Harris II','Total Bases','1.5','OVER','+126','OAK @ ATL','04:16 PM PT','MLB')"
+                id="tb_Michael Harris II|Total Bases|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="tb" data-side="OVER" data-rating="➖ AVERAGE" data-ev="40.52" data-matchup="PIT @ CIN">
+          <td><span class="bet-rating rating-average">➖ AVERAGE</span></td>
+          <td></td>
+          <td><strong>Brandon Lowe</strong></td>
+          <td><span class="stat-pill">Total Bases</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">2.25</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.75</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+140</td>
+          <td>58.6%</td>
+          <td class="ev-cell">40.5%</td>
+          <td class="muted">PIT @ CIN</td>
+          <td class="muted">03:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Brandon Lowe|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Brandon Lowe','Total Bases','1.5','OVER','+140','PIT @ CIN','03:41 PM PT','MLB')"
+                id="tb_Brandon Lowe|Total Bases|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="runs" data-side="OVER" data-rating="👍 GOOD" data-ev="38.18" data-matchup="SF @ SD"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-good">👍 GOOD</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Fernando Tatis Jr.</strong></td>
+          <td><span class="stat-pill">Runs</span></td>
+          <td>0.5</td>
+          <td style="color:#3d8ef8;font-weight:600">1.03</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.53</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+125</td>
+          <td>61.4%</td>
+          <td class="ev-cell">38.2%</td>
+          <td class="muted">SF @ SD</td>
+          <td class="muted">06:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Fernando Tatis Jr.|Runs|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Fernando Tatis Jr.','Runs','0.5','OVER','+125','SF @ SD','06:41 PM PT','MLB')"
+                id="tb_Fernando Tatis Jr.|Runs|0.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="tb" data-side="OVER" data-rating="✅ STRONG" data-ev="38.17" data-matchup="WSH @ PHI"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>James Wood</strong></td>
+          <td><span class="stat-pill">Total Bases</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">3.13</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.63</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+120</td>
+          <td>62.8%</td>
+          <td class="ev-cell">38.2%</td>
+          <td class="muted">WSH @ PHI</td>
+          <td class="muted">03:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_James Wood|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('James Wood','Total Bases','1.5','OVER','+120','WSH @ PHI','03:41 PM PT','MLB')"
+                id="tb_James Wood|Total Bases|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="tb" data-side="OVER" data-rating="⚠️ POOR" data-ev="37.67" data-matchup="PIT @ CIN">
+          <td><span class="bet-rating rating-poor">⚠️ POOR</span></td>
+          <td></td>
+          <td><strong>Eugenio Suarez</strong></td>
+          <td><span class="stat-pill">Total Bases</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">2.12</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.62</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+139</td>
+          <td>57.6%</td>
+          <td class="ev-cell">37.7%</td>
+          <td class="muted">PIT @ CIN</td>
+          <td class="muted">03:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Eugenio Suarez|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Eugenio Suarez','Total Bases','1.5','OVER','+139','PIT @ CIN','03:41 PM PT','MLB')"
+                id="tb_Eugenio Suarez|Total Bases|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="tb" data-side="OVER" data-rating="➖ AVERAGE" data-ev="36.86" data-matchup="NYM @ STL">
+          <td><span class="bet-rating rating-average">➖ AVERAGE</span></td>
+          <td></td>
+          <td><strong>Ivan Herrera</strong></td>
+          <td><span class="stat-pill">Total Bases</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">2.20</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.70</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+135</td>
+          <td>58.2%</td>
+          <td class="ev-cell">36.9%</td>
+          <td class="muted">NYM @ STL</td>
+          <td class="muted">04:46 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Ivan Herrera|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Ivan Herrera','Total Bases','1.5','OVER','+135','NYM @ STL','04:46 PM PT','MLB')"
+                id="tb_Ivan Herrera|Total Bases|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="tb" data-side="OVER" data-rating="✅ STRONG" data-ev="34.37" data-matchup="NYY @ SEA"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Aaron Judge</strong></td>
+          <td><span class="stat-pill">Total Bases</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">3.56</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+2.06</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+110</td>
+          <td>64.0%</td>
+          <td class="ev-cell">34.4%</td>
+          <td class="muted">NYY @ SEA</td>
+          <td class="muted">06:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Aaron Judge|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Aaron Judge','Total Bases','1.5','OVER','+110','NYY @ SEA','06:41 PM PT','MLB')"
+                id="tb_Aaron Judge|Total Bases|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="tb" data-side="OVER" data-rating="➖ AVERAGE" data-ev="33.72" data-matchup="NYM @ STL">
+          <td><span class="bet-rating rating-average">➖ AVERAGE</span></td>
+          <td></td>
+          <td><strong>Marcus Semien</strong></td>
+          <td><span class="stat-pill">Total Bases</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">2.38</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.88</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+125</td>
+          <td>59.4%</td>
+          <td class="ev-cell">33.7%</td>
+          <td class="muted">NYM @ STL</td>
+          <td class="muted">04:46 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Marcus Semien|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Marcus Semien','Total Bases','1.5','OVER','+125','NYM @ STL','04:46 PM PT','MLB')"
+                id="tb_Marcus Semien|Total Bases|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="tb" data-side="OVER" data-rating="✅ STRONG" data-ev="33.58" data-matchup="OAK @ ATL"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Drake Baldwin</strong></td>
+          <td><span class="stat-pill">Total Bases</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">2.93</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.43</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+115</td>
+          <td>62.1%</td>
+          <td class="ev-cell">33.6%</td>
+          <td class="muted">OAK @ ATL</td>
+          <td class="muted">04:16 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Drake Baldwin|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Drake Baldwin','Total Bases','1.5','OVER','+115','OAK @ ATL','04:16 PM PT','MLB')"
+                id="tb_Drake Baldwin|Total Bases|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="tb" data-side="OVER" data-rating="⚠️ POOR" data-ev="33.16" data-matchup="PIT @ CIN">
+          <td><span class="bet-rating rating-poor">⚠️ POOR</span></td>
+          <td></td>
+          <td><strong>Joey Bart</strong></td>
+          <td><span class="stat-pill">Total Bases</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">2.01</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.51</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+135</td>
+          <td>56.7%</td>
+          <td class="ev-cell">33.2%</td>
+          <td class="muted">PIT @ CIN</td>
+          <td class="muted">03:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Joey Bart|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Joey Bart','Total Bases','1.5','OVER','+135','PIT @ CIN','03:41 PM PT','MLB')"
+                id="tb_Joey Bart|Total Bases|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="runs" data-side="OVER" data-rating="👍 GOOD" data-ev="31.86" data-matchup="OAK @ ATL"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-good">👍 GOOD</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Nick Kurtz</strong></td>
+          <td><span class="stat-pill">Runs</span></td>
+          <td>0.5</td>
+          <td style="color:#3d8ef8;font-weight:600">1.02</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.52</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+115</td>
+          <td>61.3%</td>
+          <td class="ev-cell">31.9%</td>
+          <td class="muted">OAK @ ATL</td>
+          <td class="muted">04:16 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Nick Kurtz|Runs|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Nick Kurtz','Runs','0.5','OVER','+115','OAK @ ATL','04:16 PM PT','MLB')"
+                id="tb_Nick Kurtz|Runs|0.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="k" data-side="OVER" data-rating="✅ STRONG" data-ev="30.63" data-matchup="DET @ ARI"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Casey Mize</strong></td>
+          <td><span class="stat-pill">Strikeouts</span></td>
+          <td>4.5</td>
+          <td style="color:#3d8ef8;font-weight:600">6.11</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.61</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+105</td>
+          <td>63.7%</td>
+          <td class="ev-cell">30.6%</td>
+          <td class="muted">DET @ ARI</td>
+          <td class="muted">06:40 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Casey Mize|Strikeouts|4.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Casey Mize','Strikeouts','4.5','OVER','+105','DET @ ARI','06:40 PM PT','MLB')"
+                id="tb_Casey Mize|Strikeouts|4.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="tb" data-side="OVER" data-rating="👍 GOOD" data-ev="29.9" data-matchup="DET @ ARI"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-good">👍 GOOD</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Ketel Marte</strong></td>
+          <td><span class="stat-pill">Total Bases</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">2.55</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.05</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+115</td>
+          <td>60.4%</td>
+          <td class="ev-cell">29.9%</td>
+          <td class="muted">DET @ ARI</td>
+          <td class="muted">06:40 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Ketel Marte|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Ketel Marte','Total Bases','1.5','OVER','+115','DET @ ARI','06:40 PM PT','MLB')"
+                id="tb_Ketel Marte|Total Bases|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="tb" data-side="OVER" data-rating="👍 GOOD" data-ev="29.1" data-matchup="NYM @ STL"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-good">👍 GOOD</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Francisco Lindor</strong></td>
+          <td><span class="stat-pill">Total Bases</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">2.48</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.98</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+115</td>
+          <td>60.1%</td>
+          <td class="ev-cell">29.1%</td>
+          <td class="muted">NYM @ STL</td>
+          <td class="muted">04:46 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Francisco Lindor|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Francisco Lindor','Total Bases','1.5','OVER','+115','NYM @ STL','04:46 PM PT','MLB')"
+                id="tb_Francisco Lindor|Total Bases|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="tb" data-side="OVER" data-rating="➖ AVERAGE" data-ev="28.36" data-matchup="CLE @ LAD">
+          <td><span class="bet-rating rating-average">➖ AVERAGE</span></td>
+          <td></td>
+          <td><strong>Freddie Freeman</strong></td>
+          <td><span class="stat-pill">Total Bases</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">2.22</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.72</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+120</td>
+          <td>58.4%</td>
+          <td class="ev-cell">28.4%</td>
+          <td class="muted">CLE @ LAD</td>
+          <td class="muted">07:11 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Freddie Freeman|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Freddie Freeman','Total Bases','1.5','OVER','+120','CLE @ LAD','07:11 PM PT','MLB')"
+                id="tb_Freddie Freeman|Total Bases|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="tb" data-side="OVER" data-rating="➖ AVERAGE" data-ev="27.51" data-matchup="SF @ SD">
+          <td><span class="bet-rating rating-average">➖ AVERAGE</span></td>
+          <td></td>
+          <td><strong>Rafael Devers</strong></td>
+          <td><span class="stat-pill">Total Bases</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">2.36</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.86</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+115</td>
+          <td>59.3%</td>
+          <td class="ev-cell">27.5%</td>
+          <td class="muted">SF @ SD</td>
+          <td class="muted">06:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Rafael Devers|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Rafael Devers','Total Bases','1.5','OVER','+115','SF @ SD','06:41 PM PT','MLB')"
+                id="tb_Rafael Devers|Total Bases|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="tb" data-side="OVER" data-rating="⚠️ POOR" data-ev="27.44" data-matchup="SF @ SD">
+          <td><span class="bet-rating rating-poor">⚠️ POOR</span></td>
+          <td></td>
+          <td><strong>Luis Arraez</strong></td>
+          <td><span class="stat-pill">Total Bases</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">2.16</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.66</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+120</td>
+          <td>57.9%</td>
+          <td class="ev-cell">27.4%</td>
+          <td class="muted">SF @ SD</td>
+          <td class="muted">06:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Luis Arraez|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Luis Arraez','Total Bases','1.5','OVER','+120','SF @ SD','06:41 PM PT','MLB')"
+                id="tb_Luis Arraez|Total Bases|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="tb" data-side="OVER" data-rating="✅ STRONG" data-ev="27.29" data-matchup="NYM @ STL"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Bo Bichette</strong></td>
+          <td><span class="stat-pill">Total Bases</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">2.92</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.42</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+105</td>
+          <td>62.1%</td>
+          <td class="ev-cell">27.3%</td>
+          <td class="muted">NYM @ STL</td>
+          <td class="muted">04:46 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Bo Bichette|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Bo Bichette','Total Bases','1.5','OVER','+105','NYM @ STL','04:46 PM PT','MLB')"
+                id="tb_Bo Bichette|Total Bases|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="runs" data-side="OVER" data-rating="👍 GOOD" data-ev="26.63" data-matchup="BOS @ HOU"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-good">👍 GOOD</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Jeremy Pena</strong></td>
+          <td><span class="stat-pill">Runs</span></td>
+          <td>0.5</td>
+          <td style="color:#3d8ef8;font-weight:600">1.08</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.58</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+105</td>
+          <td>61.8%</td>
+          <td class="ev-cell">26.6%</td>
+          <td class="muted">BOS @ HOU</td>
+          <td class="muted">05:11 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Jeremy Pena|Runs|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Jeremy Pena','Runs','0.5','OVER','+105','BOS @ HOU','05:11 PM PT','MLB')"
+                id="tb_Jeremy Pena|Runs|0.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="tb" data-side="OVER" data-rating="👍 GOOD" data-ev="25.94" data-matchup="OAK @ ATL"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-good">👍 GOOD</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Shea Langeliers</strong></td>
+          <td><span class="stat-pill">Total Bases</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">2.69</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.19</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+106</td>
+          <td>61.1%</td>
+          <td class="ev-cell">25.9%</td>
+          <td class="muted">OAK @ ATL</td>
+          <td class="muted">04:16 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Shea Langeliers|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Shea Langeliers','Total Bases','1.5','OVER','+106','OAK @ ATL','04:16 PM PT','MLB')"
+                id="tb_Shea Langeliers|Total Bases|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="runs" data-side="OVER" data-rating="👍 GOOD" data-ev="23.98" data-matchup="NYY @ SEA"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-good">👍 GOOD</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Aaron Judge</strong></td>
+          <td><span class="stat-pill">Runs</span></td>
+          <td>0.5</td>
+          <td style="color:#3d8ef8;font-weight:600">1.10</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.60</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+100</td>
+          <td>62.0%</td>
+          <td class="ev-cell">24.0%</td>
+          <td class="muted">NYY @ SEA</td>
+          <td class="muted">06:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Aaron Judge|Runs|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Aaron Judge','Runs','0.5','OVER','+100','NYY @ SEA','06:41 PM PT','MLB')"
+                id="tb_Aaron Judge|Runs|0.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="tb" data-side="OVER" data-rating="👍 GOOD" data-ev="23.1" data-matchup="WSH @ PHI"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-good">👍 GOOD</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Daylen Lile</strong></td>
+          <td><span class="stat-pill">Total Bases</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">2.79</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.29</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+100</td>
+          <td>61.6%</td>
+          <td class="ev-cell">23.1%</td>
+          <td class="muted">WSH @ PHI</td>
+          <td class="muted">03:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Daylen Lile|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Daylen Lile','Total Bases','1.5','OVER','+100','WSH @ PHI','03:41 PM PT','MLB')"
+                id="tb_Daylen Lile|Total Bases|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="tb" data-side="OVER" data-rating="➖ AVERAGE" data-ev="22.8" data-matchup="TEX @ BAL">
+          <td><span class="bet-rating rating-average">➖ AVERAGE</span></td>
+          <td></td>
+          <td><strong>Pete Alonso</strong></td>
+          <td><span class="stat-pill">Total Bases</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">2.24</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.74</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+110</td>
+          <td>58.5%</td>
+          <td class="ev-cell">22.8%</td>
+          <td class="muted">TEX @ BAL</td>
+          <td class="muted">03:36 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Pete Alonso|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Pete Alonso','Total Bases','1.5','OVER','+110','TEX @ BAL','03:36 PM PT','MLB')"
+                id="tb_Pete Alonso|Total Bases|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="tb" data-side="OVER" data-rating="➖ AVERAGE" data-ev="21.87" data-matchup="OAK @ ATL">
+          <td><span class="bet-rating rating-average">➖ AVERAGE</span></td>
+          <td></td>
+          <td><strong>Ronald Acuna Jr.</strong></td>
+          <td><span class="stat-pill">Total Bases</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">2.43</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.93</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+104</td>
+          <td>59.7%</td>
+          <td class="ev-cell">21.9%</td>
+          <td class="muted">OAK @ ATL</td>
+          <td class="muted">04:16 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Ronald Acuna Jr.|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Ronald Acuna Jr.','Total Bases','1.5','OVER','+104','OAK @ ATL','04:16 PM PT','MLB')"
+                id="tb_Ronald Acuna Jr.|Total Bases|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="tb" data-side="OVER" data-rating="👍 GOOD" data-ev="20.46" data-matchup="WSH @ PHI"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-good">👍 GOOD</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Kyle Schwarber</strong></td>
+          <td><span class="stat-pill">Total Bases</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">2.51</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.01</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+100</td>
+          <td>60.2%</td>
+          <td class="ev-cell">20.5%</td>
+          <td class="muted">WSH @ PHI</td>
+          <td class="muted">03:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Kyle Schwarber|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Kyle Schwarber','Total Bases','1.5','OVER','+100','WSH @ PHI','03:41 PM PT','MLB')"
+                id="tb_Kyle Schwarber|Total Bases|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="tb" data-side="OVER" data-rating="➖ AVERAGE" data-ev="20.04" data-matchup="BOS @ HOU">
+          <td><span class="bet-rating rating-average">➖ AVERAGE</span></td>
+          <td></td>
+          <td><strong>Jeremy Pena</strong></td>
+          <td><span class="stat-pill">Total Bases</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">2.25</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.75</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>+105</td>
+          <td>58.6%</td>
+          <td class="ev-cell">20.0%</td>
+          <td class="muted">BOS @ HOU</td>
+          <td class="muted">05:11 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Jeremy Pena|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Jeremy Pena','Total Bases','1.5','OVER','+105','BOS @ HOU','05:11 PM PT','MLB')"
+                id="tb_Jeremy Pena|Total Bases|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="hits" data-side="OVER" data-rating="✅ STRONG" data-ev="18.99" data-matchup="NYY @ SEA"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Austin Wells</strong></td>
+          <td><span class="stat-pill">Hits</span></td>
+          <td>0.5</td>
+          <td style="color:#3d8ef8;font-weight:600">1.07</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.57</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>-110</td>
+          <td>62.3%</td>
+          <td class="ev-cell">19.0%</td>
+          <td class="muted">NYY @ SEA</td>
+          <td class="muted">06:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Austin Wells|Hits|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Austin Wells','Hits','0.5','OVER','-110','NYY @ SEA','06:41 PM PT','MLB')"
+                id="tb_Austin Wells|Hits|0.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="tb" data-side="OVER" data-rating="➖ AVERAGE" data-ev="15.71" data-matchup="WSH @ PHI">
+          <td><span class="bet-rating rating-average">➖ AVERAGE</span></td>
+          <td></td>
+          <td><strong>Alec Bohm</strong></td>
+          <td><span class="stat-pill">Total Bases</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">2.35</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.85</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>-105</td>
+          <td>59.3%</td>
+          <td class="ev-cell">15.7%</td>
+          <td class="muted">WSH @ PHI</td>
+          <td class="muted">03:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Alec Bohm|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Alec Bohm','Total Bases','1.5','OVER','-105','WSH @ PHI','03:41 PM PT','MLB')"
+                id="tb_Alec Bohm|Total Bases|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="hits" data-side="OVER" data-rating="✅ STRONG" data-ev="14.08" data-matchup="COL @ TOR"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Edouard Julien</strong></td>
+          <td><span class="stat-pill">Hits</span></td>
+          <td>0.5</td>
+          <td style="color:#3d8ef8;font-weight:600">1.20</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.70</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>-125</td>
+          <td>63.4%</td>
+          <td class="ev-cell">14.1%</td>
+          <td class="muted">COL @ TOR</td>
+          <td class="muted">04:07 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Edouard Julien|Hits|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Edouard Julien','Hits','0.5','OVER','-125','COL @ TOR','04:07 PM PT','MLB')"
+                id="tb_Edouard Julien|Hits|0.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="k" data-side="OVER" data-rating="✅ STRONG" data-ev="12.53" data-matchup="CLE @ LAD"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Tanner Bibee</strong></td>
+          <td><span class="stat-pill">Strikeouts</span></td>
+          <td>4.5</td>
+          <td style="color:#3d8ef8;font-weight:600">6.30</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.80</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>-135</td>
+          <td>64.6%</td>
+          <td class="ev-cell">12.5%</td>
+          <td class="muted">CLE @ LAD</td>
+          <td class="muted">07:11 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Tanner Bibee|Strikeouts|4.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Tanner Bibee','Strikeouts','4.5','OVER','-135','CLE @ LAD','07:11 PM PT','MLB')"
+                id="tb_Tanner Bibee|Strikeouts|4.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="tb" data-side="OVER" data-rating="👍 GOOD" data-ev="12.34" data-matchup="WSH @ PHI"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-good">👍 GOOD</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Trea Turner</strong></td>
+          <td><span class="stat-pill">Total Bases</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">2.72</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.22</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>-120</td>
+          <td>61.3%</td>
+          <td class="ev-cell">12.3%</td>
+          <td class="muted">WSH @ PHI</td>
+          <td class="muted">03:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Trea Turner|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Trea Turner','Total Bases','1.5','OVER','-120','WSH @ PHI','03:41 PM PT','MLB')"
+                id="tb_Trea Turner|Total Bases|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="hits" data-side="OVER" data-rating="✅ STRONG" data-ev="12.08" data-matchup="NYM @ STL"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Pedro Pages</strong></td>
+          <td><span class="stat-pill">Hits</span></td>
+          <td>0.5</td>
+          <td style="color:#3d8ef8;font-weight:600">1.20</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.70</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>-130</td>
+          <td>63.3%</td>
+          <td class="ev-cell">12.1%</td>
+          <td class="muted">NYM @ STL</td>
+          <td class="muted">04:46 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Pedro Pages|Hits|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Pedro Pages','Hits','0.5','OVER','-130','NYM @ STL','04:46 PM PT','MLB')"
+                id="tb_Pedro Pages|Hits|0.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="k" data-side="UNDER" data-rating="✅ STRONG" data-ev="11.83" data-matchup="SF @ SD">
+          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+          <td></td>
+          <td><strong>German Marquez</strong></td>
+          <td><span class="stat-pill">Strikeouts</span></td>
+          <td>3.5</td>
+          <td style="color:#3d8ef8;font-weight:600">2.42</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+-1.08</td>
+          <td><span class="badge badge-under">UNDER</span></td>
+          <td>-130</td>
+          <td>63.2%</td>
+          <td class="ev-cell">11.8%</td>
+          <td class="muted">SF @ SD</td>
+          <td class="muted">06:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_German Marquez|Strikeouts|3.5|UNDER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('German Marquez','Strikeouts','3.5','UNDER','-130','SF @ SD','06:41 PM PT','MLB')"
+                id="tb_German Marquez|Strikeouts|3.5|UNDER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="k" data-side="OVER" data-rating="✅ STRONG" data-ev="11.61" data-matchup="NYY @ SEA"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Max Fried</strong></td>
+          <td><span class="stat-pill">Strikeouts</span></td>
+          <td>5.5</td>
+          <td style="color:#3d8ef8;font-weight:600">7.10</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.60</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>-125</td>
+          <td>62.0%</td>
+          <td class="ev-cell">11.6%</td>
+          <td class="muted">NYY @ SEA</td>
+          <td class="muted">06:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Max Fried|Strikeouts|5.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Max Fried','Strikeouts','5.5','OVER','-125','NYY @ SEA','06:41 PM PT','MLB')"
+                id="tb_Max Fried|Strikeouts|5.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="k" data-side="OVER" data-rating="⚠️ POOR" data-ev="8.69" data-matchup="COL @ TOR">
+          <td><span class="bet-rating rating-poor">⚠️ POOR</span></td>
+          <td></td>
+          <td><strong>Ryan Feltner</strong></td>
+          <td><span class="stat-pill">Strikeouts</span></td>
+          <td>3.5</td>
+          <td style="color:#3d8ef8;font-weight:600">4.11</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.61</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>-114</td>
+          <td>57.9%</td>
+          <td class="ev-cell">8.7%</td>
+          <td class="muted">COL @ TOR</td>
+          <td class="muted">04:07 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Ryan Feltner|Strikeouts|3.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Ryan Feltner','Strikeouts','3.5','OVER','-114','COL @ TOR','04:07 PM PT','MLB')"
+                id="tb_Ryan Feltner|Strikeouts|3.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="k" data-side="OVER" data-rating="⚠️ POOR" data-ev="8.23" data-matchup="LAA @ CHC">
+          <td><span class="bet-rating rating-poor">⚠️ POOR</span></td>
+          <td></td>
+          <td><strong>Jose Soriano</strong></td>
+          <td><span class="stat-pill">Strikeouts</span></td>
+          <td>4.5</td>
+          <td style="color:#3d8ef8;font-weight:600">5.11</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.61</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>-110</td>
+          <td>56.7%</td>
+          <td class="ev-cell">8.2%</td>
+          <td class="muted">LAA @ CHC</td>
+          <td class="muted">04:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Jose Soriano|Strikeouts|4.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Jose Soriano','Strikeouts','4.5','OVER','-110','LAA @ CHC','04:41 PM PT','MLB')"
+                id="tb_Jose Soriano|Strikeouts|4.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="hits" data-side="OVER" data-rating="✅ STRONG" data-ev="6.74" data-matchup="OAK @ ATL"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Denzel Clarke</strong></td>
+          <td><span class="stat-pill">Hits</span></td>
+          <td>0.5</td>
+          <td style="color:#3d8ef8;font-weight:600">1.08</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.58</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>-141</td>
+          <td>62.5%</td>
+          <td class="ev-cell">6.7%</td>
+          <td class="muted">OAK @ ATL</td>
+          <td class="muted">04:16 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Denzel Clarke|Hits|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Denzel Clarke','Hits','0.5','OVER','-141','OAK @ ATL','04:16 PM PT','MLB')"
+                id="tb_Denzel Clarke|Hits|0.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="hits" data-side="OVER" data-rating="✅ STRONG" data-ev="6.69" data-matchup="OAK @ ATL"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Dominic Smith</strong></td>
+          <td><span class="stat-pill">Hits</span></td>
+          <td>0.5</td>
+          <td style="color:#3d8ef8;font-weight:600">1.17</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.67</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>-145</td>
+          <td>63.1%</td>
+          <td class="ev-cell">6.7%</td>
+          <td class="muted">OAK @ ATL</td>
+          <td class="muted">04:16 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Dominic Smith|Hits|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Dominic Smith','Hits','0.5','OVER','-145','OAK @ ATL','04:16 PM PT','MLB')"
+                id="tb_Dominic Smith|Hits|0.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="hits" data-side="OVER" data-rating="✅ STRONG" data-ev="6.33" data-matchup="TEX @ BAL"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Coby Mayo</strong></td>
+          <td><span class="stat-pill">Hits</span></td>
+          <td>0.5</td>
+          <td style="color:#3d8ef8;font-weight:600">1.14</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.64</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>-145</td>
+          <td>62.9%</td>
+          <td class="ev-cell">6.3%</td>
+          <td class="muted">TEX @ BAL</td>
+          <td class="muted">03:36 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Coby Mayo|Hits|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Coby Mayo','Hits','0.5','OVER','-145','TEX @ BAL','03:36 PM PT','MLB')"
+                id="tb_Coby Mayo|Hits|0.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="hits" data-side="OVER" data-rating="✅ STRONG" data-ev="5.77" data-matchup="NYY @ SEA"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Randy Arozarena</strong></td>
+          <td><span class="stat-pill">Hits</span></td>
+          <td>0.5</td>
+          <td style="color:#3d8ef8;font-weight:600">1.22</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.72</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>-150</td>
+          <td>63.5%</td>
+          <td class="ev-cell">5.8%</td>
+          <td class="muted">NYY @ SEA</td>
+          <td class="muted">06:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Randy Arozarena|Hits|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Randy Arozarena','Hits','0.5','OVER','-150','NYY @ SEA','06:41 PM PT','MLB')"
+                id="tb_Randy Arozarena|Hits|0.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="hits" data-side="OVER" data-rating="✅ STRONG" data-ev="5.75" data-matchup="NYY @ SEA"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Brendan Donovan</strong></td>
+          <td><span class="stat-pill">Hits</span></td>
+          <td>0.5</td>
+          <td style="color:#3d8ef8;font-weight:600">1.80</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.30</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>-165</td>
+          <td>65.8%</td>
+          <td class="ev-cell">5.8%</td>
+          <td class="muted">NYY @ SEA</td>
+          <td class="muted">06:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Brendan Donovan|Hits|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Brendan Donovan','Hits','0.5','OVER','-165','NYY @ SEA','06:41 PM PT','MLB')"
+                id="tb_Brendan Donovan|Hits|0.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="k" data-side="OVER" data-rating="⚠️ POOR" data-ev="5.45" data-matchup="TB @ MIL">
+          <td><span class="bet-rating rating-poor">⚠️ POOR</span></td>
+          <td></td>
+          <td><strong>Brandon Woodruff</strong></td>
+          <td><span class="stat-pill">Strikeouts</span></td>
+          <td>5.5</td>
+          <td style="color:#3d8ef8;font-weight:600">6.21</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.71</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>-115</td>
+          <td>56.4%</td>
+          <td class="ev-cell">5.5%</td>
+          <td class="muted">TB @ MIL</td>
+          <td class="muted">04:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Brandon Woodruff|Strikeouts|5.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Brandon Woodruff','Strikeouts','5.5','OVER','-115','TB @ MIL','04:41 PM PT','MLB')"
+                id="tb_Brandon Woodruff|Strikeouts|5.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="k" data-side="UNDER" data-rating="⚠️ POOR" data-ev="4.66" data-matchup="COL @ TOR">
+          <td><span class="bet-rating rating-poor">⚠️ POOR</span></td>
+          <td></td>
+          <td><strong>Max Scherzer</strong></td>
+          <td><span class="stat-pill">Strikeouts</span></td>
+          <td>5.5</td>
+          <td style="color:#3d8ef8;font-weight:600">4.92</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+-0.58</td>
+          <td><span class="badge badge-under">UNDER</span></td>
+          <td>-118</td>
+          <td>56.6%</td>
+          <td class="ev-cell">4.7%</td>
+          <td class="muted">COL @ TOR</td>
+          <td class="muted">04:07 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Max Scherzer|Strikeouts|5.5|UNDER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Max Scherzer','Strikeouts','5.5','UNDER','-118','COL @ TOR','04:07 PM PT','MLB')"
+                id="tb_Max Scherzer|Strikeouts|5.5|UNDER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="hits" data-side="OVER" data-rating="✅ STRONG" data-ev="4.55" data-matchup="NYY @ SEA"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Ben Rice</strong></td>
+          <td><span class="stat-pill">Hits</span></td>
+          <td>0.5</td>
+          <td style="color:#3d8ef8;font-weight:600">1.37</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.87</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>-160</td>
+          <td>64.3%</td>
+          <td class="ev-cell">4.5%</td>
+          <td class="muted">NYY @ SEA</td>
+          <td class="muted">06:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Ben Rice|Hits|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Ben Rice','Hits','0.5','OVER','-160','NYY @ SEA','06:41 PM PT','MLB')"
+                id="tb_Ben Rice|Hits|0.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="hits" data-side="OVER" data-rating="✅ STRONG" data-ev="4.1" data-matchup="NYY @ SEA"  style='background:rgba(245,166,35,0.04)'>
+          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
+          <td><span class='pick6-badge'>★</span></td>
+          <td><strong>Giancarlo Stanton</strong></td>
+          <td><span class="stat-pill">Hits</span></td>
+          <td>0.5</td>
+          <td style="color:#3d8ef8;font-weight:600">1.08</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.58</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>-150</td>
+          <td>62.5%</td>
+          <td class="ev-cell">4.1%</td>
+          <td class="muted">NYY @ SEA</td>
+          <td class="muted">06:41 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Giancarlo Stanton|Hits|0.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Giancarlo Stanton','Hits','0.5','OVER','-150','NYY @ SEA','06:41 PM PT','MLB')"
+                id="tb_Giancarlo Stanton|Hits|0.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-stat="tb" data-side="OVER" data-rating="⚠️ POOR" data-ev="3.58" data-matchup="DET @ ARI">
+          <td><span class="bet-rating rating-poor">⚠️ POOR</span></td>
+          <td></td>
+          <td><strong>Corbin Carroll</strong></td>
+          <td><span class="stat-pill">Total Bases</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">2.12</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.62</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td>-125</td>
+          <td>57.5%</td>
+          <td class="ev-cell">3.6%</td>
+          <td class="muted">DET @ ARI</td>
+          <td class="muted">06:40 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Corbin Carroll|Total Bases|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Corbin Carroll','Total Bases','1.5','OVER','-125','DET @ ARI','06:40 PM PT','MLB')"
+                id="tb_Corbin Carroll|Total Bases|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr></tbody></table>
+    </div>
 </div>
 <div id="lines" class="tab-content">
   <div class="tab-header">
@@ -121,49 +2803,38 @@
         <th>Rating</th><th>Matchup</th><th>Market</th><th>Side</th>
         <th>Best Odds</th><th>Fair Odds</th><th>Fair%</th><th>EV%</th><th>Time</th>
       </tr></thead><tbody>
-        <tr data-market="Spread">
+        <tr data-market="Moneyline">
           <td><span class="bet-rating rating-elite">🔥 ELITE</span></td>
-          <td class="muted">Texas Rangers @ Baltimore Orioles</td>
-          <td><span class="stat-pill">Spread</span></td>
-          <td><strong>Texas Rangers +1.5</strong></td>
-          <td style="font-family:monospace">+165</td>
-          <td style="font-family:monospace">-116</td>
-          <td>53.6%</td>
-          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+42.1%</span></td>
-          <td class="muted">03:36 PM PT</td>
-        </tr>
-        <tr data-market="Spread">
-          <td><span class="bet-rating rating-elite">🔥 ELITE</span></td>
-          <td class="muted">Texas Rangers @ Baltimore Orioles</td>
-          <td><span class="stat-pill">Spread</span></td>
-          <td><strong>Baltimore Orioles -1.5</strong></td>
-          <td style="font-family:monospace">+155</td>
-          <td style="font-family:monospace">+116</td>
-          <td>46.4%</td>
-          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+18.3%</span></td>
-          <td class="muted">03:36 PM PT</td>
-        </tr>
-        <tr data-market="Total">
-          <td><span class="bet-rating rating-average">➖ AVERAGE</span></td>
-          <td class="muted">Cleveland Guardians @ Los Angeles Dodgers</td>
-          <td><span class="stat-pill">Total</span></td>
-          <td><strong>Over</strong></td>
-          <td style="font-family:monospace">+100</td>
-          <td style="font-family:monospace">-103</td>
-          <td>50.6%</td>
-          <td><span style="color:#f5a623;font-family:monospace">+1.3%</span></td>
+          <td class="muted">Detroit Tigers @ Arizona Diamondbacks</td>
+          <td><span class="stat-pill">Moneyline</span></td>
+          <td><strong>Detroit Tigers</strong></td>
+          <td style="font-family:monospace">+2500</td>
+          <td style="font-family:monospace">+1957</td>
+          <td>4.9%</td>
+          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+26.4%</span></td>
           <td class="muted">07:11 PM PT</td>
         </tr>
-        <tr data-market="Total">
+        <tr data-market="Spread">
+          <td><span class="bet-rating rating-elite">🔥 ELITE</span></td>
+          <td class="muted">Detroit Tigers @ Arizona Diamondbacks</td>
+          <td><span class="stat-pill">Spread</span></td>
+          <td><strong>Detroit Tigers +2.5</strong></td>
+          <td style="font-family:monospace">+385</td>
+          <td style="font-family:monospace">+326</td>
+          <td>23.5%</td>
+          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+13.8%</span></td>
+          <td class="muted">07:11 PM PT</td>
+        </tr>
+        <tr data-market="Spread">
           <td><span class="bet-rating rating-average">➖ AVERAGE</span></td>
-          <td class="muted">New York Mets @ St. Louis Cardinals</td>
-          <td><span class="stat-pill">Total</span></td>
-          <td><strong>Under</strong></td>
-          <td style="font-family:monospace">+100</td>
-          <td style="font-family:monospace">-102</td>
-          <td>50.6%</td>
-          <td><span style="color:#f5a623;font-family:monospace">+1.2%</span></td>
-          <td class="muted">04:46 PM PT</td>
+          <td class="muted">Detroit Tigers @ Arizona Diamondbacks</td>
+          <td><span class="stat-pill">Spread</span></td>
+          <td><strong>Arizona Diamondbacks -2.5</strong></td>
+          <td style="font-family:monospace">-300</td>
+          <td style="font-family:monospace">-326</td>
+          <td>76.5%</td>
+          <td><span style="color:#44d4a0;font-family:monospace;font-weight:600">+2.0%</span></td>
+          <td class="muted">07:11 PM PT</td>
         </tr></tbody></table>
     </div>
 </div>
@@ -220,7 +2891,7 @@
   const UNIT_SIZE   = 10;
 
   try {
-    const mlbPicks = [];
+    const mlbPicks = [{"player": "Michael Busch (RBI)", "prop": "RBI", "line": "0.5", "side": "OVER", "odds": "+215", "rating": "STRONG", "matchup": "LAA @ CHC", "sport": "MLB"}, {"player": "Heliot Ramos (RBI)", "prop": "RBI", "line": "0.5", "side": "OVER", "odds": "+203", "rating": "GOOD", "matchup": "SF @ SD", "sport": "MLB"}, {"player": "Giancarlo Stanton (RBI)", "prop": "RBI", "line": "0.5", "side": "OVER", "odds": "+175", "rating": "STRONG", "matchup": "NYY @ SEA", "sport": "MLB"}, {"player": "Gary Sanchez (RBI)", "prop": "RBI", "line": "0.5", "side": "OVER", "odds": "+180", "rating": "STRONG", "matchup": "TB @ MIL", "sport": "MLB"}, {"player": "Nico Hoerner (Runs)", "prop": "Runs", "line": "0.5", "side": "OVER", "odds": "+165", "rating": "STRONG", "matchup": "LAA @ CHC", "sport": "MLB"}, {"player": "Bo Bichette (RBI)", "prop": "RBI", "line": "0.5", "side": "OVER", "odds": "+159", "rating": "STRONG", "matchup": "NYM @ STL", "sport": "MLB"}, {"player": "Aaron Judge (RBI)", "prop": "RBI", "line": "0.5", "side": "OVER", "odds": "+155", "rating": "STRONG", "matchup": "NYY @ SEA", "sport": "MLB"}, {"player": "Heliot Ramos (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "OVER", "odds": "+145", "rating": "GOOD", "matchup": "SF @ SD", "sport": "MLB"}, {"player": "Michael Busch (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "OVER", "odds": "+130", "rating": "STRONG", "matchup": "LAA @ CHC", "sport": "MLB"}, {"player": "Colson Montgomery (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "OVER", "odds": "+130", "rating": "STRONG", "matchup": "CWS @ MIA", "sport": "MLB"}, {"player": "Nick Kurtz (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "OVER", "odds": "+146", "rating": "AVERAGE", "matchup": "OAK @ ATL", "sport": "MLB"}, {"player": "Michael Harris II (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "OVER", "odds": "+126", "rating": "STRONG", "matchup": "OAK @ ATL", "sport": "MLB"}, {"player": "Brandon Lowe (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "OVER", "odds": "+140", "rating": "AVERAGE", "matchup": "PIT @ CIN", "sport": "MLB"}, {"player": "Fernando Tatis Jr. (Runs)", "prop": "Runs", "line": "0.5", "side": "OVER", "odds": "+125", "rating": "GOOD", "matchup": "SF @ SD", "sport": "MLB"}, {"player": "James Wood (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "OVER", "odds": "+120", "rating": "STRONG", "matchup": "WSH @ PHI", "sport": "MLB"}, {"player": "Eugenio Suarez (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "OVER", "odds": "+139", "rating": "POOR", "matchup": "PIT @ CIN", "sport": "MLB"}, {"player": "Ivan Herrera (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "OVER", "odds": "+135", "rating": "AVERAGE", "matchup": "NYM @ STL", "sport": "MLB"}, {"player": "Aaron Judge (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "OVER", "odds": "+110", "rating": "STRONG", "matchup": "NYY @ SEA", "sport": "MLB"}, {"player": "Marcus Semien (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "OVER", "odds": "+125", "rating": "AVERAGE", "matchup": "NYM @ STL", "sport": "MLB"}, {"player": "Drake Baldwin (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "OVER", "odds": "+115", "rating": "STRONG", "matchup": "OAK @ ATL", "sport": "MLB"}, {"player": "Joey Bart (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "OVER", "odds": "+135", "rating": "POOR", "matchup": "PIT @ CIN", "sport": "MLB"}, {"player": "Nick Kurtz (Runs)", "prop": "Runs", "line": "0.5", "side": "OVER", "odds": "+115", "rating": "GOOD", "matchup": "OAK @ ATL", "sport": "MLB"}, {"player": "Casey Mize (Strikeouts)", "prop": "Strikeouts", "line": "4.5", "side": "OVER", "odds": "+105", "rating": "STRONG", "matchup": "DET @ ARI", "sport": "MLB"}, {"player": "Ketel Marte (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "OVER", "odds": "+115", "rating": "GOOD", "matchup": "DET @ ARI", "sport": "MLB"}, {"player": "Francisco Lindor (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "OVER", "odds": "+115", "rating": "GOOD", "matchup": "NYM @ STL", "sport": "MLB"}, {"player": "Freddie Freeman (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "OVER", "odds": "+120", "rating": "AVERAGE", "matchup": "CLE @ LAD", "sport": "MLB"}, {"player": "Rafael Devers (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "OVER", "odds": "+115", "rating": "AVERAGE", "matchup": "SF @ SD", "sport": "MLB"}, {"player": "Luis Arraez (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "OVER", "odds": "+120", "rating": "POOR", "matchup": "SF @ SD", "sport": "MLB"}, {"player": "Bo Bichette (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "OVER", "odds": "+105", "rating": "STRONG", "matchup": "NYM @ STL", "sport": "MLB"}, {"player": "Jeremy Pena (Runs)", "prop": "Runs", "line": "0.5", "side": "OVER", "odds": "+105", "rating": "GOOD", "matchup": "BOS @ HOU", "sport": "MLB"}, {"player": "Shea Langeliers (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "OVER", "odds": "+106", "rating": "GOOD", "matchup": "OAK @ ATL", "sport": "MLB"}, {"player": "Aaron Judge (Runs)", "prop": "Runs", "line": "0.5", "side": "OVER", "odds": "+100", "rating": "GOOD", "matchup": "NYY @ SEA", "sport": "MLB"}, {"player": "Daylen Lile (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "OVER", "odds": "+100", "rating": "GOOD", "matchup": "WSH @ PHI", "sport": "MLB"}, {"player": "Pete Alonso (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "OVER", "odds": "+110", "rating": "AVERAGE", "matchup": "TEX @ BAL", "sport": "MLB"}, {"player": "Ronald Acuna Jr. (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "OVER", "odds": "+104", "rating": "AVERAGE", "matchup": "OAK @ ATL", "sport": "MLB"}, {"player": "Kyle Schwarber (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "OVER", "odds": "+100", "rating": "GOOD", "matchup": "WSH @ PHI", "sport": "MLB"}, {"player": "Jeremy Pena (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "OVER", "odds": "+105", "rating": "AVERAGE", "matchup": "BOS @ HOU", "sport": "MLB"}, {"player": "Austin Wells (Hits)", "prop": "Hits", "line": "0.5", "side": "OVER", "odds": "-110", "rating": "STRONG", "matchup": "NYY @ SEA", "sport": "MLB"}, {"player": "Alec Bohm (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "OVER", "odds": "-105", "rating": "AVERAGE", "matchup": "WSH @ PHI", "sport": "MLB"}, {"player": "Edouard Julien (Hits)", "prop": "Hits", "line": "0.5", "side": "OVER", "odds": "-125", "rating": "STRONG", "matchup": "COL @ TOR", "sport": "MLB"}, {"player": "Tanner Bibee (Strikeouts)", "prop": "Strikeouts", "line": "4.5", "side": "OVER", "odds": "-135", "rating": "STRONG", "matchup": "CLE @ LAD", "sport": "MLB"}, {"player": "Trea Turner (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "OVER", "odds": "-120", "rating": "GOOD", "matchup": "WSH @ PHI", "sport": "MLB"}, {"player": "Pedro Pages (Hits)", "prop": "Hits", "line": "0.5", "side": "OVER", "odds": "-130", "rating": "STRONG", "matchup": "NYM @ STL", "sport": "MLB"}, {"player": "German Marquez (Strikeouts)", "prop": "Strikeouts", "line": "3.5", "side": "UNDER", "odds": "-130", "rating": "STRONG", "matchup": "SF @ SD", "sport": "MLB"}, {"player": "Max Fried (Strikeouts)", "prop": "Strikeouts", "line": "5.5", "side": "OVER", "odds": "-125", "rating": "STRONG", "matchup": "NYY @ SEA", "sport": "MLB"}, {"player": "Ryan Feltner (Strikeouts)", "prop": "Strikeouts", "line": "3.5", "side": "OVER", "odds": "-114", "rating": "POOR", "matchup": "COL @ TOR", "sport": "MLB"}, {"player": "Jose Soriano (Strikeouts)", "prop": "Strikeouts", "line": "4.5", "side": "OVER", "odds": "-110", "rating": "POOR", "matchup": "LAA @ CHC", "sport": "MLB"}, {"player": "Denzel Clarke (Hits)", "prop": "Hits", "line": "0.5", "side": "OVER", "odds": "-141", "rating": "STRONG", "matchup": "OAK @ ATL", "sport": "MLB"}, {"player": "Dominic Smith (Hits)", "prop": "Hits", "line": "0.5", "side": "OVER", "odds": "-145", "rating": "STRONG", "matchup": "OAK @ ATL", "sport": "MLB"}, {"player": "Coby Mayo (Hits)", "prop": "Hits", "line": "0.5", "side": "OVER", "odds": "-145", "rating": "STRONG", "matchup": "TEX @ BAL", "sport": "MLB"}, {"player": "Randy Arozarena (Hits)", "prop": "Hits", "line": "0.5", "side": "OVER", "odds": "-150", "rating": "STRONG", "matchup": "NYY @ SEA", "sport": "MLB"}, {"player": "Brendan Donovan (Hits)", "prop": "Hits", "line": "0.5", "side": "OVER", "odds": "-165", "rating": "STRONG", "matchup": "NYY @ SEA", "sport": "MLB"}, {"player": "Brandon Woodruff (Strikeouts)", "prop": "Strikeouts", "line": "5.5", "side": "OVER", "odds": "-115", "rating": "POOR", "matchup": "TB @ MIL", "sport": "MLB"}, {"player": "Max Scherzer (Strikeouts)", "prop": "Strikeouts", "line": "5.5", "side": "UNDER", "odds": "-118", "rating": "POOR", "matchup": "COL @ TOR", "sport": "MLB"}, {"player": "Ben Rice (Hits)", "prop": "Hits", "line": "0.5", "side": "OVER", "odds": "-160", "rating": "STRONG", "matchup": "NYY @ SEA", "sport": "MLB"}, {"player": "Giancarlo Stanton (Hits)", "prop": "Hits", "line": "0.5", "side": "OVER", "odds": "-150", "rating": "STRONG", "matchup": "NYY @ SEA", "sport": "MLB"}, {"player": "Corbin Carroll (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "OVER", "odds": "-125", "rating": "POOR", "matchup": "DET @ ARI", "sport": "MLB"}];
     if (mlbPicks.length) {
       const existing = JSON.parse(localStorage.getItem('dk_today_picks_v1') || '[]');
       const combined = [...existing.filter(p => p.sport !== 'MLB'), ...mlbPicks];
