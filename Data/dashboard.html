@@ -94,13 +94,14 @@
 <body>
 <div class="topbar">
   <div class="logo">NBA<span>.</span>MODEL</div>
-  <div class="topbar-meta">Monday, April 06 2026<br>Updated 09:50 PM PT</div>
+  <div class="topbar-meta">Wednesday, April 08 2026<br>Updated 05:29 AM PT</div>
 </div>
 <div class="tabs">
   <button class="tab-btn active" onclick="showTab('today',this)">Today Plays</button>
   <button class="tab-btn" onclick="showTab('ev',this)">EV Scanner</button>
   <button class="tab-btn" onclick="showTab('gamelines',this)">Game Lines</button>
   <button class="tab-btn" onclick="showTab('totals',this)">Game Totals</button>
+  <button class="tab-btn" onclick="showTab('nbatotals',this)">NBA Totals</button>
   <button class="tab-btn" onclick="showTab('history',this)">Results History</button>
   <button class="tab-btn" onclick="showTab('performance',this)">Performance</button>
 </div>
@@ -1028,6 +1029,60 @@ NAME: 4, DTYPE: OBJECT" data-ev="22.23">
           <td class="muted">03:10 PM PT</td>
         </tr></tbody></table>
     </div>
+</div>
+<div id="nbatotals" class="tab-content">
+  <div class="tab-header">
+    <div class="tab-title">NBA Game Totals</div>
+    <div class="tab-subtitle">Playoff totals model · Over/Under projections vs Bovada lines</div>
+  </div>
+  <p style="font-size:0.75rem;color:var(--muted);margin-bottom:0.75rem">
+      Projections use team pace + offensive/defensive ratings with playoff pace adjustment.
+      Update team stats after April 12 for playoff accuracy.
+    </p>
+    <div class="table-wrap">
+      <table class="data-table"><thead><tr>
+        <th>Rating</th><th>Matchup</th><th>Side</th><th>Line</th>
+        <th>Projected</th><th>Odds</th><th>Fair%</th><th>Model%</th><th>EV%</th><th>Bovada</th><th>Injuries</th><th>Time</th>
+      </tr></thead><tbody><tr>
+          <td><span class="bet-rating rating-elite">ELITE</span></td>
+          <td class="muted">Oklahoma City Thunder @ Los Angeles Lakers</td>
+          <td><strong>Over</strong></td>
+          <td style="font-family:monospace">222.5</td>
+          <td style="color:#3d8ef8;font-weight:600;font-family:monospace">235.6</td>
+          <td style="font-family:monospace">-110</td>
+          <td>56.6%</td>
+          <td>61.0%</td>
+          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+8.0%</span></td>
+          <td style="color:var(--muted)">-</td>
+          <td class="muted" style="font-size:0.72rem;color:#f5a623">Luka Doncic (28ppg) | Austin Reaves (16ppg)</td>
+          <td class="muted">07:40 PM PT</td>
+        </tr><tr>
+          <td><span class="bet-rating rating-strong">STRONG</span></td>
+          <td class="muted">Charlotte Hornets @ Boston Celtics</td>
+          <td><strong>Over</strong></td>
+          <td style="font-family:monospace">219.5</td>
+          <td style="color:#3d8ef8;font-weight:600;font-family:monospace">229.6</td>
+          <td style="font-family:monospace">-110</td>
+          <td>55.3%</td>
+          <td>58.7%</td>
+          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+5.5%</span></td>
+          <td style="color:var(--muted)">-</td>
+          <td class="muted" style="font-size:0.72rem;color:#f5a623">nan</td>
+          <td class="muted">05:10 PM PT</td>
+        </tr><tr>
+          <td><span class="bet-rating rating-good">GOOD</span></td>
+          <td class="muted">Minnesota Timberwolves @ Indiana Pacers</td>
+          <td><strong>Over</strong></td>
+          <td style="font-family:monospace">231.5</td>
+          <td style="color:#3d8ef8;font-weight:600;font-family:monospace">237.4</td>
+          <td style="font-family:monospace">-105</td>
+          <td>52.8%</td>
+          <td>54.9%</td>
+          <td><span style="color:#44d4a0;font-family:monospace;font-weight:600">+3.1%</span></td>
+          <td style="color:var(--muted)">-</td>
+          <td class="muted" style="font-size:0.72rem;color:#f5a623">Andrew Nembhard (14ppg) | Pascal Siakam (22ppg) | Tyrese Haliburton (23ppg)</td>
+          <td class="muted">04:10 PM PT</td>
+        </tr></tbody></table></div>
 </div>
 <div id="history" class="tab-content">
   <div class="tab-header">
