@@ -83,7 +83,7 @@
 <body>
 <div class="topbar">
   <div class="logo">MLB<span>.</span>MODEL</div>
-  <div class="topbar-meta">Wednesday, April 08 2026<br>Updated 05:29 AM PT</div>
+  <div class="topbar-meta">Wednesday, April 08 2026<br>Updated 10:30 PM PT</div>
 </div>
 <div class="tabs">
   <button class="tab-btn active" onclick="showTab('today',this)">Today's Plays</button>
@@ -800,7 +800,49 @@
     <div class="tab-title">Game Lines</div>
     <div class="tab-subtitle">Spreads · Totals · Moneylines · Consensus fair odds vs Bovada</div>
   </div>
-  <p class="empty-msg">No positive EV game lines found today.</p>
+  
+    <div class="filter-bar">
+      <select id="gl-market" class="filter-select" onchange="applyGLFilters()">
+        <option value="">All Markets</option>
+        <option value="Total">Totals</option>
+        <option value="Spread">Spreads</option>
+        <option value="Moneyline">Moneyline</option>
+      </select>
+      <button class="filter-reset" onclick="resetGLFilters()">Reset</button>
+    </div>
+    <p style="font-size:0.75rem;color:var(--muted);margin-bottom:0.75rem">
+      Fair odds from consensus across DraftKings, FanDuel, BetMGM, Caesars. Check Bovada before betting.
+    </p>
+    <div class="table-wrap">
+      <table class="data-table" id="gl-table"><thead><tr>
+        <th>Rating</th><th>Matchup</th><th>Market</th><th>Side</th>
+        <th>Best Odds</th><th>Fair Odds</th><th>Fair%</th><th>EV%</th><th>Time</th><th>Track</th>
+      </tr></thead><tbody>
+        <tr data-market="Spread">
+          <td><span class="bet-rating rating-poor">⚠️ POOR</span></td>
+          <td class="muted">Kansas City Royals @ Cleveland Guardians</td>
+          <td><span class="stat-pill">Spread</span></td>
+          <td><strong>Kansas City Royals -1.5</strong></td>
+          <td style="font-family:monospace">+155</td>
+          <td style="font-family:monospace">+154</td>
+          <td>39.3%</td>
+          <td><span style="color:#f5a623;font-family:monospace">+0.3%</span></td>
+          <td class="muted">10:11 AM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Kansas City Royals @ Cleveland Guardians|Spread|Kansas City Royals -1.5" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option><option value="2">2u</option>
+                <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Kansas City Royals -1.5','Spread','-','Kansas City Royals -1.5','+155','Kansas City Royals @ Cleveland Guardians','10:11 AM PT','MLB')"
+                id="tb_Kansas City Royals @ Cleveland Guardians|Spread|Kansas City Royals -1.5"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr></tbody></table>
+    </div>
 </div>
 <div id="history" class="tab-content">
   <div class="tab-header">
@@ -816,17 +858,17 @@
   </div>
   
     <div class="stat-strip">
-      <div class="stat-chip"><span class="chip-val">1063</span><span class="chip-lbl">Graded</span></div>
-      <div class="stat-chip" style="border-color:rgba(0,229,160,0.3)"><span class="chip-val" style="color:#00e5a0">604</span><span class="chip-lbl">Wins</span></div>
-      <div class="stat-chip" style="border-color:rgba(240,78,78,0.3)"><span class="chip-val" style="color:#f04e4e">459</span><span class="chip-lbl">Losses</span></div>
-      <div class="stat-chip"><span class="chip-val">56.8%</span><span class="chip-lbl">Win Rate</span></div>
+      <div class="stat-chip"><span class="chip-val">1069</span><span class="chip-lbl">Graded</span></div>
+      <div class="stat-chip" style="border-color:rgba(0,229,160,0.3)"><span class="chip-val" style="color:#00e5a0">608</span><span class="chip-lbl">Wins</span></div>
+      <div class="stat-chip" style="border-color:rgba(240,78,78,0.3)"><span class="chip-val" style="color:#f04e4e">461</span><span class="chip-lbl">Losses</span></div>
+      <div class="stat-chip"><span class="chip-val">56.9%</span><span class="chip-lbl">Win Rate</span></div>
       
     <div class="stat-chip" style="border-color:#00e5a040">
-      <span class="chip-val" style="color:#00e5a0">+$828.79</span>
+      <span class="chip-val" style="color:#00e5a0">+$818.51</span>
       <span class="chip-lbl">Live P&amp;L</span>
     </div>
     <div class="stat-chip" style="border-color:#00e5a040">
-      <span class="chip-val" style="color:#00e5a0">+82.9u</span>
+      <span class="chip-val" style="color:#00e5a0">+81.9u</span>
       <span class="chip-lbl">Live Units</span>
     </div>
     </div>
@@ -838,7 +880,7 @@
           <div class="table-wrap">
             <table class="data-table mini"><thead><tr>
               <th>Stat</th><th>Picks</th><th>W</th><th>L</th><th>Win%</th><th>P&L</th>
-            </tr></thead><tbody><tr><td><strong>Hits</strong></td><td>581</td><td style='color:#00e5a0'>365</td><td style='color:#f04e4e'>216</td><td>62.8%</td><td style='color:#00e5a0;font-family:monospace'>+$24.05</td></tr><tr><td><strong>Strikeouts</strong></td><td>138</td><td style='color:#00e5a0'>76</td><td style='color:#f04e4e'>62</td><td>55.1%</td><td style='color:#00e5a0;font-family:monospace'>+$488.71</td></tr><tr><td><strong>Outs Recorded</strong></td><td>24</td><td style='color:#00e5a0'>16</td><td style='color:#f04e4e'>8</td><td>66.7%</td><td style='color:#00e5a0;font-family:monospace'>+$80.81</td></tr><tr><td><strong>RBI</strong></td><td>30</td><td style='color:#00e5a0'>17</td><td style='color:#f04e4e'>13</td><td>56.7%</td><td style='color:#00e5a0;font-family:monospace'>+$181.20</td></tr><tr><td><strong>Runs</strong></td><td>42</td><td style='color:#00e5a0'>28</td><td style='color:#f04e4e'>14</td><td>66.7%</td><td style='color:#00e5a0;font-family:monospace'>+$294.53</td></tr><tr><td><strong>Total Bases</strong></td><td>248</td><td style='color:#00e5a0'>102</td><td style='color:#f04e4e'>146</td><td>41.1%</td><td style='color:#f04e4e;font-family:monospace'>$-240.50</td></tr></tbody></table>
+            </tr></thead><tbody><tr><td><strong>Hits</strong></td><td>586</td><td style='color:#00e5a0'>369</td><td style='color:#f04e4e'>217</td><td>63.0%</td><td style='color:#00e5a0;font-family:monospace'>+$23.77</td></tr><tr><td><strong>Strikeouts</strong></td><td>139</td><td style='color:#00e5a0'>76</td><td style='color:#f04e4e'>63</td><td>54.7%</td><td style='color:#00e5a0;font-family:monospace'>+$478.71</td></tr><tr><td><strong>Outs Recorded</strong></td><td>24</td><td style='color:#00e5a0'>16</td><td style='color:#f04e4e'>8</td><td>66.7%</td><td style='color:#00e5a0;font-family:monospace'>+$80.81</td></tr><tr><td><strong>RBI</strong></td><td>30</td><td style='color:#00e5a0'>17</td><td style='color:#f04e4e'>13</td><td>56.7%</td><td style='color:#00e5a0;font-family:monospace'>+$181.20</td></tr><tr><td><strong>Runs</strong></td><td>42</td><td style='color:#00e5a0'>28</td><td style='color:#f04e4e'>14</td><td>66.7%</td><td style='color:#00e5a0;font-family:monospace'>+$294.53</td></tr><tr><td><strong>Total Bases</strong></td><td>248</td><td style='color:#00e5a0'>102</td><td style='color:#f04e4e'>146</td><td>41.1%</td><td style='color:#f04e4e;font-family:monospace'>$-240.50</td></tr></tbody></table>
           </div>
         </div>
         <div class="perf-card">
@@ -846,7 +888,7 @@
           <div class="table-wrap">
             <table class="data-table mini"><thead><tr>
               <th>Side</th><th>Picks</th><th>W</th><th>L</th><th>Win%</th><th>P&L</th>
-            </tr></thead><tbody><tr><td><strong>OVER</strong></td><td>896</td><td style='color:#00e5a0'>494</td><td style='color:#f04e4e'>402</td><td>55.1%</td><td style='color:#00e5a0;font-family:monospace'>+$49.53</td></tr><tr><td><strong>UNDER</strong></td><td>167</td><td style='color:#00e5a0'>110</td><td style='color:#f04e4e'>57</td><td>65.9%</td><td style='color:#00e5a0;font-family:monospace'>+$779.26</td></tr></tbody></table>
+            </tr></thead><tbody><tr><td><strong>OVER</strong></td><td>902</td><td style='color:#00e5a0'>498</td><td style='color:#f04e4e'>404</td><td>55.2%</td><td style='color:#00e5a0;font-family:monospace'>+$39.25</td></tr><tr><td><strong>UNDER</strong></td><td>167</td><td style='color:#00e5a0'>110</td><td style='color:#f04e4e'>57</td><td>65.9%</td><td style='color:#00e5a0;font-family:monospace'>+$779.26</td></tr></tbody></table>
           </div>
         </div></div>
 </div>
