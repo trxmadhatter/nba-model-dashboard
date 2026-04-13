@@ -92,11 +92,12 @@
 <body>
 <div class="topbar">
   <div class="logo">MLB<span>.</span>MODEL</div>
-  <div class="topbar-meta">Sunday, April 12 2026<br>Updated 09:06 AM PT</div>
+  <div class="topbar-meta">Monday, April 13 2026<br>Updated 05:33 AM PT</div>
 </div>
 <div class="tabs">
   <button class="tab-btn active" onclick="showTab('today',this)">Today's Plays</button>
   <button class="tab-btn" onclick="showTab('lines',this)">Game Lines</button>
+  <button class="tab-btn" onclick="showTab('series',this)">4-Game Series</button>
   <button class="tab-btn" onclick="showTab('history',this)">Results History</button>
   <button class="tab-btn" onclick="showTab('parlayhistory',this)">Parlay History</button>
   <button class="tab-btn" onclick="showTab('performance',this)">Performance</button>
@@ -113,12 +114,12 @@
               🎯 Parlay of the Day &nbsp;·&nbsp; 2 Legs
             </div>
             <div style="display:flex;align-items:center;gap:0.75rem">
-              <div style="font-family:monospace;font-size:1.1rem;font-weight:700;color:rgb(245,166,35)">+198</div>
-              <select id="pu_32758" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+              <div style="font-family:monospace;font-size:1.1rem;font-weight:700;color:rgb(245,166,35)">+215</div>
+              <select id="pu_92112" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
                 <option value="0.1">0.1u</option><option value="0.5">0.5u</option>
                 <option value="1" selected>1u</option><option value="2">2u</option>
               </select>
-              <button onclick="trackParlay('Parlay of the Day','+198',['Jose Soriano K 5.5 UNDER','Nick Pivetta K 7.5 UNDER'],parseFloat(document.getElementById('pu_32758').value))"
+              <button onclick="trackParlay('Parlay of the Day','+215',['David Peterson K 4.5 UNDER','Yusei Kikuchi K 5.5 UNDER'],parseFloat(document.getElementById('pu_92112').value))"
                 style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace">
                 Track Parlay
               </button>
@@ -128,35 +129,35 @@
             <div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;border-bottom:1px solid var(--border)">
               <span style="background:rgba(245,166,35,0.15);color:rgb(245,166,35);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">1</span>
               <div style="flex:1">
-                <div style="font-weight:600;font-size:0.85rem">Jose Soriano K 5.5 UNDER</div>
-                <div style="font-size:0.72rem;color:var(--muted)">LAA @ CIN &nbsp;·&nbsp; Fair prob: 66.9%</div>
+                <div style="font-weight:600;font-size:0.85rem">David Peterson K 4.5 UNDER</div>
+                <div style="font-size:0.72rem;color:var(--muted)">NYM @ LAD &nbsp;·&nbsp; Fair prob: 62.1%</div>
               </div>
-              <span style="font-family:monospace;font-weight:700;color:rgb(245,166,35)">-135</span>
+              <span style="font-family:monospace;font-weight:700;color:rgb(245,166,35)">-117</span>
             </div>
             <div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;border-bottom:1px solid var(--border)">
               <span style="background:rgba(245,166,35,0.15);color:rgb(245,166,35);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">2</span>
               <div style="flex:1">
-                <div style="font-weight:600;font-size:0.85rem">Nick Pivetta K 7.5 UNDER</div>
-                <div style="font-size:0.72rem;color:var(--muted)">COL @ SD &nbsp;·&nbsp; Fair prob: 64.0%</div>
+                <div style="font-weight:600;font-size:0.85rem">Yusei Kikuchi K 5.5 UNDER</div>
+                <div style="font-size:0.72rem;color:var(--muted)">LAA @ NYY &nbsp;·&nbsp; Fair prob: 61.2%</div>
               </div>
-              <span style="font-family:monospace;font-weight:700;color:rgb(245,166,35)">-140</span>
+              <span style="font-family:monospace;font-weight:700;color:rgb(245,166,35)">-143</span>
             </div>
           <div style="margin-top:0.75rem;font-size:0.72rem;color:var(--muted)">
-            Combined fair probability: 42.8% &nbsp;·&nbsp; Targeting ~+200 odds &nbsp;·&nbsp; Verify odds on Bovada before placing
+            Combined fair probability: 38.0% &nbsp;·&nbsp; Targeting ~+200 odds &nbsp;·&nbsp; Verify odds on Bovada before placing
           </div>
         </div>
         <div style="background:rgba(180,100,255,0.06);border:1px solid rgba(180,100,255,0.3);border-radius:10px;padding:1.2rem 1.4rem;margin-bottom:1rem">
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem">
             <div style="font-family:'DM Mono',monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.08em;color:rgb(180,100,255);font-weight:600">
-              🚀 Shot in the Dark &nbsp;·&nbsp; 5 Legs
+              🚀 Shot in the Dark &nbsp;·&nbsp; 7 Legs
             </div>
             <div style="display:flex;align-items:center;gap:0.75rem">
-              <div style="font-family:monospace;font-size:1.1rem;font-weight:700;color:rgb(180,100,255)">+2206</div>
-              <select id="pu_79643" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+              <div style="font-family:monospace;font-size:1.1rem;font-weight:700;color:rgb(180,100,255)">+9340</div>
+              <select id="pu_96747" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
                 <option value="0.1">0.1u</option><option value="0.5">0.5u</option>
                 <option value="1" selected>1u</option><option value="2">2u</option>
               </select>
-              <button onclick="trackParlay('Shot in the Dark','+2206',['Andrew Painter K 4.5 OVER','Jose Soriano K 5.5 UNDER','Cody Bolton K 3.5 UNDER','Tarik Skubal K 7.5 UNDER','Cam Schlittler K 5.5 OVER'],parseFloat(document.getElementById('pu_79643').value))"
+              <button onclick="trackParlay('Shot in the Dark','+9340',['Gavin Williams K 6.5 OVER','Paul Skenes K 6.5 UNDER','George Kirby K 5.5 OVER','Eury Perez K 5.5 OVER','David Peterson K 4.5 UNDER','Yusei Kikuchi K 5.5 UNDER','Cristopher Sanchez K 6.5 OVER'],parseFloat(document.getElementById('pu_96747').value))"
                 style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace">
                 Track Parlay
               </button>
@@ -166,45 +167,61 @@
             <div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;border-bottom:1px solid var(--border)">
               <span style="background:rgba(180,100,255,0.15);color:rgb(180,100,255);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">1</span>
               <div style="flex:1">
-                <div style="font-weight:600;font-size:0.85rem">Andrew Painter K 4.5 OVER</div>
-                <div style="font-size:0.72rem;color:var(--muted)">ARI @ PHI &nbsp;·&nbsp; Fair prob: 69.8%</div>
+                <div style="font-weight:600;font-size:0.85rem">Gavin Williams K 6.5 OVER</div>
+                <div style="font-size:0.72rem;color:var(--muted)">CLE @ STL &nbsp;·&nbsp; Fair prob: 63.3%</div>
               </div>
-              <span style="font-family:monospace;font-weight:700;color:rgb(180,100,255)">-115</span>
+              <span style="font-family:monospace;font-weight:700;color:rgb(180,100,255)">+110</span>
             </div>
             <div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;border-bottom:1px solid var(--border)">
               <span style="background:rgba(180,100,255,0.15);color:rgb(180,100,255);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">2</span>
               <div style="flex:1">
-                <div style="font-weight:600;font-size:0.85rem">Jose Soriano K 5.5 UNDER</div>
-                <div style="font-size:0.72rem;color:var(--muted)">LAA @ CIN &nbsp;·&nbsp; Fair prob: 66.9%</div>
+                <div style="font-weight:600;font-size:0.85rem">Paul Skenes K 6.5 UNDER</div>
+                <div style="font-size:0.72rem;color:var(--muted)">WSH @ PIT &nbsp;·&nbsp; Fair prob: 63.0%</div>
               </div>
-              <span style="font-family:monospace;font-weight:700;color:rgb(180,100,255)">-135</span>
+              <span style="font-family:monospace;font-weight:700;color:rgb(180,100,255)">-116</span>
             </div>
             <div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;border-bottom:1px solid var(--border)">
               <span style="background:rgba(180,100,255,0.15);color:rgb(180,100,255);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">3</span>
               <div style="flex:1">
-                <div style="font-weight:600;font-size:0.85rem">Cody Bolton K 3.5 UNDER</div>
-                <div style="font-size:0.72rem;color:var(--muted)">HOU @ SEA &nbsp;·&nbsp; Fair prob: 65.8%</div>
+                <div style="font-weight:600;font-size:0.85rem">George Kirby K 5.5 OVER</div>
+                <div style="font-size:0.72rem;color:var(--muted)">HOU @ SEA &nbsp;·&nbsp; Fair prob: 63.0%</div>
               </div>
               <span style="font-family:monospace;font-weight:700;color:rgb(180,100,255)">+100</span>
             </div>
             <div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;border-bottom:1px solid var(--border)">
               <span style="background:rgba(180,100,255,0.15);color:rgb(180,100,255);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">4</span>
               <div style="flex:1">
-                <div style="font-weight:600;font-size:0.85rem">Tarik Skubal K 7.5 UNDER</div>
-                <div style="font-size:0.72rem;color:var(--muted)">MIA @ DET &nbsp;·&nbsp; Fair prob: 64.2%</div>
+                <div style="font-weight:600;font-size:0.85rem">Eury Perez K 5.5 OVER</div>
+                <div style="font-size:0.72rem;color:var(--muted)">MIA @ ATL &nbsp;·&nbsp; Fair prob: 62.2%</div>
               </div>
-              <span style="font-family:monospace;font-weight:700;color:rgb(180,100,255)">-104</span>
+              <span style="font-family:monospace;font-weight:700;color:rgb(180,100,255)">-106</span>
             </div>
             <div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;border-bottom:1px solid var(--border)">
               <span style="background:rgba(180,100,255,0.15);color:rgb(180,100,255);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">5</span>
               <div style="flex:1">
-                <div style="font-weight:600;font-size:0.85rem">Cam Schlittler K 5.5 OVER</div>
-                <div style="font-size:0.72rem;color:var(--muted)">NYY @ TB &nbsp;·&nbsp; Fair prob: 62.4%</div>
+                <div style="font-weight:600;font-size:0.85rem">David Peterson K 4.5 UNDER</div>
+                <div style="font-size:0.72rem;color:var(--muted)">NYM @ LAD &nbsp;·&nbsp; Fair prob: 62.1%</div>
               </div>
-              <span style="font-family:monospace;font-weight:700;color:rgb(180,100,255)">-124</span>
+              <span style="font-family:monospace;font-weight:700;color:rgb(180,100,255)">-117</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;border-bottom:1px solid var(--border)">
+              <span style="background:rgba(180,100,255,0.15);color:rgb(180,100,255);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">6</span>
+              <div style="flex:1">
+                <div style="font-weight:600;font-size:0.85rem">Yusei Kikuchi K 5.5 UNDER</div>
+                <div style="font-size:0.72rem;color:var(--muted)">LAA @ NYY &nbsp;·&nbsp; Fair prob: 61.2%</div>
+              </div>
+              <span style="font-family:monospace;font-weight:700;color:rgb(180,100,255)">-143</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;border-bottom:1px solid var(--border)">
+              <span style="background:rgba(180,100,255,0.15);color:rgb(180,100,255);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">7</span>
+              <div style="flex:1">
+                <div style="font-weight:600;font-size:0.85rem">Cristopher Sanchez K 6.5 OVER</div>
+                <div style="font-size:0.72rem;color:var(--muted)">CHC @ PHI &nbsp;·&nbsp; Fair prob: 55.9%</div>
+              </div>
+              <span style="font-family:monospace;font-weight:700;color:rgb(180,100,255)">-103</span>
             </div>
           <div style="margin-top:0.75rem;font-size:0.72rem;color:var(--muted)">
-            Combined fair probability: 12.3% &nbsp;·&nbsp; Long shot · Small unit only (0.1u max) &nbsp;·&nbsp; Verify odds on Bovada before placing
+            Combined fair probability: 3.3% &nbsp;·&nbsp; Best prob × payout combo · Small unit only (0.1u max) &nbsp;·&nbsp; Verify odds on Bovada before placing
           </div>
         </div>
     <div class="filter-bar">
@@ -232,11 +249,11 @@
         <option value="60">60%+</option><option value="63">63%+</option>
       </select>
       <select id="f-matchup" class="filter-select" onchange="applyFilters()">
-        <option value="">All Games</option><option value="ARI @ PHI">ARI @ PHI</option><option value="BOS @ STL">BOS @ STL</option><option value="CLE @ ATL">CLE @ ATL</option><option value="COL @ SD">COL @ SD</option><option value="HOU @ SEA">HOU @ SEA</option><option value="LAA @ CIN">LAA @ CIN</option><option value="MIA @ DET">MIA @ DET</option><option value="MIN @ TOR">MIN @ TOR</option><option value="NYY @ TB">NYY @ TB</option><option value="PIT @ CHC">PIT @ CHC</option><option value="SF @ BAL">SF @ BAL</option><option value="TEX @ LAD">TEX @ LAD</option><option value="WSH @ MIL">WSH @ MIL</option>
+        <option value="">All Games</option><option value="CHC @ PHI">CHC @ PHI</option><option value="CLE @ STL">CLE @ STL</option><option value="HOU @ SEA">HOU @ SEA</option><option value="LAA @ NYY">LAA @ NYY</option><option value="MIA @ ATL">MIA @ ATL</option><option value="NYM @ LAD">NYM @ LAD</option><option value="WSH @ PIT">WSH @ PIT</option>
       </select>
       <button class="filter-reset" onclick="resetFilters()">Reset</button>
     </div>
-    <p style="font-size:0.75rem;color:var(--muted);margin-bottom:0.75rem">19 picks today &nbsp;·&nbsp; Sorted by game time &nbsp;·&nbsp; Check Bovada odds before betting</p>
+    <p style="font-size:0.75rem;color:var(--muted);margin-bottom:0.75rem">10 picks today &nbsp;·&nbsp; Sorted by game time &nbsp;·&nbsp; Check Bovada odds before betting</p>
     <div class="table-wrap">
       <table class="data-table" id="mlb-table"><thead><tr>
         <th class="tt" data-tip="Overall bet quality based on EV% and probability">Rating</th>
@@ -253,571 +270,301 @@
         <th>Matchup</th>
         <th>Time</th>
         <th>Track</th>
-      </tr></thead><tbody><tr data-stat="k" data-side="OVER" data-rating="🔥 ELITE" data-ev="30.47" data-fairprob="69.8" data-matchup="ARI @ PHI" style='background:rgba(245,166,35,0.07);border-left:3px solid #f5a623'>
+      </tr></thead><tbody><tr data-stat="k" data-side="OVER" data-rating="🔥 ELITE" data-ev="25.96" data-fairprob="63.0" data-matchup="HOU @ SEA" style='background:rgba(245,166,35,0.07);border-left:3px solid #f5a623'>
           <td><span class="bet-rating rating-elite">🔥 ELITE</span></td>
-          <td><strong>Andrew Painter</strong></td>
-          <td><span class="stat-pill">Strikeouts</span></td>
-          <td>4.5</td>
-          <td style="color:#3d8ef8;font-weight:600">7.92</td>
-          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+3.42</td>
-          <td><span class="badge badge-over">OVER</span></td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">-115</td>
-          <td style="font-family:monospace;color:var(--muted)">-116</td>
-          <td>69.8%</td>
-          <td class="ev-cell">30.5%</td>
-          <td class="muted">ARI @ PHI</td>
-          <td class="muted">10:36 AM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Andrew Painter|Strikeouts|4.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option>
-                <option value="2">2u</option>
-                <option value="3">3u</option>
-                <option value="4">4u</option>
-                <option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('Andrew Painter','Strikeouts','4.5','OVER','-115','ARI @ PHI','10:36 AM PT','MLB')"
-                id="tb_Andrew Painter|Strikeouts|4.5|OVER"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr><tr data-stat="hrb" data-side="OVER" data-rating="➖ AVERAGE" data-ev="7.66" data-fairprob="57.6" data-matchup="SF @ BAL">
-          <td><span class="bet-rating rating-average">➖ AVERAGE</span></td>
-          <td><strong>Willy Adames</strong></td>
-          <td><span class="stat-pill">HRB</span></td>
-          <td>1.5</td>
-          <td style="color:#3d8ef8;font-weight:600">2.63</td>
-          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.13</td>
-          <td><span class="badge badge-over">OVER</span></td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">-115</td>
-          <td style="font-family:monospace;color:var(--muted)">-120</td>
-          <td>57.6%</td>
-          <td class="ev-cell">7.7%</td>
-          <td class="muted">SF @ BAL</td>
-          <td class="muted">10:36 AM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Willy Adames|HRB|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option>
-                <option value="2">2u</option>
-                <option value="3">3u</option>
-                <option value="4">4u</option>
-                <option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('Willy Adames','HRB','1.5','OVER','-115','SF @ BAL','10:36 AM PT','MLB')"
-                id="tb_Willy Adames|HRB|1.5|OVER"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr><tr data-stat="hrb" data-side="OVER" data-rating="👍 GOOD" data-ev="4.85" data-fairprob="58.2" data-matchup="SF @ BAL">
-          <td><span class="bet-rating rating-good">👍 GOOD</span></td>
-          <td><strong>Taylor Ward</strong></td>
-          <td><span class="stat-pill">HRB</span></td>
-          <td>1.5</td>
-          <td style="color:#3d8ef8;font-weight:600">2.82</td>
-          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.32</td>
-          <td><span class="badge badge-over">OVER</span></td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">-125</td>
-          <td style="font-family:monospace;color:var(--muted)">-115</td>
-          <td>58.2%</td>
-          <td class="ev-cell">4.8%</td>
-          <td class="muted">SF @ BAL</td>
-          <td class="muted">10:36 AM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Taylor Ward|HRB|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option>
-                <option value="2">2u</option>
-                <option value="3">3u</option>
-                <option value="4">4u</option>
-                <option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('Taylor Ward','HRB','1.5','OVER','-125','SF @ BAL','10:36 AM PT','MLB')"
-                id="tb_Taylor Ward|HRB|1.5|OVER"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr><tr data-stat="k" data-side="OVER" data-rating="🔥 ELITE" data-ev="7.21" data-fairprob="63.4" data-matchup="MIN @ TOR">
-          <td><span class="bet-rating rating-elite">🔥 ELITE</span></td>
-          <td><strong>Taj Bradley</strong></td>
-          <td><span class="stat-pill">Strikeouts</span></td>
-          <td>4.5</td>
-          <td style="color:#3d8ef8;font-weight:600">6.44</td>
-          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.94</td>
-          <td><span class="badge badge-over">OVER</span></td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">-145</td>
-          <td style="font-family:monospace;color:var(--muted)">+120</td>
-          <td>63.4%</td>
-          <td class="ev-cell">7.2%</td>
-          <td class="muted">MIN @ TOR</td>
-          <td class="muted">10:38 AM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Taj Bradley|Strikeouts|4.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option>
-                <option value="2">2u</option>
-                <option value="3">3u</option>
-                <option value="4">4u</option>
-                <option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('Taj Bradley','Strikeouts','4.5','OVER','-145','MIN @ TOR','10:38 AM PT','MLB')"
-                id="tb_Taj Bradley|Strikeouts|4.5|OVER"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr><tr data-stat="k" data-side="OVER" data-rating="🔥 ELITE" data-ev="12.66" data-fairprob="62.4" data-matchup="NYY @ TB">
-          <td><span class="bet-rating rating-elite">🔥 ELITE</span></td>
-          <td><strong>Cam Schlittler</strong></td>
+          <td><strong>George Kirby</strong></td>
           <td><span class="stat-pill">Strikeouts</span></td>
           <td>5.5</td>
-          <td style="color:#3d8ef8;font-weight:600">7.40</td>
-          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.90</td>
+          <td style="color:#3d8ef8;font-weight:600">7.51</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+2.01</td>
           <td><span class="badge badge-over">OVER</span></td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">-124</td>
-          <td style="font-family:monospace;color:var(--muted)">-109</td>
-          <td>62.4%</td>
-          <td class="ev-cell">12.7%</td>
-          <td class="muted">NYY @ TB</td>
-          <td class="muted">10:40 AM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Cam Schlittler|Strikeouts|5.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option>
-                <option value="2">2u</option>
-                <option value="3">3u</option>
-                <option value="4">4u</option>
-                <option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('Cam Schlittler','Strikeouts','5.5','OVER','-124','NYY @ TB','10:40 AM PT','MLB')"
-                id="tb_Cam Schlittler|Strikeouts|5.5|OVER"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr><tr data-stat="k" data-side="UNDER" data-rating="🔥 ELITE" data-ev="24.28" data-fairprob="60.9" data-matchup="LAA @ CIN" style='background:rgba(245,166,35,0.07);border-left:3px solid #f5a623'>
-          <td><span class="bet-rating rating-elite">🔥 ELITE</span></td>
-          <td><strong>Andrew Abbott</strong></td>
-          <td><span class="stat-pill">Strikeouts</span></td>
-          <td>5.5</td>
-          <td style="color:#3d8ef8;font-weight:600">4.41</td>
-          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+-1.09</td>
-          <td><span class="badge badge-under">UNDER</span></td>
-          <td style="font-family:monospace;color:#f5a623;font-weight:600">+104</td>
-          <td style="font-family:monospace;color:var(--muted)">-105</td>
-          <td>60.9%</td>
-          <td class="ev-cell">24.3%</td>
-          <td class="muted">LAA @ CIN</td>
-          <td class="muted">10:41 AM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Andrew Abbott|Strikeouts|5.5|UNDER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option>
-                <option value="2">2u</option>
-                <option value="3">3u</option>
-                <option value="4">4u</option>
-                <option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('Andrew Abbott','Strikeouts','5.5','UNDER','+104','LAA @ CIN','10:41 AM PT','MLB')"
-                id="tb_Andrew Abbott|Strikeouts|5.5|UNDER"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr><tr data-stat="k" data-side="UNDER" data-rating="🔥 ELITE" data-ev="16.47" data-fairprob="66.9" data-matchup="LAA @ CIN">
-          <td><span class="bet-rating rating-elite">🔥 ELITE</span></td>
-          <td><strong>Jose Soriano</strong></td>
-          <td><span class="stat-pill">Strikeouts</span></td>
-          <td>5.5</td>
-          <td style="color:#3d8ef8;font-weight:600">3.64</td>
-          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+-1.86</td>
-          <td><span class="badge badge-under">UNDER</span></td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">-135</td>
-          <td style="font-family:monospace;color:var(--muted)">-110</td>
-          <td>66.9%</td>
-          <td class="ev-cell">16.5%</td>
-          <td class="muted">LAA @ CIN</td>
-          <td class="muted">10:41 AM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Jose Soriano|Strikeouts|5.5|UNDER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option>
-                <option value="2">2u</option>
-                <option value="3">3u</option>
-                <option value="4">4u</option>
-                <option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('Jose Soriano','Strikeouts','5.5','UNDER','-135','LAA @ CIN','10:41 AM PT','MLB')"
-                id="tb_Jose Soriano|Strikeouts|5.5|UNDER"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr><tr data-stat="hrb" data-side="OVER" data-rating="🔥 ELITE" data-ev="15.9" data-fairprob="59.4" data-matchup="LAA @ CIN">
-          <td><span class="bet-rating rating-elite">🔥 ELITE</span></td>
-          <td><strong>Jorge Soler</strong></td>
-          <td><span class="stat-pill">HRB</span></td>
-          <td>1.5</td>
-          <td style="color:#3d8ef8;font-weight:600">3.24</td>
-          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.74</td>
-          <td><span class="badge badge-over">OVER</span></td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">-105</td>
-          <td style="font-family:monospace;color:var(--muted)">-110</td>
-          <td>59.4%</td>
-          <td class="ev-cell">15.9%</td>
-          <td class="muted">LAA @ CIN</td>
-          <td class="muted">10:41 AM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Jorge Soler|HRB|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option>
-                <option value="2">2u</option>
-                <option value="3">3u</option>
-                <option value="4">4u</option>
-                <option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('Jorge Soler','HRB','1.5','OVER','-105','LAA @ CIN','10:41 AM PT','MLB')"
-                id="tb_Jorge Soler|HRB|1.5|OVER"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr><tr data-stat="k" data-side="UNDER" data-rating="🔥 ELITE" data-ev="25.99" data-fairprob="64.2" data-matchup="MIA @ DET" style='background:rgba(245,166,35,0.07);border-left:3px solid #f5a623'>
-          <td><span class="bet-rating rating-elite">🔥 ELITE</span></td>
-          <td><strong>Tarik Skubal</strong></td>
-          <td><span class="stat-pill">Strikeouts</span></td>
-          <td>7.5</td>
-          <td style="color:#3d8ef8;font-weight:600">5.70</td>
-          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+-1.80</td>
-          <td><span class="badge badge-under">UNDER</span></td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">-104</td>
-          <td style="font-family:monospace;color:var(--muted)">-104</td>
-          <td>64.2%</td>
-          <td class="ev-cell">26.0%</td>
-          <td class="muted">MIA @ DET</td>
-          <td class="muted">10:41 AM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Tarik Skubal|Strikeouts|7.5|UNDER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option>
-                <option value="2">2u</option>
-                <option value="3">3u</option>
-                <option value="4">4u</option>
-                <option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('Tarik Skubal','Strikeouts','7.5','UNDER','-104','MIA @ DET','10:41 AM PT','MLB')"
-                id="tb_Tarik Skubal|Strikeouts|7.5|UNDER"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr><tr data-stat="hrb" data-side="OVER" data-rating="🔥 ELITE" data-ev="26.85" data-fairprob="60.4" data-matchup="WSH @ MIL" style='background:rgba(245,166,35,0.07);border-left:3px solid #f5a623'>
-          <td><span class="bet-rating rating-elite">🔥 ELITE</span></td>
-          <td><strong>James Wood</strong></td>
-          <td><span class="stat-pill">HRB</span></td>
-          <td>1.5</td>
-          <td style="color:#3d8ef8;font-weight:600">3.78</td>
-          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+2.28</td>
-          <td><span class="badge badge-over">OVER</span></td>
-          <td style="font-family:monospace;color:#f5a623;font-weight:600">+110</td>
-          <td style="font-family:monospace;color:var(--muted)">+100</td>
-          <td>60.4%</td>
-          <td class="ev-cell">26.9%</td>
-          <td class="muted">WSH @ MIL</td>
-          <td class="muted">11:11 AM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_James Wood|HRB|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option>
-                <option value="2">2u</option>
-                <option value="3">3u</option>
-                <option value="4">4u</option>
-                <option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('James Wood','HRB','1.5','OVER','+110','WSH @ MIL','11:11 AM PT','MLB')"
-                id="tb_James Wood|HRB|1.5|OVER"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr><tr data-stat="hrb" data-side="OVER" data-rating="🔥 ELITE" data-ev="10.31" data-fairprob="57.8" data-matchup="WSH @ MIL">
-          <td><span class="bet-rating rating-elite">🔥 ELITE</span></td>
-          <td><strong>Garrett Mitchell</strong></td>
-          <td><span class="stat-pill">HRB</span></td>
-          <td>1.5</td>
-          <td style="color:#3d8ef8;font-weight:600">2.68</td>
-          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.18</td>
-          <td><span class="badge badge-over">OVER</span></td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">-110</td>
-          <td style="font-family:monospace;color:var(--muted)">-112</td>
-          <td>57.8%</td>
-          <td class="ev-cell">10.3%</td>
-          <td class="muted">WSH @ MIL</td>
-          <td class="muted">11:11 AM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Garrett Mitchell|HRB|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option>
-                <option value="2">2u</option>
-                <option value="3">3u</option>
-                <option value="4">4u</option>
-                <option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('Garrett Mitchell','HRB','1.5','OVER','-110','WSH @ MIL','11:11 AM PT','MLB')"
-                id="tb_Garrett Mitchell|HRB|1.5|OVER"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr><tr data-stat="hrb" data-side="OVER" data-rating="➖ AVERAGE" data-ev="7.62" data-fairprob="57.6" data-matchup="BOS @ STL">
-          <td><span class="bet-rating rating-average">➖ AVERAGE</span></td>
-          <td><strong>Jordan Walker</strong></td>
-          <td><span class="stat-pill">HRB</span></td>
-          <td>1.5</td>
-          <td style="color:#3d8ef8;font-weight:600">2.62</td>
-          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.12</td>
-          <td><span class="badge badge-over">OVER</span></td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">-115</td>
-          <td style="font-family:monospace;color:var(--muted)">-112</td>
-          <td>57.6%</td>
-          <td class="ev-cell">7.6%</td>
-          <td class="muted">BOS @ STL</td>
-          <td class="muted">11:16 AM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Jordan Walker|HRB|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option>
-                <option value="2">2u</option>
-                <option value="3">3u</option>
-                <option value="4">4u</option>
-                <option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('Jordan Walker','HRB','1.5','OVER','-115','BOS @ STL','11:16 AM PT','MLB')"
-                id="tb_Jordan Walker|HRB|1.5|OVER"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr><tr data-stat="k" data-side="OVER" data-rating="👍 GOOD" data-ev="2.37" data-fairprob="58.1" data-matchup="PIT @ CHC">
-          <td><span class="bet-rating rating-good">👍 GOOD</span></td>
-          <td><strong>Bubba Chandler</strong></td>
-          <td><span class="stat-pill">Strikeouts</span></td>
-          <td>4.5</td>
-          <td style="color:#3d8ef8;font-weight:600">5.62</td>
-          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.12</td>
-          <td><span class="badge badge-over">OVER</span></td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">-131</td>
-          <td style="font-family:monospace;color:var(--muted)">-105</td>
-          <td>58.1%</td>
-          <td class="ev-cell">2.4%</td>
-          <td class="muted">PIT @ CHC</td>
-          <td class="muted">11:21 AM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Bubba Chandler|Strikeouts|4.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option>
-                <option value="2">2u</option>
-                <option value="3">3u</option>
-                <option value="4">4u</option>
-                <option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('Bubba Chandler','Strikeouts','4.5','OVER','-131','PIT @ CHC','11:21 AM PT','MLB')"
-                id="tb_Bubba Chandler|Strikeouts|4.5|OVER"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr><tr data-stat="k" data-side="UNDER" data-rating="🔥 ELITE" data-ev="9.75" data-fairprob="64.0" data-matchup="COL @ SD">
-          <td><span class="bet-rating rating-elite">🔥 ELITE</span></td>
-          <td><strong>Nick Pivetta</strong></td>
-          <td><span class="stat-pill">Strikeouts</span></td>
-          <td>7.5</td>
-          <td style="color:#3d8ef8;font-weight:600">5.73</td>
-          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+-1.77</td>
-          <td><span class="badge badge-under">UNDER</span></td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">-140</td>
-          <td style="font-family:monospace;color:var(--muted)">-103</td>
-          <td>64.0%</td>
-          <td class="ev-cell">9.8%</td>
-          <td class="muted">COL @ SD</td>
-          <td class="muted">01:11 PM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Nick Pivetta|Strikeouts|7.5|UNDER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option>
-                <option value="2">2u</option>
-                <option value="3">3u</option>
-                <option value="4">4u</option>
-                <option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('Nick Pivetta','Strikeouts','7.5','UNDER','-140','COL @ SD','01:11 PM PT','MLB')"
-                id="tb_Nick Pivetta|Strikeouts|7.5|UNDER"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr><tr data-stat="hrb" data-side="OVER" data-rating="👍 GOOD" data-ev="2.14" data-fairprob="58.7" data-matchup="COL @ SD">
-          <td><span class="bet-rating rating-good">👍 GOOD</span></td>
-          <td><strong>Xander Bogaerts</strong></td>
-          <td><span class="stat-pill">HRB</span></td>
-          <td>1.5</td>
-          <td style="color:#3d8ef8;font-weight:600">2.97</td>
-          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.47</td>
-          <td><span class="badge badge-over">OVER</span></td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">-135</td>
-          <td style="font-family:monospace;color:var(--muted)">-105</td>
-          <td>58.7%</td>
-          <td class="ev-cell">2.1%</td>
-          <td class="muted">COL @ SD</td>
-          <td class="muted">01:11 PM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Xander Bogaerts|HRB|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option>
-                <option value="2">2u</option>
-                <option value="3">3u</option>
-                <option value="4">4u</option>
-                <option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('Xander Bogaerts','HRB','1.5','OVER','-135','COL @ SD','01:11 PM PT','MLB')"
-                id="tb_Xander Bogaerts|HRB|1.5|OVER"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr><tr data-stat="k" data-side="UNDER" data-rating="🔥 ELITE" data-ev="31.63" data-fairprob="65.8" data-matchup="HOU @ SEA" style='background:rgba(245,166,35,0.07);border-left:3px solid #f5a623'>
-          <td><span class="bet-rating rating-elite">🔥 ELITE</span></td>
-          <td><strong>Cody Bolton</strong></td>
-          <td><span class="stat-pill">Strikeouts</span></td>
-          <td>3.5</td>
-          <td style="color:#3d8ef8;font-weight:600">2.22</td>
-          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+-1.28</td>
-          <td><span class="badge badge-under">UNDER</span></td>
           <td style="font-family:monospace;color:#f5a623;font-weight:600">+100</td>
-          <td style="font-family:monospace;color:var(--muted)">-102</td>
-          <td>65.8%</td>
-          <td class="ev-cell">31.6%</td>
+          <td style="font-family:monospace;color:var(--muted)">+113</td>
+          <td>63.0%</td>
+          <td class="ev-cell">26.0%</td>
           <td class="muted">HOU @ SEA</td>
           <td class="muted">01:11 PM PT</td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Cody Bolton|Strikeouts|3.5|UNDER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+              <select id="u_George Kirby|Strikeouts|5.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
                 <option value="1">1u</option>
                 <option value="2">2u</option>
                 <option value="3">3u</option>
                 <option value="4">4u</option>
                 <option value="5">5u</option>
               </select>
-              <button onclick="trackBet('Cody Bolton','Strikeouts','3.5','UNDER','+100','HOU @ SEA','01:11 PM PT','MLB')"
-                id="tb_Cody Bolton|Strikeouts|3.5|UNDER"
+              <button onclick="trackBet('George Kirby','Strikeouts','5.5','OVER','+100','HOU @ SEA','01:11 PM PT','MLB')"
+                id="tb_George Kirby|Strikeouts|5.5|OVER"
                 style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
                 Track
               </button>
             </div>
           </td>
-        </tr><tr data-stat="hrb" data-side="OVER" data-rating="🔥 ELITE" data-ev="17.68" data-fairprob="58.8" data-matchup="TEX @ LAD">
+        </tr><tr data-stat="k" data-side="OVER" data-rating="🔥 ELITE" data-ev="10.15" data-fairprob="55.9" data-matchup="CHC @ PHI">
           <td><span class="bet-rating rating-elite">🔥 ELITE</span></td>
-          <td><strong>Andy Pages</strong></td>
-          <td><span class="stat-pill">HRB</span></td>
-          <td>1.5</td>
-          <td style="color:#3d8ef8;font-weight:600">3.03</td>
-          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.53</td>
+          <td><strong>Cristopher Sanchez</strong></td>
+          <td><span class="stat-pill">Strikeouts</span></td>
+          <td>6.5</td>
+          <td style="color:#3d8ef8;font-weight:600">7.47</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+0.97</td>
           <td><span class="badge badge-over">OVER</span></td>
-          <td style="font-family:monospace;color:#f5a623;font-weight:600">+100</td>
-          <td style="font-family:monospace;color:var(--muted)">+105</td>
-          <td>58.8%</td>
-          <td class="ev-cell">17.7%</td>
-          <td class="muted">TEX @ LAD</td>
-          <td class="muted">01:11 PM PT</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">-103</td>
+          <td style="font-family:monospace;color:var(--muted)">+100</td>
+          <td>55.9%</td>
+          <td class="ev-cell">10.2%</td>
+          <td class="muted">CHC @ PHI</td>
+          <td class="muted">03:41 PM PT</td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Andy Pages|HRB|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+              <select id="u_Cristopher Sanchez|Strikeouts|6.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
                 <option value="1">1u</option>
                 <option value="2">2u</option>
                 <option value="3">3u</option>
                 <option value="4">4u</option>
                 <option value="5">5u</option>
               </select>
-              <button onclick="trackBet('Andy Pages','HRB','1.5','OVER','+100','TEX @ LAD','01:11 PM PT','MLB')"
-                id="tb_Andy Pages|HRB|1.5|OVER"
+              <button onclick="trackBet('Cristopher Sanchez','Strikeouts','6.5','OVER','-103','CHC @ PHI','03:41 PM PT','MLB')"
+                id="tb_Cristopher Sanchez|Strikeouts|6.5|OVER"
                 style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
                 Track
               </button>
             </div>
           </td>
-        </tr><tr data-stat="hrb" data-side="OVER" data-rating="🔥 ELITE" data-ev="9.88" data-fairprob="57.6" data-matchup="TEX @ LAD">
+        </tr><tr data-stat="k" data-side="UNDER" data-rating="🔥 ELITE" data-ev="17.38" data-fairprob="63.0" data-matchup="WSH @ PIT" style='background:rgba(245,166,35,0.07);border-left:3px solid #f5a623'>
           <td><span class="bet-rating rating-elite">🔥 ELITE</span></td>
-          <td><strong>Teoscar Hernandez</strong></td>
-          <td><span class="stat-pill">HRB</span></td>
-          <td>1.5</td>
-          <td style="color:#3d8ef8;font-weight:600">2.62</td>
-          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.12</td>
-          <td><span class="badge badge-over">OVER</span></td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">-110</td>
-          <td style="font-family:monospace;color:var(--muted)">-108</td>
-          <td>57.6%</td>
-          <td class="ev-cell">9.9%</td>
-          <td class="muted">TEX @ LAD</td>
-          <td class="muted">01:11 PM PT</td>
+          <td><strong>Paul Skenes</strong></td>
+          <td><span class="stat-pill">Strikeouts</span></td>
+          <td>6.5</td>
+          <td style="color:#3d8ef8;font-weight:600">5.01</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+-1.49</td>
+          <td><span class="badge badge-under">UNDER</span></td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">-116</td>
+          <td style="font-family:monospace;color:var(--muted)">-115</td>
+          <td>63.0%</td>
+          <td class="ev-cell">17.4%</td>
+          <td class="muted">WSH @ PIT</td>
+          <td class="muted">03:41 PM PT</td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Teoscar Hernandez|HRB|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+              <select id="u_Paul Skenes|Strikeouts|6.5|UNDER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
                 <option value="1">1u</option>
                 <option value="2">2u</option>
                 <option value="3">3u</option>
                 <option value="4">4u</option>
                 <option value="5">5u</option>
               </select>
-              <button onclick="trackBet('Teoscar Hernandez','HRB','1.5','OVER','-110','TEX @ LAD','01:11 PM PT','MLB')"
-                id="tb_Teoscar Hernandez|HRB|1.5|OVER"
+              <button onclick="trackBet('Paul Skenes','Strikeouts','6.5','UNDER','-116','WSH @ PIT','03:41 PM PT','MLB')"
+                id="tb_Paul Skenes|Strikeouts|6.5|UNDER"
                 style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
                 Track
               </button>
             </div>
           </td>
-        </tr><tr data-stat="k" data-side="OVER" data-rating="👍 GOOD" data-ev="5.4" data-fairprob="59.8" data-matchup="CLE @ ATL">
+        </tr><tr data-stat="k" data-side="UNDER" data-rating="🔥 ELITE" data-ev="8.68" data-fairprob="56.2" data-matchup="LAA @ NYY">
+          <td><span class="bet-rating rating-elite">🔥 ELITE</span></td>
+          <td><strong>Will Warren</strong></td>
+          <td><span class="stat-pill">Strikeouts</span></td>
+          <td>5.5</td>
+          <td style="color:#3d8ef8;font-weight:600">4.96</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+-0.54</td>
+          <td><span class="badge badge-under">UNDER</span></td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">-107</td>
+          <td style="font-family:monospace;color:var(--muted)">-105</td>
+          <td>56.2%</td>
+          <td class="ev-cell">8.7%</td>
+          <td class="muted">LAA @ NYY</td>
+          <td class="muted">04:06 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Will Warren|Strikeouts|5.5|UNDER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Will Warren','Strikeouts','5.5','UNDER','-107','LAA @ NYY','04:06 PM PT','MLB')"
+                id="tb_Will Warren|Strikeouts|5.5|UNDER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr><tr data-stat="k" data-side="UNDER" data-rating="👍 GOOD" data-ev="3.95" data-fairprob="61.2" data-matchup="LAA @ NYY">
           <td><span class="bet-rating rating-good">👍 GOOD</span></td>
-          <td><strong>Tanner Bibee</strong></td>
+          <td><strong>Yusei Kikuchi</strong></td>
+          <td><span class="stat-pill">Strikeouts</span></td>
+          <td>5.5</td>
+          <td style="color:#3d8ef8;font-weight:600">4.38</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+-1.12</td>
+          <td><span class="badge badge-under">UNDER</span></td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">-143</td>
+          <td style="font-family:monospace;color:var(--muted)">-101</td>
+          <td>61.2%</td>
+          <td class="ev-cell">4.0%</td>
+          <td class="muted">LAA @ NYY</td>
+          <td class="muted">04:06 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Yusei Kikuchi|Strikeouts|5.5|UNDER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Yusei Kikuchi','Strikeouts','5.5','UNDER','-143','LAA @ NYY','04:06 PM PT','MLB')"
+                id="tb_Yusei Kikuchi|Strikeouts|5.5|UNDER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr><tr data-stat="hrb" data-side="OVER" data-rating="➖ AVERAGE" data-ev="3.0" data-fairprob="57.2" data-matchup="LAA @ NYY">
+          <td><span class="bet-rating rating-average">➖ AVERAGE</span></td>
+          <td><strong>Zach Neto</strong></td>
+          <td><span class="stat-pill">HRB</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">2.53</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.03</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">-125</td>
+          <td style="font-family:monospace;color:var(--muted)">-115</td>
+          <td>57.2%</td>
+          <td class="ev-cell">3.0%</td>
+          <td class="muted">LAA @ NYY</td>
+          <td class="muted">04:06 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Zach Neto|HRB|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Zach Neto','HRB','1.5','OVER','-125','LAA @ NYY','04:06 PM PT','MLB')"
+                id="tb_Zach Neto|HRB|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr><tr data-stat="k" data-side="OVER" data-rating="🔥 ELITE" data-ev="20.88" data-fairprob="62.2" data-matchup="MIA @ ATL" style='background:rgba(245,166,35,0.07);border-left:3px solid #f5a623'>
+          <td><span class="bet-rating rating-elite">🔥 ELITE</span></td>
+          <td><strong>Eury Perez</strong></td>
+          <td><span class="stat-pill">Strikeouts</span></td>
+          <td>5.5</td>
+          <td style="color:#3d8ef8;font-weight:600">7.37</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.87</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">-106</td>
+          <td style="font-family:monospace;color:var(--muted)">+104</td>
+          <td>62.2%</td>
+          <td class="ev-cell">20.9%</td>
+          <td class="muted">MIA @ ATL</td>
+          <td class="muted">04:16 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Eury Perez|Strikeouts|5.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Eury Perez','Strikeouts','5.5','OVER','-106','MIA @ ATL','04:16 PM PT','MLB')"
+                id="tb_Eury Perez|Strikeouts|5.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr><tr data-stat="hrb" data-side="OVER" data-rating="🔥 ELITE" data-ev="10.35" data-fairprob="59.0" data-matchup="MIA @ ATL">
+          <td><span class="bet-rating rating-elite">🔥 ELITE</span></td>
+          <td><strong>Drake Baldwin</strong></td>
+          <td><span class="stat-pill">HRB</span></td>
+          <td>1.5</td>
+          <td style="color:#3d8ef8;font-weight:600">3.10</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.60</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">-115</td>
+          <td style="font-family:monospace;color:var(--muted)">-115</td>
+          <td>59.0%</td>
+          <td class="ev-cell">10.3%</td>
+          <td class="muted">MIA @ ATL</td>
+          <td class="muted">04:16 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Drake Baldwin|HRB|1.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Drake Baldwin','HRB','1.5','OVER','-115','MIA @ ATL','04:16 PM PT','MLB')"
+                id="tb_Drake Baldwin|HRB|1.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr><tr data-stat="k" data-side="OVER" data-rating="🔥 ELITE" data-ev="32.92" data-fairprob="63.3" data-matchup="CLE @ STL" style='background:rgba(245,166,35,0.07);border-left:3px solid #f5a623'>
+          <td><span class="bet-rating rating-elite">🔥 ELITE</span></td>
+          <td><strong>Gavin Williams</strong></td>
+          <td><span class="stat-pill">Strikeouts</span></td>
+          <td>6.5</td>
+          <td style="color:#3d8ef8;font-weight:600">8.71</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+2.21</td>
+          <td><span class="badge badge-over">OVER</span></td>
+          <td style="font-family:monospace;color:#f5a623;font-weight:600">+110</td>
+          <td style="font-family:monospace;color:var(--muted)">+114</td>
+          <td>63.3%</td>
+          <td class="ev-cell">32.9%</td>
+          <td class="muted">CLE @ STL</td>
+          <td class="muted">04:46 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Gavin Williams|Strikeouts|6.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Gavin Williams','Strikeouts','6.5','OVER','+110','CLE @ STL','04:46 PM PT','MLB')"
+                id="tb_Gavin Williams|Strikeouts|6.5|OVER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr><tr data-stat="k" data-side="UNDER" data-rating="🔥 ELITE" data-ev="15.24" data-fairprob="62.1" data-matchup="NYM @ LAD" style='background:rgba(245,166,35,0.07);border-left:3px solid #f5a623'>
+          <td><span class="bet-rating rating-elite">🔥 ELITE</span></td>
+          <td><strong>David Peterson</strong></td>
           <td><span class="stat-pill">Strikeouts</span></td>
           <td>4.5</td>
-          <td style="color:#3d8ef8;font-weight:600">5.86</td>
-          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+1.36</td>
-          <td><span class="badge badge-over">OVER</span></td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">-131</td>
-          <td style="font-family:monospace;color:var(--muted)">+100</td>
-          <td>59.8%</td>
-          <td class="ev-cell">5.4%</td>
-          <td class="muted">CLE @ ATL</td>
-          <td class="muted">04:21 PM PT</td>
+          <td style="color:#3d8ef8;font-weight:600">3.41</td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+-1.09</td>
+          <td><span class="badge badge-under">UNDER</span></td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">-117</td>
+          <td style="font-family:monospace;color:var(--muted)">-106</td>
+          <td>62.1%</td>
+          <td class="ev-cell">15.2%</td>
+          <td class="muted">NYM @ LAD</td>
+          <td class="muted">07:11 PM PT</td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Tanner Bibee|Strikeouts|4.5|OVER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+              <select id="u_David Peterson|Strikeouts|4.5|UNDER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
                 <option value="1">1u</option>
                 <option value="2">2u</option>
                 <option value="3">3u</option>
                 <option value="4">4u</option>
                 <option value="5">5u</option>
               </select>
-              <button onclick="trackBet('Tanner Bibee','Strikeouts','4.5','OVER','-131','CLE @ ATL','04:21 PM PT','MLB')"
-                id="tb_Tanner Bibee|Strikeouts|4.5|OVER"
+              <button onclick="trackBet('David Peterson','Strikeouts','4.5','UNDER','-117','NYM @ LAD','07:11 PM PT','MLB')"
+                id="tb_David Peterson|Strikeouts|4.5|UNDER"
                 style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
                 Track
               </button>
@@ -831,72 +578,939 @@
     <div class="tab-title">Game Lines</div>
     <div class="tab-subtitle">Spreads · Totals · Moneylines · Consensus fair odds vs Bovada</div>
   </div>
+  <p class="empty-msg">No positive EV game lines found today.</p>
+</div>
+<div id="series" class="tab-content">
+  <div class="tab-header">
+    <div class="tab-title">4-Game Series</div>
+    <div class="tab-subtitle">True 4-game series only &middot; No off days &middot; Game 4 = high fatigue spot</div>
+  </div>
   
-    <div class="filter-bar">
-      <select id="gl-market" class="filter-select" onchange="applyGLFilters()">
-        <option value="">All Markets</option>
-        <option value="Total">Totals</option>
-        <option value="Spread">Spreads</option>
-        <option value="Moneyline">Moneyline</option>
-      </select>
-      <button class="filter-reset" onclick="resetGLFilters()">Reset</button>
+    <div style="background:rgba(245,166,35,0.06);border:1px solid rgba(245,166,35,0.25);border-radius:10px;
+                padding:1.2rem 1.6rem;margin-bottom:2rem;display:flex;gap:3rem;flex-wrap:wrap;align-items:center">
+      <div>
+        <div style="font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:#f5a623">100%</div>
+        <div style="font-size:0.72rem;font-family:'DM Mono',monospace;color:var(--muted);text-transform:uppercase">Home wins at least 1 game</div>
+      </div>
+      <div style="flex:1;font-size:0.8rem;color:var(--muted);line-height:1.6">
+        <strong style="color:var(--text)">Strategy:</strong> Bet on the home team ML each game, doubling until they win.
+        Full Martingale: 1u &rarr; 2u &rarr; 4u &rarr; 8u (max 15u exposure).
+        Capped: 1u &rarr; 2u &rarr; 3u &rarr; 4u (max 10u exposure).
+        Stop as soon as the home team wins &mdash; you profit on every series where they win at least 1 game.<br>
+        <span style="color:var(--muted);font-size:0.72rem">8/8 completed series — home team won at least 1 game &nbsp;&middot;&nbsp;
+        SKIP = qualification filter blocked the bet (price too high, dog too big, or bullpen overloaded)</span>
+      </div>
     </div>
-    <p style="font-size:0.75rem;color:var(--muted);margin-bottom:0.75rem">
-      Fair odds from consensus across DraftKings, FanDuel, BetMGM, Caesars. Check Bovada before betting.
-    </p>
-    <div class="table-wrap">
-      <table class="data-table" id="gl-table"><thead><tr>
-        <th>Rating</th><th>Matchup</th><th>Market</th><th>Side</th>
-        <th>Best Odds</th><th>Fair Odds</th><th>Fair%</th><th>EV%</th><th>Time</th><th>Track</th>
-      </tr></thead><tbody>
-        <tr data-market="Moneyline">
-          <td><span class="bet-rating rating-average">➖ AVERAGE</span></td>
-          <td class="muted">Athletics @ New York Mets</td>
-          <td><span class="stat-pill">Moneyline</span></td>
-          <td><strong>New York Mets</strong></td>
-          <td style="font-family:monospace">+360</td>
-          <td style="font-family:monospace">+348</td>
-          <td>22.3%</td>
-          <td><span style="color:#44d4a0;font-family:monospace;font-weight:600">+2.6%</span></td>
-          <td class="muted">01:11 PM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Athletics @ New York Mets|Moneyline|New York Mets" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option><option value="2">2u</option>
-                <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('New York Mets','Moneyline','-','New York Mets','+360','Athletics @ New York Mets','01:11 PM PT','MLB')"
-                id="tb_Athletics @ New York Mets|Moneyline|New York Mets"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr>
-        <tr data-market="Spread">
-          <td><span class="bet-rating rating-poor">⚠️ POOR</span></td>
-          <td class="muted">Los Angeles Angels @ Cincinnati Reds</td>
-          <td><span class="stat-pill">Spread</span></td>
-          <td><strong>Cincinnati Reds -2.5</strong></td>
-          <td style="font-family:monospace">+128</td>
-          <td style="font-family:monospace">+127</td>
-          <td>44.1%</td>
-          <td><span style="color:#f5a623;font-family:monospace">+0.6%</span></td>
-          <td class="muted">01:11 PM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Los Angeles Angels @ Cincinnati Reds|Spread|Cincinnati Reds -2.5" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option><option value="2">2u</option>
-                <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('Cincinnati Reds -2.5','Spread','-','Cincinnati Reds -2.5','+128','Los Angeles Angels @ Cincinnati Reds','01:11 PM PT','MLB')"
-                id="tb_Los Angeles Angels @ Cincinnati Reds|Spread|Cincinnati Reds -2.5"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr></tbody></table>
+
+    
+        <div style="margin-bottom:2rem">
+          <div style="font-family:'DM Mono',monospace;font-size:0.72rem;text-transform:uppercase;
+                      letter-spacing:0.08em;color:#f5a623;margin-bottom:0.75rem">
+            Active Series &mdash; Martingale Tracker
+          </div>
+          <div class="table-wrap">
+            <table class="data-table"><thead><tr>
+              <th>Home Team</th>
+              <th class="tt" data-tip="Green = home win, Red = home loss">Results So Far</th>
+              <th>Status</th>
+              <th class="tt" data-tip="Full Martingale bet: 1u-2u-4u-8u. Max exposure 15u.">Full MG</th>
+              <th class="tt" data-tip="Capped progression: 1u-2u-3u-4u. Max exposure 10u.">Capped</th>
+              <th>Edge</th>
+              <th>Action</th>
+            </tr></thead><tbody>
+            <tr>
+              <td><strong>Athletics</strong><br><span style="color:var(--muted);font-size:0.75rem">vs Texas Rangers</span></td>
+              <td><span style="color:#f5a623;font-family:monospace">G1:Today</span> &nbsp; <span style="color:var(--muted);font-family:monospace">G2:—</span> &nbsp; <span style="color:var(--muted);font-family:monospace">G3:—</span> &nbsp; <span style="color:var(--muted);font-family:monospace">G4:—</span></td>
+              <td><span style="background:rgba(245,166,35,0.15);color:#f5a623;font-weight:600;padding:0.2rem 0.5rem;border-radius:4px;font-size:0.72rem;font-family:monospace">GAME 1 TODAY</span></td>
+              <td class="tt" data-tip="Full Martingale: 1u-2u-4u-8u"><span style="color:#f5a623;font-family:monospace;font-weight:700">1u</span></td>
+              <td class="tt" data-tip="Capped: 1u-2u-3u-4u"><span style="color:#f5a623;font-family:monospace;font-weight:700">1u</span></td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span> <span style="color:#f04e4e;font-size:0.68rem" title="NO_ODDS">SKIP</span></td>
+              <td><span style="color:#5a6172;font-size:0.75rem">SKIP (NO_ODDS)</span></td>
+            </tr>
+            <tr>
+              <td><strong>Seattle Mariners</strong><br><span style="color:var(--muted);font-size:0.75rem">vs Houston Astros</span></td>
+              <td><span style="color:#00e5a0;font-family:monospace">G1:9-6</span> &nbsp; <span style="color:#00e5a0;font-family:monospace">G2:8-7</span> &nbsp; <span style="color:#00e5a0;font-family:monospace">G3:6-1</span> &nbsp; <span style="color:#f5a623;font-family:monospace">G4:Today</span></td>
+              <td><span style="background:rgba(0,229,160,0.15);color:#00e5a0;padding:0.2rem 0.5rem;border-radius:4px;font-size:0.72rem;font-family:monospace;font-weight:700">HOME WON - DONE</span></td>
+              <td class="tt" data-tip="Full Martingale: 1u-2u-4u-8u">-</td>
+              <td class="tt" data-tip="Capped: 1u-2u-3u-4u">-</td>
+              <td><span style="color:#f5a623;font-size:0.68rem">FATIGUE</span> <span style="color:#f04e4e;font-size:0.68rem" title="NO_ODDS">SKIP</span></td>
+              <td><span style="color:var(--muted);font-size:0.75rem">No bet needed</span></td>
+            </tr>
+            <tr>
+              <td><strong>New York Yankees</strong><br><span style="color:var(--muted);font-size:0.75rem">vs Los Angeles Angels</span></td>
+              <td><span style="color:#f5a623;font-family:monospace">G1:Today</span> &nbsp; <span style="color:var(--muted);font-family:monospace">G2:—</span> &nbsp; <span style="color:var(--muted);font-family:monospace">G3:—</span> &nbsp; <span style="color:var(--muted);font-family:monospace">G4:—</span></td>
+              <td><span style="background:rgba(245,166,35,0.15);color:#f5a623;font-weight:600;padding:0.2rem 0.5rem;border-radius:4px;font-size:0.72rem;font-family:monospace">GAME 1 TODAY</span></td>
+              <td class="tt" data-tip="Full Martingale: 1u-2u-4u-8u"><span style="color:#f5a623;font-family:monospace;font-weight:700">1u</span></td>
+              <td class="tt" data-tip="Capped: 1u-2u-3u-4u"><span style="color:#f5a623;font-family:monospace;font-weight:700">1u</span></td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span> <span style="color:#f04e4e;font-size:0.68rem" title="NO_ODDS">SKIP</span></td>
+              <td><span style="color:#5a6172;font-size:0.75rem">SKIP (NO_ODDS)</span></td>
+            </tr>
+            <tr>
+              <td><strong>Pittsburgh Pirates</strong><br><span style="color:var(--muted);font-size:0.75rem">vs Washington Nationals</span></td>
+              <td><span style="color:#f5a623;font-family:monospace">G1:Today</span> &nbsp; <span style="color:var(--muted);font-family:monospace">G2:—</span> &nbsp; <span style="color:var(--muted);font-family:monospace">G3:—</span> &nbsp; <span style="color:var(--muted);font-family:monospace">G4:—</span></td>
+              <td><span style="background:rgba(245,166,35,0.15);color:#f5a623;font-weight:600;padding:0.2rem 0.5rem;border-radius:4px;font-size:0.72rem;font-family:monospace">GAME 1 TODAY</span></td>
+              <td class="tt" data-tip="Full Martingale: 1u-2u-4u-8u"><span style="color:#f5a623;font-family:monospace;font-weight:700">1u</span></td>
+              <td class="tt" data-tip="Capped: 1u-2u-3u-4u"><span style="color:#f5a623;font-family:monospace;font-weight:700">1u</span></td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span> <span style="color:#f04e4e;font-size:0.68rem" title="NO_ODDS">SKIP</span></td>
+              <td><span style="color:#5a6172;font-size:0.75rem">SKIP (NO_ODDS)</span></td>
+            </tr></tbody></table>
+          </div>
+        </div>
+
+    <div style="margin-top:2rem">
+      <div style="font-family:'DM Mono',monospace;font-size:0.72rem;text-transform:uppercase;
+                  letter-spacing:0.08em;color:var(--muted);margin-bottom:0.75rem">
+        Upcoming 4-Game Series &mdash; 84 remaining this season
+      </div>
+      
+        <div class="table-wrap">
+          <table class="data-table"><thead><tr>
+            <th>Dates</th><th>Starts</th><th>Home Team</th><th></th><th>Away Team</th>
+            <th class="tt" data-tip="Consensus home moneyline from sharp books">Home ML</th>
+            <th>Edge</th>
+            <th class="tt" data-tip="Starting bet = 1 unit on home team ML. Doubles each loss.">G1 Bet</th>
+          </tr></thead><tbody>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-04-16 &ndash; 2026-04-19</td>
+              <td>In 3d</td>
+              <td><strong>Cleveland Guardians</strong></td>
+              <td class="muted">vs</td>
+              <td>Baltimore Orioles</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-04-17 &ndash; 2026-04-20</td>
+              <td>In 4d</td>
+              <td><strong>Boston Red Sox</strong></td>
+              <td class="muted">vs</td>
+              <td>Detroit Tigers</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-04-17 &ndash; 2026-04-20</td>
+              <td>In 4d</td>
+              <td><strong>Colorado Rockies</strong></td>
+              <td class="muted">vs</td>
+              <td>Los Angeles Dodgers</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-04-20 &ndash; 2026-04-23</td>
+              <td>In 7d</td>
+              <td><strong>Chicago Cubs</strong></td>
+              <td class="muted">vs</td>
+              <td>Philadelphia Phillies</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-04-20 &ndash; 2026-04-23</td>
+              <td>In 7d</td>
+              <td><strong>Washington Nationals</strong></td>
+              <td class="muted">vs</td>
+              <td>Atlanta Braves</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-04-27 &ndash; 2026-04-30</td>
+              <td>In 14d</td>
+              <td><strong>Pittsburgh Pirates</strong></td>
+              <td class="muted">vs</td>
+              <td>St. Louis Cardinals</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-04-30 &ndash; 2026-05-03</td>
+              <td>In 17d</td>
+              <td><strong>Minnesota Twins</strong></td>
+              <td class="muted">vs</td>
+              <td>Toronto Blue Jays</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-05-01 &ndash; 2026-05-04</td>
+              <td>In 18d</td>
+              <td><strong>New York Yankees</strong></td>
+              <td class="muted">vs</td>
+              <td>Baltimore Orioles</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-05-01 &ndash; 2026-05-04</td>
+              <td>In 18d</td>
+              <td><strong>Miami Marlins</strong></td>
+              <td class="muted">vs</td>
+              <td>Philadelphia Phillies</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-05-04 &ndash; 2026-05-07</td>
+              <td>In 21d</td>
+              <td><strong>Chicago Cubs</strong></td>
+              <td class="muted">vs</td>
+              <td>Cincinnati Reds</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-05-04 &ndash; 2026-05-07</td>
+              <td>In 21d</td>
+              <td><strong>Kansas City Royals</strong></td>
+              <td class="muted">vs</td>
+              <td>Cleveland Guardians</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-05-07 &ndash; 2026-05-10</td>
+              <td>In 24d</td>
+              <td><strong>Boston Red Sox</strong></td>
+              <td class="muted">vs</td>
+              <td>Tampa Bay Rays</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-05-07 &ndash; 2026-05-10</td>
+              <td>In 24d</td>
+              <td><strong>San Diego Padres</strong></td>
+              <td class="muted">vs</td>
+              <td>St. Louis Cardinals</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-05-11 &ndash; 2026-05-14</td>
+              <td>In 28d</td>
+              <td><strong>Houston Astros</strong></td>
+              <td class="muted">vs</td>
+              <td>Seattle Mariners</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-05-11 &ndash; 2026-05-14</td>
+              <td>In 28d</td>
+              <td><strong>Los Angeles Dodgers</strong></td>
+              <td class="muted">vs</td>
+              <td>San Francisco Giants</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-05-18 &ndash; 2026-05-21</td>
+              <td>In 35d</td>
+              <td><strong>New York Yankees</strong></td>
+              <td class="muted">vs</td>
+              <td>Toronto Blue Jays</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-05-18 &ndash; 2026-05-21</td>
+              <td>In 35d</td>
+              <td><strong>Miami Marlins</strong></td>
+              <td class="muted">vs</td>
+              <td>Atlanta Braves</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-05-18 &ndash; 2026-05-21</td>
+              <td>In 35d</td>
+              <td><strong>Washington Nationals</strong></td>
+              <td class="muted">vs</td>
+              <td>New York Mets</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-05-18 &ndash; 2026-05-21</td>
+              <td>In 35d</td>
+              <td><strong>Detroit Tigers</strong></td>
+              <td class="muted">vs</td>
+              <td>Cleveland Guardians</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-05-18 &ndash; 2026-05-21</td>
+              <td>In 35d</td>
+              <td><strong>Los Angeles Angels</strong></td>
+              <td class="muted">vs</td>
+              <td>Athletics</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-05-21 &ndash; 2026-05-24</td>
+              <td>In 38d</td>
+              <td><strong>Arizona Diamondbacks</strong></td>
+              <td class="muted">vs</td>
+              <td>Colorado Rockies</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-05-25 &ndash; 2026-05-28</td>
+              <td>In 42d</td>
+              <td><strong>Chicago White Sox</strong></td>
+              <td class="muted">vs</td>
+              <td>Minnesota Twins</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-05-25 &ndash; 2026-05-28</td>
+              <td>In 42d</td>
+              <td><strong>Pittsburgh Pirates</strong></td>
+              <td class="muted">vs</td>
+              <td>Chicago Cubs</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-05-25 &ndash; 2026-05-28</td>
+              <td>In 42d</td>
+              <td><strong>Texas Rangers</strong></td>
+              <td class="muted">vs</td>
+              <td>Houston Astros</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-05-28 &ndash; 2026-05-31</td>
+              <td>In 45d</td>
+              <td><strong>Baltimore Orioles</strong></td>
+              <td class="muted">vs</td>
+              <td>Toronto Blue Jays</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-06-01 &ndash; 2026-06-04</td>
+              <td>In 49d</td>
+              <td><strong>Arizona Diamondbacks</strong></td>
+              <td class="muted">vs</td>
+              <td>Los Angeles Dodgers</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-06-01 &ndash; 2026-06-04</td>
+              <td>In 49d</td>
+              <td><strong>Milwaukee Brewers</strong></td>
+              <td class="muted">vs</td>
+              <td>San Francisco Giants</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-06-04 &ndash; 2026-06-07</td>
+              <td>In 52d</td>
+              <td><strong>Minnesota Twins</strong></td>
+              <td class="muted">vs</td>
+              <td>Kansas City Royals</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-06-08 &ndash; 2026-06-11</td>
+              <td>In 56d</td>
+              <td><strong>Baltimore Orioles</strong></td>
+              <td class="muted">vs</td>
+              <td>Seattle Mariners</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-06-18 &ndash; 2026-06-21</td>
+              <td>In 66d</td>
+              <td><strong>Athletics</strong></td>
+              <td class="muted">vs</td>
+              <td>Los Angeles Angels</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-06-22 &ndash; 2026-06-25</td>
+              <td>In 70d</td>
+              <td><strong>New York Mets</strong></td>
+              <td class="muted">vs</td>
+              <td>Chicago Cubs</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-06-22 &ndash; 2026-06-25</td>
+              <td>In 70d</td>
+              <td><strong>St. Louis Cardinals</strong></td>
+              <td class="muted">vs</td>
+              <td>Arizona Diamondbacks</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-06-22 &ndash; 2026-06-25</td>
+              <td>In 70d</td>
+              <td><strong>Tampa Bay Rays</strong></td>
+              <td class="muted">vs</td>
+              <td>Kansas City Royals</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-06-22 &ndash; 2026-06-25</td>
+              <td>In 70d</td>
+              <td><strong>Washington Nationals</strong></td>
+              <td class="muted">vs</td>
+              <td>Philadelphia Phillies</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-06-25 &ndash; 2026-06-28</td>
+              <td>In 73d</td>
+              <td><strong>Boston Red Sox</strong></td>
+              <td class="muted">vs</td>
+              <td>New York Yankees</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-06-25 &ndash; 2026-06-28</td>
+              <td>In 73d</td>
+              <td><strong>Detroit Tigers</strong></td>
+              <td class="muted">vs</td>
+              <td>Houston Astros</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-06-25 &ndash; 2026-06-28</td>
+              <td>In 73d</td>
+              <td><strong>Toronto Blue Jays</strong></td>
+              <td class="muted">vs</td>
+              <td>Texas Rangers</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-06-29 &ndash; 2026-07-02</td>
+              <td>In 77d</td>
+              <td><strong>Colorado Rockies</strong></td>
+              <td class="muted">vs</td>
+              <td>Miami Marlins</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-06-29 &ndash; 2026-07-02</td>
+              <td>In 77d</td>
+              <td><strong>Milwaukee Brewers</strong></td>
+              <td class="muted">vs</td>
+              <td>Cincinnati Reds</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-06-29 &ndash; 2026-07-02</td>
+              <td>In 77d</td>
+              <td><strong>Philadelphia Phillies</strong></td>
+              <td class="muted">vs</td>
+              <td>Pittsburgh Pirates</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-07-02 &ndash; 2026-07-05</td>
+              <td>In 80d</td>
+              <td><strong>Los Angeles Dodgers</strong></td>
+              <td class="muted">vs</td>
+              <td>San Diego Padres</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-07-02 &ndash; 2026-07-05</td>
+              <td>In 80d</td>
+              <td><strong>Cleveland Guardians</strong></td>
+              <td class="muted">vs</td>
+              <td>Chicago White Sox</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-07-03 &ndash; 2026-07-06</td>
+              <td>In 81d</td>
+              <td><strong>Atlanta Braves</strong></td>
+              <td class="muted">vs</td>
+              <td>New York Mets</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-07-06 &ndash; 2026-07-09</td>
+              <td>In 84d</td>
+              <td><strong>San Diego Padres</strong></td>
+              <td class="muted">vs</td>
+              <td>Arizona Diamondbacks</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-07-06 &ndash; 2026-07-09</td>
+              <td>In 84d</td>
+              <td><strong>St. Louis Cardinals</strong></td>
+              <td class="muted">vs</td>
+              <td>Milwaukee Brewers</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-07-06 &ndash; 2026-07-09</td>
+              <td>In 84d</td>
+              <td><strong>Tampa Bay Rays</strong></td>
+              <td class="muted">vs</td>
+              <td>New York Yankees</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-07-09 &ndash; 2026-07-12</td>
+              <td>In 87d</td>
+              <td><strong>San Francisco Giants</strong></td>
+              <td class="muted">vs</td>
+              <td>Colorado Rockies</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-07-20 &ndash; 2026-07-23</td>
+              <td>In 98d</td>
+              <td><strong>Atlanta Braves</strong></td>
+              <td class="muted">vs</td>
+              <td>San Diego Padres</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-07-20 &ndash; 2026-07-23</td>
+              <td>In 98d</td>
+              <td><strong>Cleveland Guardians</strong></td>
+              <td class="muted">vs</td>
+              <td>Minnesota Twins</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-07-20 &ndash; 2026-07-23</td>
+              <td>In 98d</td>
+              <td><strong>Toronto Blue Jays</strong></td>
+              <td class="muted">vs</td>
+              <td>Tampa Bay Rays</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-07-23 &ndash; 2026-07-26</td>
+              <td>In 101d</td>
+              <td><strong>Detroit Tigers</strong></td>
+              <td class="muted">vs</td>
+              <td>Kansas City Royals</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-07-24 &ndash; 2026-07-27</td>
+              <td>In 102d</td>
+              <td><strong>Texas Rangers</strong></td>
+              <td class="muted">vs</td>
+              <td>Seattle Mariners</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-07-27 &ndash; 2026-07-30</td>
+              <td>In 105d</td>
+              <td><strong>Athletics</strong></td>
+              <td class="muted">vs</td>
+              <td>Boston Red Sox</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-07-27 &ndash; 2026-07-30</td>
+              <td>In 105d</td>
+              <td><strong>Chicago White Sox</strong></td>
+              <td class="muted">vs</td>
+              <td>New York Yankees</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-07-27 &ndash; 2026-07-30</td>
+              <td>In 105d</td>
+              <td><strong>St. Louis Cardinals</strong></td>
+              <td class="muted">vs</td>
+              <td>Chicago Cubs</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-07-30 &ndash; 2026-08-02</td>
+              <td>In 108d</td>
+              <td><strong>Atlanta Braves</strong></td>
+              <td class="muted">vs</td>
+              <td>Washington Nationals</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-07-30 &ndash; 2026-08-02</td>
+              <td>In 108d</td>
+              <td><strong>Cincinnati Reds</strong></td>
+              <td class="muted">vs</td>
+              <td>Pittsburgh Pirates</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-07-30 &ndash; 2026-08-02</td>
+              <td>In 108d</td>
+              <td><strong>New York Mets</strong></td>
+              <td class="muted">vs</td>
+              <td>Miami Marlins</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-07-30 &ndash; 2026-08-02</td>
+              <td>In 108d</td>
+              <td><strong>San Diego Padres</strong></td>
+              <td class="muted">vs</td>
+              <td>San Francisco Giants</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-08-03 &ndash; 2026-08-06</td>
+              <td>In 112d</td>
+              <td><strong>Arizona Diamondbacks</strong></td>
+              <td class="muted">vs</td>
+              <td>San Diego Padres</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-08-03 &ndash; 2026-08-06</td>
+              <td>In 112d</td>
+              <td><strong>Milwaukee Brewers</strong></td>
+              <td class="muted">vs</td>
+              <td>Pittsburgh Pirates</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-08-03 &ndash; 2026-08-06</td>
+              <td>In 112d</td>
+              <td><strong>Philadelphia Phillies</strong></td>
+              <td class="muted">vs</td>
+              <td>Washington Nationals</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-08-10 &ndash; 2026-08-13</td>
+              <td>In 119d</td>
+              <td><strong>Toronto Blue Jays</strong></td>
+              <td class="muted">vs</td>
+              <td>Boston Red Sox</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-08-10 &ndash; 2026-08-13</td>
+              <td>In 119d</td>
+              <td><strong>Los Angeles Angels</strong></td>
+              <td class="muted">vs</td>
+              <td>Texas Rangers</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-08-13 &ndash; 2026-08-16</td>
+              <td>In 122d</td>
+              <td><strong>Los Angeles Dodgers</strong></td>
+              <td class="muted">vs</td>
+              <td>Milwaukee Brewers</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-08-14 &ndash; 2026-08-17</td>
+              <td>In 123d</td>
+              <td><strong>Tampa Bay Rays</strong></td>
+              <td class="muted">vs</td>
+              <td>Baltimore Orioles</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-08-17 &ndash; 2026-08-20</td>
+              <td>In 126d</td>
+              <td><strong>Cincinnati Reds</strong></td>
+              <td class="muted">vs</td>
+              <td>St. Louis Cardinals</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-08-17 &ndash; 2026-08-20</td>
+              <td>In 126d</td>
+              <td><strong>Kansas City Royals</strong></td>
+              <td class="muted">vs</td>
+              <td>Athletics</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-08-24 &ndash; 2026-08-27</td>
+              <td>In 133d</td>
+              <td><strong>Washington Nationals</strong></td>
+              <td class="muted">vs</td>
+              <td>Colorado Rockies</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-08-27 &ndash; 2026-08-30</td>
+              <td>In 136d</td>
+              <td><strong>San Francisco Giants</strong></td>
+              <td class="muted">vs</td>
+              <td>Arizona Diamondbacks</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-08-28 &ndash; 2026-08-31</td>
+              <td>In 137d</td>
+              <td><strong>Washington Nationals</strong></td>
+              <td class="muted">vs</td>
+              <td>Miami Marlins</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-08-31 &ndash; 2026-09-03</td>
+              <td>In 140d</td>
+              <td><strong>Houston Astros</strong></td>
+              <td class="muted">vs</td>
+              <td>Chicago White Sox</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-08-31 &ndash; 2026-09-03</td>
+              <td>In 140d</td>
+              <td><strong>Chicago Cubs</strong></td>
+              <td class="muted">vs</td>
+              <td>Milwaukee Brewers</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-09-03 &ndash; 2026-09-06</td>
+              <td>In 143d</td>
+              <td><strong>Baltimore Orioles</strong></td>
+              <td class="muted">vs</td>
+              <td>Boston Red Sox</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-09-03 &ndash; 2026-09-06</td>
+              <td>In 143d</td>
+              <td><strong>Seattle Mariners</strong></td>
+              <td class="muted">vs</td>
+              <td>Athletics</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-09-03 &ndash; 2026-09-06</td>
+              <td>In 143d</td>
+              <td><strong>Texas Rangers</strong></td>
+              <td class="muted">vs</td>
+              <td>Tampa Bay Rays</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-09-04 &ndash; 2026-09-07</td>
+              <td>In 144d</td>
+              <td><strong>Philadelphia Phillies</strong></td>
+              <td class="muted">vs</td>
+              <td>Atlanta Braves</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-09-14 &ndash; 2026-09-17</td>
+              <td>In 154d</td>
+              <td><strong>Cincinnati Reds</strong></td>
+              <td class="muted">vs</td>
+              <td>Los Angeles Dodgers</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-09-14 &ndash; 2026-09-17</td>
+              <td>In 154d</td>
+              <td><strong>Colorado Rockies</strong></td>
+              <td class="muted">vs</td>
+              <td>San Diego Padres</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-09-17 &ndash; 2026-09-20</td>
+              <td>In 157d</td>
+              <td><strong>Los Angeles Angels</strong></td>
+              <td class="muted">vs</td>
+              <td>Minnesota Twins</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-09-17 &ndash; 2026-09-20</td>
+              <td>In 157d</td>
+              <td><strong>Chicago White Sox</strong></td>
+              <td class="muted">vs</td>
+              <td>Detroit Tigers</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td><span style="color:#a78bfa;font-size:0.68rem">TRAVEL</span></td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-09-17 &ndash; 2026-09-20</td>
+              <td>In 157d</td>
+              <td><strong>New York Mets</strong></td>
+              <td class="muted">vs</td>
+              <td>Philadelphia Phillies</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-09-24 &ndash; 2026-09-27</td>
+              <td>In 164d</td>
+              <td><strong>Athletics</strong></td>
+              <td class="muted">vs</td>
+              <td>Houston Astros</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.8rem">2026-09-24 &ndash; 2026-09-27</td>
+              <td>In 164d</td>
+              <td><strong>Seattle Mariners</strong></td>
+              <td class="muted">vs</td>
+              <td>Los Angeles Angels</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">—</td>
+              <td>—</td>
+              <td style="color:#f5a623;font-family:monospace;font-weight:600">1u</td>
+            </tr></tbody></table>
+        </div>
     </div>
 </div>
 <div id="history" class="tab-content">
@@ -925,22 +1539,22 @@
       </span>
     </div>
     <div class="stat-strip">
-      <div class="stat-chip"><span class="chip-val">1157</span><span class="chip-lbl">Graded</span></div>
-      <div class="stat-chip" style="border-color:rgba(0,229,160,0.3)"><span class="chip-val" style="color:#00e5a0">647</span><span class="chip-lbl">Wins</span></div>
-      <div class="stat-chip" style="border-color:rgba(240,78,78,0.3)"><span class="chip-val" style="color:#f04e4e">510</span><span class="chip-lbl">Losses</span></div>
-      <div class="stat-chip"><span class="chip-val">55.9%</span><span class="chip-lbl">Win Rate</span></div>
+      <div class="stat-chip"><span class="chip-val">1172</span><span class="chip-lbl">Graded</span></div>
+      <div class="stat-chip" style="border-color:rgba(0,229,160,0.3)"><span class="chip-val" style="color:#00e5a0">658</span><span class="chip-lbl">Wins</span></div>
+      <div class="stat-chip" style="border-color:rgba(240,78,78,0.3)"><span class="chip-val" style="color:#f04e4e">514</span><span class="chip-lbl">Losses</span></div>
+      <div class="stat-chip"><span class="chip-val">56.1%</span><span class="chip-lbl">Win Rate</span></div>
       
     <div class="stat-chip" style="border-color:#f04e4e40">
-      <span class="chip-val" style="color:#f04e4e">$-99.03</span>
+      <span class="chip-val" style="color:#f04e4e">$-52.09</span>
       <span class="chip-lbl">Live P&amp;L</span>
     </div>
     <div class="stat-chip" style="border-color:#f04e4e40">
-      <span class="chip-val" style="color:#f04e4e">-9.9u</span>
+      <span class="chip-val" style="color:#f04e4e">-5.2u</span>
       <span class="chip-lbl">Live Units</span>
     </div>
     </div>
     <p style="font-size:0.72rem;color:var(--muted);margin-bottom:0.5rem">
-      All-time (incl. pre-Bovada): 1252 picks · 57.5% · +$673.87
+      All-time (incl. pre-Bovada): 1267 picks · 57.7% · +$720.82
     </p>
     <p style="font-size:0.75rem;color:var(--muted);margin-bottom:1.5rem">
       Performance based on all model picks — not just bets placed.
@@ -950,7 +1564,7 @@
           <div class="table-wrap">
             <table class="data-table mini"><thead><tr>
               <th>Stat</th><th>Picks</th><th>W</th><th>L</th><th>Win%</th><th>P&L</th>
-            </tr></thead><tbody><tr><td><strong>Hits</strong></td><td>688</td><td style='color:#00e5a0'>428</td><td style='color:#f04e4e'>260</td><td>62.2%</td><td style='color:#f04e4e;font-family:monospace'>$-483.15</td></tr><tr><td><strong>Strikeouts</strong></td><td>166</td><td style='color:#00e5a0'>88</td><td style='color:#f04e4e'>78</td><td>53.0%</td><td style='color:#00e5a0;font-family:monospace'>+$426.80</td></tr><tr><td><strong>Outs Recorded</strong></td><td>24</td><td style='color:#00e5a0'>16</td><td style='color:#f04e4e'>8</td><td>66.7%</td><td style='color:#00e5a0;font-family:monospace'>+$80.81</td></tr><tr><td><strong>RBI</strong></td><td>28</td><td style='color:#00e5a0'>16</td><td style='color:#f04e4e'>12</td><td>57.1%</td><td style='color:#00e5a0;font-family:monospace'>+$171.20</td></tr><tr><td><strong>Runs</strong></td><td>29</td><td style='color:#00e5a0'>17</td><td style='color:#f04e4e'>12</td><td>58.6%</td><td style='color:#00e5a0;font-family:monospace'>+$130.93</td></tr><tr><td><strong>Total Bases</strong></td><td>222</td><td style='color:#00e5a0'>82</td><td style='color:#f04e4e'>140</td><td>36.9%</td><td style='color:#f04e4e;font-family:monospace'>$-425.62</td></tr></tbody></table>
+            </tr></thead><tbody><tr><td><strong>Hits</strong></td><td>688</td><td style='color:#00e5a0'>428</td><td style='color:#f04e4e'>260</td><td>62.2%</td><td style='color:#f04e4e;font-family:monospace'>$-483.15</td></tr><tr><td><strong>Strikeouts</strong></td><td>181</td><td style='color:#00e5a0'>99</td><td style='color:#f04e4e'>82</td><td>54.7%</td><td style='color:#00e5a0;font-family:monospace'>+$473.74</td></tr><tr><td><strong>Outs Recorded</strong></td><td>24</td><td style='color:#00e5a0'>16</td><td style='color:#f04e4e'>8</td><td>66.7%</td><td style='color:#00e5a0;font-family:monospace'>+$80.81</td></tr><tr><td><strong>RBI</strong></td><td>28</td><td style='color:#00e5a0'>16</td><td style='color:#f04e4e'>12</td><td>57.1%</td><td style='color:#00e5a0;font-family:monospace'>+$171.20</td></tr><tr><td><strong>Runs</strong></td><td>29</td><td style='color:#00e5a0'>17</td><td style='color:#f04e4e'>12</td><td>58.6%</td><td style='color:#00e5a0;font-family:monospace'>+$130.93</td></tr><tr><td><strong>Total Bases</strong></td><td>222</td><td style='color:#00e5a0'>82</td><td style='color:#f04e4e'>140</td><td>36.9%</td><td style='color:#f04e4e;font-family:monospace'>$-425.62</td></tr></tbody></table>
           </div>
         </div>
         <div class="perf-card">
@@ -958,7 +1572,7 @@
           <div class="table-wrap">
             <table class="data-table mini"><thead><tr>
               <th>Side</th><th>Picks</th><th>W</th><th>L</th><th>Win%</th><th>P&L</th>
-            </tr></thead><tbody><tr><td><strong>OVER</strong></td><td>1027</td><td style='color:#00e5a0'>573</td><td style='color:#f04e4e'>454</td><td>55.8%</td><td style='color:#f04e4e;font-family:monospace'>$-389.04</td></tr><tr><td><strong>UNDER</strong></td><td>130</td><td style='color:#00e5a0'>74</td><td style='color:#f04e4e'>56</td><td>56.9%</td><td style='color:#00e5a0;font-family:monospace'>+$290.01</td></tr></tbody></table>
+            </tr></thead><tbody><tr><td><strong>OVER</strong></td><td>1035</td><td style='color:#00e5a0'>578</td><td style='color:#f04e4e'>457</td><td>55.8%</td><td style='color:#f04e4e;font-family:monospace'>$-383.56</td></tr><tr><td><strong>UNDER</strong></td><td>137</td><td style='color:#00e5a0'>80</td><td style='color:#f04e4e'>57</td><td>58.4%</td><td style='color:#00e5a0;font-family:monospace'>+$331.47</td></tr></tbody></table>
           </div>
         </div></div>
 </div>
@@ -985,6 +1599,7 @@
     if (result==='win')  bet.pnl = isNaN(o)||o===0 ? 0 : o>0?(o/100)*bet.amount:(100/Math.abs(o))*bet.amount;
     if (result==='loss') bet.pnl = -bet.amount;
     if (result==='push') bet.pnl = 0;
+    if (result==='void') bet.pnl = 0;
     if (result==='pending') bet.pnl = null;
     localStorage.setItem(PARLAY_KEY, JSON.stringify(bets));
     renderParlayHistory();
@@ -1007,6 +1622,7 @@
     }
     let totalWagered=0, totalPnl=0, wins=0, losses=0;
     bets.forEach(b => {
+      if (b.result==='void') return;  // voided bets excluded from all stats
       totalWagered += b.amount||0;
       if (b.result==='win')  { wins++;   totalPnl += b.pnl||0; }
       if (b.result==='loss') { losses++; totalPnl += b.pnl||0; }
@@ -1014,16 +1630,19 @@
     const pnlColor = totalPnl >= 0 ? '#00e5a0' : '#f04e4e';
     const pnlSign  = totalPnl >= 0 ? '+' : '';
     let rows = bets.slice().reverse().map(b => {
-      const resBadge = b.result==='win' ? '<span style="color:#00e5a0;font-weight:700">WIN</span>'
+      const resBadge = b.result==='win'  ? '<span style="color:#00e5a0;font-weight:700">WIN</span>'
                      : b.result==='loss' ? '<span style="color:#f04e4e;font-weight:700">LOSS</span>'
                      : b.result==='push' ? '<span style="color:#aaa">PUSH</span>'
+                     : b.result==='void' ? '<span style="color:#5a6172;font-weight:700">VOID</span>'
                      : '<span style="color:#888">PENDING</span>';
-      const pnlStr = b.pnl!=null ? `<span style="color:${b.pnl>=0?'#00e5a0':'#f04e4e'}">${b.pnl>=0?'+':''}$${b.pnl.toFixed(2)}</span>` : '-';
+      const pnlStr = (b.result==='void') ? '<span style="color:var(--muted)">-</span>'
+                   : b.pnl!=null ? `<span style="color:${b.pnl>=0?'#00e5a0':'#f04e4e'}">${b.pnl>=0?'+':''}$${b.pnl.toFixed(2)}</span>` : '-';
       const resBtns = b.result==='pending'
         ? `<button class="result-btn" onclick="setParlayResult(${b.id},'win')">W</button>
            <button class="result-btn" onclick="setParlayResult(${b.id},'loss')">L</button>
-           <button class="result-btn" onclick="setParlayResult(${b.id},'push')">P</button>`
-        : `<button class="result-btn" onclick="setParlayResult(${b.id},'pending')">↺</button>`;
+           <button class="result-btn" onclick="setParlayResult(${b.id},'push')">P</button>
+           <button class="result-btn" onclick="setParlayResult(${b.id},'void')" style="color:#5a6172">V</button>`
+        : `<button class="result-btn" onclick="setParlayResult(${b.id},'pending')">&#8635;</button>`;
       const legsStr = (b.legs||[]).join(' / ');
       return `<tr>
         <td class="muted">${b.date}</td>
@@ -1050,7 +1669,7 @@
   const UNIT_SIZE   = 10;
 
   try {
-    const mlbPicks = [{"player": "Cody Bolton (Strikeouts)", "prop": "Strikeouts", "line": "3.5", "side": "UNDER", "odds": "+100", "rating": "ELITE", "matchup": "HOU @ SEA", "sport": "MLB"}, {"player": "Andrew Painter (Strikeouts)", "prop": "Strikeouts", "line": "4.5", "side": "OVER", "odds": "-115", "rating": "ELITE", "matchup": "ARI @ PHI", "sport": "MLB"}, {"player": "James Wood (HRB)", "prop": "HRB", "line": "1.5", "side": "OVER", "odds": "+110", "rating": "ELITE", "matchup": "WSH @ MIL", "sport": "MLB"}, {"player": "Tarik Skubal (Strikeouts)", "prop": "Strikeouts", "line": "7.5", "side": "UNDER", "odds": "-104", "rating": "ELITE", "matchup": "MIA @ DET", "sport": "MLB"}, {"player": "Andrew Abbott (Strikeouts)", "prop": "Strikeouts", "line": "5.5", "side": "UNDER", "odds": "+104", "rating": "ELITE", "matchup": "LAA @ CIN", "sport": "MLB"}, {"player": "Andy Pages (HRB)", "prop": "HRB", "line": "1.5", "side": "OVER", "odds": "+100", "rating": "ELITE", "matchup": "TEX @ LAD", "sport": "MLB"}, {"player": "Jose Soriano (Strikeouts)", "prop": "Strikeouts", "line": "5.5", "side": "UNDER", "odds": "-135", "rating": "ELITE", "matchup": "LAA @ CIN", "sport": "MLB"}, {"player": "Jorge Soler (HRB)", "prop": "HRB", "line": "1.5", "side": "OVER", "odds": "-105", "rating": "ELITE", "matchup": "LAA @ CIN", "sport": "MLB"}, {"player": "Cam Schlittler (Strikeouts)", "prop": "Strikeouts", "line": "5.5", "side": "OVER", "odds": "-124", "rating": "ELITE", "matchup": "NYY @ TB", "sport": "MLB"}, {"player": "Garrett Mitchell (HRB)", "prop": "HRB", "line": "1.5", "side": "OVER", "odds": "-110", "rating": "ELITE", "matchup": "WSH @ MIL", "sport": "MLB"}, {"player": "Teoscar Hernandez (HRB)", "prop": "HRB", "line": "1.5", "side": "OVER", "odds": "-110", "rating": "ELITE", "matchup": "TEX @ LAD", "sport": "MLB"}, {"player": "Nick Pivetta (Strikeouts)", "prop": "Strikeouts", "line": "7.5", "side": "UNDER", "odds": "-140", "rating": "ELITE", "matchup": "COL @ SD", "sport": "MLB"}, {"player": "Willy Adames (HRB)", "prop": "HRB", "line": "1.5", "side": "OVER", "odds": "-115", "rating": "AVERAGE", "matchup": "SF @ BAL", "sport": "MLB"}, {"player": "Jordan Walker (HRB)", "prop": "HRB", "line": "1.5", "side": "OVER", "odds": "-115", "rating": "AVERAGE", "matchup": "BOS @ STL", "sport": "MLB"}, {"player": "Taj Bradley (Strikeouts)", "prop": "Strikeouts", "line": "4.5", "side": "OVER", "odds": "-145", "rating": "ELITE", "matchup": "MIN @ TOR", "sport": "MLB"}, {"player": "Tanner Bibee (Strikeouts)", "prop": "Strikeouts", "line": "4.5", "side": "OVER", "odds": "-131", "rating": "GOOD", "matchup": "CLE @ ATL", "sport": "MLB"}, {"player": "Taylor Ward (HRB)", "prop": "HRB", "line": "1.5", "side": "OVER", "odds": "-125", "rating": "GOOD", "matchup": "SF @ BAL", "sport": "MLB"}, {"player": "Bubba Chandler (Strikeouts)", "prop": "Strikeouts", "line": "4.5", "side": "OVER", "odds": "-131", "rating": "GOOD", "matchup": "PIT @ CHC", "sport": "MLB"}, {"player": "Xander Bogaerts (HRB)", "prop": "HRB", "line": "1.5", "side": "OVER", "odds": "-135", "rating": "GOOD", "matchup": "COL @ SD", "sport": "MLB"}];
+    const mlbPicks = [{"player": "Gavin Williams (Strikeouts)", "prop": "Strikeouts", "line": "6.5", "side": "OVER", "odds": "+110", "rating": "ELITE", "matchup": "CLE @ STL", "sport": "MLB"}, {"player": "George Kirby (Strikeouts)", "prop": "Strikeouts", "line": "5.5", "side": "OVER", "odds": "+100", "rating": "ELITE", "matchup": "HOU @ SEA", "sport": "MLB"}, {"player": "Eury Perez (Strikeouts)", "prop": "Strikeouts", "line": "5.5", "side": "OVER", "odds": "-106", "rating": "ELITE", "matchup": "MIA @ ATL", "sport": "MLB"}, {"player": "Paul Skenes (Strikeouts)", "prop": "Strikeouts", "line": "6.5", "side": "UNDER", "odds": "-116", "rating": "ELITE", "matchup": "WSH @ PIT", "sport": "MLB"}, {"player": "David Peterson (Strikeouts)", "prop": "Strikeouts", "line": "4.5", "side": "UNDER", "odds": "-117", "rating": "ELITE", "matchup": "NYM @ LAD", "sport": "MLB"}, {"player": "Drake Baldwin (HRB)", "prop": "HRB", "line": "1.5", "side": "OVER", "odds": "-115", "rating": "ELITE", "matchup": "MIA @ ATL", "sport": "MLB"}, {"player": "Cristopher Sanchez (Strikeouts)", "prop": "Strikeouts", "line": "6.5", "side": "OVER", "odds": "-103", "rating": "ELITE", "matchup": "CHC @ PHI", "sport": "MLB"}, {"player": "Will Warren (Strikeouts)", "prop": "Strikeouts", "line": "5.5", "side": "UNDER", "odds": "-107", "rating": "ELITE", "matchup": "LAA @ NYY", "sport": "MLB"}, {"player": "Yusei Kikuchi (Strikeouts)", "prop": "Strikeouts", "line": "5.5", "side": "UNDER", "odds": "-143", "rating": "GOOD", "matchup": "LAA @ NYY", "sport": "MLB"}, {"player": "Zach Neto (HRB)", "prop": "HRB", "line": "1.5", "side": "OVER", "odds": "-125", "rating": "AVERAGE", "matchup": "LAA @ NYY", "sport": "MLB"}];
     if (mlbPicks.length) {
       const existing = JSON.parse(localStorage.getItem('dk_today_picks_v1') || '[]');
       const combined = [...existing.filter(p => p.sport !== 'MLB'), ...mlbPicks];
@@ -1111,12 +1730,13 @@
       return;
     }
 
-    // Stats
+    // Stats — voided bets excluded from all counts
     const wins    = bets.filter(b => b.result==='win').length;
     const losses  = bets.filter(b => b.result==='loss').length;
     const pending = bets.filter(b => b.result==='pending').length;
+    const voids   = bets.filter(b => b.result==='void').length;
     const graded  = wins + losses;
-    const wagered = bets.reduce((s,b) => s+(b.amount||0), 0);
+    const wagered = bets.filter(b=>b.result!=='void').reduce((s,b) => s+(b.amount||0), 0);
     const pnl     = bets.reduce((s,b) => {
       if (b.result==='win')  return s + (b.pnl || calcPnl(b.odds, b.amount));
       if (b.result==='loss') return s - b.amount;
@@ -1131,6 +1751,7 @@
       <div class="stat-chip" style="border-color:rgba(0,229,160,0.3)"><span class="chip-val" style="color:#00e5a0">${wins}</span><span class="chip-lbl">Wins</span></div>
       <div class="stat-chip" style="border-color:rgba(240,78,78,0.3)"><span class="chip-val" style="color:#f04e4e">${losses}</span><span class="chip-lbl">Losses</span></div>
       <div class="stat-chip" style="border-color:rgba(61,142,248,0.3)"><span class="chip-val" style="color:#3d8ef8">${pending}</span><span class="chip-lbl">Pending</span></div>
+      ${voids > 0 ? `<div class="stat-chip" style="border-color:rgba(90,97,114,0.3)"><span class="chip-val" style="color:#5a6172">${voids}</span><span class="chip-lbl">Voided</span></div>` : ''}
       <div class="stat-chip"><span class="chip-val">${wr}</span><span class="chip-lbl">Win Rate</span></div>
       <div class="stat-chip"><span class="chip-val">$${wagered.toFixed(2)}</span><span class="chip-lbl">Wagered</span></div>
       <div class="stat-chip" style="border-color:${pnl>=0?'rgba(0,229,160,0.3)':'rgba(240,78,78,0.3)'}">
@@ -1167,17 +1788,20 @@
         const resBadge = b.result==='win'   ? '<span class="badge badge-win">WIN</span>'
           : b.result==='loss'  ? '<span class="badge badge-loss">LOSS</span>'
           : b.result==='push'  ? '<span class="badge badge-push">PUSH</span>'
+          : b.result==='void'  ? '<span class="badge" style="color:#5a6172">VOID</span>'
           : '<span class="badge badge-pending">OPEN</span>';
-        const pnlVal = b.result==='win' ? (b.pnl || calcPnl(b.odds, b.amount))
+        const pnlVal = b.result==='win'  ? (b.pnl || calcPnl(b.odds, b.amount))
           : b.result==='loss' ? -b.amount : null;
-        const pnlStr = pnlVal !== null
+        const pnlStr = b.result==='void' ? '<span style="color:var(--muted)">-</span>'
+          : pnlVal !== null
           ? `<span style="color:${pnlVal>=0?'#00e5a0':'#f04e4e'};font-family:monospace">${pnlVal>=0?'+':''}$${Math.abs(pnlVal).toFixed(2)}</span>`
           : '-';
         const resBtns = b.result==='pending'
           ? `<button class="result-btn" onclick="setTrackedResult(${b.id},'win')">W</button>
              <button class="result-btn" onclick="setTrackedResult(${b.id},'loss')">L</button>
-             <button class="result-btn" onclick="setTrackedResult(${b.id},'push')">P</button>`
-          : `<button class="result-btn" onclick="setTrackedResult(${b.id},'pending')">↺</button>`;
+             <button class="result-btn" onclick="setTrackedResult(${b.id},'push')">P</button>
+             <button class="result-btn" onclick="setTrackedResult(${b.id},'void')" style="color:#5a6172">V</button>`
+          : `<button class="result-btn" onclick="setTrackedResult(${b.id},'pending')">&#8635;</button>`;
 
         return `<tr>
           <td><strong>${b.player}</strong></td>
@@ -1225,6 +1849,7 @@
     if (result==='win')  bet.pnl = calcPnl(bet.odds, bet.amount);
     if (result==='loss') bet.pnl = -bet.amount;
     if (result==='push') bet.pnl = 0;
+    if (result==='void') bet.pnl = 0;
     if (result==='pending') bet.pnl = null;
     localStorage.setItem(TRACKED_KEY, JSON.stringify(bets));
     renderTrackedHistory();
