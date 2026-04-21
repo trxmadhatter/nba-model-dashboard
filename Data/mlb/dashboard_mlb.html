@@ -92,7 +92,7 @@
 <body>
 <div class="topbar">
   <div class="logo">MLB<span>.</span>MODEL</div>
-  <div class="topbar-meta">Monday, April 20 2026<br>Updated 03:04 PM PT</div>
+  <div class="topbar-meta">Monday, April 20 2026<br>Updated 10:51 PM PT</div>
 </div>
 <div class="tabs">
   <button class="tab-btn active" onclick="showTab('today',this)">Today's Plays</button>
@@ -108,7 +108,205 @@
     <div class="tab-title">Today's MLB Plays</div>
     <div class="tab-subtitle">Player props · Filter by stat, side, rating, EV%, matchup</div>
   </div>
-  <p class="empty-msg">No actionable picks for April 20. The model found no edge on today's Bovada/BetOnline lines vs sharp consensus. Check back after lines move or tomorrow's slate.</p>
+  
+        <div style="background:rgba(245,166,35,0.06);border:1px solid rgba(245,166,35,0.3);border-radius:10px;padding:1.2rem 1.4rem;margin-bottom:1rem">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem">
+            <div style="font-family:'DM Mono',monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.08em;color:rgb(245,166,35);font-weight:600">
+              🎯 Parlay of the Day &nbsp;·&nbsp; 2 Legs
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem">
+              <div style="font-family:monospace;font-size:1.1rem;font-weight:700;color:rgb(245,166,35)">+201</div>
+              <select id="pu_68110" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="0.1">0.1u</option><option value="0.5">0.5u</option>
+                <option value="1" selected>1u</option><option value="2">2u</option>
+              </select>
+              <button onclick="trackParlay('Parlay of the Day','+201',['St. Louis Cardinals +1.5 (Spread) — St. Louis Cardinals @ Miami Marlins','Over (Total) — Atlanta Braves @ Washington Nationals'],parseFloat(document.getElementById('pu_68110').value))"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace">
+                Track Parlay
+              </button>
+            </div>
+          </div>
+          
+            <div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;border-bottom:1px solid var(--border)">
+              <span style="background:rgba(245,166,35,0.15);color:rgb(245,166,35);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">1</span>
+              <div style="flex:1">
+                <div style="font-weight:600;font-size:0.85rem">St. Louis Cardinals +1.5 (Spread) — St. Louis Cardinals @ Miami Marlins</div>
+                <div style="font-size:0.72rem;color:var(--muted)">St. Louis Cardinals @ Miami Marlins &nbsp;·&nbsp; Fair prob: 73.5%</div>
+              </div>
+              <span style="font-family:monospace;font-weight:700;color:rgb(245,166,35)">-172</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;border-bottom:1px solid var(--border)">
+              <span style="background:rgba(245,166,35,0.15);color:rgb(245,166,35);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">2</span>
+              <div style="flex:1">
+                <div style="font-weight:600;font-size:0.85rem">Over (Total) — Atlanta Braves @ Washington Nationals</div>
+                <div style="font-size:0.72rem;color:var(--muted)">Atlanta Braves @ Washington Nationals &nbsp;·&nbsp; Fair prob: 54.5%</div>
+              </div>
+              <span style="font-family:monospace;font-weight:700;color:rgb(245,166,35)">-110</span>
+            </div>
+          <div style="margin-top:0.75rem;font-size:0.72rem;color:var(--muted)">
+            Combined fair probability: 40.0% &nbsp;·&nbsp; Targeting ~+200 odds &nbsp;·&nbsp; Verify odds on Bovada before placing
+          </div>
+        </div>
+        <div style="background:rgba(180,100,255,0.06);border:1px solid rgba(180,100,255,0.3);border-radius:10px;padding:1.2rem 1.4rem;margin-bottom:1rem">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem">
+            <div style="font-family:'DM Mono',monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.08em;color:rgb(180,100,255);font-weight:600">
+              🚀 Shot in the Dark &nbsp;·&nbsp; 7 Legs
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem">
+              <div style="font-family:monospace;font-size:1.1rem;font-weight:700;color:rgb(180,100,255)">+3482</div>
+              <select id="pu_56789" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="0.1">0.1u</option><option value="0.5">0.5u</option>
+                <option value="1" selected>1u</option><option value="2">2u</option>
+              </select>
+              <button onclick="trackParlay('Shot in the Dark','+3482',['Tampa Bay Rays +1.5 (Spread) — Cincinnati Reds @ Tampa Bay Rays','Chicago Cubs +1.5 (Spread) — Philadelphia Phillies @ Chicago Cubs','St. Louis Cardinals +1.5 (Spread) — St. Louis Cardinals @ Miami Marlins','Houston Astros +1.5 (Spread) — Houston Astros @ Cleveland Guardians','Los Angeles Angels +1.5 (Spread) — Toronto Blue Jays @ Los Angeles Angels','Under (Total) — Los Angeles Dodgers @ Colorado Rockies','Over (Total) — Atlanta Braves @ Washington Nationals'],parseFloat(document.getElementById('pu_56789').value))"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace">
+                Track Parlay
+              </button>
+            </div>
+          </div>
+          
+            <div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;border-bottom:1px solid var(--border)">
+              <span style="background:rgba(180,100,255,0.15);color:rgb(180,100,255);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">1</span>
+              <div style="flex:1">
+                <div style="font-weight:600;font-size:0.85rem">Tampa Bay Rays +1.5 (Spread) — Cincinnati Reds @ Tampa Bay Rays</div>
+                <div style="font-size:0.72rem;color:var(--muted)">Cincinnati Reds @ Tampa Bay Rays &nbsp;·&nbsp; Fair prob: 79.2%</div>
+              </div>
+              <span style="font-family:monospace;font-weight:700;color:rgb(180,100,255)">-190</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;border-bottom:1px solid var(--border)">
+              <span style="background:rgba(180,100,255,0.15);color:rgb(180,100,255);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">2</span>
+              <div style="flex:1">
+                <div style="font-weight:600;font-size:0.85rem">Chicago Cubs +1.5 (Spread) — Philadelphia Phillies @ Chicago Cubs</div>
+                <div style="font-size:0.72rem;color:var(--muted)">Philadelphia Phillies @ Chicago Cubs &nbsp;·&nbsp; Fair prob: 79.0%</div>
+              </div>
+              <span style="font-family:monospace;font-weight:700;color:rgb(180,100,255)">-180</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;border-bottom:1px solid var(--border)">
+              <span style="background:rgba(180,100,255,0.15);color:rgb(180,100,255);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">3</span>
+              <div style="flex:1">
+                <div style="font-weight:600;font-size:0.85rem">St. Louis Cardinals +1.5 (Spread) — St. Louis Cardinals @ Miami Marlins</div>
+                <div style="font-size:0.72rem;color:var(--muted)">St. Louis Cardinals @ Miami Marlins &nbsp;·&nbsp; Fair prob: 73.5%</div>
+              </div>
+              <span style="font-family:monospace;font-weight:700;color:rgb(180,100,255)">-172</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;border-bottom:1px solid var(--border)">
+              <span style="background:rgba(180,100,255,0.15);color:rgb(180,100,255);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">4</span>
+              <div style="flex:1">
+                <div style="font-weight:600;font-size:0.85rem">Houston Astros +1.5 (Spread) — Houston Astros @ Cleveland Guardians</div>
+                <div style="font-size:0.72rem;color:var(--muted)">Houston Astros @ Cleveland Guardians &nbsp;·&nbsp; Fair prob: 67.0%</div>
+              </div>
+              <span style="font-family:monospace;font-weight:700;color:rgb(180,100,255)">-186</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;border-bottom:1px solid var(--border)">
+              <span style="background:rgba(180,100,255,0.15);color:rgb(180,100,255);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">5</span>
+              <div style="flex:1">
+                <div style="font-weight:600;font-size:0.85rem">Los Angeles Angels +1.5 (Spread) — Toronto Blue Jays @ Los Angeles Angels</div>
+                <div style="font-size:0.72rem;color:var(--muted)">Toronto Blue Jays @ Los Angeles Angels &nbsp;·&nbsp; Fair prob: 66.1%</div>
+              </div>
+              <span style="font-family:monospace;font-weight:700;color:rgb(180,100,255)">-160</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;border-bottom:1px solid var(--border)">
+              <span style="background:rgba(180,100,255,0.15);color:rgb(180,100,255);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">6</span>
+              <div style="flex:1">
+                <div style="font-weight:600;font-size:0.85rem">Under (Total) — Los Angeles Dodgers @ Colorado Rockies</div>
+                <div style="font-size:0.72rem;color:var(--muted)">Los Angeles Dodgers @ Colorado Rockies &nbsp;·&nbsp; Fair prob: 55.1%</div>
+              </div>
+              <span style="font-family:monospace;font-weight:700;color:rgb(180,100,255)">+100</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;border-bottom:1px solid var(--border)">
+              <span style="background:rgba(180,100,255,0.15);color:rgb(180,100,255);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">7</span>
+              <div style="flex:1">
+                <div style="font-weight:600;font-size:0.85rem">Over (Total) — Atlanta Braves @ Washington Nationals</div>
+                <div style="font-size:0.72rem;color:var(--muted)">Atlanta Braves @ Washington Nationals &nbsp;·&nbsp; Fair prob: 54.5%</div>
+              </div>
+              <span style="font-family:monospace;font-weight:700;color:rgb(180,100,255)">-110</span>
+            </div>
+          <div style="margin-top:0.75rem;font-size:0.72rem;color:var(--muted)">
+            Combined fair probability: 6.1% &nbsp;·&nbsp; Best prob × payout combo · Small unit only (0.1u max) &nbsp;·&nbsp; Verify odds on Bovada before placing
+          </div>
+        </div>
+    <div style="background:rgba(245,166,35,0.1);border:1px solid rgba(245,166,35,0.35);border-radius:6px;padding:0.5rem 0.85rem;margin-bottom:0.75rem;font-size:0.75rem;color:#f5a623">
+      No ELITE or STRONG picks today &mdash; showing model-based GOOD/AVERAGE plays. AVERAGE = model only (no sharp consensus). Smaller units or skip.
+    </div>
+    <div class="filter-bar">
+      <select id="f-stat" class="filter-select" onchange="applyFilters()">
+        <option value="">All Stats</option><option value="hrb">HRB</option>
+      </select>
+      <select id="f-side" class="filter-select" onchange="applyFilters()">
+        <option value="">All Sides</option>
+        <option value="OVER">OVER</option><option value="UNDER">UNDER</option>
+      </select>
+      <select id="f-rating" class="filter-select" onchange="applyFilters()">
+        <option value="" selected>All Ratings</option><option value="ELITE,STRONG">Elite + Strong Only</option>
+        <option value="ELITE">ELITE Only</option>
+        <option value="STRONG">STRONG Only</option>
+      </select>
+      <select id="f-ev" class="filter-select" onchange="applyFilters()">
+        <option value="">Min EV%</option>
+        <option value="2">2%+</option><option value="4">4%+</option>
+        <option value="6">6%+</option><option value="8">8%+</option>
+      </select>
+      <select id="f-fairprob" class="filter-select" onchange="applyFilters()">
+        <option value="">Min Fair%</option>
+        <option value="55">55%+</option><option value="57">57%+</option>
+        <option value="60">60%+</option><option value="63">63%+</option>
+      </select>
+      <select id="f-matchup" class="filter-select" onchange="applyFilters()">
+        <option value="">All Games</option><option value="Los Angeles Dodgers @ Colorado Rockies">Los Angeles Dodgers @ Colorado Rockies</option>
+      </select>
+      <button class="filter-reset" onclick="resetFilters()">Reset</button>
+    </div>
+    <p style="font-size:0.75rem;color:var(--muted);margin-bottom:0.75rem">1 picks today &nbsp;·&nbsp; Sorted by game time &nbsp;·&nbsp; Check Bovada odds before betting</p>
+    <div class="table-wrap">
+      <table class="data-table" id="mlb-table"><thead><tr>
+        <th class="tt" data-tip="Overall bet quality based on EV% and probability">Rating</th>
+        <th>Player</th>
+        <th class="tt" data-tip="The stat being bet on (Hits, Strikeouts, Outs, etc.)">Stat</th>
+        <th class="tt" data-tip="The book's over/under line for this stat">Line</th>
+        <th class="tt" data-tip="Model's projected stat value based on season averages">Projection</th>
+        <th class="tt" data-tip="Projection minus line. Positive = model favors OVER, negative = model favors UNDER">Edge</th>
+        <th class="tt" data-tip="Whether the model recommends OVER or UNDER">Pick</th>
+        <th class="tt" data-tip="Bovada's actual odds — this is what you can bet">Bovada</th>
+        <th class="tt" data-tip="Best available odds across all books for the recommended side — shop here first">Best Book</th>
+        <th class="tt" data-tip="Consensus odds from sharp US books (FanDuel, BetMGM, etc.)">Consensus</th>
+        <th class="tt" data-tip="Model's estimated probability of winning after removing vig">Fair%</th>
+        <th class="tt" data-tip="Expected Value % — how much profit per $100 wagered if the model is correct. 5% EV means +$5 per $100 bet long term">EV%</th>
+        <th>Matchup</th>
+        <th>Time</th>
+        <th>Track</th>
+      </tr></thead><tbody><tr data-stat="hrb" data-side="UNDER" data-rating="AVERAGE" data-ev="38.89" data-fairprob="83.3" data-matchup="Los Angeles Dodgers @ Colorado Rockies" data-started="1" style='opacity:0.45;border-left:3px solid #555'>
+          <td><span class="bet-rating rating-average">➖ AVERAGE</span></td>
+          <td><div><strong>Shohei Ohtani</strong></div><div style="margin-top:2px;display:flex;gap:4px;align-items:center"><span style="font-size:0.65rem;background:rgba(245,166,35,0.15);color:#f5a623;border-radius:3px;padding:1px 5px;font-family:monospace;letter-spacing:0.04em">MED</span></div></td>
+          <td><span class="stat-pill">HRB</span></td>
+          <td>3.5</td>
+          <td><div style="color:#3d8ef8;font-weight:600">2.13</div><div style="margin-top:2px"><span style="font-size:0.65rem;color:#f04e4e;font-family:monospace;font-weight:600" title="Jose Quintana">vs LHP</span></div></td>
+          <td style="color:#00e5a0;font-weight:600;font-family:monospace">+-1.37</td>
+          <td><span class="badge badge-under">UNDER</span></td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">-150</td>
+          <td><span style="color:var(--text);font-weight:600;font-family:monospace">-150</span> <span style="color:var(--muted);font-size:11px">BOL</span></td>
+          <td style="font-family:monospace;color:var(--muted)">-</td>
+          <td>83.3%</td>
+          <td class="ev-cell">38.9%</td>
+          <td class="muted">Los Angeles Dodgers @ Colorado Rockies</td>
+          <td class="muted"><span style="color:#888;font-size:10px">LIVE</span></td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Shohei Ohtani|HRB|3.5|UNDER" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option>
+                <option value="2">2u</option>
+                <option value="3">3u</option>
+                <option value="4">4u</option>
+                <option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Shohei Ohtani','HRB','3.5','UNDER','-150','Los Angeles Dodgers @ Colorado Rockies','05:41 PM PT','MLB')"
+                id="tb_Shohei Ohtani|HRB|3.5|UNDER"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr></tbody></table>
+    </div>
 </div>
 <div id="lines" class="tab-content">
   <div class="tab-header">
@@ -455,7 +653,7 @@
   
     <p style="font-size:0.75rem;color:var(--muted);margin-bottom:0.75rem">
       P(HR) = Poisson probability of hitting &ge;1 HR · PROJ_HR incorporates park, pitcher, form, weather &amp; Statcast ·
-      <span style="color:#00e5a0">Green rows = positive EV vs best available odds</span> · 50 +EV picks today
+      <span style="color:#00e5a0">Green rows = positive EV vs best available odds</span> · 52 +EV picks today
     </p>
     <div class="table-wrap">
       <table class="data-table" id="hr-table"><thead><tr>
@@ -483,40 +681,64 @@
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
         <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">28.9%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">29.6%</td>
           <td><strong>Matt Olson</strong></td>
           <td class="muted" style="font-size:0.78rem">Atlanta Braves @ Washington Nationals</td>
           <td style="font-family:monospace">+400</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">20.0%</td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+44.3%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+48.1%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.007</td>
           <td style="font-size:0.75rem;color:var(--muted)">Jake Irvin (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">BetOnline</td>
         </tr>
         <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">28.2%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">27.9%</td>
           <td><strong>Mike Trout</strong></td>
           <td class="muted" style="font-size:0.78rem">Toronto Blue Jays @ Los Angeles Angels</td>
           <td style="font-family:monospace">+350</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">22.2%</td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+27.0%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+25.5%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.00</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.990</td>
           <td style="font-size:0.75rem;color:var(--muted)">Dylan Cease (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">BetOnline</td>
         </tr>
         <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">25.7%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">26.5%</td>
           <td><strong>Yordan Alvarez</strong></td>
           <td class="muted" style="font-size:0.78rem">Houston Astros @ Cleveland Guardians</td>
           <td style="font-family:monospace">+400</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">20.0%</td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+28.6%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+32.6%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.40</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.992</td>
           <td style="font-size:0.75rem;color:var(--muted)">Slade Cecconi (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
+        </tr>
+        <tr >
+          <td style="font-family:monospace;color:var(--muted);font-weight:700">25.6%</td>
+          <td><strong>Shohei Ohtani</strong></td>
+          <td class="muted" style="font-size:0.78rem">Los Angeles Dodgers @ Colorado Rockies</td>
+          <td style="font-family:monospace">+210</td>
+          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">32.3%</td>
+          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-20.5%</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.40</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.046</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Jose Quintana (L)</td>
+          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
+        </tr>
+        <tr style="background:rgba(0,229,160,0.04)">
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">25.2%</td>
+          <td><strong>Hunter Goodman</strong></td>
+          <td class="muted" style="font-size:0.78rem">Los Angeles Dodgers @ Colorado Rockies</td>
+          <td style="font-family:monospace">+340</td>
+          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">22.7%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+10.7%</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.60</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.046</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Justin Wrobleski (L)</td>
+          <td style="font-size:0.72rem;color:var(--muted)">BetRivers</td>
         </tr>
         <tr style="background:rgba(0,229,160,0.04)">
           <td style="font-family:monospace;color:#00e5a0;font-weight:700">24.9%</td>
@@ -530,77 +752,53 @@
           <td style="font-size:0.75rem;color:var(--muted)">Jesse Scholtens (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">BetRivers</td>
         </tr>
-        <tr >
-          <td style="font-family:monospace;color:var(--muted);font-weight:700">24.8%</td>
-          <td><strong>Shohei Ohtani</strong></td>
-          <td class="muted" style="font-size:0.78rem">Los Angeles Dodgers @ Colorado Rockies</td>
-          <td style="font-family:monospace">+210</td>
-          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">32.3%</td>
-          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-23.2%</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.40</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.046</td>
-          <td style="font-size:0.75rem;color:var(--muted)">Jose Quintana (L)</td>
-          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
-        </tr>
         <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">24.3%</td>
-          <td><strong>Hunter Goodman</strong></td>
-          <td class="muted" style="font-size:0.78rem">Los Angeles Dodgers @ Colorado Rockies</td>
-          <td style="font-family:monospace">+340</td>
-          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">22.7%</td>
-          <td style="font-family:monospace;color:#44d4a0;font-weight:600">+6.9%</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.60</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.046</td>
-          <td style="font-size:0.75rem;color:var(--muted)">Justin Wrobleski (L)</td>
-          <td style="font-size:0.72rem;color:var(--muted)">BetRivers</td>
-        </tr>
-        <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">24.2%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">24.9%</td>
           <td><strong>Drake Baldwin</strong></td>
           <td class="muted" style="font-size:0.78rem">Atlanta Braves @ Washington Nationals</td>
           <td style="font-family:monospace">+600</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">14.3%</td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+69.5%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+74.1%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.007</td>
           <td style="font-size:0.75rem;color:var(--muted)">Jake Irvin (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
+        <tr style="background:rgba(0,229,160,0.04)">
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">23.2%</td>
+          <td><strong>Austin Riley</strong></td>
+          <td class="muted" style="font-size:0.78rem">Atlanta Braves @ Washington Nationals</td>
+          <td style="font-family:monospace">+500</td>
+          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">16.7%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+39.0%</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.60</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.007</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Jake Irvin (R)</td>
+          <td style="font-size:0.72rem;color:var(--muted)">BetOnline</td>
+        </tr>
         <tr >
-          <td style="font-family:monospace;color:var(--muted);font-weight:700">23.1%</td>
+          <td style="font-family:monospace;color:var(--muted);font-weight:700">22.9%</td>
           <td><strong>Kyle Schwarber</strong></td>
           <td class="muted" style="font-size:0.78rem">Philadelphia Phillies @ Chicago Cubs</td>
           <td style="font-family:monospace">+250</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">28.6%</td>
-          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-19.1%</td>
+          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-19.8%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.40</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.988</td>
           <td style="font-size:0.75rem;color:var(--muted)">Colin Rea (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">BetRivers</td>
         </tr>
         <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">22.6%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">22.5%</td>
           <td><strong>Carter Jensen</strong></td>
           <td class="muted" style="font-size:0.78rem">Baltimore Orioles @ Kansas City Royals</td>
           <td style="font-family:monospace">+600</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">14.3%</td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+57.8%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+57.7%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.018</td>
           <td style="font-size:0.75rem;color:var(--muted)">Kyle Bradish (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
-        </tr>
-        <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">22.5%</td>
-          <td><strong>Austin Riley</strong></td>
-          <td class="muted" style="font-size:0.78rem">Atlanta Braves @ Washington Nationals</td>
-          <td style="font-family:monospace">+500</td>
-          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">16.7%</td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+35.3%</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.60</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.007</td>
-          <td style="font-size:0.75rem;color:var(--muted)">Jake Irvin (R)</td>
-          <td style="font-size:0.72rem;color:var(--muted)">BetOnline</td>
         </tr>
         <tr style="background:rgba(0,229,160,0.04)">
           <td style="font-family:monospace;color:#00e5a0;font-weight:700">22.3%</td>
@@ -627,39 +825,39 @@
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
         <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">21.0%</td>
-          <td><strong>Dansby Swanson</strong></td>
-          <td class="muted" style="font-size:0.78rem">Philadelphia Phillies @ Chicago Cubs</td>
-          <td style="font-family:monospace">+900</td>
-          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">10.0%</td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+110.2%</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.60</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.988</td>
-          <td style="font-size:0.75rem;color:var(--muted)">Aaron Nola (R)</td>
-          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
-        </tr>
-        <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">21.0%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">21.6%</td>
           <td><strong>James Wood</strong></td>
           <td class="muted" style="font-size:0.78rem">Atlanta Braves @ Washington Nationals</td>
           <td style="font-family:monospace">+500</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">16.7%</td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+26.0%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+29.5%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.007</td>
           <td style="font-size:0.75rem;color:var(--muted)">Bryce Elder (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">BetOnline</td>
         </tr>
         <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">20.9%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">21.5%</td>
           <td><strong>CJ Abrams</strong></td>
           <td class="muted" style="font-size:0.78rem">Atlanta Braves @ Washington Nationals</td>
           <td style="font-family:monospace">+700</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">12.5%</td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+67.0%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+71.7%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.40</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.007</td>
           <td style="font-size:0.75rem;color:var(--muted)">Bryce Elder (R)</td>
+          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
+        </tr>
+        <tr style="background:rgba(0,229,160,0.04)">
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">20.8%</td>
+          <td><strong>Dansby Swanson</strong></td>
+          <td class="muted" style="font-size:0.78rem">Philadelphia Phillies @ Chicago Cubs</td>
+          <td style="font-family:monospace">+900</td>
+          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">10.0%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+108.1%</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.60</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.988</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Aaron Nola (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
         <tr style="background:rgba(0,229,160,0.04)">
@@ -668,35 +866,71 @@
           <td class="muted" style="font-size:0.78rem">Baltimore Orioles @ Kansas City Royals</td>
           <td style="font-family:monospace">+525</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">16.0%</td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+29.9%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+29.8%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.80</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.018</td>
           <td style="font-size:0.75rem;color:var(--muted)">Seth Lugo (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">BetRivers</td>
         </tr>
         <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">20.4%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">20.2%</td>
           <td><strong>Ian Happ</strong></td>
           <td class="muted" style="font-size:0.78rem">Philadelphia Phillies @ Chicago Cubs</td>
           <td style="font-family:monospace">+500</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">16.7%</td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+22.5%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+21.3%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.988</td>
           <td style="font-size:0.75rem;color:var(--muted)">Aaron Nola (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
         <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">19.7%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">19.8%</td>
+          <td><strong>Dominic Smith</strong></td>
+          <td class="muted" style="font-size:0.78rem">Atlanta Braves @ Washington Nationals</td>
+          <td style="font-family:monospace">+900</td>
+          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">10.0%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+97.7%</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.007</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Jake Irvin (R)</td>
+          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
+        </tr>
+        <tr style="background:rgba(0,229,160,0.04)">
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">19.6%</td>
+          <td><strong>Michael Harris II</strong></td>
+          <td class="muted" style="font-size:0.78rem">Atlanta Braves @ Washington Nationals</td>
+          <td style="font-family:monospace">+600</td>
+          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">14.3%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+37.1%</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.007</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Jake Irvin (R)</td>
+          <td style="font-size:0.72rem;color:var(--muted)">BetOnline</td>
+        </tr>
+        <tr style="background:rgba(0,229,160,0.04)">
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">19.5%</td>
           <td><strong>Moisés Ballesteros</strong></td>
           <td class="muted" style="font-size:0.78rem">Philadelphia Phillies @ Chicago Cubs</td>
           <td style="font-family:monospace">+700</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">12.5%</td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+57.7%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+56.1%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.40</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.988</td>
           <td style="font-size:0.75rem;color:var(--muted)">Aaron Nola (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
+        </tr>
+        <tr style="background:rgba(0,229,160,0.04)">
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">19.4%</td>
+          <td><strong>Chase DeLauter</strong></td>
+          <td class="muted" style="font-size:0.78rem">Houston Astros @ Cleveland Guardians</td>
+          <td style="font-family:monospace">+550</td>
+          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">15.4%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+25.9%</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.992</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Spencer Arrighetti (R)</td>
+          <td style="font-size:0.72rem;color:var(--muted)">BetRivers</td>
         </tr>
         <tr style="background:rgba(0,229,160,0.04)">
           <td style="font-family:monospace;color:#00e5a0;font-weight:700">19.3%</td>
@@ -711,51 +945,27 @@
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
         <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">19.2%</td>
-          <td><strong>Dominic Smith</strong></td>
-          <td class="muted" style="font-size:0.78rem">Atlanta Braves @ Washington Nationals</td>
-          <td style="font-family:monospace">+900</td>
-          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">10.0%</td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+92.2%</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.007</td>
-          <td style="font-size:0.75rem;color:var(--muted)">Jake Irvin (R)</td>
-          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
-        </tr>
-        <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">19.0%</td>
-          <td><strong>Michael Harris II</strong></td>
-          <td class="muted" style="font-size:0.78rem">Atlanta Braves @ Washington Nationals</td>
-          <td style="font-family:monospace">+600</td>
-          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">14.3%</td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+33.3%</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.007</td>
-          <td style="font-size:0.75rem;color:var(--muted)">Jake Irvin (R)</td>
-          <td style="font-size:0.72rem;color:var(--muted)">BetOnline</td>
-        </tr>
-        <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">18.8%</td>
-          <td><strong>Chase DeLauter</strong></td>
-          <td class="muted" style="font-size:0.78rem">Houston Astros @ Cleveland Guardians</td>
-          <td style="font-family:monospace">+550</td>
-          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">15.4%</td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+21.9%</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.992</td>
-          <td style="font-size:0.75rem;color:var(--muted)">Spencer Arrighetti (R)</td>
-          <td style="font-size:0.72rem;color:var(--muted)">BetRivers</td>
-        </tr>
-        <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">18.0%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">17.8%</td>
           <td><strong>Bryce Harper</strong></td>
           <td class="muted" style="font-size:0.78rem">Philadelphia Phillies @ Chicago Cubs</td>
           <td style="font-family:monospace">+500</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">16.7%</td>
-          <td style="font-family:monospace;color:#44d4a0;font-weight:600">+7.8%</td>
+          <td style="font-family:monospace;color:#44d4a0;font-weight:600">+6.7%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.988</td>
           <td style="font-size:0.75rem;color:var(--muted)">Colin Rea (R)</td>
+          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
+        </tr>
+        <tr style="background:rgba(0,229,160,0.04)">
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">17.7%</td>
+          <td><strong>Ronald Acuna Jr.</strong></td>
+          <td class="muted" style="font-size:0.78rem">Atlanta Braves @ Washington Nationals</td>
+          <td style="font-family:monospace">+525</td>
+          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">16.0%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+10.6%</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.007</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Jake Irvin (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
         <tr style="background:rgba(0,229,160,0.04)">
@@ -769,18 +979,6 @@
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.000</td>
           <td style="font-size:0.75rem;color:var(--muted)">Jesse Scholtens (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">BetRivers</td>
-        </tr>
-        <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">17.2%</td>
-          <td><strong>Ronald Acuna Jr.</strong></td>
-          <td class="muted" style="font-size:0.78rem">Atlanta Braves @ Washington Nationals</td>
-          <td style="font-family:monospace">+525</td>
-          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">16.0%</td>
-          <td style="font-family:monospace;color:#44d4a0;font-weight:600">+7.5%</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.007</td>
-          <td style="font-size:0.75rem;color:var(--muted)">Jake Irvin (R)</td>
-          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
         <tr >
           <td style="font-family:monospace;color:var(--muted);font-weight:700">17.0%</td>
@@ -796,18 +994,6 @@
         </tr>
         <tr style="background:rgba(0,229,160,0.04)">
           <td style="font-family:monospace;color:#00e5a0;font-weight:700">16.9%</td>
-          <td><strong>Jorge Soler</strong></td>
-          <td class="muted" style="font-size:0.78rem">Toronto Blue Jays @ Los Angeles Angels</td>
-          <td style="font-family:monospace">+500</td>
-          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">16.7%</td>
-          <td style="font-family:monospace;color:#f5a623;font-weight:600">+1.7%</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.40</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.990</td>
-          <td style="font-size:0.75rem;color:var(--muted)">Dylan Cease (R)</td>
-          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
-        </tr>
-        <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">16.9%</td>
           <td><strong>Liam Hicks</strong></td>
           <td class="muted" style="font-size:0.78rem">St. Louis Cardinals @ Miami Marlins</td>
           <td style="font-family:monospace">+1100</td>
@@ -818,13 +1004,37 @@
           <td style="font-size:0.75rem;color:var(--muted)">Michael McGreevy (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
+        <tr style="background:rgba(0,229,160,0.04)">
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">16.8%</td>
+          <td><strong>Jorge Soler</strong></td>
+          <td class="muted" style="font-size:0.78rem">Toronto Blue Jays @ Los Angeles Angels</td>
+          <td style="font-family:monospace">+500</td>
+          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">16.7%</td>
+          <td style="font-family:monospace;color:#f5a623;font-weight:600">+0.5%</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.40</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.990</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Dylan Cease (R)</td>
+          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
+        </tr>
+        <tr >
+          <td style="font-family:monospace;color:var(--muted);font-weight:700">16.8%</td>
+          <td><strong>Teoscar Hernandez</strong></td>
+          <td class="muted" style="font-size:0.78rem">Los Angeles Dodgers @ Colorado Rockies</td>
+          <td style="font-family:monospace">+300</td>
+          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">25.0%</td>
+          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-33.0%</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.40</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.046</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Jose Quintana (L)</td>
+          <td style="font-size:0.72rem;color:var(--muted)">BetOnline</td>
+        </tr>
         <tr >
           <td style="font-family:monospace;color:var(--muted);font-weight:700">16.6%</td>
           <td><strong>Salvador Perez</strong></td>
           <td class="muted" style="font-size:0.78rem">Baltimore Orioles @ Kansas City Royals</td>
           <td style="font-family:monospace">+410</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">19.6%</td>
-          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-15.1%</td>
+          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-15.2%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.018</td>
           <td style="font-size:0.75rem;color:var(--muted)">Kyle Bradish (R)</td>
@@ -843,40 +1053,28 @@
           <td style="font-size:0.72rem;color:var(--muted)">BetOnline</td>
         </tr>
         <tr >
-          <td style="font-family:monospace;color:var(--muted);font-weight:700">16.5%</td>
+          <td style="font-family:monospace;color:var(--muted);font-weight:700">16.3%</td>
           <td><strong>Davis Schneider</strong></td>
           <td class="muted" style="font-size:0.78rem">Toronto Blue Jays @ Los Angeles Angels</td>
           <td style="font-family:monospace">+475</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">17.4%</td>
-          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-5.0%</td>
+          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-6.2%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.990</td>
           <td style="font-size:0.75rem;color:var(--muted)">Reid Detmers (L)</td>
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
-        <tr >
-          <td style="font-family:monospace;color:var(--muted);font-weight:700">16.2%</td>
-          <td><strong>Carson Kelly</strong></td>
-          <td class="muted" style="font-size:0.78rem">Philadelphia Phillies @ Chicago Cubs</td>
-          <td style="font-family:monospace">+600</td>
-          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">14.3%</td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+13.8%</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.988</td>
-          <td style="font-size:0.75rem;color:var(--muted)">Aaron Nola (R)</td>
-          <td style="font-size:0.72rem;color:var(--muted)">BetOnline</td>
-        </tr>
-        <tr >
-          <td style="font-family:monospace;color:var(--muted);font-weight:700">16.1%</td>
-          <td><strong>Teoscar Hernandez</strong></td>
-          <td class="muted" style="font-size:0.78rem">Los Angeles Dodgers @ Colorado Rockies</td>
-          <td style="font-family:monospace">+300</td>
-          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">25.0%</td>
-          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-35.4%</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.40</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.046</td>
-          <td style="font-size:0.75rem;color:var(--muted)">Jose Quintana (L)</td>
-          <td style="font-size:0.72rem;color:var(--muted)">BetOnline</td>
+        <tr style="background:rgba(0,229,160,0.04)">
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">16.3%</td>
+          <td><strong>Kyle Manzardo</strong></td>
+          <td class="muted" style="font-size:0.78rem">Houston Astros @ Cleveland Guardians</td>
+          <td style="font-family:monospace">+550</td>
+          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">15.4%</td>
+          <td style="font-family:monospace;color:#44d4a0;font-weight:600">+5.7%</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.992</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Spencer Arrighetti (R)</td>
+          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
         <tr style="background:rgba(0,229,160,0.04)">
           <td style="font-family:monospace;color:#00e5a0;font-weight:700">16.1%</td>
@@ -884,22 +1082,46 @@
           <td class="muted" style="font-size:0.78rem">Baltimore Orioles @ Kansas City Royals</td>
           <td style="font-family:monospace">+700</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">12.5%</td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+28.9%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+28.7%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.018</td>
           <td style="font-size:0.75rem;color:var(--muted)">Kyle Bradish (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
-        <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">15.8%</td>
-          <td><strong>Kyle Manzardo</strong></td>
-          <td class="muted" style="font-size:0.78rem">Houston Astros @ Cleveland Guardians</td>
-          <td style="font-family:monospace">+550</td>
-          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">15.4%</td>
-          <td style="font-family:monospace;color:#44d4a0;font-weight:600">+2.4%</td>
+        <tr >
+          <td style="font-family:monospace;color:var(--muted);font-weight:700">16.1%</td>
+          <td><strong>Carson Kelly</strong></td>
+          <td class="muted" style="font-size:0.78rem">Philadelphia Phillies @ Chicago Cubs</td>
+          <td style="font-family:monospace">+600</td>
+          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">14.3%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+12.6%</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.988</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Aaron Nola (R)</td>
+          <td style="font-size:0.72rem;color:var(--muted)">BetOnline</td>
+        </tr>
+        <tr >
+          <td style="font-family:monospace;color:var(--muted);font-weight:700">15.8%</td>
+          <td><strong>Will Smith</strong></td>
+          <td class="muted" style="font-size:0.78rem">Los Angeles Dodgers @ Colorado Rockies</td>
+          <td style="font-family:monospace">+425</td>
+          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">19.1%</td>
+          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-16.9%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.992</td>
-          <td style="font-size:0.75rem;color:var(--muted)">Spencer Arrighetti (R)</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.046</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Jose Quintana (L)</td>
+          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
+        </tr>
+        <tr >
+          <td style="font-family:monospace;color:var(--muted);font-weight:700">15.8%</td>
+          <td><strong>Andy Pages</strong></td>
+          <td class="muted" style="font-size:0.78rem">Los Angeles Dodgers @ Colorado Rockies</td>
+          <td style="font-family:monospace">+475</td>
+          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">17.4%</td>
+          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-9.1%</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.046</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Jose Quintana (L)</td>
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
         <tr style="background:rgba(0,229,160,0.04)">
@@ -915,36 +1137,12 @@
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
         <tr >
-          <td style="font-family:monospace;color:var(--muted);font-weight:700">15.3%</td>
-          <td><strong>Will Smith</strong></td>
-          <td class="muted" style="font-size:0.78rem">Los Angeles Dodgers @ Colorado Rockies</td>
-          <td style="font-family:monospace">+425</td>
-          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">19.1%</td>
-          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-19.9%</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.046</td>
-          <td style="font-size:0.75rem;color:var(--muted)">Jose Quintana (L)</td>
-          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
-        </tr>
-        <tr >
-          <td style="font-family:monospace;color:var(--muted);font-weight:700">15.2%</td>
-          <td><strong>Andy Pages</strong></td>
-          <td class="muted" style="font-size:0.78rem">Los Angeles Dodgers @ Colorado Rockies</td>
-          <td style="font-family:monospace">+475</td>
-          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">17.4%</td>
-          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-12.4%</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.046</td>
-          <td style="font-size:0.75rem;color:var(--muted)">Jose Quintana (L)</td>
-          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
-        </tr>
-        <tr >
-          <td style="font-family:monospace;color:var(--muted);font-weight:700">14.9%</td>
+          <td style="font-family:monospace;color:var(--muted);font-weight:700">15.4%</td>
           <td><strong>Jose Ramirez</strong></td>
           <td class="muted" style="font-size:0.78rem">Houston Astros @ Cleveland Guardians</td>
           <td style="font-family:monospace">+500</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">16.7%</td>
-          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-10.3%</td>
+          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-7.3%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.40</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.992</td>
           <td style="font-size:0.75rem;color:var(--muted)">Spencer Arrighetti (R)</td>
@@ -974,6 +1172,18 @@
           <td style="font-size:0.75rem;color:var(--muted)">Emerson Hancock (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">BetOnline</td>
         </tr>
+        <tr >
+          <td style="font-family:monospace;color:var(--muted);font-weight:700">14.7%</td>
+          <td><strong>Kyle Tucker</strong></td>
+          <td class="muted" style="font-size:0.78rem">Los Angeles Dodgers @ Colorado Rockies</td>
+          <td style="font-family:monospace">+400</td>
+          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">20.0%</td>
+          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-26.4%</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.046</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Jose Quintana (L)</td>
+          <td style="font-size:0.72rem;color:var(--muted)">BetOnline</td>
+        </tr>
         <tr style="background:rgba(0,229,160,0.04)">
           <td style="font-family:monospace;color:#00e5a0;font-weight:700">14.4%</td>
           <td><strong>Ramon Urias</strong></td>
@@ -992,7 +1202,7 @@
           <td class="muted" style="font-size:0.78rem">Baltimore Orioles @ Kansas City Royals</td>
           <td style="font-family:monospace">+500</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">16.7%</td>
-          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-13.7%</td>
+          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-13.8%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.40</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.018</td>
           <td style="font-size:0.75rem;color:var(--muted)">Kyle Bradish (R)</td>
@@ -1022,16 +1232,16 @@
           <td style="font-size:0.75rem;color:var(--muted)">Rhett Lowder (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
-        <tr >
-          <td style="font-family:monospace;color:var(--muted);font-weight:700">14.2%</td>
-          <td><strong>Kyle Tucker</strong></td>
-          <td class="muted" style="font-size:0.78rem">Los Angeles Dodgers @ Colorado Rockies</td>
-          <td style="font-family:monospace">+400</td>
-          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">20.0%</td>
-          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-29.1%</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.046</td>
-          <td style="font-size:0.75rem;color:var(--muted)">Jose Quintana (L)</td>
+        <tr style="background:rgba(0,229,160,0.04)">
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">14.2%</td>
+          <td><strong>Bo Naylor</strong></td>
+          <td class="muted" style="font-size:0.78rem">Houston Astros @ Cleveland Guardians</td>
+          <td style="font-family:monospace">+700</td>
+          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">12.5%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+13.4%</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.992</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Spencer Arrighetti (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">BetOnline</td>
         </tr>
         <tr style="background:rgba(0,229,160,0.04)">
@@ -1052,35 +1262,11 @@
           <td class="muted" style="font-size:0.78rem">Baltimore Orioles @ Kansas City Royals</td>
           <td style="font-family:monospace">+525</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">16.0%</td>
-          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-11.9%</td>
+          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-12.0%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.40</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.018</td>
           <td style="font-size:0.75rem;color:var(--muted)">Seth Lugo (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">BetRivers</td>
-        </tr>
-        <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">14.0%</td>
-          <td><strong>Daulton Varsho</strong></td>
-          <td class="muted" style="font-size:0.78rem">Toronto Blue Jays @ Los Angeles Angels</td>
-          <td style="font-family:monospace">+700</td>
-          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">12.5%</td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+12.3%</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.40</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.990</td>
-          <td style="font-size:0.75rem;color:var(--muted)">Reid Detmers (L)</td>
-          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
-        </tr>
-        <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">13.9%</td>
-          <td><strong>Tyler Stephenson</strong></td>
-          <td class="muted" style="font-size:0.78rem">Cincinnati Reds @ Tampa Bay Rays</td>
-          <td style="font-family:monospace">+700</td>
-          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">12.5%</td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+11.1%</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.000</td>
-          <td style="font-size:0.75rem;color:var(--muted)">Jesse Scholtens (R)</td>
-          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
         <tr >
           <td style="font-family:monospace;color:var(--muted);font-weight:700">13.9%</td>
@@ -1095,16 +1281,28 @@
           <td style="font-size:0.72rem;color:var(--muted)">BetRivers</td>
         </tr>
         <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">13.7%</td>
-          <td><strong>Bo Naylor</strong></td>
-          <td class="muted" style="font-size:0.78rem">Houston Astros @ Cleveland Guardians</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">13.9%</td>
+          <td><strong>Tyler Stephenson</strong></td>
+          <td class="muted" style="font-size:0.78rem">Cincinnati Reds @ Tampa Bay Rays</td>
           <td style="font-family:monospace">+700</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">12.5%</td>
-          <td style="font-family:monospace;color:#44d4a0;font-weight:600">+9.7%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+11.1%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.992</td>
-          <td style="font-size:0.75rem;color:var(--muted)">Spencer Arrighetti (R)</td>
-          <td style="font-size:0.72rem;color:var(--muted)">BetOnline</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.000</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Jesse Scholtens (R)</td>
+          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
+        </tr>
+        <tr style="background:rgba(0,229,160,0.04)">
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">13.9%</td>
+          <td><strong>Daulton Varsho</strong></td>
+          <td class="muted" style="font-size:0.78rem">Toronto Blue Jays @ Los Angeles Angels</td>
+          <td style="font-family:monospace">+700</td>
+          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">12.5%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+10.9%</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.40</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.990</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Reid Detmers (L)</td>
+          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
         <tr style="background:rgba(0,229,160,0.04)">
           <td style="font-family:monospace;color:#00e5a0;font-weight:700">13.7%</td>
@@ -1118,13 +1316,25 @@
           <td style="font-size:0.75rem;color:var(--muted)">Jesse Scholtens (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
+        <tr style="background:rgba(0,229,160,0.04)">
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">13.5%</td>
+          <td><strong>Jose Altuve</strong></td>
+          <td class="muted" style="font-size:0.78rem">Houston Astros @ Cleveland Guardians</td>
+          <td style="font-family:monospace">+700</td>
+          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">12.5%</td>
+          <td style="font-family:monospace;color:#44d4a0;font-weight:600">+8.1%</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.992</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Slade Cecconi (R)</td>
+          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
+        </tr>
         <tr >
-          <td style="font-family:monospace;color:var(--muted);font-weight:700">13.5%</td>
+          <td style="font-family:monospace;color:var(--muted);font-weight:700">13.3%</td>
           <td><strong>Michael Conforto</strong></td>
           <td class="muted" style="font-size:0.78rem">Philadelphia Phillies @ Chicago Cubs</td>
           <td style="font-family:monospace">+600</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">14.3%</td>
-          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-5.6%</td>
+          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-6.5%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.988</td>
           <td style="font-size:0.75rem;color:var(--muted)">Aaron Nola (R)</td>
@@ -1132,14 +1342,14 @@
         </tr>
         <tr >
           <td style="font-family:monospace;color:var(--muted);font-weight:700">13.2%</td>
-          <td><strong>Zach Neto</strong></td>
-          <td class="muted" style="font-size:0.78rem">Toronto Blue Jays @ Los Angeles Angels</td>
+          <td><strong>Christian Walker</strong></td>
+          <td class="muted" style="font-size:0.78rem">Houston Astros @ Cleveland Guardians</td>
           <td style="font-family:monospace">+600</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">14.3%</td>
-          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-7.4%</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.990</td>
-          <td style="font-size:0.75rem;color:var(--muted)">Dylan Cease (R)</td>
+          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-7.3%</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.992</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Slade Cecconi (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
         <tr >
@@ -1154,76 +1364,76 @@
           <td style="font-size:0.75rem;color:var(--muted)">J.T. Ginn (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">BetRivers</td>
         </tr>
-        <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">13.1%</td>
-          <td><strong>Jose Altuve</strong></td>
-          <td class="muted" style="font-size:0.78rem">Houston Astros @ Cleveland Guardians</td>
-          <td style="font-family:monospace">+700</td>
-          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">12.5%</td>
-          <td style="font-family:monospace;color:#44d4a0;font-weight:600">+4.6%</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.992</td>
-          <td style="font-size:0.75rem;color:var(--muted)">Slade Cecconi (R)</td>
-          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
-        </tr>
         <tr >
-          <td style="font-family:monospace;color:var(--muted);font-weight:700">12.8%</td>
-          <td><strong>Christian Walker</strong></td>
-          <td class="muted" style="font-size:0.78rem">Houston Astros @ Cleveland Guardians</td>
+          <td style="font-family:monospace;color:var(--muted);font-weight:700">13.1%</td>
+          <td><strong>Zach Neto</strong></td>
+          <td class="muted" style="font-size:0.78rem">Toronto Blue Jays @ Los Angeles Angels</td>
           <td style="font-family:monospace">+600</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">14.3%</td>
-          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-10.3%</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.992</td>
-          <td style="font-size:0.75rem;color:var(--muted)">Slade Cecconi (R)</td>
-          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
-        </tr>
-        <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">12.7%</td>
-          <td><strong>Josh Lowe</strong></td>
-          <td class="muted" style="font-size:0.78rem">Toronto Blue Jays @ Los Angeles Angels</td>
-          <td style="font-family:monospace">+1000</td>
-          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">9.1%</td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+39.3%</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.40</td>
+          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-8.6%</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.990</td>
           <td style="font-size:0.75rem;color:var(--muted)">Dylan Cease (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
         <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">12.6%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">13.0%</td>
+          <td><strong>Taylor Trammell</strong></td>
+          <td class="muted" style="font-size:0.78rem">Houston Astros @ Cleveland Guardians</td>
+          <td style="font-family:monospace">+900</td>
+          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">10.0%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+29.7%</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.992</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Slade Cecconi (R)</td>
+          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
+        </tr>
+        <tr style="background:rgba(0,229,160,0.04)">
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">13.0%</td>
           <td><strong>Ozzie Albies</strong></td>
           <td class="muted" style="font-size:0.78rem">Atlanta Braves @ Washington Nationals</td>
           <td style="font-family:monospace">+800</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">11.1%</td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+13.4%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+16.8%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.007</td>
           <td style="font-size:0.75rem;color:var(--muted)">Jake Irvin (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
         <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">12.5%</td>
-          <td><strong>Taylor Trammell</strong></td>
-          <td class="muted" style="font-size:0.78rem">Houston Astros @ Cleveland Guardians</td>
-          <td style="font-family:monospace">+900</td>
-          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">10.0%</td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+25.4%</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.992</td>
-          <td style="font-size:0.75rem;color:var(--muted)">Slade Cecconi (R)</td>
-          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
-        </tr>
-        <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">12.4%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">12.9%</td>
           <td><strong>Miguel Rojas</strong></td>
           <td class="muted" style="font-size:0.78rem">Los Angeles Dodgers @ Colorado Rockies</td>
           <td style="font-family:monospace">+900</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">10.0%</td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+23.9%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+28.7%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.046</td>
           <td style="font-size:0.75rem;color:var(--muted)">Jose Quintana (L)</td>
+          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
+        </tr>
+        <tr style="background:rgba(0,229,160,0.04)">
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">12.5%</td>
+          <td><strong>Josh Lowe</strong></td>
+          <td class="muted" style="font-size:0.78rem">Toronto Blue Jays @ Los Angeles Angels</td>
+          <td style="font-family:monospace">+1000</td>
+          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">9.1%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+37.6%</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.40</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.990</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Dylan Cease (R)</td>
+          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
+        </tr>
+        <tr style="background:rgba(0,229,160,0.04)">
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">12.5%</td>
+          <td><strong>Jacob Young</strong></td>
+          <td class="muted" style="font-size:0.78rem">Atlanta Braves @ Washington Nationals</td>
+          <td style="font-family:monospace">+1200</td>
+          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">7.7%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+62.2%</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.007</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Bryce Elder (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
         <tr >
@@ -1240,18 +1450,6 @@
         </tr>
         <tr style="background:rgba(0,229,160,0.04)">
           <td style="font-family:monospace;color:#00e5a0;font-weight:700">12.1%</td>
-          <td><strong>Jacob Young</strong></td>
-          <td class="muted" style="font-size:0.78rem">Atlanta Braves @ Washington Nationals</td>
-          <td style="font-family:monospace">+1200</td>
-          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">7.7%</td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+57.5%</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.007</td>
-          <td style="font-size:0.75rem;color:var(--muted)">Bryce Elder (R)</td>
-          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
-        </tr>
-        <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">12.1%</td>
           <td><strong>Richie Palacios</strong></td>
           <td class="muted" style="font-size:0.78rem">Cincinnati Reds @ Tampa Bay Rays</td>
           <td style="font-family:monospace">+900</td>
@@ -1263,12 +1461,12 @@
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
         <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">12.0%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">11.8%</td>
           <td><strong>Nico Hoerner</strong></td>
           <td class="muted" style="font-size:0.78rem">Philadelphia Phillies @ Chicago Cubs</td>
           <td style="font-family:monospace">+1200</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">7.7%</td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+55.5%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+54.0%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.40</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.988</td>
           <td style="font-size:0.75rem;color:var(--muted)">Aaron Nola (R)</td>
@@ -1284,6 +1482,18 @@
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.997</td>
           <td style="font-size:0.75rem;color:var(--muted)">Max Meyer (R)</td>
+          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
+        </tr>
+        <tr >
+          <td style="font-family:monospace;color:var(--muted);font-weight:700">11.7%</td>
+          <td><strong>Rhys Hoskins</strong></td>
+          <td class="muted" style="font-size:0.78rem">Houston Astros @ Cleveland Guardians</td>
+          <td style="font-family:monospace">+550</td>
+          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">15.4%</td>
+          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-23.7%</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.992</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Spencer Arrighetti (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
         <tr >
@@ -1304,7 +1514,7 @@
           <td class="muted" style="font-size:0.78rem">Baltimore Orioles @ Kansas City Royals</td>
           <td style="font-family:monospace">+475</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">17.4%</td>
-          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-32.8%</td>
+          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-32.9%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.018</td>
           <td style="font-size:0.75rem;color:var(--muted)">Seth Lugo (R)</td>
@@ -1316,47 +1526,35 @@
           <td class="muted" style="font-size:0.78rem">Baltimore Orioles @ Kansas City Royals</td>
           <td style="font-family:monospace">+900</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">10.0%</td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+16.6%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+16.5%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.018</td>
           <td style="font-size:0.75rem;color:var(--muted)">Kyle Bradish (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
         <tr >
-          <td style="font-family:monospace;color:var(--muted);font-weight:700">11.6%</td>
+          <td style="font-family:monospace;color:var(--muted);font-weight:700">11.4%</td>
           <td><strong>Yoan Moncada</strong></td>
           <td class="muted" style="font-size:0.78rem">Toronto Blue Jays @ Los Angeles Angels</td>
           <td style="font-family:monospace">+750</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">11.8%</td>
-          <td style="font-family:monospace;color:#f5a623;font-weight:600">-1.7%</td>
+          <td style="font-family:monospace;color:#f5a623;font-weight:600">-3.0%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.40</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.990</td>
           <td style="font-size:0.75rem;color:var(--muted)">Dylan Cease (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">BetRivers</td>
         </tr>
         <tr >
-          <td style="font-family:monospace;color:var(--muted);font-weight:700">11.5%</td>
+          <td style="font-family:monospace;color:var(--muted);font-weight:700">11.4%</td>
           <td><strong>Adolis Garcia</strong></td>
           <td class="muted" style="font-size:0.78rem">Philadelphia Phillies @ Chicago Cubs</td>
           <td style="font-family:monospace">+575</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">14.8%</td>
-          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-22.2%</td>
+          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-23.0%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.988</td>
           <td style="font-size:0.75rem;color:var(--muted)">Colin Rea (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">BetRivers</td>
-        </tr>
-        <tr >
-          <td style="font-family:monospace;color:var(--muted);font-weight:700">11.3%</td>
-          <td><strong>Rhys Hoskins</strong></td>
-          <td class="muted" style="font-size:0.78rem">Houston Astros @ Cleveland Guardians</td>
-          <td style="font-family:monospace">+550</td>
-          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">15.4%</td>
-          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-26.2%</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.992</td>
-          <td style="font-size:0.75rem;color:var(--muted)">Spencer Arrighetti (R)</td>
-          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
         <tr >
           <td style="font-family:monospace;color:var(--muted);font-weight:700">11.2%</td>
@@ -1364,35 +1562,23 @@
           <td class="muted" style="font-size:0.78rem">Baltimore Orioles @ Kansas City Royals</td>
           <td style="font-family:monospace">+450</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">18.2%</td>
-          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-38.3%</td>
+          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-38.4%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.018</td>
           <td style="font-size:0.75rem;color:var(--muted)">Kyle Bradish (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
         <tr >
-          <td style="font-family:monospace;color:var(--muted);font-weight:700">11.1%</td>
+          <td style="font-family:monospace;color:var(--muted);font-weight:700">11.0%</td>
           <td><strong>Vladimir Guerrero Jr.</strong></td>
           <td class="muted" style="font-size:0.78rem">Toronto Blue Jays @ Los Angeles Angels</td>
           <td style="font-family:monospace">+425</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">19.1%</td>
-          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-41.7%</td>
+          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-42.4%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.990</td>
           <td style="font-size:0.75rem;color:var(--muted)">Reid Detmers (L)</td>
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
-        </tr>
-        <tr >
-          <td style="font-family:monospace;color:var(--muted);font-weight:700">11.0%</td>
-          <td><strong>Logan O'Hoppe</strong></td>
-          <td class="muted" style="font-size:0.78rem">Toronto Blue Jays @ Los Angeles Angels</td>
-          <td style="font-family:monospace">+600</td>
-          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">14.3%</td>
-          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-23.2%</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.990</td>
-          <td style="font-size:0.75rem;color:var(--muted)">Dylan Cease (R)</td>
-          <td style="font-size:0.72rem;color:var(--muted)">BetOnline</td>
         </tr>
         <tr >
           <td style="font-family:monospace;color:var(--muted);font-weight:700">10.9%</td>
@@ -1406,16 +1592,28 @@
           <td style="font-size:0.75rem;color:var(--muted)">Emerson Hancock (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">BetOnline</td>
         </tr>
+        <tr >
+          <td style="font-family:monospace;color:var(--muted);font-weight:700">10.8%</td>
+          <td><strong>Logan O'Hoppe</strong></td>
+          <td class="muted" style="font-size:0.78rem">Toronto Blue Jays @ Los Angeles Angels</td>
+          <td style="font-family:monospace">+600</td>
+          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">14.3%</td>
+          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-24.2%</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.990</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Dylan Cease (R)</td>
+          <td style="font-size:0.72rem;color:var(--muted)">BetOnline</td>
+        </tr>
         <tr style="background:rgba(0,229,160,0.04)">
-          <td style="font-family:monospace;color:#00e5a0;font-weight:700">10.5%</td>
-          <td><strong>Brandon Marsh</strong></td>
-          <td class="muted" style="font-size:0.78rem">Philadelphia Phillies @ Chicago Cubs</td>
-          <td style="font-family:monospace">+1100</td>
-          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">8.3%</td>
-          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+26.3%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">10.7%</td>
+          <td><strong>Brice Matthews</strong></td>
+          <td class="muted" style="font-size:0.78rem">Houston Astros @ Cleveland Guardians</td>
+          <td style="font-family:monospace">+900</td>
+          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">10.0%</td>
+          <td style="font-family:monospace;color:#44d4a0;font-weight:600">+7.3%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.988</td>
-          <td style="font-size:0.75rem;color:var(--muted)">Colin Rea (R)</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.992</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Slade Cecconi (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
         <tr >
@@ -1424,7 +1622,7 @@
           <td class="muted" style="font-size:0.78rem">Baltimore Orioles @ Kansas City Royals</td>
           <td style="font-family:monospace">+380</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">20.8%</td>
-          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-49.7%</td>
+          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-49.8%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.018</td>
           <td style="font-size:0.75rem;color:var(--muted)">Seth Lugo (R)</td>
@@ -1444,26 +1642,38 @@
         </tr>
         <tr style="background:rgba(0,229,160,0.04)">
           <td style="font-family:monospace;color:#00e5a0;font-weight:700">10.4%</td>
-          <td><strong>Brice Matthews</strong></td>
-          <td class="muted" style="font-size:0.78rem">Houston Astros @ Cleveland Guardians</td>
+          <td><strong>Brandon Marsh</strong></td>
+          <td class="muted" style="font-size:0.78rem">Philadelphia Phillies @ Chicago Cubs</td>
+          <td style="font-family:monospace">+1100</td>
+          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">8.3%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+25.0%</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.988</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Colin Rea (R)</td>
+          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
+        </tr>
+        <tr style="background:rgba(0,229,160,0.04)">
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">10.4%</td>
+          <td><strong>Willi Castro</strong></td>
+          <td class="muted" style="font-size:0.78rem">Los Angeles Dodgers @ Colorado Rockies</td>
           <td style="font-family:monospace">+900</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">10.0%</td>
           <td style="font-family:monospace;color:#44d4a0;font-weight:600">+3.8%</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.992</td>
-          <td style="font-size:0.75rem;color:var(--muted)">Slade Cecconi (R)</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.20</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.046</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Justin Wrobleski (L)</td>
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
-        <tr >
-          <td style="font-family:monospace;color:var(--muted);font-weight:700">10.2%</td>
-          <td><strong>Alex Bregman</strong></td>
-          <td class="muted" style="font-size:0.78rem">Philadelphia Phillies @ Chicago Cubs</td>
-          <td style="font-family:monospace">+700</td>
-          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">12.5%</td>
-          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-18.6%</td>
+        <tr style="background:rgba(0,229,160,0.04)">
+          <td style="font-family:monospace;color:#00e5a0;font-weight:700">10.2%</td>
+          <td><strong>Brady House</strong></td>
+          <td class="muted" style="font-size:0.78rem">Atlanta Braves @ Washington Nationals</td>
+          <td style="font-family:monospace">+1000</td>
+          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">9.1%</td>
+          <td style="font-family:monospace;color:#00e5a0;font-weight:600">+12.6%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
-          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.988</td>
-          <td style="font-size:0.75rem;color:var(--muted)">Aaron Nola (R)</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.007</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Bryce Elder (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr>
         <tr style="background:rgba(0,229,160,0.04)">
@@ -1472,10 +1682,22 @@
           <td class="muted" style="font-size:0.78rem">Baltimore Orioles @ Kansas City Royals</td>
           <td style="font-family:monospace">+900</td>
           <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">10.0%</td>
-          <td style="font-family:monospace;color:#f5a623;font-weight:600">+0.8%</td>
+          <td style="font-family:monospace;color:#f5a623;font-weight:600">+0.7%</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
           <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">1.018</td>
           <td style="font-size:0.75rem;color:var(--muted)">Kyle Bradish (R)</td>
+          <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
+        </tr>
+        <tr >
+          <td style="font-family:monospace;color:var(--muted);font-weight:700">10.1%</td>
+          <td><strong>Alex Bregman</strong></td>
+          <td class="muted" style="font-size:0.78rem">Philadelphia Phillies @ Chicago Cubs</td>
+          <td style="font-family:monospace">+700</td>
+          <td style="font-family:monospace;font-size:0.75rem;color:var(--muted)">12.5%</td>
+          <td style="font-family:monospace;color:#f04e4e;font-weight:600">-19.4%</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.00</td>
+          <td style="font-family:monospace;color:var(--muted);font-size:0.75rem">0.988</td>
+          <td style="font-size:0.75rem;color:var(--muted)">Aaron Nola (R)</td>
           <td style="font-size:0.72rem;color:var(--muted)">ESPN BET</td>
         </tr></tbody></table>
     </div>
@@ -2640,7 +2862,7 @@
         Full Martingale: 1u &rarr; 2u &rarr; 4u &rarr; 8u (max 15u exposure).
         Capped: 1u &rarr; 2u &rarr; 3u &rarr; 4u (max 10u exposure).
         Stop as soon as the home team wins &mdash; you profit on every series where they win at least 1 game.<br>
-        <span style="color:var(--muted);font-size:0.72rem">14/14 completed series — home team won at least 1 game &nbsp;&middot;&nbsp;
+        <span style="color:var(--muted);font-size:0.72rem">15/15 completed series — home team won at least 1 game &nbsp;&middot;&nbsp;
         SKIP = qualification filter blocked the bet (price too high, dog too big, or bullpen overloaded)</span>
       </div>
     </div>
@@ -2663,7 +2885,7 @@
             </tr></thead><tbody>
             <tr>
               <td><strong>Washington Nationals</strong><br><span style="color:var(--muted);font-size:0.75rem">vs Atlanta Braves</span></td>
-              <td><span style="color:#f5a623;font-family:monospace">G1:Today</span> &nbsp; <span style="color:var(--muted);font-family:monospace">G2:—</span> &nbsp; <span style="color:var(--muted);font-family:monospace">G3:—</span> &nbsp; <span style="color:var(--muted);font-family:monospace">G4:—</span></td>
+              <td><span style="color:#f04e4e;font-family:monospace">G1:4-9</span> &nbsp; <span style="color:var(--muted);font-family:monospace">G2:—</span> &nbsp; <span style="color:var(--muted);font-family:monospace">G3:—</span> &nbsp; <span style="color:var(--muted);font-family:monospace">G4:—</span></td>
               <td><span style="background:rgba(245,166,35,0.15);color:#f5a623;font-weight:600;padding:0.2rem 0.5rem;border-radius:4px;font-size:0.72rem;font-family:monospace">GAME 1 TODAY</span></td>
               <td class="tt" data-tip="Full Martingale: 1u-2u-4u-8u"><span style="color:#f5a623;font-family:monospace;font-weight:700">1u</span></td>
               <td class="tt" data-tip="Capped: 1u-2u-3u-4u"><span style="color:#f5a623;font-family:monospace;font-weight:700">1u</span></td>
@@ -2681,16 +2903,16 @@
             </tr>
             <tr>
               <td><strong>Chicago Cubs</strong><br><span style="color:var(--muted);font-size:0.75rem">vs Philadelphia Phillies</span></td>
-              <td><span style="color:#f5a623;font-family:monospace">G1:Today</span> &nbsp; <span style="color:var(--muted);font-family:monospace">G2:—</span> &nbsp; <span style="color:var(--muted);font-family:monospace">G3:—</span> &nbsp; <span style="color:var(--muted);font-family:monospace">G4:—</span></td>
-              <td><span style="background:rgba(245,166,35,0.15);color:#f5a623;font-weight:600;padding:0.2rem 0.5rem;border-radius:4px;font-size:0.72rem;font-family:monospace">GAME 1 TODAY</span></td>
-              <td class="tt" data-tip="Full Martingale: 1u-2u-4u-8u"><span style="color:#f5a623;font-family:monospace;font-weight:700">1u</span></td>
-              <td class="tt" data-tip="Capped: 1u-2u-3u-4u"><span style="color:#f5a623;font-family:monospace;font-weight:700">1u</span></td>
+              <td><span style="color:#00e5a0;font-family:monospace">G1:5-1</span> &nbsp; <span style="color:var(--muted);font-family:monospace">G2:—</span> &nbsp; <span style="color:var(--muted);font-family:monospace">G3:—</span> &nbsp; <span style="color:var(--muted);font-family:monospace">G4:—</span></td>
+              <td><span style="background:rgba(0,229,160,0.15);color:#00e5a0;padding:0.2rem 0.5rem;border-radius:4px;font-size:0.72rem;font-family:monospace;font-weight:700">HOME WON - DONE</span></td>
+              <td class="tt" data-tip="Full Martingale: 1u-2u-4u-8u">-</td>
+              <td class="tt" data-tip="Capped: 1u-2u-3u-4u">-</td>
               <td></td>
-              <td><span style="color:#f5a623;font-weight:600">BET on Chicago Cubs ML -116</span></td>
+              <td><span style="color:var(--muted);font-size:0.75rem">No bet needed</span></td>
             </tr>
             <tr>
               <td><strong>Colorado Rockies</strong><br><span style="color:var(--muted);font-size:0.75rem">vs Los Angeles Dodgers</span></td>
-              <td><span style="color:#f04e4e;font-family:monospace">G1:1-7</span> &nbsp; <span style="color:#00e5a0;font-family:monospace">G2:4-3</span> &nbsp; <span style="color:#00e5a0;font-family:monospace">G3:9-6</span> &nbsp; <span style="color:#f5a623;font-family:monospace">G4:Today</span></td>
+              <td><span style="color:#f04e4e;font-family:monospace">G1:1-7</span> &nbsp; <span style="color:#00e5a0;font-family:monospace">G2:4-3</span> &nbsp; <span style="color:#00e5a0;font-family:monospace">G3:9-6</span> &nbsp; <span style="color:#f04e4e;font-family:monospace">G4:3-12</span></td>
               <td><span style="background:rgba(0,229,160,0.15);color:#00e5a0;padding:0.2rem 0.5rem;border-radius:4px;font-size:0.72rem;font-family:monospace;font-weight:700">HOME WON - DONE</span></td>
               <td class="tt" data-tip="Full Martingale: 1u-2u-4u-8u">-</td>
               <td class="tt" data-tip="Capped: 1u-2u-3u-4u">-</td>
@@ -3532,22 +3754,22 @@
       </span>
     </div>
     <div class="stat-strip">
-      <div class="stat-chip"><span class="chip-val">1723</span><span class="chip-lbl">Graded</span></div>
-      <div class="stat-chip" style="border-color:rgba(0,229,160,0.3)"><span class="chip-val" style="color:#00e5a0">948</span><span class="chip-lbl">Wins</span></div>
-      <div class="stat-chip" style="border-color:rgba(240,78,78,0.3)"><span class="chip-val" style="color:#f04e4e">775</span><span class="chip-lbl">Losses</span></div>
+      <div class="stat-chip"><span class="chip-val">1744</span><span class="chip-lbl">Graded</span></div>
+      <div class="stat-chip" style="border-color:rgba(0,229,160,0.3)"><span class="chip-val" style="color:#00e5a0">959</span><span class="chip-lbl">Wins</span></div>
+      <div class="stat-chip" style="border-color:rgba(240,78,78,0.3)"><span class="chip-val" style="color:#f04e4e">785</span><span class="chip-lbl">Losses</span></div>
       <div class="stat-chip"><span class="chip-val">55.0%</span><span class="chip-lbl">Win Rate</span></div>
       
     <div class="stat-chip" style="border-color:#f04e4e40">
-      <span class="chip-val" style="color:#f04e4e">$-416.16</span>
+      <span class="chip-val" style="color:#f04e4e">$-424.31</span>
       <span class="chip-lbl">Live P&amp;L</span>
     </div>
     <div class="stat-chip" style="border-color:#f04e4e40">
-      <span class="chip-val" style="color:#f04e4e">-41.6u</span>
+      <span class="chip-val" style="color:#f04e4e">-42.4u</span>
       <span class="chip-lbl">Live Units</span>
     </div>
     </div>
     <p style="font-size:0.72rem;color:var(--muted);margin-bottom:0.5rem">
-      All-time (incl. pre-Bovada): 1818 picks · 56.2% · +$356.75
+      All-time (incl. pre-Bovada): 1839 picks · 56.1% · +$348.60
     </p>
     <p style="font-size:0.75rem;color:var(--muted);margin-bottom:1.5rem">
       Performance based on all model picks — not just bets placed.
@@ -3557,7 +3779,7 @@
           <div class="table-wrap">
             <table class="data-table mini"><thead><tr>
               <th>Stat</th><th>Picks</th><th>W</th><th>L</th><th>Win%</th><th>P&L</th>
-            </tr></thead><tbody><tr><td><strong>Hits</strong></td><td>720</td><td style='color:#00e5a0'>443</td><td style='color:#f04e4e'>277</td><td>61.5%</td><td style='color:#f04e4e;font-family:monospace'>$-539.49</td></tr><tr><td><strong>HR</strong></td><td>1</td><td style='color:#00e5a0'>1</td><td style='color:#f04e4e'>0</td><td>100.0%</td><td style='color:#00e5a0;font-family:monospace'>+$22.50</td></tr><tr><td><strong>HRB</strong></td><td>163</td><td style='color:#00e5a0'>89</td><td style='color:#f04e4e'>74</td><td>54.6%</td><td style='color:#00e5a0;font-family:monospace'>+$55.02</td></tr><tr><td><strong>Strikeouts</strong></td><td>246</td><td style='color:#00e5a0'>132</td><td style='color:#f04e4e'>114</td><td>53.7%</td><td style='color:#00e5a0;font-family:monospace'>+$429.28</td></tr><tr><td><strong>Outs Recorded</strong></td><td>29</td><td style='color:#00e5a0'>19</td><td style='color:#f04e4e'>10</td><td>65.5%</td><td style='color:#00e5a0;font-family:monospace'>+$87.72</td></tr><tr><td><strong>RBI</strong></td><td>28</td><td style='color:#00e5a0'>16</td><td style='color:#f04e4e'>12</td><td>57.1%</td><td style='color:#00e5a0;font-family:monospace'>+$171.20</td></tr><tr><td><strong>Runs</strong></td><td>29</td><td style='color:#00e5a0'>17</td><td style='color:#f04e4e'>12</td><td>58.6%</td><td style='color:#00e5a0;font-family:monospace'>+$130.93</td></tr><tr><td><strong>Total Bases</strong></td><td>507</td><td style='color:#00e5a0'>231</td><td style='color:#f04e4e'>276</td><td>45.6%</td><td style='color:#f04e4e;font-family:monospace'>$-773.32</td></tr></tbody></table>
+            </tr></thead><tbody><tr><td><strong>Hits</strong></td><td>723</td><td style='color:#00e5a0'>445</td><td style='color:#f04e4e'>278</td><td>61.5%</td><td style='color:#f04e4e;font-family:monospace'>$-531.53</td></tr><tr><td><strong>HR</strong></td><td>1</td><td style='color:#00e5a0'>1</td><td style='color:#f04e4e'>0</td><td>100.0%</td><td style='color:#00e5a0;font-family:monospace'>+$22.50</td></tr><tr><td><strong>HRB</strong></td><td>163</td><td style='color:#00e5a0'>89</td><td style='color:#f04e4e'>74</td><td>54.6%</td><td style='color:#00e5a0;font-family:monospace'>+$55.02</td></tr><tr><td><strong>Strikeouts</strong></td><td>246</td><td style='color:#00e5a0'>132</td><td style='color:#f04e4e'>114</td><td>53.7%</td><td style='color:#00e5a0;font-family:monospace'>+$429.28</td></tr><tr><td><strong>Outs Recorded</strong></td><td>29</td><td style='color:#00e5a0'>19</td><td style='color:#f04e4e'>10</td><td>65.5%</td><td style='color:#00e5a0;font-family:monospace'>+$87.72</td></tr><tr><td><strong>RBI</strong></td><td>28</td><td style='color:#00e5a0'>16</td><td style='color:#f04e4e'>12</td><td>57.1%</td><td style='color:#00e5a0;font-family:monospace'>+$171.20</td></tr><tr><td><strong>Runs</strong></td><td>29</td><td style='color:#00e5a0'>17</td><td style='color:#f04e4e'>12</td><td>58.6%</td><td style='color:#00e5a0;font-family:monospace'>+$130.93</td></tr><tr><td><strong>Total Bases</strong></td><td>525</td><td style='color:#00e5a0'>240</td><td style='color:#f04e4e'>285</td><td>45.7%</td><td style='color:#f04e4e;font-family:monospace'>$-789.42</td></tr></tbody></table>
           </div>
         </div>
         <div class="perf-card">
@@ -3565,7 +3787,7 @@
           <div class="table-wrap">
             <table class="data-table mini"><thead><tr>
               <th>Side</th><th>Picks</th><th>W</th><th>L</th><th>Win%</th><th>P&L</th>
-            </tr></thead><tbody><tr><td><strong>OVER</strong></td><td>1506</td><td style='color:#00e5a0'>823</td><td style='color:#f04e4e'>683</td><td>54.6%</td><td style='color:#f04e4e;font-family:monospace'>$-741.53</td></tr><tr><td><strong>UNDER</strong></td><td>217</td><td style='color:#00e5a0'>125</td><td style='color:#f04e4e'>92</td><td>57.6%</td><td style='color:#00e5a0;font-family:monospace'>+$325.37</td></tr></tbody></table>
+            </tr></thead><tbody><tr><td><strong>OVER</strong></td><td>1524</td><td style='color:#00e5a0'>831</td><td style='color:#f04e4e'>693</td><td>54.5%</td><td style='color:#f04e4e;font-family:monospace'>$-766.78</td></tr><tr><td><strong>UNDER</strong></td><td>220</td><td style='color:#00e5a0'>128</td><td style='color:#f04e4e'>92</td><td>58.2%</td><td style='color:#00e5a0;font-family:monospace'>+$342.47</td></tr></tbody></table>
           </div>
         </div></div>
 </div>
@@ -3959,7 +4181,7 @@
 
   function resetFilters() {
     ['f-stat','f-side','f-ev','f-fairprob','f-matchup'].forEach(id => document.getElementById(id).value = '');
-    document.getElementById('f-rating').value = 'ELITE,STRONG';
+    document.getElementById('f-rating').value = '';
     applyFilters();
   }
 
