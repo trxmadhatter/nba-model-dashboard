@@ -94,7 +94,7 @@
 <body>
 <div class="topbar">
   <div class="logo">NBA<span>.</span>MODEL</div>
-  <div class="topbar-meta">Wednesday, April 22 2026<br>Updated 11:29 AM PT</div>
+  <div class="topbar-meta">Monday, April 27 2026<br>Updated 08:32 AM PT</div>
 </div>
 <div class="tabs">
   <button class="tab-btn active" onclick="showTab('gamelines',this)">Game Lines</button>
@@ -107,32 +107,7 @@
     <div class="tab-title">Game Lines</div>
     <div class="tab-subtitle">Spreads &middot; Totals &middot; Moneylines &middot; Consensus fair odds vs book</div>
   </div>
-  <div class="filter-bar">
-      <select id="gl-market" class="filter-select" onchange="applyGLFilters()">
-        <option value="">All Markets</option>
-        <option value="Total">Totals</option>
-        <option value="Spread">Spreads</option>
-        <option value="Moneyline">Moneyline</option>
-      </select>
-      <button class="filter-reset" onclick="resetGLFilters()">Reset</button>
-    </div><p style="font-size:0.75rem;color:var(--muted);margin-bottom:0.75rem">
-      Fair odds from consensus across DraftKings, FanDuel, BetMGM, Caesars. Check Bovada before betting.
-    </p><div class="table-wrap">
-      <table class="data-table" id="gl-table"><thead><tr>
-        <th>Rating</th><th>Matchup</th><th>Market</th><th>Side</th>
-        <th>Best Odds</th><th>Fair Odds</th><th>Fair%</th><th>EV%</th><th>Time</th>
-      </tr></thead><tbody><tr data-market="Moneyline">
-          <td><span class="bet-rating rating-poor">POOR</span></td>
-          <td class="muted">Phoenix Suns @ Oklahoma City Thunder</td>
-          <td><span class="stat-pill">Moneyline</span></td>
-          <td><strong>Phoenix Suns</strong></td>
-          <td style="font-family:monospace">+1100</td>
-          <td style="font-family:monospace">+1088</td>
-          <td>8.4%</td>
-          <td><span style="color:#f5a623;font-family:monospace">+1.0%</span></td>
-          <td class="muted">06:40 PM PT</td>
-        </tr></tbody></table>
-    </div>
+  <p class="empty-msg">No game lines data. Run compute_ev_game_lines.py first.</p>
 </div>
 <div id="nbatotals" class="tab-content">
   <div class="tab-header">
@@ -184,7 +159,7 @@
           <td>61.2%</td>
           <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+8.3%</span></td>
           <td style="color:var(--muted)">-</td>
-          <td class="muted" style="font-size:0.72rem;color:#f5a623">Joel Embiid (26ppg)</td>
+          <td class="muted" style="font-size:0.72rem;color:#f5a623">nan</td>
           <td class="muted">04:10 PM PT</td>
         </tr><tr>
           <td><span class="bet-rating rating-strong">STRONG</span></td>
@@ -197,7 +172,7 @@
           <td>59.3%</td>
           <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+6.6%</span></td>
           <td style="color:var(--muted)">-</td>
-          <td class="muted" style="font-size:0.72rem;color:#f5a623">Bradley Beal (18ppg)</td>
+          <td class="muted" style="font-size:0.72rem;color:#f5a623">Jalen Williams (24ppg) | Bradley Beal (18ppg)</td>
           <td class="muted">06:40 PM PT</td>
         </tr><tr>
           <td><span class="bet-rating rating-strong">STRONG</span></td>
@@ -210,7 +185,7 @@
           <td>60.2%</td>
           <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+6.5%</span></td>
           <td style="color:var(--muted)">-</td>
-          <td class="muted" style="font-size:0.72rem;color:#f5a623">Bradley Beal (18ppg)</td>
+          <td class="muted" style="font-size:0.72rem;color:#f5a623">Jalen Williams (24ppg) | Bradley Beal (18ppg)</td>
           <td class="muted">06:40 PM PT</td>
         </tr><tr>
           <td><span class="bet-rating rating-strong">STRONG</span></td>
@@ -249,7 +224,7 @@
           <td>56.4%</td>
           <td><span style="color:#44d4a0;font-family:monospace;font-weight:600">+4.3%</span></td>
           <td style="color:var(--muted)">-</td>
-          <td class="muted" style="font-size:0.72rem;color:#f5a623">Michael Porter Jr. (18ppg)</td>
+          <td class="muted" style="font-size:0.72rem;color:#f5a623">Anthony Edwards (28ppg) | Michael Porter Jr. (18ppg)</td>
           <td class="muted">06:30 PM PT</td>
         </tr><tr>
           <td><span class="bet-rating rating-good">GOOD</span></td>
@@ -262,7 +237,7 @@
           <td>57.3%</td>
           <td><span style="color:#44d4a0;font-family:monospace;font-weight:600">+4.2%</span></td>
           <td style="color:var(--muted)">-</td>
-          <td class="muted" style="font-size:0.72rem;color:#f5a623">Michael Porter Jr. (18ppg)</td>
+          <td class="muted" style="font-size:0.72rem;color:#f5a623">Anthony Edwards (28ppg) | Michael Porter Jr. (18ppg)</td>
           <td class="muted">06:30 PM PT</td>
         </tr><tr>
           <td><span class="bet-rating rating-poor">POOR</span></td>
