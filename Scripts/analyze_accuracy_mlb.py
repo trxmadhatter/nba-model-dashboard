@@ -15,12 +15,11 @@ Run:
 from pathlib import Path
 import pandas as pd
 import numpy as np
-import os
 
-os.chdir(Path(__file__).parent.parent)
+_ROOT = Path(__file__).resolve().parent.parent
 
-GRADED_FILE    = Path("Data/mlb/history/graded_picks_mlb.csv")
-OUTPUT_HTML    = Path("Data/mlb/accuracy_report.html")
+GRADED_FILE    = _ROOT / "Data/mlb/history/graded_picks_mlb.csv"
+OUTPUT_HTML    = _ROOT / "Data/mlb/accuracy_report.html"
 BET_SIZE       = 100
 HEAVY_JUICE    = -200
 HITS_MAX_JUICE = -115
