@@ -296,7 +296,7 @@ def _load_gamelog_index(log_df, stat_col):
     date_col = next((c for c in ["game_date", "gamedate", "date"] if c in cols), None)
     if not pid_col or not date_col or stat_col not in cols:
         return idx
-    sub = log_df[[pid_col, date_col, stat_col]].dropna(subset=[stat_col])
+    sub = log_df[[pid_col, date_col, stat_col]].dropna(subset=[pid_col, stat_col])
     sub = sub.sort_values(date_col, ascending=False)
     for pid, grp in sub.groupby(pid_col):
         idx[str(pid).split(".")[0]] = [float(v) for v in grp[stat_col].head(30)]
@@ -331,8 +331,9 @@ def build_sim_inputs(df):
         date_col = next((c for c in ["game_date","gamedate"] if c in proj_df.columns), None)
         if date_col:
             proj_df = proj_df.sort_values(date_col, ascending=False)
-        for name, grp in proj_df.groupby("player_name"):
-            out[str(name).strip().lower()] = grp.iloc[0].to_dict()
+        deduped = proj_df.drop_duplicates(subset="player_name", keep="first")
+        for _, r in deduped.iterrows():
+            out[str(r["player_name"]).strip().lower()] = r.to_dict()
         return out
 
     bat_idx = name_lookup(bat_prj)
@@ -362,6 +363,8 @@ def build_sim_inputs(df):
     results = []
     for _, row in elite.iterrows():
         player    = str(row.get("player_name", "")).strip()
+        if not player:
+            continue
         stat      = str(row.get("stat", "")).strip().lower()
         try:
             line = float(row.get("line", 0))
@@ -381,6 +384,8 @@ def build_sim_inputs(df):
         proj_lookup = pit_idx if is_pitcher else bat_idx
         proj_row    = proj_lookup.get(player.lower(), {})
         player_id   = str(proj_row.get("player_id", "")).split(".")[0]
+        if not player_id:
+            print(f"  [sim] no player_id for {player!r} ({stat}) — bootstrap will use season-avg padding")
 
         # Projection mean from PROJ_* column, fall back to EV projection
         proj_col  = _PROJ_COL.get(stat)
