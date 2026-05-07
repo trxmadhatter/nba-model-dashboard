@@ -92,7 +92,7 @@
 <body>
 <div class="topbar">
   <div class="logo">MLB<span>.</span>MODEL</div>
-  <div class="topbar-meta">Wednesday, May 06 2026<br>Updated 11:23 PM PT</div>
+  <div class="topbar-meta">Wednesday, May 06 2026<br>Updated 11:30 PM PT</div>
 </div>
 <div class="tabs">
   <button class="tab-btn active" onclick="showTab('today',this)">Today's Plays</button>
@@ -117,11 +117,11 @@
             </div>
             <div style="display:flex;align-items:center;gap:0.75rem">
               <div style="font-family:monospace;font-size:1.1rem;font-weight:700;color:rgb(245,166,35)">+203</div>
-              <select id="pu_50090" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+              <select id="pu_66423" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
                 <option value="0.1">0.1u</option><option value="0.5">0.5u</option>
                 <option value="1" selected>1u</option><option value="2">2u</option>
               </select>
-              <button onclick="trackParlay('Parlay of the Day','+203',['Detroit Tigers +1.5 (Spread) — Boston Red Sox @ Detroit Tigers','Freddy Peralta H_Allowed 4.5 UNDER'],parseFloat(document.getElementById('pu_50090').value))"
+              <button onclick="trackParlay('Parlay of the Day','+203',['Detroit Tigers +1.5 (Spread) — Boston Red Sox @ Detroit Tigers','Freddy Peralta H_Allowed 4.5 UNDER'],parseFloat(document.getElementById('pu_66423').value))"
                 style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace">
                 Track Parlay
               </button>
@@ -155,11 +155,11 @@
             </div>
             <div style="display:flex;align-items:center;gap:0.75rem">
               <div style="font-family:monospace;font-size:1.1rem;font-weight:700;color:rgb(180,100,255)">+10241</div>
-              <select id="pu_14296" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+              <select id="pu_74251" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
                 <option value="0.1">0.1u</option><option value="0.5">0.5u</option>
                 <option value="1" selected>1u</option><option value="2">2u</option>
               </select>
-              <button onclick="trackParlay('Shot in the Dark','+10241',['Martin Perez K 3.5 UNDER','Andre Pallante H_Allowed 5.5 OVER','Bailey Ober K 3.5 OVER','Eury Perez H_Allowed 4.5 OVER','Patrick Corbin H_Allowed 5.5 UNDER','Freddy Peralta H_Allowed 4.5 UNDER','Colin Rea H_Allowed 4.5 UNDER'],parseFloat(document.getElementById('pu_14296').value))"
+              <button onclick="trackParlay('Shot in the Dark','+10241',['Martin Perez K 3.5 UNDER','Andre Pallante H_Allowed 5.5 OVER','Bailey Ober K 3.5 OVER','Eury Perez H_Allowed 4.5 OVER','Patrick Corbin H_Allowed 5.5 UNDER','Freddy Peralta H_Allowed 4.5 UNDER','Colin Rea H_Allowed 4.5 UNDER'],parseFloat(document.getElementById('pu_74251').value))"
                 style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace">
                 Track Parlay
               </button>
@@ -5215,9 +5215,9 @@
   }
 
   function _unitTier(ensProb, ciWidth) {
-    if (ensProb >= 0.70 && ciWidth < 0.05) return 4;
-    if (ensProb >= 0.65 && ciWidth < 0.08) return 3;
-    if (ensProb >= 0.60 && ciWidth < 0.10) return 2;
+    if (ensProb >= 0.70 && ciWidth < 1.5) return 4;
+    if (ensProb >= 0.65 && ciWidth < 2.5) return 3;
+    if (ensProb >= 0.60 && ciWidth < 4.0) return 2;
     return 1;
   }
 
@@ -5238,7 +5238,7 @@
       const {prob: bsProb, ci_lo, ci_hi} = _bootstrap(inp, N);
       const ensProb              = 0.6 * mcProb + 0.4 * bsProb;
       const ev                   = _ev(ensProb, inp.odds);
-      const ciWidth              = inp.line > 0 ? (ci_hi - ci_lo) / inp.line : (ci_hi - ci_lo);
+      const ciWidth              = ci_hi - ci_lo;
       const units                = _unitTier(ensProb, ciWidth);
       const modelEV              = _ev(inp.fair_prob, inp.odds);
       return {...inp, mcProb, bsProb, ensProb, ev, ci_lo, ci_hi, ciWidth, units, modelEV,

@@ -2383,9 +2383,9 @@ def main():
   }}
 
   function _unitTier(ensProb, ciWidth) {{
-    if (ensProb >= 0.70 && ciWidth < 0.05) return 4;
-    if (ensProb >= 0.65 && ciWidth < 0.08) return 3;
-    if (ensProb >= 0.60 && ciWidth < 0.10) return 2;
+    if (ensProb >= 0.70 && ciWidth < 1.5) return 4;
+    if (ensProb >= 0.65 && ciWidth < 2.5) return 3;
+    if (ensProb >= 0.60 && ciWidth < 4.0) return 2;
     return 1;
   }}
 
@@ -2406,7 +2406,7 @@ def main():
       const {{prob: bsProb, ci_lo, ci_hi}} = _bootstrap(inp, N);
       const ensProb              = 0.6 * mcProb + 0.4 * bsProb;
       const ev                   = _ev(ensProb, inp.odds);
-      const ciWidth              = inp.line > 0 ? (ci_hi - ci_lo) / inp.line : (ci_hi - ci_lo);
+      const ciWidth              = ci_hi - ci_lo;
       const units                = _unitTier(ensProb, ciWidth);
       const modelEV              = _ev(inp.fair_prob, inp.odds);
       return {{...inp, mcProb, bsProb, ensProb, ev, ci_lo, ci_hi, ciWidth, units, modelEV,
