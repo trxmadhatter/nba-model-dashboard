@@ -8,6 +8,7 @@ from analyze_accuracy_mlb import (
     load_and_filter, american_to_profit, pnl,
     calibration_curve, calibration_grade,
     book_roi,
+    direction_edge,
 )
 
 
@@ -161,6 +162,52 @@ def test_book_roi_missing_column():
     assert rows == []
 
 
+def test_direction_edge_filters_min_picks():
+    # Only 5 picks — below MIN_DIRECTION=10, should produce no rows
+    df = pd.DataFrame({
+        "stat":           ["k"] * 5,
+        "side":           ["OVER"] * 5,
+        "bet_odds":       [-110.0] * 5,
+        "hit_result":     ["WIN"] * 3 + ["LOSS"] * 2,
+        "fair_prob":      [0.60] * 5,
+        "pricing_source": ["bovada"] * 5,
+    })
+    assert direction_edge(df) == []
+
+
+def test_direction_edge_sorted_by_roi():
+    # k OVER: 16 wins / 20 picks at +150 = positive ROI
+    # hits UNDER: 8 wins / 20 picks at -110 = negative ROI
+    df = pd.DataFrame({
+        "stat":           ["k"]    * 20 + ["hits"] * 20,
+        "side":           ["OVER"] * 20 + ["UNDER"] * 20,
+        "bet_odds":       [150.0]  * 20 + [-110.0] * 20,
+        "hit_result":     ["WIN"] * 16 + ["LOSS"] * 4 + ["WIN"] * 8 + ["LOSS"] * 12,
+        "fair_prob":      [0.62] * 40,
+        "pricing_source": ["bovada"] * 40,
+    })
+    rows = direction_edge(df)
+    assert len(rows) == 2
+    assert rows[0]["stat_side"] == "k OVER"
+    assert rows[-1]["stat_side"] == "hits UNDER"
+    assert rows[0]["roi"] > rows[-1]["roi"]
+
+
+def test_direction_edge_win_rate_calculation():
+    df = pd.DataFrame({
+        "stat":           ["k"] * 20,
+        "side":           ["OVER"] * 20,
+        "bet_odds":       [-110.0] * 20,
+        "hit_result":     ["WIN"] * 13 + ["LOSS"] * 7,
+        "fair_prob":      [0.65] * 20,
+        "pricing_source": ["bovada"] * 20,
+    })
+    rows = direction_edge(df)
+    assert len(rows) == 1
+    assert abs(rows[0]["win_rate"] - 0.65) < 0.001
+    assert rows[0]["n"] == 20
+
+
 if __name__ == "__main__":
     test_excludes_rbi()
     test_drops_heavy_juice()
@@ -179,4 +226,7 @@ if __name__ == "__main__":
     test_book_roi_basic()
     test_book_roi_skips_nan_source()
     test_book_roi_missing_column()
-    print("All tests passed (Task 1 + Task 2 + Task 3)")
+    test_direction_edge_filters_min_picks()
+    test_direction_edge_sorted_by_roi()
+    test_direction_edge_win_rate_calculation()
+    print("All tests passed (Task 1 + Task 2 + Task 3 + Task 4)")

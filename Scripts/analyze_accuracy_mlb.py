@@ -154,6 +154,42 @@ def print_book_roi(book_rows: list[dict]) -> None:
         )
 
 
+def direction_edge(df: pd.DataFrame) -> list[dict]:
+    rows = []
+    for (stat, side), group in df.groupby(["stat", "side"]):
+        graded = group[group["hit_result"].isin(["WIN", "LOSS"])]
+        if len(graded) < MIN_DIRECTION:
+            continue
+        wins   = (graded["hit_result"] == "WIN").sum()
+        n      = len(graded)
+        profit = graded.apply(pnl, axis=1).sum()
+        rows.append({
+            "stat_side": f"{stat} {side.upper()}",
+            "n":         n,
+            "win_rate":  wins / n,
+            "profit":    profit,
+            "roi":       profit / (n * BET_SIZE) * 100,
+        })
+    return sorted(rows, key=lambda x: x["roi"], reverse=True)
+
+
+def print_direction_edge(dir_rows: list[dict]) -> None:
+    print(f"\n{'=' * 62}")
+    print("  MODULE 3 — DIRECTION EDGE (OVER vs UNDER by stat)")
+    print(f"{'=' * 62}")
+    if not dir_rows:
+        print("  No stat/side combinations with >= 10 graded picks")
+        return
+    print(f"  {'Stat + Side':<20} {'N':>5}  {'Win%':>6}  {'Profit':>10}  {'ROI':>7}")
+    print(f"  {'-' * 56}")
+    for r in dir_rows:
+        print(
+            f"  {r['stat_side']:<20} {r['n']:>5}  "
+            f"{r['win_rate'] * 100:>5.1f}%  "
+            f"${r['profit']:>+9,.0f}  {r['roi']:>+6.1f}%"
+        )
+
+
 if __name__ == "__main__":
     if not GRADED_FILE.exists():
         print(f"Graded file not found: {GRADED_FILE}")
