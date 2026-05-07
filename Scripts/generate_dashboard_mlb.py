@@ -1719,6 +1719,7 @@ def main():
     series_html  = build_4game_series(series_df)
     hr_html      = build_hr_props(hr_df, hr_hist_df)
     picks_json   = build_picks_json(df)
+    sim_inputs_json = build_sim_inputs(df)
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -1824,6 +1825,7 @@ def main():
   <button class="tab-btn" onclick="showTab('history',this)">Results History</button>
   <button class="tab-btn" onclick="showTab('parlayhistory',this)">Parlay History</button>
   <button class="tab-btn" onclick="showTab('performance',this)">Performance</button>
+  <button class="tab-btn" onclick="showTab('simulations',this)">Simulations</button>
 </div>
 <div id="today" class="tab-content active">
   <div class="tab-header">
@@ -1873,6 +1875,13 @@ def main():
     <div class="tab-subtitle">All model picks · Win rate and P&L by stat type and side</div>
   </div>
   {perf_html}
+</div>
+<div id="simulations" class="tab-content">
+  <div class="tab-header">
+    <div class="tab-title">Elite Pick Simulations</div>
+    <div class="tab-subtitle">Monte Carlo + Bootstrap · 10k trials each · 60/40 ensemble · Unit sizing by confidence</div>
+  </div>
+  <div id="sim-content"><p style="color:var(--muted);font-style:italic;padding:1rem 0">Loading simulations…</p></div>
 </div>
 <script>
   const TRACKED_KEY = 'mlb_tracked_bets_v1';
@@ -1970,6 +1979,9 @@ def main():
   }}
   const UNIT_SIZE   = 10;
 
+  const SIM_INPUTS = {sim_inputs_json};
+  let _simDone = false;
+
   try {{
     const mlbPicks = {picks_json};
     if (mlbPicks.length) {{
@@ -1986,6 +1998,7 @@ def main():
     btn.classList.add('active');
     if (id === 'history') renderTrackedHistory();
     if (id === 'parlayhistory') renderParlayHistory();
+    if (id === 'simulations') runSimulations();
   }}
 
   // ── Track a bet ───────────────────────────────────────────
@@ -2315,6 +2328,163 @@ def main():
     renderTrackedHistory();
     applyFilters();
   }});
+
+  // ── Elite Pick Simulations ──────────────────────────────────────────────
+
+  function _poissonDraw(lam) {{
+    const L = Math.exp(-Math.min(lam, 700));
+    let k = 0, p = 1;
+    do {{ k++; p *= Math.random(); }} while (p > L);
+    return k - 1;
+  }}
+
+  function _normalDraw(mu, sigma) {{
+    const u1 = Math.random() || 1e-10, u2 = Math.random();
+    return mu + sigma * Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2);
+  }}
+
+  function _monteCarlo(inp, N) {{
+    const {{proj_mean, proj_std, line, side, stat_type}} = inp;
+    let hits = 0;
+    for (let i = 0; i < N; i++) {{
+      const v = stat_type === 'normal' ? _normalDraw(proj_mean, proj_std) : _poissonDraw(proj_mean);
+      if (side === 'OVER'  && v > line)  hits++;
+      if (side === 'UNDER' && v < line)  hits++;
+    }}
+    return hits / N;
+  }}
+
+  function _bootstrap(inp, N) {{
+    const {{samples, line, side}} = inp;
+    const n = samples.length;
+    let hits = 0;
+    const drawn = [];
+    for (let i = 0; i < N; i++) {{
+      const v = samples[Math.floor(Math.random() * n)];
+      if (side === 'OVER'  && v > line)  hits++;
+      if (side === 'UNDER' && v < line)  hits++;
+      drawn.push(v);
+    }}
+    drawn.sort((a, b) => a - b);
+    return {{
+      prob:  hits / N,
+      ci_lo: drawn[Math.floor(0.025 * N)],
+      ci_hi: drawn[Math.floor(0.975 * N)],
+    }};
+  }}
+
+  function _decimal(odds) {{
+    return odds > 0 ? odds / 100 + 1 : 100 / Math.abs(odds) + 1;
+  }}
+
+  function _ev(prob, odds) {{
+    const d = _decimal(odds);
+    return (prob * (d - 1) - (1 - prob)) * 100;
+  }}
+
+  function _unitTier(ensProb, ciWidth) {{
+    if (ensProb >= 0.70 && ciWidth < 0.05) return 4;
+    if (ensProb >= 0.65 && ciWidth < 0.08) return 3;
+    if (ensProb >= 0.60 && ciWidth < 0.10) return 2;
+    return 1;
+  }}
+
+  function runSimulations() {{
+    if (_simDone) return;
+    _simDone = true;
+
+    const inputs = window.SIM_INPUTS || SIM_INPUTS || [];
+    if (!inputs.length) {{
+      document.getElementById('sim-content').innerHTML =
+        '<p style="color:var(--muted);font-style:italic;padding:1rem 0">No ELITE picks today.</p>';
+      return;
+    }}
+
+    const N = 10000;
+    const results = inputs.map(inp => {{
+      const mcProb               = _monteCarlo(inp, N);
+      const {{prob: bsProb, ci_lo, ci_hi}} = _bootstrap(inp, N);
+      const ensProb              = 0.6 * mcProb + 0.4 * bsProb;
+      const ev                   = _ev(ensProb, inp.odds);
+      const ciWidth              = inp.line > 0 ? (ci_hi - ci_lo) / inp.line : (ci_hi - ci_lo);
+      const units                = _unitTier(ensProb, ciWidth);
+      const modelEV              = _ev(inp.fair_prob, inp.odds);
+      return {{...inp, mcProb, bsProb, ensProb, ev, ci_lo, ci_hi, ciWidth, units, modelEV,
+               disagree: (modelEV - ev) > 5}};
+    }});
+
+    results.sort((a, b) => b.ev - a.ev);
+
+    const totalUnits = results.reduce((s, r) => s + r.units, 0);
+    const avgEV      = results.reduce((s, r) => s + r.ev, 0) / results.length;
+    const avgSign    = avgEV >= 0 ? '+' : '';
+
+    const summaryHtml = `
+    <div class="stat-strip" style="margin-bottom:1.5rem">
+      <div class="stat-chip"><span class="chip-val">${{results.length}}</span><span class="chip-lbl">Elite Picks</span></div>
+      <div class="stat-chip" style="border-color:rgba(0,229,160,0.3)">
+        <span class="chip-val" style="color:#00e5a0">${{avgSign}}${{avgEV.toFixed(1)}}%</span>
+        <span class="chip-lbl">Avg Ensemble EV</span>
+      </div>
+      <div class="stat-chip">
+        <span class="chip-val">${{totalUnits}}u</span>
+        <span class="chip-lbl">Rec. Units Total</span>
+      </div>
+    </div>`;
+
+    const unitColors = ['', '#5a6172', '#3d8ef8', '#00e5a0', '#e05c3a'];
+
+    const rows = results.map(r => {{
+      const sc   = r.side === 'OVER' ? '#00e5a0' : '#3d8ef8';
+      const uc   = unitColors[r.units];
+      const evC  = r.ev >= 5 ? '#00e5a0' : r.ev >= 0 ? '#f5a623' : '#f04e4e';
+      const evS  = r.ev >= 0 ? '+' : '';
+      const warn = r.disagree
+        ? `<span style="font-size:0.62rem;background:rgba(245,166,35,0.2);color:#f5a623;border-radius:3px;padding:1px 5px;margin-left:4px;font-family:monospace" title="Simulation EV is 5+ pts below model EV">⚠</span>`
+        : '';
+      return `<tr>
+        <td>
+          <strong style="font-size:0.88rem">${{r.player}}</strong><br>
+          <span style="font-size:0.7rem;color:var(--muted)">${{r.matchup}}</span>
+        </td>
+        <td>
+          <span style="color:${{sc}};font-weight:700">${{r.side}}</span>
+          <span style="font-family:monospace"> ${{r.line}} ${{r.stat_label}}</span>
+        </td>
+        <td style="font-family:monospace;color:var(--muted)">${{(r.fair_prob*100).toFixed(1)}}%</td>
+        <td style="font-family:monospace;color:#00e5a0">${{(r.mcProb*100).toFixed(1)}}%</td>
+        <td style="font-family:monospace;color:#3d8ef8">${{(r.bsProb*100).toFixed(1)}}%</td>
+        <td style="font-family:monospace;font-weight:700">${{(r.ensProb*100).toFixed(1)}}%</td>
+        <td style="font-family:monospace;color:${{evC}}">${{evS}}${{r.ev.toFixed(1)}}%${{warn}}</td>
+        <td style="font-family:monospace;font-size:0.78rem">${{r.ci_lo.toFixed(2)}}–${{r.ci_hi.toFixed(2)}}</td>
+        <td>
+          <span style="background:${{uc}}22;color:${{uc}};border:1px solid ${{uc}}55;border-radius:4px;
+                       padding:0.2rem 0.55rem;font-family:monospace;font-weight:700;font-size:0.82rem">
+            ${{r.units}}u
+          </span>
+        </td>
+      </tr>`;
+    }}).join('');
+
+    const tableHtml = `
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr>
+          <th>Player</th><th>Pick</th>
+          <th title="Original model probability">Model Prob</th>
+          <th title="Monte Carlo 10k trials from Poisson/Normal projection">MC Prob</th>
+          <th title="Bootstrap 10k resamples from last 30 games">Bootstrap Prob</th>
+          <th title="60% MC + 40% Bootstrap">Ensemble Prob</th>
+          <th title="EV recalculated with ensemble probability">Ensemble EV</th>
+          <th title="Bootstrap 2.5th–97.5th percentile of stat outcomes">95% CI</th>
+          <th title="Unit tier: both ensemble prob AND CI width must qualify">Units</th>
+        </tr></thead>
+        <tbody>${{rows}}</tbody>
+      </table>
+    </div>`;
+
+    document.getElementById('sim-content').innerHTML = summaryHtml + tableHtml;
+  }}
 </script>
 </body>
 </html>"""

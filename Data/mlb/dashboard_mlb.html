@@ -92,7 +92,7 @@
 <body>
 <div class="topbar">
   <div class="logo">MLB<span>.</span>MODEL</div>
-  <div class="topbar-meta">Wednesday, May 06 2026<br>Updated 06:11 AM PT</div>
+  <div class="topbar-meta">Wednesday, May 06 2026<br>Updated 11:23 PM PT</div>
 </div>
 <div class="tabs">
   <button class="tab-btn active" onclick="showTab('today',this)">Today's Plays</button>
@@ -102,6 +102,7 @@
   <button class="tab-btn" onclick="showTab('history',this)">Results History</button>
   <button class="tab-btn" onclick="showTab('parlayhistory',this)">Parlay History</button>
   <button class="tab-btn" onclick="showTab('performance',this)">Performance</button>
+  <button class="tab-btn" onclick="showTab('simulations',this)">Simulations</button>
 </div>
 <div id="today" class="tab-content active">
   <div class="tab-header">
@@ -115,12 +116,12 @@
               🎯 Parlay of the Day &nbsp;·&nbsp; 2 Legs
             </div>
             <div style="display:flex;align-items:center;gap:0.75rem">
-              <div style="font-family:monospace;font-size:1.1rem;font-weight:700;color:rgb(245,166,35)">+200</div>
-              <select id="pu_20242" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+              <div style="font-family:monospace;font-size:1.1rem;font-weight:700;color:rgb(245,166,35)">+203</div>
+              <select id="pu_50090" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
                 <option value="0.1">0.1u</option><option value="0.5">0.5u</option>
                 <option value="1" selected>1u</option><option value="2">2u</option>
               </select>
-              <button onclick="trackParlay('Parlay of the Day','+200',['Martin Perez K 3.5 UNDER','Toronto Blue Jays +1.5 (Spread) — Toronto Blue Jays @ Tampa Bay Rays'],parseFloat(document.getElementById('pu_20242').value))"
+              <button onclick="trackParlay('Parlay of the Day','+203',['Detroit Tigers +1.5 (Spread) — Boston Red Sox @ Detroit Tigers','Freddy Peralta H_Allowed 4.5 UNDER'],parseFloat(document.getElementById('pu_50090').value))"
                 style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace">
                 Track Parlay
               </button>
@@ -130,21 +131,21 @@
             <div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;border-bottom:1px solid var(--border)">
               <span style="background:rgba(245,166,35,0.15);color:rgb(245,166,35);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">1</span>
               <div style="flex:1">
-                <div style="font-weight:600;font-size:0.85rem">Martin Perez K 3.5 UNDER</div>
-                <div style="font-size:0.72rem;color:var(--muted)">Atlanta Braves @ Seattle Mariners &nbsp;·&nbsp; Fair prob: 77.3%</div>
+                <div style="font-weight:600;font-size:0.85rem">Detroit Tigers +1.5 (Spread) — Boston Red Sox @ Detroit Tigers</div>
+                <div style="font-size:0.72rem;color:var(--muted)">Boston Red Sox @ Detroit Tigers &nbsp;·&nbsp; Fair prob: 73.7%</div>
               </div>
-              <span style="font-family:monospace;font-weight:700;color:rgb(245,166,35)">-110</span>
+              <span style="font-family:monospace;font-weight:700;color:rgb(245,166,35)">-225</span>
             </div>
             <div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;border-bottom:1px solid var(--border)">
               <span style="background:rgba(245,166,35,0.15);color:rgb(245,166,35);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">2</span>
               <div style="flex:1">
-                <div style="font-weight:600;font-size:0.85rem">Toronto Blue Jays +1.5 (Spread) — Toronto Blue Jays @ Tampa Bay Rays</div>
-                <div style="font-size:0.72rem;color:var(--muted)">Toronto Blue Jays @ Tampa Bay Rays &nbsp;·&nbsp; Fair prob: 71.5%</div>
+                <div style="font-weight:600;font-size:0.85rem">Freddy Peralta H_Allowed 4.5 UNDER</div>
+                <div style="font-size:0.72rem;color:var(--muted)">New York Mets @ Colorado Rockies &nbsp;·&nbsp; Fair prob: 67.5%</div>
               </div>
-              <span style="font-family:monospace;font-weight:700;color:rgb(245,166,35)">-175</span>
+              <span style="font-family:monospace;font-weight:700;color:rgb(245,166,35)">+110</span>
             </div>
           <div style="margin-top:0.75rem;font-size:0.72rem;color:var(--muted)">
-            Combined fair probability: 55.3% &nbsp;·&nbsp; Targeting ~+200 odds &nbsp;·&nbsp; Verify odds on Bovada before placing
+            Combined fair probability: 49.8% &nbsp;·&nbsp; Targeting ~+200 odds &nbsp;·&nbsp; Verify odds on Bovada before placing
           </div>
         </div>
         <div style="background:rgba(180,100,255,0.06);border:1px solid rgba(180,100,255,0.3);border-radius:10px;padding:1.2rem 1.4rem;margin-bottom:1rem">
@@ -153,12 +154,12 @@
               🚀 Shot in the Dark &nbsp;·&nbsp; 7 Legs
             </div>
             <div style="display:flex;align-items:center;gap:0.75rem">
-              <div style="font-family:monospace;font-size:1.1rem;font-weight:700;color:rgb(180,100,255)">+10828</div>
-              <select id="pu_5832" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+              <div style="font-family:monospace;font-size:1.1rem;font-weight:700;color:rgb(180,100,255)">+10241</div>
+              <select id="pu_14296" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
                 <option value="0.1">0.1u</option><option value="0.5">0.5u</option>
                 <option value="1" selected>1u</option><option value="2">2u</option>
               </select>
-              <button onclick="trackParlay('Shot in the Dark','+10828',['Martin Perez K 3.5 UNDER','Andre Pallante H_Allowed 5.5 OVER','Bailey Ober K 3.5 OVER','Eury Perez H_Allowed 4.5 OVER','Freddy Peralta H_Allowed 4.5 UNDER','Colin Rea H_Allowed 4.5 UNDER','Jeffrey Springs Outs 15.5 OVER'],parseFloat(document.getElementById('pu_5832').value))"
+              <button onclick="trackParlay('Shot in the Dark','+10241',['Martin Perez K 3.5 UNDER','Andre Pallante H_Allowed 5.5 OVER','Bailey Ober K 3.5 OVER','Eury Perez H_Allowed 4.5 OVER','Patrick Corbin H_Allowed 5.5 UNDER','Freddy Peralta H_Allowed 4.5 UNDER','Colin Rea H_Allowed 4.5 UNDER'],parseFloat(document.getElementById('pu_14296').value))"
                 style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace">
                 Track Parlay
               </button>
@@ -200,29 +201,29 @@
             <div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;border-bottom:1px solid var(--border)">
               <span style="background:rgba(180,100,255,0.15);color:rgb(180,100,255);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">5</span>
               <div style="flex:1">
+                <div style="font-weight:600;font-size:0.85rem">Patrick Corbin H_Allowed 5.5 UNDER</div>
+                <div style="font-size:0.72rem;color:var(--muted)">Toronto Blue Jays @ Tampa Bay Rays &nbsp;·&nbsp; Fair prob: 68.5%</div>
+              </div>
+              <span style="font-family:monospace;font-weight:700;color:rgb(180,100,255)">-130</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;border-bottom:1px solid var(--border)">
+              <span style="background:rgba(180,100,255,0.15);color:rgb(180,100,255);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">6</span>
+              <div style="flex:1">
                 <div style="font-weight:600;font-size:0.85rem">Freddy Peralta H_Allowed 4.5 UNDER</div>
                 <div style="font-size:0.72rem;color:var(--muted)">New York Mets @ Colorado Rockies &nbsp;·&nbsp; Fair prob: 67.5%</div>
               </div>
               <span style="font-family:monospace;font-weight:700;color:rgb(180,100,255)">+110</span>
             </div>
             <div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;border-bottom:1px solid var(--border)">
-              <span style="background:rgba(180,100,255,0.15);color:rgb(180,100,255);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">6</span>
+              <span style="background:rgba(180,100,255,0.15);color:rgb(180,100,255);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">7</span>
               <div style="flex:1">
                 <div style="font-weight:600;font-size:0.85rem">Colin Rea H_Allowed 4.5 UNDER</div>
                 <div style="font-size:0.72rem;color:var(--muted)">Cincinnati Reds @ Chicago Cubs &nbsp;·&nbsp; Fair prob: 65.4%</div>
               </div>
               <span style="font-family:monospace;font-weight:700;color:rgb(180,100,255)">-105</span>
             </div>
-            <div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;border-bottom:1px solid var(--border)">
-              <span style="background:rgba(180,100,255,0.15);color:rgb(180,100,255);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">7</span>
-              <div style="flex:1">
-                <div style="font-weight:600;font-size:0.85rem">Jeffrey Springs Outs 15.5 OVER</div>
-                <div style="font-size:0.72rem;color:var(--muted)">Athletics @ Philadelphia Phillies &nbsp;·&nbsp; Fair prob: 61.6%</div>
-              </div>
-              <span style="font-family:monospace;font-weight:700;color:rgb(180,100,255)">-115</span>
-            </div>
           <div style="margin-top:0.75rem;font-size:0.72rem;color:var(--muted)">
-            Combined fair probability: 8.5% &nbsp;·&nbsp; Best prob × payout combo · Small unit only (0.1u max) &nbsp;·&nbsp; Verify odds on Bovada before placing
+            Combined fair probability: 9.5% &nbsp;·&nbsp; Best prob × payout combo · Small unit only (0.1u max) &nbsp;·&nbsp; Verify odds on Bovada before placing
           </div>
         </div>
     <div class="filter-bar">
@@ -270,7 +271,7 @@
         <th class="tt" data-tip="Key reasons the model likes this pick">Why</th>
         <th>Matchup</th>
         <th>Time</th>
-      </tr></thead><tbody><tr data-stat="hrb" data-side="OVER" data-rating="STRONG" data-ev="41.13" data-fairprob="67.2" data-matchup="Toronto Blue Jays @ Tampa Bay Rays" style='background:rgba(245,166,35,0.07);border-left:3px solid #f5a623'>
+      </tr></thead><tbody><tr data-stat="hrb" data-side="OVER" data-rating="STRONG" data-ev="41.13" data-fairprob="67.2" data-matchup="Toronto Blue Jays @ Tampa Bay Rays" data-started="1" style='opacity:0.45;border-left:3px solid #555'>
           <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
@@ -299,8 +300,8 @@
           <td class="ev-cell">41.1%</td>
           <td style="font-size:0.72rem;color:var(--muted);min-width:220px;max-width:320px;white-space:normal">Proj 3.6 HRB vs line 1.5 (+1.6). vs LHP McClanahan.</td>
           <td class="muted" style="white-space:nowrap;font-family:monospace;font-size:0.78rem">TOR@TB</td>
-          <td class="muted">10:11 AM PT</td>
-        </tr><tr data-stat="h_allowed" data-side="UNDER" data-rating="STRONG" data-ev="21.1" data-fairprob="68.5" data-matchup="Toronto Blue Jays @ Tampa Bay Rays">
+          <td class="muted"><span style="color:#888;font-size:10px">LIVE</span></td>
+        </tr><tr data-stat="h_allowed" data-side="UNDER" data-rating="STRONG" data-ev="21.1" data-fairprob="68.5" data-matchup="Toronto Blue Jays @ Tampa Bay Rays" data-started="1" style='opacity:0.45;border-left:3px solid #555'>
           <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
@@ -329,8 +330,8 @@
           <td class="ev-cell">21.1%</td>
           <td style="font-size:0.72rem;color:var(--muted);min-width:220px;max-width:320px;white-space:normal">Proj 4.6 H_ALLOWED vs line 5.5 (-0.9). 5 books.</td>
           <td class="muted" style="white-space:nowrap;font-family:monospace;font-size:0.78rem">TOR@TB</td>
-          <td class="muted">10:11 AM PT</td>
-        </tr><tr data-stat="h_allowed" data-side="OVER" data-rating="ELITE" data-ev="79.94" data-fairprob="76.9" data-matchup="Milwaukee Brewers @ St. Louis Cardinals" style='background:rgba(245,166,35,0.07);border-left:3px solid #f5a623'>
+          <td class="muted"><span style="color:#888;font-size:10px">LIVE</span></td>
+        </tr><tr data-stat="h_allowed" data-side="OVER" data-rating="ELITE" data-ev="79.94" data-fairprob="76.9" data-matchup="Milwaukee Brewers @ St. Louis Cardinals" data-started="1" style='opacity:0.45;border-left:3px solid #555'>
           <td><span class="bet-rating rating-elite">🔥 ELITE</span></td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
@@ -359,8 +360,8 @@
           <td class="ev-cell">79.9%</td>
           <td style="font-size:0.72rem;color:var(--muted);min-width:220px;max-width:320px;white-space:normal">Proj 7.6 H_ALLOWED vs line 5.5 (+2.1).</td>
           <td class="muted" style="white-space:nowrap;font-family:monospace;font-size:0.78rem">MIL@STL</td>
-          <td class="muted">10:16 AM PT</td>
-        </tr><tr data-stat="hrb" data-side="OVER" data-rating="STRONG" data-ev="24.08" data-fairprob="70.1" data-matchup="Milwaukee Brewers @ St. Louis Cardinals">
+          <td class="muted"><span style="color:#888;font-size:10px">LIVE</span></td>
+        </tr><tr data-stat="hrb" data-side="OVER" data-rating="STRONG" data-ev="24.08" data-fairprob="70.1" data-matchup="Milwaukee Brewers @ St. Louis Cardinals" data-started="1" style='opacity:0.45;border-left:3px solid #555'>
           <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
@@ -389,8 +390,8 @@
           <td class="ev-cell">24.1%</td>
           <td style="font-size:0.72rem;color:var(--muted);min-width:220px;max-width:320px;white-space:normal">Proj 3.8 HRB vs line 1.5 (+1.8). vs RHP Sproat.</td>
           <td class="muted" style="white-space:nowrap;font-family:monospace;font-size:0.78rem">MIL@STL</td>
-          <td class="muted">10:16 AM PT</td>
-        </tr><tr data-stat="tb" data-side="UNDER" data-rating="ELITE" data-ev="29.42" data-fairprob="70.6" data-matchup="San Diego Padres @ San Francisco Giants">
+          <td class="muted"><span style="color:#888;font-size:10px">LIVE</span></td>
+        </tr><tr data-stat="tb" data-side="UNDER" data-rating="ELITE" data-ev="29.42" data-fairprob="70.6" data-matchup="San Diego Padres @ San Francisco Giants" data-started="1" style='opacity:0.45;border-left:3px solid #555'>
           <td><span class="bet-rating rating-elite">🔥 ELITE</span></td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
@@ -419,8 +420,8 @@
           <td class="ev-cell">29.4%</td>
           <td style="font-size:0.72rem;color:var(--muted);min-width:220px;max-width:320px;white-space:normal">Proj 1.2 TB vs line 1.5 (-0.3). vs RHP Houser. 5 books. calibrated.</td>
           <td class="muted" style="white-space:nowrap;font-family:monospace;font-size:0.78rem">SD@SF</td>
-          <td class="muted">12:46 PM PT</td>
-        </tr><tr data-stat="k" data-side="UNDER" data-rating="STRONG" data-ev="6.57" data-fairprob="61.2" data-matchup="Chicago White Sox @ Los Angeles Angels">
+          <td class="muted"><span style="color:#888;font-size:10px">LIVE</span></td>
+        </tr><tr data-stat="k" data-side="UNDER" data-rating="STRONG" data-ev="6.57" data-fairprob="61.2" data-matchup="Chicago White Sox @ Los Angeles Angels" data-started="1" style='opacity:0.45;border-left:3px solid #555'>
           <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
@@ -449,8 +450,8 @@
           <td class="ev-cell">6.6%</td>
           <td style="font-size:0.72rem;color:var(--muted);min-width:220px;max-width:320px;white-space:normal">Proj 5.2 K vs line 5.5 (-0.3). 8 books. calibrated.</td>
           <td class="muted" style="white-space:nowrap;font-family:monospace;font-size:0.78rem">CWS@LAA</td>
-          <td class="muted">01:08 PM PT</td>
-        </tr><tr data-stat="k" data-side="UNDER" data-rating="ELITE" data-ev="47.64" data-fairprob="77.3" data-matchup="Atlanta Braves @ Seattle Mariners" style='background:rgba(245,166,35,0.07);border-left:3px solid #f5a623'>
+          <td class="muted"><span style="color:#888;font-size:10px">LIVE</span></td>
+        </tr><tr data-stat="k" data-side="UNDER" data-rating="ELITE" data-ev="47.64" data-fairprob="77.3" data-matchup="Atlanta Braves @ Seattle Mariners" data-started="1" style='opacity:0.45;border-left:3px solid #555'>
           <td><span class="bet-rating rating-elite">🔥 ELITE</span></td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
@@ -479,8 +480,8 @@
           <td class="ev-cell">47.6%</td>
           <td style="font-size:0.72rem;color:var(--muted);min-width:220px;max-width:320px;white-space:normal">Proj 2.4 K vs line 3.5 (-1.1). 7 books.</td>
           <td class="muted" style="white-space:nowrap;font-family:monospace;font-size:0.78rem">ATL@SEA</td>
-          <td class="muted">01:10 PM PT</td>
-        </tr><tr data-stat="h_allowed" data-side="OVER" data-rating="STRONG" data-ev="15.08" data-fairprob="60.3" data-matchup="Atlanta Braves @ Seattle Mariners">
+          <td class="muted"><span style="color:#888;font-size:10px">LIVE</span></td>
+        </tr><tr data-stat="h_allowed" data-side="OVER" data-rating="STRONG" data-ev="15.08" data-fairprob="60.3" data-matchup="Atlanta Braves @ Seattle Mariners" data-started="1" style='opacity:0.45;border-left:3px solid #555'>
           <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
@@ -509,8 +510,8 @@
           <td class="ev-cell">15.1%</td>
           <td style="font-size:0.72rem;color:var(--muted);min-width:220px;max-width:320px;white-space:normal">Proj 6.3 H_ALLOWED vs line 5.5 (+0.8). 5 books.</td>
           <td class="muted" style="white-space:nowrap;font-family:monospace;font-size:0.78rem">ATL@SEA</td>
-          <td class="muted">01:10 PM PT</td>
-        </tr><tr data-stat="outs" data-side="OVER" data-rating="STRONG" data-ev="15.13" data-fairprob="61.6" data-matchup="Athletics @ Philadelphia Phillies">
+          <td class="muted"><span style="color:#888;font-size:10px">LIVE</span></td>
+        </tr><tr data-stat="outs" data-side="OVER" data-rating="STRONG" data-ev="15.13" data-fairprob="61.6" data-matchup="Athletics @ Philadelphia Phillies" data-started="1" style='opacity:0.45;border-left:3px solid #555'>
           <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
@@ -539,8 +540,8 @@
           <td class="ev-cell">15.1%</td>
           <td style="font-size:0.72rem;color:var(--muted);min-width:220px;max-width:320px;white-space:normal">Proj 17.3 Outs vs line 15.5 (+1.8). 4 books.</td>
           <td class="muted" style="white-space:nowrap;font-family:monospace;font-size:0.78rem">OAK@PHI</td>
-          <td class="muted">03:41 PM PT</td>
-        </tr><tr data-stat="h_allowed" data-side="OVER" data-rating="ELITE" data-ev="26.87" data-fairprob="69.2" data-matchup="Baltimore Orioles @ Miami Marlins">
+          <td class="muted"><span style="color:#888;font-size:10px">LIVE</span></td>
+        </tr><tr data-stat="h_allowed" data-side="OVER" data-rating="ELITE" data-ev="26.87" data-fairprob="69.2" data-matchup="Baltimore Orioles @ Miami Marlins" data-started="1" style='opacity:0.45;border-left:3px solid #555'>
           <td><span class="bet-rating rating-elite">🔥 ELITE</span></td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
@@ -569,8 +570,8 @@
           <td class="ev-cell">26.9%</td>
           <td style="font-size:0.72rem;color:var(--muted);min-width:220px;max-width:320px;white-space:normal">Proj 5.8 H_ALLOWED vs line 4.5 (+1.3). 4 books.</td>
           <td class="muted" style="white-space:nowrap;font-family:monospace;font-size:0.78rem">BAL@MIA</td>
-          <td class="muted">03:41 PM PT</td>
-        </tr><tr data-stat="er" data-side="OVER" data-rating="STRONG" data-ev="19.25" data-fairprob="65.8" data-matchup="Baltimore Orioles @ Miami Marlins">
+          <td class="muted"><span style="color:#888;font-size:10px">LIVE</span></td>
+        </tr><tr data-stat="er" data-side="OVER" data-rating="STRONG" data-ev="19.25" data-fairprob="65.8" data-matchup="Baltimore Orioles @ Miami Marlins" data-started="1" style='opacity:0.45;border-left:3px solid #555'>
           <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
@@ -599,8 +600,8 @@
           <td class="ev-cell">19.2%</td>
           <td style="font-size:0.72rem;color:var(--muted);min-width:220px;max-width:320px;white-space:normal">Proj 3.4 ER vs line 2.5 (+0.9). 3 books.</td>
           <td class="muted" style="white-space:nowrap;font-family:monospace;font-size:0.78rem">BAL@MIA</td>
-          <td class="muted">03:41 PM PT</td>
-        </tr><tr data-stat="h_allowed" data-side="OVER" data-rating="STRONG" data-ev="23.35" data-fairprob="64.6" data-matchup="Boston Red Sox @ Detroit Tigers">
+          <td class="muted"><span style="color:#888;font-size:10px">LIVE</span></td>
+        </tr><tr data-stat="h_allowed" data-side="OVER" data-rating="STRONG" data-ev="23.35" data-fairprob="64.6" data-matchup="Boston Red Sox @ Detroit Tigers" data-started="1" style='opacity:0.45;border-left:3px solid #555'>
           <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
@@ -629,8 +630,8 @@
           <td class="ev-cell">23.4%</td>
           <td style="font-size:0.72rem;color:var(--muted);min-width:220px;max-width:320px;white-space:normal">Proj 5.5 H_ALLOWED vs line 4.5 (+1.0). 5 books.</td>
           <td class="muted" style="white-space:nowrap;font-family:monospace;font-size:0.78rem">BOS@DET</td>
-          <td class="muted">03:41 PM PT</td>
-        </tr><tr data-stat="k" data-side="OVER" data-rating="ELITE" data-ev="32.49" data-fairprob="76.1" data-matchup="Minnesota Twins @ Washington Nationals">
+          <td class="muted"><span style="color:#888;font-size:10px">LIVE</span></td>
+        </tr><tr data-stat="k" data-side="OVER" data-rating="ELITE" data-ev="32.49" data-fairprob="76.1" data-matchup="Minnesota Twins @ Washington Nationals" data-started="1" style='opacity:0.45;border-left:3px solid #555'>
           <td><span class="bet-rating rating-elite">🔥 ELITE</span></td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
@@ -659,8 +660,8 @@
           <td class="ev-cell">32.5%</td>
           <td style="font-size:0.72rem;color:var(--muted);min-width:220px;max-width:320px;white-space:normal">Proj 5.2 K vs line 3.5 (+1.7). 8 books.</td>
           <td class="muted" style="white-space:nowrap;font-family:monospace;font-size:0.78rem">MIN@WSH</td>
-          <td class="muted">03:46 PM PT</td>
-        </tr><tr data-stat="h_allowed" data-side="UNDER" data-rating="STRONG" data-ev="27.68" data-fairprob="65.4" data-matchup="Cincinnati Reds @ Chicago Cubs">
+          <td class="muted"><span style="color:#888;font-size:10px">LIVE</span></td>
+        </tr><tr data-stat="h_allowed" data-side="UNDER" data-rating="STRONG" data-ev="27.68" data-fairprob="65.4" data-matchup="Cincinnati Reds @ Chicago Cubs" data-started="1" style='opacity:0.45;border-left:3px solid #555'>
           <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
@@ -689,8 +690,8 @@
           <td class="ev-cell">27.7%</td>
           <td style="font-size:0.72rem;color:var(--muted);min-width:220px;max-width:320px;white-space:normal">Proj 3.9 H_ALLOWED vs line 4.5 (-0.6). 5 books.</td>
           <td class="muted" style="white-space:nowrap;font-family:monospace;font-size:0.78rem">CIN@CHC</td>
-          <td class="muted">04:41 PM PT</td>
-        </tr><tr data-stat="h_allowed" data-side="OVER" data-rating="STRONG" data-ev="15.14" data-fairprob="61.6" data-matchup="Cincinnati Reds @ Chicago Cubs">
+          <td class="muted"><span style="color:#888;font-size:10px">LIVE</span></td>
+        </tr><tr data-stat="h_allowed" data-side="OVER" data-rating="STRONG" data-ev="15.14" data-fairprob="61.6" data-matchup="Cincinnati Reds @ Chicago Cubs" data-started="1" style='opacity:0.45;border-left:3px solid #555'>
           <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
@@ -719,8 +720,8 @@
           <td class="ev-cell">15.1%</td>
           <td style="font-size:0.72rem;color:var(--muted);min-width:220px;max-width:320px;white-space:normal">Proj 6.4 H_ALLOWED vs line 5.5 (+0.9). 4 books.</td>
           <td class="muted" style="white-space:nowrap;font-family:monospace;font-size:0.78rem">CIN@CHC</td>
-          <td class="muted">04:41 PM PT</td>
-        </tr><tr data-stat="k" data-side="UNDER" data-rating="STRONG" data-ev="16.87" data-fairprob="61.2" data-matchup="Cleveland Guardians @ Kansas City Royals">
+          <td class="muted"><span style="color:#888;font-size:10px">LIVE</span></td>
+        </tr><tr data-stat="k" data-side="UNDER" data-rating="STRONG" data-ev="16.87" data-fairprob="61.2" data-matchup="Cleveland Guardians @ Kansas City Royals" data-started="1" style='opacity:0.45;border-left:3px solid #555'>
           <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
@@ -749,8 +750,8 @@
           <td class="ev-cell">16.9%</td>
           <td style="font-size:0.72rem;color:var(--muted);min-width:220px;max-width:320px;white-space:normal">Proj 4.2 K vs line 4.5 (-0.3). 7 books. calibrated.</td>
           <td class="muted" style="white-space:nowrap;font-family:monospace;font-size:0.78rem">CLE@KC</td>
-          <td class="muted">04:41 PM PT</td>
-        </tr><tr data-stat="h_allowed" data-side="UNDER" data-rating="STRONG" data-ev="41.69" data-fairprob="67.5" data-matchup="New York Mets @ Colorado Rockies" style='background:rgba(245,166,35,0.07);border-left:3px solid #f5a623'>
+          <td class="muted"><span style="color:#888;font-size:10px">LIVE</span></td>
+        </tr><tr data-stat="h_allowed" data-side="UNDER" data-rating="STRONG" data-ev="41.69" data-fairprob="67.5" data-matchup="New York Mets @ Colorado Rockies" data-started="1" style='opacity:0.45;border-left:3px solid #555'>
           <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
@@ -779,8 +780,8 @@
           <td class="ev-cell">41.7%</td>
           <td style="font-size:0.72rem;color:var(--muted);min-width:220px;max-width:320px;white-space:normal">Proj 3.8 H_ALLOWED vs line 4.5 (-0.7). 5 books.</td>
           <td class="muted" style="white-space:nowrap;font-family:monospace;font-size:0.78rem">NYM@COL</td>
-          <td class="muted">06:21 PM PT</td>
-        </tr><tr data-stat="k" data-side="UNDER" data-rating="STRONG" data-ev="40.81" data-fairprob="61.2" data-matchup="Pittsburgh Pirates @ Arizona Diamondbacks" style='background:rgba(245,166,35,0.07);border-left:3px solid #f5a623'>
+          <td class="muted"><span style="color:#888;font-size:10px">LIVE</span></td>
+        </tr><tr data-stat="k" data-side="UNDER" data-rating="STRONG" data-ev="40.81" data-fairprob="61.2" data-matchup="Pittsburgh Pirates @ Arizona Diamondbacks" data-started="1" style='opacity:0.45;border-left:3px solid #555'>
           <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
@@ -809,7 +810,7 @@
           <td class="ev-cell">40.8%</td>
           <td style="font-size:0.72rem;color:var(--muted);min-width:220px;max-width:320px;white-space:normal">Proj 5.2 K vs line 5.5 (-0.3). 5 books. calibrated.</td>
           <td class="muted" style="white-space:nowrap;font-family:monospace;font-size:0.78rem">PIT@ARI</td>
-          <td class="muted">06:41 PM PT</td>
+          <td class="muted"><span style="color:#888;font-size:10px">LIVE</span></td>
         </tr></tbody></table>
     </div>
 </div>
@@ -838,63 +839,15 @@
         <th>Rating</th><th>Matchup</th><th>Market</th><th>Side</th>
         <th>Best Odds</th><th>Fair Odds</th><th>Fair%</th><th>EV%</th><th>Time</th><th>Track</th>
       </tr></thead><tbody>
-        <tr data-market="Spread">
-          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
-          <td class="muted">Athletics @ Philadelphia Phillies</td>
-          <td><span class="stat-pill">Spread</span></td>
-          <td><strong>Philadelphia Phillies -1.5</strong></td>
-          <td style="font-family:monospace">+120</td>
-          <td style="font-family:monospace">-124</td>
-          <td>55.3%</td>
-          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+21.7%</span></td>
-          <td class="muted">03:41 PM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Athletics @ Philadelphia Phillies|Spread|Philadelphia Phillies -1.5" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option><option value="2">2u</option>
-                <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('Philadelphia Phillies -1.5','Spread','-','Philadelphia Phillies -1.5','+120','Athletics @ Philadelphia Phillies','03:41 PM PT','MLB')"
-                id="tb_Athletics @ Philadelphia Phillies|Spread|Philadelphia Phillies -1.5"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr>
-        <tr data-market="F5 ML">
-          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
-          <td class="muted">Cleveland Guardians @ Kansas City Royals</td>
-          <td><span class="stat-pill">F5 ML</span></td>
-          <td><strong>Cleveland Guardians</strong></td>
-          <td style="font-family:monospace">+110</td>
-          <td style="font-family:monospace">-134</td>
-          <td>57.3%</td>
-          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+20.3%</span></td>
-          <td class="muted">04:41 PM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Cleveland Guardians @ Kansas City Royals|F5 ML|Cleveland Guardians" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option><option value="2">2u</option>
-                <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('Cleveland Guardians','F5 ML','-','Cleveland Guardians','+110','Cleveland Guardians @ Kansas City Royals','04:41 PM PT','MLB')"
-                id="tb_Cleveland Guardians @ Kansas City Royals|F5 ML|Cleveland Guardians"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr>
         <tr data-market="F5 ML">
           <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
           <td class="muted">San Diego Padres @ San Francisco Giants</td>
           <td><span class="stat-pill">F5 ML</span></td>
           <td><strong>San Diego Padres</strong></td>
-          <td style="font-family:monospace">+100</td>
+          <td style="font-family:monospace">+105</td>
           <td style="font-family:monospace">-149</td>
           <td>59.8%</td>
-          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+19.7%</span></td>
+          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+22.7%</span></td>
           <td class="muted">12:46 PM PT</td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
@@ -902,7 +855,7 @@
                 <option value="1">1u</option><option value="2">2u</option>
                 <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
               </select>
-              <button onclick="trackBet('San Diego Padres','F5 ML','-','San Diego Padres','+100','San Diego Padres @ San Francisco Giants','12:46 PM PT','MLB')"
+              <button onclick="trackBet('San Diego Padres','F5 ML','-','San Diego Padres','+105','San Diego Padres @ San Francisco Giants','12:46 PM PT','MLB')"
                 id="tb_San Diego Padres @ San Francisco Giants|F5 ML|San Diego Padres"
                 style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
                 Track
@@ -910,24 +863,24 @@
             </div>
           </td>
         </tr>
-        <tr data-market="F5 ML">
-          <td><span class="bet-rating rating-strong">✅ STRONG</span></td>
-          <td class="muted">Toronto Blue Jays @ Tampa Bay Rays</td>
-          <td><span class="stat-pill">F5 ML</span></td>
-          <td><strong>Toronto Blue Jays</strong></td>
-          <td style="font-family:monospace">+115</td>
-          <td style="font-family:monospace">-123</td>
-          <td>55.2%</td>
-          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+18.8%</span></td>
-          <td class="muted">10:11 AM PT</td>
+        <tr data-market="F5 Total">
+          <td><span class="bet-rating rating-good">👍 GOOD</span></td>
+          <td class="muted">Pittsburgh Pirates @ Arizona Diamondbacks</td>
+          <td><span class="stat-pill">F5 Total</span></td>
+          <td><strong>Over</strong></td>
+          <td style="font-family:monospace">+100</td>
+          <td style="font-family:monospace">-150</td>
+          <td>60.0%</td>
+          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+20.0%</span></td>
+          <td class="muted">06:41 PM PT</td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Toronto Blue Jays @ Tampa Bay Rays|F5 ML|Toronto Blue Jays" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+              <select id="u_Pittsburgh Pirates @ Arizona Diamondbacks|F5 Total|Over" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
                 <option value="1">1u</option><option value="2">2u</option>
                 <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
               </select>
-              <button onclick="trackBet('Toronto Blue Jays','F5 ML','-','Toronto Blue Jays','+115','Toronto Blue Jays @ Tampa Bay Rays','10:11 AM PT','MLB')"
-                id="tb_Toronto Blue Jays @ Tampa Bay Rays|F5 ML|Toronto Blue Jays"
+              <button onclick="trackBet('Over','F5 Total','-','Over','+100','Pittsburgh Pirates @ Arizona Diamondbacks','06:41 PM PT','MLB')"
+                id="tb_Pittsburgh Pirates @ Arizona Diamondbacks|F5 Total|Over"
                 style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
                 Track
               </button>
@@ -939,10 +892,10 @@
           <td class="muted">Atlanta Braves @ Seattle Mariners</td>
           <td><span class="stat-pill">Moneyline</span></td>
           <td><strong>Atlanta Braves</strong></td>
-          <td style="font-family:monospace">+112</td>
+          <td style="font-family:monospace">+111</td>
           <td style="font-family:monospace">-120</td>
           <td>54.6%</td>
-          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+15.8%</span></td>
+          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+15.3%</span></td>
           <td class="muted">01:10 PM PT</td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
@@ -950,200 +903,8 @@
                 <option value="1">1u</option><option value="2">2u</option>
                 <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
               </select>
-              <button onclick="trackBet('Atlanta Braves','Moneyline','-','Atlanta Braves','+112','Atlanta Braves @ Seattle Mariners','01:10 PM PT','MLB')"
+              <button onclick="trackBet('Atlanta Braves','Moneyline','-','Atlanta Braves','+111','Atlanta Braves @ Seattle Mariners','01:10 PM PT','MLB')"
                 id="tb_Atlanta Braves @ Seattle Mariners|Moneyline|Atlanta Braves"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr>
-        <tr data-market="Total">
-          <td><span class="bet-rating rating-good">👍 GOOD</span></td>
-          <td class="muted">Pittsburgh Pirates @ Arizona Diamondbacks</td>
-          <td><span class="stat-pill">Total</span></td>
-          <td><strong>Over</strong></td>
-          <td style="font-family:monospace">-105</td>
-          <td style="font-family:monospace">-135</td>
-          <td>57.5%</td>
-          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+12.3%</span></td>
-          <td class="muted">06:41 PM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Pittsburgh Pirates @ Arizona Diamondbacks|Total|Over" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option><option value="2">2u</option>
-                <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('Over','Total','-','Over','-105','Pittsburgh Pirates @ Arizona Diamondbacks','06:41 PM PT','MLB')"
-                id="tb_Pittsburgh Pirates @ Arizona Diamondbacks|Total|Over"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr>
-        <tr data-market="Total">
-          <td><span class="bet-rating rating-good">👍 GOOD</span></td>
-          <td class="muted">Cincinnati Reds @ Chicago Cubs</td>
-          <td><span class="stat-pill">Total</span></td>
-          <td><strong>Over</strong></td>
-          <td style="font-family:monospace">-105</td>
-          <td style="font-family:monospace">-135</td>
-          <td>57.5%</td>
-          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+12.2%</span></td>
-          <td class="muted">04:41 PM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Cincinnati Reds @ Chicago Cubs|Total|Over" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option><option value="2">2u</option>
-                <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('Over','Total','-','Over','-105','Cincinnati Reds @ Chicago Cubs','04:41 PM PT','MLB')"
-                id="tb_Cincinnati Reds @ Chicago Cubs|Total|Over"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr>
-        <tr data-market="Spread">
-          <td><span class="bet-rating rating-good">👍 GOOD</span></td>
-          <td class="muted">Milwaukee Brewers @ St. Louis Cardinals</td>
-          <td><span class="stat-pill">Spread</span></td>
-          <td><strong>Milwaukee Brewers -1.5</strong></td>
-          <td style="font-family:monospace">+185</td>
-          <td style="font-family:monospace">+156</td>
-          <td>39.0%</td>
-          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+11.1%</span></td>
-          <td class="muted">10:16 AM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Milwaukee Brewers @ St. Louis Cardinals|Spread|Milwaukee Brewers -1.5" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option><option value="2">2u</option>
-                <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('Milwaukee Brewers -1.5','Spread','-','Milwaukee Brewers -1.5','+185','Milwaukee Brewers @ St. Louis Cardinals','10:16 AM PT','MLB')"
-                id="tb_Milwaukee Brewers @ St. Louis Cardinals|Spread|Milwaukee Brewers -1.5"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr>
-        <tr data-market="Spread">
-          <td><span class="bet-rating rating-good">👍 GOOD</span></td>
-          <td class="muted">Chicago White Sox @ Los Angeles Angels</td>
-          <td><span class="stat-pill">Spread</span></td>
-          <td><strong>Chicago White Sox -1.5</strong></td>
-          <td style="font-family:monospace">+150</td>
-          <td style="font-family:monospace">+127</td>
-          <td>44.0%</td>
-          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+10.1%</span></td>
-          <td class="muted">01:08 PM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Chicago White Sox @ Los Angeles Angels|Spread|Chicago White Sox -1.5" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option><option value="2">2u</option>
-                <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('Chicago White Sox -1.5','Spread','-','Chicago White Sox -1.5','+150','Chicago White Sox @ Los Angeles Angels','01:08 PM PT','MLB')"
-                id="tb_Chicago White Sox @ Los Angeles Angels|Spread|Chicago White Sox -1.5"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr>
-        <tr data-market="F5 ML">
-          <td><span class="bet-rating rating-good">👍 GOOD</span></td>
-          <td class="muted">Boston Red Sox @ Detroit Tigers</td>
-          <td><span class="stat-pill">F5 ML</span></td>
-          <td><strong>Boston Red Sox</strong></td>
-          <td style="font-family:monospace">-105</td>
-          <td style="font-family:monospace">-127</td>
-          <td>55.9%</td>
-          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+9.1%</span></td>
-          <td class="muted">03:41 PM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Boston Red Sox @ Detroit Tigers|F5 ML|Boston Red Sox" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option><option value="2">2u</option>
-                <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('Boston Red Sox','F5 ML','-','Boston Red Sox','-105','Boston Red Sox @ Detroit Tigers','03:41 PM PT','MLB')"
-                id="tb_Boston Red Sox @ Detroit Tigers|F5 ML|Boston Red Sox"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr>
-        <tr data-market="F5 ML">
-          <td><span class="bet-rating rating-good">👍 GOOD</span></td>
-          <td class="muted">Milwaukee Brewers @ St. Louis Cardinals</td>
-          <td><span class="stat-pill">F5 ML</span></td>
-          <td><strong>Milwaukee Brewers</strong></td>
-          <td style="font-family:monospace">-120</td>
-          <td style="font-family:monospace">-146</td>
-          <td>59.3%</td>
-          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+8.8%</span></td>
-          <td class="muted">10:16 AM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Milwaukee Brewers @ St. Louis Cardinals|F5 ML|Milwaukee Brewers" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option><option value="2">2u</option>
-                <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('Milwaukee Brewers','F5 ML','-','Milwaukee Brewers','-120','Milwaukee Brewers @ St. Louis Cardinals','10:16 AM PT','MLB')"
-                id="tb_Milwaukee Brewers @ St. Louis Cardinals|F5 ML|Milwaukee Brewers"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr>
-        <tr data-market="Total">
-          <td><span class="bet-rating rating-good">👍 GOOD</span></td>
-          <td class="muted">San Diego Padres @ San Francisco Giants</td>
-          <td><span class="stat-pill">Total</span></td>
-          <td><strong>Under</strong></td>
-          <td style="font-family:monospace">-105</td>
-          <td style="font-family:monospace">-125</td>
-          <td>55.6%</td>
-          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+8.5%</span></td>
-          <td class="muted">12:46 PM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_San Diego Padres @ San Francisco Giants|Total|Under" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option><option value="2">2u</option>
-                <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('Under','Total','-','Under','-105','San Diego Padres @ San Francisco Giants','12:46 PM PT','MLB')"
-                id="tb_San Diego Padres @ San Francisco Giants|Total|Under"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr>
-        <tr data-market="Total">
-          <td><span class="bet-rating rating-good">👍 GOOD</span></td>
-          <td class="muted">Athletics @ Philadelphia Phillies</td>
-          <td><span class="stat-pill">Total</span></td>
-          <td><strong>Over</strong></td>
-          <td style="font-family:monospace">-115</td>
-          <td style="font-family:monospace">-138</td>
-          <td>57.9%</td>
-          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+8.3%</span></td>
-          <td class="muted">03:41 PM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Athletics @ Philadelphia Phillies|Total|Over" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option><option value="2">2u</option>
-                <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('Over','Total','-','Over','-115','Athletics @ Philadelphia Phillies','03:41 PM PT','MLB')"
-                id="tb_Athletics @ Philadelphia Phillies|Total|Over"
                 style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
                 Track
               </button>
@@ -1155,10 +916,10 @@
           <td class="muted">Chicago White Sox @ Los Angeles Angels</td>
           <td><span class="stat-pill">F5 ML</span></td>
           <td><strong>Chicago White Sox</strong></td>
-          <td style="font-family:monospace">-115</td>
+          <td style="font-family:monospace">-110</td>
           <td style="font-family:monospace">-136</td>
           <td>57.7%</td>
-          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+7.8%</span></td>
+          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+10.1%</span></td>
           <td class="muted">01:08 PM PT</td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
@@ -1166,7 +927,7 @@
                 <option value="1">1u</option><option value="2">2u</option>
                 <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
               </select>
-              <button onclick="trackBet('Chicago White Sox','F5 ML','-','Chicago White Sox','-115','Chicago White Sox @ Los Angeles Angels','01:08 PM PT','MLB')"
+              <button onclick="trackBet('Chicago White Sox','F5 ML','-','Chicago White Sox','-110','Chicago White Sox @ Los Angeles Angels','01:08 PM PT','MLB')"
                 id="tb_Chicago White Sox @ Los Angeles Angels|F5 ML|Chicago White Sox"
                 style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
                 Track
@@ -1174,48 +935,72 @@
             </div>
           </td>
         </tr>
-        <tr data-market="Moneyline">
+        <tr data-market="F5 Total">
+          <td><span class="bet-rating rating-good">👍 GOOD</span></td>
+          <td class="muted">Texas Rangers @ New York Yankees</td>
+          <td><span class="stat-pill">F5 Total</span></td>
+          <td><strong>Over</strong></td>
+          <td style="font-family:monospace">-110</td>
+          <td style="font-family:monospace">-130</td>
+          <td>56.5%</td>
+          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+7.8%</span></td>
+          <td class="muted">04:06 PM PT</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:4px">
+              <select id="u_Texas Rangers @ New York Yankees|F5 Total|Over" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+                <option value="1">1u</option><option value="2">2u</option>
+                <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
+              </select>
+              <button onclick="trackBet('Over','F5 Total','-','Over','-110','Texas Rangers @ New York Yankees','04:06 PM PT','MLB')"
+                id="tb_Texas Rangers @ New York Yankees|F5 Total|Over"
+                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
+                Track
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr data-market="F5 Total">
           <td><span class="bet-rating rating-good">👍 GOOD</span></td>
           <td class="muted">Athletics @ Philadelphia Phillies</td>
-          <td><span class="stat-pill">Moneyline</span></td>
-          <td><strong>Athletics</strong></td>
-          <td style="font-family:monospace">+147</td>
-          <td style="font-family:monospace">+129</td>
-          <td>43.6%</td>
-          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+7.8%</span></td>
+          <td><span class="stat-pill">F5 Total</span></td>
+          <td><strong>Over</strong></td>
+          <td style="font-family:monospace">-110</td>
+          <td style="font-family:monospace">-129</td>
+          <td>56.3%</td>
+          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+7.6%</span></td>
           <td class="muted">03:41 PM PT</td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Athletics @ Philadelphia Phillies|Moneyline|Athletics" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+              <select id="u_Athletics @ Philadelphia Phillies|F5 Total|Over" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
                 <option value="1">1u</option><option value="2">2u</option>
                 <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
               </select>
-              <button onclick="trackBet('Athletics','Moneyline','-','Athletics','+147','Athletics @ Philadelphia Phillies','03:41 PM PT','MLB')"
-                id="tb_Athletics @ Philadelphia Phillies|Moneyline|Athletics"
+              <button onclick="trackBet('Over','F5 Total','-','Over','-110','Athletics @ Philadelphia Phillies','03:41 PM PT','MLB')"
+                id="tb_Athletics @ Philadelphia Phillies|F5 Total|Over"
                 style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
                 Track
               </button>
             </div>
           </td>
         </tr>
-        <tr data-market="F5 Total">
+        <tr data-market="F5 ML">
           <td><span class="bet-rating rating-average">➖ AVERAGE</span></td>
-          <td class="muted">Pittsburgh Pirates @ Arizona Diamondbacks</td>
-          <td><span class="stat-pill">F5 Total</span></td>
-          <td><strong>Over</strong></td>
-          <td style="font-family:monospace">-115</td>
-          <td style="font-family:monospace">-132</td>
-          <td>56.9%</td>
-          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+6.3%</span></td>
-          <td class="muted">06:41 PM PT</td>
+          <td class="muted">Boston Red Sox @ Detroit Tigers</td>
+          <td><span class="stat-pill">F5 ML</span></td>
+          <td><strong>Boston Red Sox</strong></td>
+          <td style="font-family:monospace">-110</td>
+          <td style="font-family:monospace">-127</td>
+          <td>55.9%</td>
+          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+6.7%</span></td>
+          <td class="muted">03:41 PM PT</td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Pittsburgh Pirates @ Arizona Diamondbacks|F5 Total|Over" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+              <select id="u_Boston Red Sox @ Detroit Tigers|F5 ML|Boston Red Sox" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
                 <option value="1">1u</option><option value="2">2u</option>
                 <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
               </select>
-              <button onclick="trackBet('Over','F5 Total','-','Over','-115','Pittsburgh Pirates @ Arizona Diamondbacks','06:41 PM PT','MLB')"
-                id="tb_Pittsburgh Pirates @ Arizona Diamondbacks|F5 Total|Over"
+              <button onclick="trackBet('Boston Red Sox','F5 ML','-','Boston Red Sox','-110','Boston Red Sox @ Detroit Tigers','03:41 PM PT','MLB')"
+                id="tb_Boston Red Sox @ Detroit Tigers|F5 ML|Boston Red Sox"
                 style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
                 Track
               </button>
@@ -1224,70 +1009,22 @@
         </tr>
         <tr data-market="F5 Total">
           <td><span class="bet-rating rating-average">➖ AVERAGE</span></td>
-          <td class="muted">New York Mets @ Colorado Rockies</td>
+          <td class="muted">Cincinnati Reds @ Chicago Cubs</td>
           <td><span class="stat-pill">F5 Total</span></td>
           <td><strong>Over</strong></td>
           <td style="font-family:monospace">-105</td>
-          <td style="font-family:monospace">-118</td>
-          <td>54.1%</td>
-          <td><span style="color:#00e5a0;font-family:monospace;font-weight:600">+5.6%</span></td>
-          <td class="muted">06:21 PM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_New York Mets @ Colorado Rockies|F5 Total|Over" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option><option value="2">2u</option>
-                <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('Over','F5 Total','-','Over','-105','New York Mets @ Colorado Rockies','06:21 PM PT','MLB')"
-                id="tb_New York Mets @ Colorado Rockies|F5 Total|Over"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr>
-        <tr data-market="Total">
-          <td><span class="bet-rating rating-average">➖ AVERAGE</span></td>
-          <td class="muted">Boston Red Sox @ Detroit Tigers</td>
-          <td><span class="stat-pill">Total</span></td>
-          <td><strong>Under</strong></td>
-          <td style="font-family:monospace">-115</td>
-          <td style="font-family:monospace">-127</td>
-          <td>56.0%</td>
-          <td><span style="color:#44d4a0;font-family:monospace;font-weight:600">+4.7%</span></td>
-          <td class="muted">03:41 PM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Boston Red Sox @ Detroit Tigers|Total|Under" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option><option value="2">2u</option>
-                <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('Under','Total','-','Under','-115','Boston Red Sox @ Detroit Tigers','03:41 PM PT','MLB')"
-                id="tb_Boston Red Sox @ Detroit Tigers|Total|Under"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr>
-        <tr data-market="Total">
-          <td><span class="bet-rating rating-average">➖ AVERAGE</span></td>
-          <td class="muted">New York Mets @ Colorado Rockies</td>
-          <td><span class="stat-pill">Total</span></td>
-          <td><strong>Over</strong></td>
-          <td style="font-family:monospace">-110</td>
-          <td style="font-family:monospace">-120</td>
-          <td>54.5%</td>
+          <td style="font-family:monospace">-114</td>
+          <td>53.3%</td>
           <td><span style="color:#44d4a0;font-family:monospace;font-weight:600">+4.1%</span></td>
-          <td class="muted">06:21 PM PT</td>
+          <td class="muted">04:41 PM PT</td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_New York Mets @ Colorado Rockies|Total|Over" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+              <select id="u_Cincinnati Reds @ Chicago Cubs|F5 Total|Over" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
                 <option value="1">1u</option><option value="2">2u</option>
                 <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
               </select>
-              <button onclick="trackBet('Over','Total','-','Over','-110','New York Mets @ Colorado Rockies','06:21 PM PT','MLB')"
-                id="tb_New York Mets @ Colorado Rockies|Total|Over"
+              <button onclick="trackBet('Over','F5 Total','-','Over','-105','Cincinnati Reds @ Chicago Cubs','04:41 PM PT','MLB')"
+                id="tb_Cincinnati Reds @ Chicago Cubs|F5 Total|Over"
                 style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
                 Track
               </button>
@@ -1296,46 +1033,22 @@
         </tr>
         <tr data-market="Spread">
           <td><span class="bet-rating rating-average">➖ AVERAGE</span></td>
-          <td class="muted">Texas Rangers @ New York Yankees</td>
+          <td class="muted">Chicago White Sox @ Los Angeles Angels</td>
           <td><span class="stat-pill">Spread</span></td>
-          <td><strong>Texas Rangers +1.5</strong></td>
-          <td style="font-family:monospace">-115</td>
-          <td style="font-family:monospace">-123</td>
-          <td>55.2%</td>
-          <td><span style="color:#44d4a0;font-family:monospace;font-weight:600">+3.3%</span></td>
-          <td class="muted">04:06 PM PT</td>
+          <td><strong>Chicago White Sox -1.5</strong></td>
+          <td style="font-family:monospace">+135</td>
+          <td style="font-family:monospace">+127</td>
+          <td>44.0%</td>
+          <td><span style="color:#44d4a0;font-family:monospace;font-weight:600">+3.4%</span></td>
+          <td class="muted">01:08 PM PT</td>
           <td>
             <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Texas Rangers @ New York Yankees|Spread|Texas Rangers +1.5" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+              <select id="u_Chicago White Sox @ Los Angeles Angels|Spread|Chicago White Sox -1.5" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
                 <option value="1">1u</option><option value="2">2u</option>
                 <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
               </select>
-              <button onclick="trackBet('Texas Rangers +1.5','Spread','-','Texas Rangers +1.5','-115','Texas Rangers @ New York Yankees','04:06 PM PT','MLB')"
-                id="tb_Texas Rangers @ New York Yankees|Spread|Texas Rangers +1.5"
-                style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
-                Track
-              </button>
-            </div>
-          </td>
-        </tr>
-        <tr data-market="Moneyline">
-          <td><span class="bet-rating rating-average">➖ AVERAGE</span></td>
-          <td class="muted">Baltimore Orioles @ Miami Marlins</td>
-          <td><span class="stat-pill">Moneyline</span></td>
-          <td><strong>Miami Marlins</strong></td>
-          <td style="font-family:monospace">-132</td>
-          <td style="font-family:monospace">-142</td>
-          <td>58.7%</td>
-          <td><span style="color:#44d4a0;font-family:monospace;font-weight:600">+3.2%</span></td>
-          <td class="muted">03:41 PM PT</td>
-          <td>
-            <div style="display:flex;align-items:center;gap:4px">
-              <select id="u_Baltimore Orioles @ Miami Marlins|Moneyline|Miami Marlins" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
-                <option value="1">1u</option><option value="2">2u</option>
-                <option value="3">3u</option><option value="4">4u</option><option value="5">5u</option>
-              </select>
-              <button onclick="trackBet('Miami Marlins','Moneyline','-','Miami Marlins','-132','Baltimore Orioles @ Miami Marlins','03:41 PM PT','MLB')"
-                id="tb_Baltimore Orioles @ Miami Marlins|Moneyline|Miami Marlins"
+              <button onclick="trackBet('Chicago White Sox -1.5','Spread','-','Chicago White Sox -1.5','+135','Chicago White Sox @ Los Angeles Angels','01:08 PM PT','MLB')"
+                id="tb_Chicago White Sox @ Los Angeles Angels|Spread|Chicago White Sox -1.5"
                 style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace;white-space:nowrap">
                 Track
               </button>
@@ -4950,22 +4663,22 @@
       </span>
     </div>
     <div class="stat-strip">
-      <div class="stat-chip"><span class="chip-val">1523</span><span class="chip-lbl">Graded</span></div>
-      <div class="stat-chip" style="border-color:rgba(0,229,160,0.3)"><span class="chip-val" style="color:#00e5a0">801</span><span class="chip-lbl">Wins</span></div>
-      <div class="stat-chip" style="border-color:rgba(240,78,78,0.3)"><span class="chip-val" style="color:#f04e4e">722</span><span class="chip-lbl">Losses</span></div>
-      <div class="stat-chip"><span class="chip-val">52.6%</span><span class="chip-lbl">Win Rate</span></div>
+      <div class="stat-chip"><span class="chip-val">1582</span><span class="chip-lbl">Graded</span></div>
+      <div class="stat-chip" style="border-color:rgba(0,229,160,0.3)"><span class="chip-val" style="color:#00e5a0">834</span><span class="chip-lbl">Wins</span></div>
+      <div class="stat-chip" style="border-color:rgba(240,78,78,0.3)"><span class="chip-val" style="color:#f04e4e">748</span><span class="chip-lbl">Losses</span></div>
+      <div class="stat-chip"><span class="chip-val">52.7%</span><span class="chip-lbl">Win Rate</span></div>
       
     <div class="stat-chip" style="border-color:#00e5a040">
-      <span class="chip-val" style="color:#00e5a0">+$713.19</span>
+      <span class="chip-val" style="color:#00e5a0">+$755.88</span>
       <span class="chip-lbl">Live P&amp;L</span>
     </div>
     <div class="stat-chip" style="border-color:#00e5a040">
-      <span class="chip-val" style="color:#00e5a0">+71.3u</span>
+      <span class="chip-val" style="color:#00e5a0">+75.6u</span>
       <span class="chip-lbl">Live Units</span>
     </div>
     </div>
     <p style="font-size:0.72rem;color:var(--muted);margin-bottom:0.5rem">
-      All-time (incl. pre-Bovada): 1618 picks · 54.0% · +$1486.10
+      All-time (incl. pre-Bovada): 1677 picks · 54.1% · +$1528.79
     </p>
     <p style="font-size:0.75rem;color:var(--muted);margin-bottom:1.5rem">
       Performance based on all model picks — not just bets placed.
@@ -4975,7 +4688,7 @@
           <div class="table-wrap">
             <table class="data-table mini"><thead><tr>
               <th>Stat</th><th>Picks</th><th>W</th><th>L</th><th>Win%</th><th>P&L</th>
-            </tr></thead><tbody><tr><td><strong>Hits</strong></td><td>174</td><td style='color:#00e5a0'>89</td><td style='color:#f04e4e'>85</td><td>51.1%</td><td style='color:#f04e4e;font-family:monospace'>$-119.95</td></tr><tr><td><strong>HRB</strong></td><td>741</td><td style='color:#00e5a0'>390</td><td style='color:#f04e4e'>351</td><td>52.6%</td><td style='color:#f04e4e;font-family:monospace'>$-15.93</td></tr><tr><td><strong>Strikeouts</strong></td><td>217</td><td style='color:#00e5a0'>124</td><td style='color:#f04e4e'>93</td><td>57.1%</td><td style='color:#00e5a0;font-family:monospace'>+$601.40</td></tr><tr><td><strong>Outs Recorded</strong></td><td>38</td><td style='color:#00e5a0'>30</td><td style='color:#f04e4e'>8</td><td>78.9%</td><td style='color:#00e5a0;font-family:monospace'>+$223.75</td></tr><tr><td><strong>RBI</strong></td><td>28</td><td style='color:#00e5a0'>16</td><td style='color:#f04e4e'>12</td><td>57.1%</td><td style='color:#00e5a0;font-family:monospace'>+$171.20</td></tr><tr><td><strong>Runs</strong></td><td>29</td><td style='color:#00e5a0'>17</td><td style='color:#f04e4e'>12</td><td>58.6%</td><td style='color:#00e5a0;font-family:monospace'>+$130.93</td></tr><tr><td><strong>SB</strong></td><td>1</td><td style='color:#00e5a0'>0</td><td style='color:#f04e4e'>1</td><td>0.0%</td><td style='color:#f04e4e;font-family:monospace'>$-10.00</td></tr><tr><td><strong>Total Bases</strong></td><td>295</td><td style='color:#00e5a0'>135</td><td style='color:#f04e4e'>160</td><td>45.8%</td><td style='color:#f04e4e;font-family:monospace'>$-268.20</td></tr></tbody></table>
+            </tr></thead><tbody><tr><td><strong>BB_ALLOWED</strong></td><td>8</td><td style='color:#00e5a0'>2</td><td style='color:#f04e4e'>6</td><td>25.0%</td><td style='color:#f04e4e;font-family:monospace'>$-39.74</td></tr><tr><td><strong>ER</strong></td><td>6</td><td style='color:#00e5a0'>5</td><td style='color:#f04e4e'>1</td><td>83.3%</td><td style='color:#00e5a0;font-family:monospace'>+$36.45</td></tr><tr><td><strong>H_ALLOWED</strong></td><td>15</td><td style='color:#00e5a0'>10</td><td style='color:#f04e4e'>5</td><td>66.7%</td><td style='color:#00e5a0;font-family:monospace'>+$46.31</td></tr><tr><td><strong>Hits</strong></td><td>174</td><td style='color:#00e5a0'>89</td><td style='color:#f04e4e'>85</td><td>51.1%</td><td style='color:#f04e4e;font-family:monospace'>$-119.95</td></tr><tr><td><strong>HRB</strong></td><td>752</td><td style='color:#00e5a0'>397</td><td style='color:#f04e4e'>355</td><td>52.8%</td><td style='color:#00e5a0;font-family:monospace'>+$6.85</td></tr><tr><td><strong>Strikeouts</strong></td><td>230</td><td style='color:#00e5a0'>129</td><td style='color:#f04e4e'>101</td><td>56.1%</td><td style='color:#00e5a0;font-family:monospace'>+$567.39</td></tr><tr><td><strong>Outs Recorded</strong></td><td>42</td><td style='color:#00e5a0'>33</td><td style='color:#f04e4e'>9</td><td>78.6%</td><td style='color:#00e5a0;font-family:monospace'>+$236.30</td></tr><tr><td><strong>RBI</strong></td><td>28</td><td style='color:#00e5a0'>16</td><td style='color:#f04e4e'>12</td><td>57.1%</td><td style='color:#00e5a0;font-family:monospace'>+$171.20</td></tr><tr><td><strong>Runs</strong></td><td>29</td><td style='color:#00e5a0'>17</td><td style='color:#f04e4e'>12</td><td>58.6%</td><td style='color:#00e5a0;font-family:monospace'>+$130.93</td></tr><tr><td><strong>SB</strong></td><td>1</td><td style='color:#00e5a0'>0</td><td style='color:#f04e4e'>1</td><td>0.0%</td><td style='color:#f04e4e;font-family:monospace'>$-10.00</td></tr><tr><td><strong>Total Bases</strong></td><td>297</td><td style='color:#00e5a0'>136</td><td style='color:#f04e4e'>161</td><td>45.8%</td><td style='color:#f04e4e;font-family:monospace'>$-269.87</td></tr></tbody></table>
           </div>
         </div>
         <div class="perf-card">
@@ -4983,7 +4696,7 @@
           <div class="table-wrap">
             <table class="data-table mini"><thead><tr>
               <th>Side</th><th>Picks</th><th>W</th><th>L</th><th>Win%</th><th>P&L</th>
-            </tr></thead><tbody><tr><td><strong>OVER</strong></td><td>1150</td><td style='color:#00e5a0'>567</td><td style='color:#f04e4e'>583</td><td>49.3%</td><td style='color:#f04e4e;font-family:monospace'>$-39.33</td></tr><tr><td><strong>UNDER</strong></td><td>373</td><td style='color:#00e5a0'>234</td><td style='color:#f04e4e'>139</td><td>62.7%</td><td style='color:#00e5a0;font-family:monospace'>+$752.52</td></tr></tbody></table>
+            </tr></thead><tbody><tr><td><strong>OVER</strong></td><td>1175</td><td style='color:#00e5a0'>578</td><td style='color:#f04e4e'>597</td><td>49.2%</td><td style='color:#f04e4e;font-family:monospace'>$-74.78</td></tr><tr><td><strong>UNDER</strong></td><td>407</td><td style='color:#00e5a0'>256</td><td style='color:#f04e4e'>151</td><td>62.9%</td><td style='color:#00e5a0;font-family:monospace'>+$830.66</td></tr></tbody></table>
           </div>
         </div>
         <div class="perf-card">
@@ -4991,9 +4704,16 @@
           <div class="table-wrap">
             <table class="data-table mini"><thead><tr>
               <th>Bet_Rating</th><th>Picks</th><th>W</th><th>L</th><th>Win%</th><th>P&L</th>
-            </tr></thead><tbody><tr><td><strong>ELITE</strong></td><td>341</td><td style='color:#00e5a0'>188</td><td style='color:#f04e4e'>153</td><td>55.1%</td><td style='color:#00e5a0;font-family:monospace'>+$647.46</td></tr><tr><td><strong>STRONG</strong></td><td>303</td><td style='color:#00e5a0'>159</td><td style='color:#f04e4e'>144</td><td>52.5%</td><td style='color:#00e5a0;font-family:monospace'>+$145.09</td></tr><tr><td><strong>GOOD</strong></td><td>536</td><td style='color:#00e5a0'>294</td><td style='color:#f04e4e'>242</td><td>54.9%</td><td style='color:#00e5a0;font-family:monospace'>+$169.93</td></tr><tr><td><strong>AVERAGE</strong></td><td>198</td><td style='color:#00e5a0'>99</td><td style='color:#f04e4e'>99</td><td>50.0%</td><td style='color:#f04e4e;font-family:monospace'>$-24.19</td></tr><tr><td><strong>POOR</strong></td><td>145</td><td style='color:#00e5a0'>61</td><td style='color:#f04e4e'>84</td><td>42.1%</td><td style='color:#f04e4e;font-family:monospace'>$-225.10</td></tr></tbody></table>
+            </tr></thead><tbody><tr><td><strong>ELITE</strong></td><td>349</td><td style='color:#00e5a0'>190</td><td style='color:#f04e4e'>159</td><td>54.4%</td><td style='color:#00e5a0;font-family:monospace'>+$615.86</td></tr><tr><td><strong>STRONG</strong></td><td>320</td><td style='color:#00e5a0'>166</td><td style='color:#f04e4e'>154</td><td>51.9%</td><td style='color:#00e5a0;font-family:monospace'>+$102.37</td></tr><tr><td><strong>GOOD</strong></td><td>570</td><td style='color:#00e5a0'>318</td><td style='color:#f04e4e'>252</td><td>55.8%</td><td style='color:#00e5a0;font-family:monospace'>+$286.94</td></tr><tr><td><strong>AVERAGE</strong></td><td>198</td><td style='color:#00e5a0'>99</td><td style='color:#f04e4e'>99</td><td>50.0%</td><td style='color:#f04e4e;font-family:monospace'>$-24.19</td></tr><tr><td><strong>POOR</strong></td><td>145</td><td style='color:#00e5a0'>61</td><td style='color:#f04e4e'>84</td><td>42.1%</td><td style='color:#f04e4e;font-family:monospace'>$-225.10</td></tr></tbody></table>
           </div>
         </div></div>
+</div>
+<div id="simulations" class="tab-content">
+  <div class="tab-header">
+    <div class="tab-title">Elite Pick Simulations</div>
+    <div class="tab-subtitle">Monte Carlo + Bootstrap · 10k trials each · 60/40 ensemble · Unit sizing by confidence</div>
+  </div>
+  <div id="sim-content"><p style="color:var(--muted);font-style:italic;padding:1rem 0">Loading simulations…</p></div>
 </div>
 <script>
   const TRACKED_KEY = 'mlb_tracked_bets_v1';
@@ -5091,6 +4811,9 @@
   }
   const UNIT_SIZE   = 10;
 
+  const SIM_INPUTS = [{"player": "Andre Pallante", "stat": "h_allowed", "stat_label": "H_ALLOWED", "line": 5.5, "side": "OVER", "odds": 134.0, "fair_prob": 0.769, "proj_mean": 7.597, "proj_std": 2.6589, "samples": [7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6], "stat_type": "poisson", "matchup": "Milwaukee Brewers @ St. Louis Cardinals"}, {"player": "Martin Perez", "stat": "k", "stat_label": "Strikeouts", "line": 3.5, "side": "UNDER", "odds": -110.0, "fair_prob": 0.7733, "proj_mean": 2.426, "proj_std": 0.8491, "samples": [2.43, 2.43, 2.43, 2.43, 2.43, 2.43, 2.43, 2.43, 2.43, 2.43], "stat_type": "poisson", "matchup": "Atlanta Braves @ Seattle Mariners"}, {"player": "Bailey Ober", "stat": "k", "stat_label": "Strikeouts", "line": 3.5, "side": "OVER", "odds": -135.0, "fair_prob": 0.7611, "proj_mean": 5.9435, "proj_std": 2.0802, "samples": [5.28, 5.28, 5.28, 5.28, 5.28, 5.28, 5.28, 5.28, 5.28, 5.28], "stat_type": "poisson", "matchup": "Minnesota Twins @ Washington Nationals"}, {"player": "Fernando Tatis Jr.", "stat": "tb", "stat_label": "Total Bases", "line": 1.5, "side": "UNDER", "odds": -120.0, "fair_prob": 0.7059, "proj_mean": 1.14, "proj_std": 2.1679, "samples": [0.0, 2.0, 0.0, 0.0, 5.0, 1.0, 0.0, 2.0, 1.0, 1.0, 1.0, 0.0, 2.0, 1.0, 2.0, 0.0, 1.0, 1.0, 2.0, 4.0, 0.0, 1.0, 1.0, 1.0, 0.0, 2.0, 2.0, 0.0, 1.0, 2.0], "stat_type": "normal", "matchup": "San Diego Padres @ San Francisco Giants"}, {"player": "Eury Perez", "stat": "h_allowed", "stat_label": "H_ALLOWED", "line": 4.5, "side": "OVER", "odds": -120.0, "fair_prob": 0.692, "proj_mean": 5.833, "proj_std": 2.0415, "samples": [5.83, 5.83, 5.83, 5.83, 5.83, 5.83, 5.83, 5.83, 5.83, 5.83], "stat_type": "poisson", "matchup": "Baltimore Orioles @ Miami Marlins"}];
+  let _simDone = false;
+
   try {
     const mlbPicks = [{"player": "Shane McClanahan (H_ALLOWED)", "prop": "H_ALLOWED", "line": "4.5", "side": "UNDER", "odds": "+105", "rating": "GOOD", "matchup": "Toronto Blue Jays @ Tampa Bay Rays", "sport": "MLB"}, {"player": "Andre Pallante (ER)", "prop": "ER", "line": "2.5", "side": "OVER", "odds": "+120", "rating": "GOOD", "matchup": "Milwaukee Brewers @ St. Louis Cardinals", "sport": "MLB"}, {"player": "Paul Skenes (H_ALLOWED)", "prop": "H_ALLOWED", "line": "4.5", "side": "UNDER", "odds": "-110", "rating": "GOOD", "matchup": "Pittsburgh Pirates @ Arizona Diamondbacks", "sport": "MLB"}, {"player": "Andre Pallante (H_ALLOWED)", "prop": "H_ALLOWED", "line": "5.5", "side": "OVER", "odds": "+134", "rating": "ELITE", "matchup": "Milwaukee Brewers @ St. Louis Cardinals", "sport": "MLB"}, {"player": "Brady Singer (Strikeouts)", "prop": "Strikeouts", "line": "3.5", "side": "UNDER", "odds": "+105", "rating": "GOOD", "matchup": "Cincinnati Reds @ Chicago Cubs", "sport": "MLB"}, {"player": "Brandon Young (Strikeouts)", "prop": "Strikeouts", "line": "3.5", "side": "UNDER", "odds": "-105", "rating": "GOOD", "matchup": "Baltimore Orioles @ Miami Marlins", "sport": "MLB"}, {"player": "Sonny Gray (Strikeouts)", "prop": "Strikeouts", "line": "4.5", "side": "UNDER", "odds": "-135", "rating": "GOOD", "matchup": "Boston Red Sox @ Detroit Tigers", "sport": "MLB"}, {"player": "Michael Lorenzen (Strikeouts)", "prop": "Strikeouts", "line": "3.5", "side": "UNDER", "odds": "-110", "rating": "GOOD", "matchup": "New York Mets @ Colorado Rockies", "sport": "MLB"}, {"player": "Lance McCullers Jr. (ER)", "prop": "ER", "line": "2.5", "side": "OVER", "odds": "-123", "rating": "GOOD", "matchup": "Los Angeles Dodgers @ Houston Astros", "sport": "MLB"}, {"player": "Nathan Eovaldi (Strikeouts)", "prop": "Strikeouts", "line": "5.5", "side": "UNDER", "odds": "-110", "rating": "GOOD", "matchup": "Texas Rangers @ New York Yankees", "sport": "MLB"}, {"player": "Martin Perez (Strikeouts)", "prop": "Strikeouts", "line": "3.5", "side": "UNDER", "odds": "-110", "rating": "ELITE", "matchup": "Atlanta Braves @ Seattle Mariners", "sport": "MLB"}, {"player": "Martin Perez (H_ALLOWED)", "prop": "H_ALLOWED", "line": "4.5", "side": "UNDER", "odds": "-140", "rating": "GOOD", "matchup": "Atlanta Braves @ Seattle Mariners", "sport": "MLB"}, {"player": "Jack Flaherty (H_ALLOWED)", "prop": "H_ALLOWED", "line": "4.5", "side": "UNDER", "odds": "-140", "rating": "GOOD", "matchup": "Boston Red Sox @ Detroit Tigers", "sport": "MLB"}, {"player": "Shohei Ohtani (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "UNDER", "odds": "-125", "rating": "GOOD", "matchup": "Los Angeles Dodgers @ Houston Astros", "sport": "MLB"}, {"player": "Freddy Peralta (H_ALLOWED)", "prop": "H_ALLOWED", "line": "4.5", "side": "UNDER", "odds": "+110", "rating": "STRONG", "matchup": "New York Mets @ Colorado Rockies", "sport": "MLB"}, {"player": "Kazuma Okamoto (HRB)", "prop": "HRB", "line": "1.5", "side": "OVER", "odds": "+110", "rating": "STRONG", "matchup": "Toronto Blue Jays @ Tampa Bay Rays", "sport": "MLB"}, {"player": "Paul Skenes (Strikeouts)", "prop": "Strikeouts", "line": "5.5", "side": "UNDER", "odds": "+130", "rating": "STRONG", "matchup": "Pittsburgh Pirates @ Arizona Diamondbacks", "sport": "MLB"}, {"player": "Teoscar Hernandez (HRB)", "prop": "HRB", "line": "1.5", "side": "UNDER", "odds": "+100", "rating": "GOOD", "matchup": "Los Angeles Dodgers @ Houston Astros", "sport": "MLB"}, {"player": "JJ Wetherholt (HRB)", "prop": "HRB", "line": "1.5", "side": "UNDER", "odds": "-110", "rating": "GOOD", "matchup": "Milwaukee Brewers @ St. Louis Cardinals", "sport": "MLB"}, {"player": "Ernie Clement (HRB)", "prop": "HRB", "line": "1.5", "side": "UNDER", "odds": "-110", "rating": "GOOD", "matchup": "Toronto Blue Jays @ Tampa Bay Rays", "sport": "MLB"}, {"player": "Bailey Ober (Strikeouts)", "prop": "Strikeouts", "line": "3.5", "side": "OVER", "odds": "-135", "rating": "ELITE", "matchup": "Minnesota Twins @ Washington Nationals", "sport": "MLB"}, {"player": "Masyn Winn (HRB)", "prop": "HRB", "line": "1.5", "side": "UNDER", "odds": "-130", "rating": "GOOD", "matchup": "Milwaukee Brewers @ St. Louis Cardinals", "sport": "MLB"}, {"player": "Lance McCullers Jr. (Strikeouts)", "prop": "Strikeouts", "line": "4.5", "side": "UNDER", "odds": "+130", "rating": "GOOD", "matchup": "Los Angeles Dodgers @ Houston Astros", "sport": "MLB"}, {"player": "Fernando Tatis Jr. (Total Bases)", "prop": "Total Bases", "line": "1.5", "side": "UNDER", "odds": "-120", "rating": "ELITE", "matchup": "San Diego Padres @ San Francisco Giants", "sport": "MLB"}, {"player": "Colin Rea (H_ALLOWED)", "prop": "H_ALLOWED", "line": "4.5", "side": "UNDER", "odds": "-105", "rating": "STRONG", "matchup": "Cincinnati Reds @ Chicago Cubs", "sport": "MLB"}, {"player": "Sal Frelick (HRB)", "prop": "HRB", "line": "1.5", "side": "UNDER", "odds": "-140", "rating": "GOOD", "matchup": "Milwaukee Brewers @ St. Louis Cardinals", "sport": "MLB"}, {"player": "Eury Perez (Strikeouts)", "prop": "Strikeouts", "line": "5.5", "side": "UNDER", "odds": "+125", "rating": "GOOD", "matchup": "Baltimore Orioles @ Miami Marlins", "sport": "MLB"}, {"player": "Eury Perez (H_ALLOWED)", "prop": "H_ALLOWED", "line": "4.5", "side": "OVER", "odds": "-120", "rating": "ELITE", "matchup": "Baltimore Orioles @ Miami Marlins", "sport": "MLB"}, {"player": "Michael Soroka (ER)", "prop": "ER", "line": "2.5", "side": "OVER", "odds": "+117", "rating": "GOOD", "matchup": "Pittsburgh Pirates @ Arizona Diamondbacks", "sport": "MLB"}, {"player": "Jordan Walker (HRB)", "prop": "HRB", "line": "1.5", "side": "OVER", "odds": "-130", "rating": "STRONG", "matchup": "Milwaukee Brewers @ St. Louis Cardinals", "sport": "MLB"}, {"player": "Sonny Gray (H_ALLOWED)", "prop": "H_ALLOWED", "line": "4.5", "side": "OVER", "odds": "-110", "rating": "STRONG", "matchup": "Boston Red Sox @ Detroit Tigers", "sport": "MLB"}, {"player": "Brady Singer (Outs Recorded)", "prop": "Outs Recorded", "line": "15.5", "side": "OVER", "odds": "+125", "rating": "AVERAGE", "matchup": "Cincinnati Reds @ Chicago Cubs", "sport": "MLB"}, {"player": "Noah Schultz (ER)", "prop": "ER", "line": "2.5", "side": "OVER", "odds": "+110", "rating": "GOOD", "matchup": "Chicago White Sox @ Los Angeles Angels", "sport": "MLB"}, {"player": "Brandon Sproat (H_ALLOWED)", "prop": "H_ALLOWED", "line": "4.5", "side": "UNDER", "odds": "+110", "rating": "GOOD", "matchup": "Milwaukee Brewers @ St. Louis Cardinals", "sport": "MLB"}, {"player": "Christian Walker (HRB)", "prop": "HRB", "line": "1.5", "side": "OVER", "odds": "+115", "rating": "GOOD", "matchup": "Los Angeles Dodgers @ Houston Astros", "sport": "MLB"}, {"player": "Patrick Corbin (H_ALLOWED)", "prop": "H_ALLOWED", "line": "5.5", "side": "UNDER", "odds": "-130", "rating": "STRONG", "matchup": "Toronto Blue Jays @ Tampa Bay Rays", "sport": "MLB"}, {"player": "Brandon Young (ER)", "prop": "ER", "line": "2.5", "side": "OVER", "odds": "-123", "rating": "STRONG", "matchup": "Baltimore Orioles @ Miami Marlins", "sport": "MLB"}, {"player": "Joey Cantillo (Strikeouts)", "prop": "Strikeouts", "line": "4.5", "side": "UNDER", "odds": "-110", "rating": "STRONG", "matchup": "Cleveland Guardians @ Kansas City Royals", "sport": "MLB"}, {"player": "Bailey Ober (ER)", "prop": "ER", "line": "2.5", "side": "OVER", "odds": "-139", "rating": "GOOD", "matchup": "Minnesota Twins @ Washington Nationals", "sport": "MLB"}, {"player": "Paul Skenes (Outs Recorded)", "prop": "Outs Recorded", "line": "17.5", "side": "UNDER", "odds": "+115", "rating": "POOR", "matchup": "Pittsburgh Pirates @ Arizona Diamondbacks", "sport": "MLB"}, {"player": "Brady Singer (H_ALLOWED)", "prop": "H_ALLOWED", "line": "5.5", "side": "OVER", "odds": "-115", "rating": "STRONG", "matchup": "Cincinnati Reds @ Chicago Cubs", "sport": "MLB"}, {"player": "Jeffrey Springs (Outs Recorded)", "prop": "Outs Recorded", "line": "15.5", "side": "OVER", "odds": "-115", "rating": "STRONG", "matchup": "Athletics @ Philadelphia Phillies", "sport": "MLB"}, {"player": "Bryan Woo (H_ALLOWED)", "prop": "H_ALLOWED", "line": "5.5", "side": "OVER", "odds": "-110", "rating": "STRONG", "matchup": "Atlanta Braves @ Seattle Mariners", "sport": "MLB"}, {"player": "William Contreras (HRB)", "prop": "HRB", "line": "1.5", "side": "OVER", "odds": "-140", "rating": "GOOD", "matchup": "Milwaukee Brewers @ St. Louis Cardinals", "sport": "MLB"}, {"player": "Alec Burleson (HRB)", "prop": "HRB", "line": "1.5", "side": "OVER", "odds": "-135", "rating": "GOOD", "matchup": "Milwaukee Brewers @ St. Louis Cardinals", "sport": "MLB"}, {"player": "Colin Rea (Outs Recorded)", "prop": "Outs Recorded", "line": "17.5", "side": "UNDER", "odds": "-140", "rating": "GOOD", "matchup": "Cincinnati Reds @ Chicago Cubs", "sport": "MLB"}, {"player": "Colin Rea (Strikeouts)", "prop": "Strikeouts", "line": "4.5", "side": "UNDER", "odds": "+100", "rating": "GOOD", "matchup": "Cincinnati Reds @ Chicago Cubs", "sport": "MLB"}, {"player": "Brandon Young (H_ALLOWED)", "prop": "H_ALLOWED", "line": "5.5", "side": "UNDER", "odds": "-115", "rating": "GOOD", "matchup": "Baltimore Orioles @ Miami Marlins", "sport": "MLB"}, {"player": "Lance McCullers Jr. (Outs Recorded)", "prop": "Outs Recorded", "line": "14.5", "side": "UNDER", "odds": "+110", "rating": "POOR", "matchup": "Los Angeles Dodgers @ Houston Astros", "sport": "MLB"}, {"player": "Bailey Ober (H_ALLOWED)", "prop": "H_ALLOWED", "line": "5.5", "side": "OVER", "odds": "-110", "rating": "GOOD", "matchup": "Minnesota Twins @ Washington Nationals", "sport": "MLB"}, {"player": "Shane McClanahan (Outs Recorded)", "prop": "Outs Recorded", "line": "15.5", "side": "UNDER", "odds": "-135", "rating": "GOOD", "matchup": "Toronto Blue Jays @ Tampa Bay Rays", "sport": "MLB"}, {"player": "Eury Perez (ER)", "prop": "ER", "line": "2.5", "side": "OVER", "odds": "-102", "rating": "AVERAGE", "matchup": "Baltimore Orioles @ Miami Marlins", "sport": "MLB"}, {"player": "Cole Ragans (Outs Recorded)", "prop": "Outs Recorded", "line": "16.5", "side": "UNDER", "odds": "-125", "rating": "GOOD", "matchup": "Cleveland Guardians @ Kansas City Royals", "sport": "MLB"}, {"player": "Noah Schultz (Strikeouts)", "prop": "Strikeouts", "line": "5.5", "side": "UNDER", "odds": "-135", "rating": "STRONG", "matchup": "Chicago White Sox @ Los Angeles Angels", "sport": "MLB"}, {"player": "Brice Turang (HRB)", "prop": "HRB", "line": "1.5", "side": "OVER", "odds": "-125", "rating": "GOOD", "matchup": "Milwaukee Brewers @ St. Louis Cardinals", "sport": "MLB"}, {"player": "Jonathan Aranda (HRB)", "prop": "HRB", "line": "1.5", "side": "OVER", "odds": "+100", "rating": "POOR", "matchup": "Toronto Blue Jays @ Tampa Bay Rays", "sport": "MLB"}];
     if (mlbPicks.length) {
@@ -5107,6 +4830,7 @@
     btn.classList.add('active');
     if (id === 'history') renderTrackedHistory();
     if (id === 'parlayhistory') renderParlayHistory();
+    if (id === 'simulations') runSimulations();
   }
 
   // ── Track a bet ───────────────────────────────────────────
@@ -5436,6 +5160,163 @@
     renderTrackedHistory();
     applyFilters();
   });
+
+  // ── Elite Pick Simulations ──────────────────────────────────────────────
+
+  function _poissonDraw(lam) {
+    const L = Math.exp(-Math.min(lam, 700));
+    let k = 0, p = 1;
+    do { k++; p *= Math.random(); } while (p > L);
+    return k - 1;
+  }
+
+  function _normalDraw(mu, sigma) {
+    const u1 = Math.random() || 1e-10, u2 = Math.random();
+    return mu + sigma * Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2);
+  }
+
+  function _monteCarlo(inp, N) {
+    const {proj_mean, proj_std, line, side, stat_type} = inp;
+    let hits = 0;
+    for (let i = 0; i < N; i++) {
+      const v = stat_type === 'normal' ? _normalDraw(proj_mean, proj_std) : _poissonDraw(proj_mean);
+      if (side === 'OVER'  && v > line)  hits++;
+      if (side === 'UNDER' && v < line)  hits++;
+    }
+    return hits / N;
+  }
+
+  function _bootstrap(inp, N) {
+    const {samples, line, side} = inp;
+    const n = samples.length;
+    let hits = 0;
+    const drawn = [];
+    for (let i = 0; i < N; i++) {
+      const v = samples[Math.floor(Math.random() * n)];
+      if (side === 'OVER'  && v > line)  hits++;
+      if (side === 'UNDER' && v < line)  hits++;
+      drawn.push(v);
+    }
+    drawn.sort((a, b) => a - b);
+    return {
+      prob:  hits / N,
+      ci_lo: drawn[Math.floor(0.025 * N)],
+      ci_hi: drawn[Math.floor(0.975 * N)],
+    };
+  }
+
+  function _decimal(odds) {
+    return odds > 0 ? odds / 100 + 1 : 100 / Math.abs(odds) + 1;
+  }
+
+  function _ev(prob, odds) {
+    const d = _decimal(odds);
+    return (prob * (d - 1) - (1 - prob)) * 100;
+  }
+
+  function _unitTier(ensProb, ciWidth) {
+    if (ensProb >= 0.70 && ciWidth < 0.05) return 4;
+    if (ensProb >= 0.65 && ciWidth < 0.08) return 3;
+    if (ensProb >= 0.60 && ciWidth < 0.10) return 2;
+    return 1;
+  }
+
+  function runSimulations() {
+    if (_simDone) return;
+    _simDone = true;
+
+    const inputs = window.SIM_INPUTS || SIM_INPUTS || [];
+    if (!inputs.length) {
+      document.getElementById('sim-content').innerHTML =
+        '<p style="color:var(--muted);font-style:italic;padding:1rem 0">No ELITE picks today.</p>';
+      return;
+    }
+
+    const N = 10000;
+    const results = inputs.map(inp => {
+      const mcProb               = _monteCarlo(inp, N);
+      const {prob: bsProb, ci_lo, ci_hi} = _bootstrap(inp, N);
+      const ensProb              = 0.6 * mcProb + 0.4 * bsProb;
+      const ev                   = _ev(ensProb, inp.odds);
+      const ciWidth              = inp.line > 0 ? (ci_hi - ci_lo) / inp.line : (ci_hi - ci_lo);
+      const units                = _unitTier(ensProb, ciWidth);
+      const modelEV              = _ev(inp.fair_prob, inp.odds);
+      return {...inp, mcProb, bsProb, ensProb, ev, ci_lo, ci_hi, ciWidth, units, modelEV,
+               disagree: (modelEV - ev) > 5};
+    });
+
+    results.sort((a, b) => b.ev - a.ev);
+
+    const totalUnits = results.reduce((s, r) => s + r.units, 0);
+    const avgEV      = results.reduce((s, r) => s + r.ev, 0) / results.length;
+    const avgSign    = avgEV >= 0 ? '+' : '';
+
+    const summaryHtml = `
+    <div class="stat-strip" style="margin-bottom:1.5rem">
+      <div class="stat-chip"><span class="chip-val">${results.length}</span><span class="chip-lbl">Elite Picks</span></div>
+      <div class="stat-chip" style="border-color:rgba(0,229,160,0.3)">
+        <span class="chip-val" style="color:#00e5a0">${avgSign}${avgEV.toFixed(1)}%</span>
+        <span class="chip-lbl">Avg Ensemble EV</span>
+      </div>
+      <div class="stat-chip">
+        <span class="chip-val">${totalUnits}u</span>
+        <span class="chip-lbl">Rec. Units Total</span>
+      </div>
+    </div>`;
+
+    const unitColors = ['', '#5a6172', '#3d8ef8', '#00e5a0', '#e05c3a'];
+
+    const rows = results.map(r => {
+      const sc   = r.side === 'OVER' ? '#00e5a0' : '#3d8ef8';
+      const uc   = unitColors[r.units];
+      const evC  = r.ev >= 5 ? '#00e5a0' : r.ev >= 0 ? '#f5a623' : '#f04e4e';
+      const evS  = r.ev >= 0 ? '+' : '';
+      const warn = r.disagree
+        ? `<span style="font-size:0.62rem;background:rgba(245,166,35,0.2);color:#f5a623;border-radius:3px;padding:1px 5px;margin-left:4px;font-family:monospace" title="Simulation EV is 5+ pts below model EV">⚠</span>`
+        : '';
+      return `<tr>
+        <td>
+          <strong style="font-size:0.88rem">${r.player}</strong><br>
+          <span style="font-size:0.7rem;color:var(--muted)">${r.matchup}</span>
+        </td>
+        <td>
+          <span style="color:${sc};font-weight:700">${r.side}</span>
+          <span style="font-family:monospace"> ${r.line} ${r.stat_label}</span>
+        </td>
+        <td style="font-family:monospace;color:var(--muted)">${(r.fair_prob*100).toFixed(1)}%</td>
+        <td style="font-family:monospace;color:#00e5a0">${(r.mcProb*100).toFixed(1)}%</td>
+        <td style="font-family:monospace;color:#3d8ef8">${(r.bsProb*100).toFixed(1)}%</td>
+        <td style="font-family:monospace;font-weight:700">${(r.ensProb*100).toFixed(1)}%</td>
+        <td style="font-family:monospace;color:${evC}">${evS}${r.ev.toFixed(1)}%${warn}</td>
+        <td style="font-family:monospace;font-size:0.78rem">${r.ci_lo.toFixed(2)}–${r.ci_hi.toFixed(2)}</td>
+        <td>
+          <span style="background:${uc}22;color:${uc};border:1px solid ${uc}55;border-radius:4px;
+                       padding:0.2rem 0.55rem;font-family:monospace;font-weight:700;font-size:0.82rem">
+            ${r.units}u
+          </span>
+        </td>
+      </tr>`;
+    }).join('');
+
+    const tableHtml = `
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr>
+          <th>Player</th><th>Pick</th>
+          <th title="Original model probability">Model Prob</th>
+          <th title="Monte Carlo 10k trials from Poisson/Normal projection">MC Prob</th>
+          <th title="Bootstrap 10k resamples from last 30 games">Bootstrap Prob</th>
+          <th title="60% MC + 40% Bootstrap">Ensemble Prob</th>
+          <th title="EV recalculated with ensemble probability">Ensemble EV</th>
+          <th title="Bootstrap 2.5th–97.5th percentile of stat outcomes">95% CI</th>
+          <th title="Unit tier: both ensemble prob AND CI width must qualify">Units</th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
+
+    document.getElementById('sim-content').innerHTML = summaryHtml + tableHtml;
+  }
 </script>
 </body>
 </html>
