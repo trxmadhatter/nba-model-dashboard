@@ -190,11 +190,175 @@ def print_direction_edge(dir_rows: list[dict]) -> None:
         )
 
 
-if __name__ == "__main__":
+def build_html(
+    cal_rows: list[dict],
+    book_rows: list[dict],
+    dir_rows: list[dict],
+    date_range: str,
+    total_picks: int,
+) -> str:
+    grade     = calibration_grade(cal_rows)
+    best_book = book_rows[0]["book"] if book_rows else "N/A"
+    best_dir  = dir_rows[0]["stat_side"] if dir_rows else "N/A"
+    best_book_roi = f"{book_rows[0]['roi']:+.1f}%" if book_rows else "N/A"
+    best_dir_roi  = f"{dir_rows[0]['roi']:+.1f}%" if dir_rows else "N/A"
+
+    def cal_row_html(r: dict) -> str:
+        flag      = "⚠" if r["low_conf"] else ""
+        gap_color = (
+            "#e74c3c" if abs(r["gap"]) > 0.06
+            else "#f39c12" if abs(r["gap"]) > 0.03
+            else "#2ecc71"
+        )
+        return (
+            f"<tr><td>{r['bucket']}</td><td>{r['n']}</td>"
+            f"<td>{r['predicted'] * 100:.1f}%</td>"
+            f"<td>{r['actual'] * 100:.1f}%</td>"
+            f"<td style='color:{gap_color}'>{r['gap'] * 100:+.1f}%</td>"
+            f"<td>{flag}</td></tr>"
+        )
+
+    def money_row_html(r: dict, key: str) -> str:
+        roi_color = "#2ecc71" if r["roi"] > 0 else "#e74c3c"
+        return (
+            f"<tr><td>{r[key]}</td><td>{r['n']}</td>"
+            f"<td>{r['win_rate'] * 100:.1f}%</td>"
+            f"<td>${r['profit']:+,.0f}</td>"
+            f"<td style='color:{roi_color}'>{r['roi']:+.1f}%</td></tr>"
+        )
+
+    cal_html  = "\n".join(cal_row_html(r) for r in cal_rows)
+    book_html = "\n".join(money_row_html(r, "book") for r in book_rows)
+    dir_html  = "\n".join(money_row_html(r, "stat_side") for r in dir_rows)
+
+    no_data = "<tr><td colspan='6' style='color:#6b7280;text-align:center'>No data</td></tr>"
+
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MLB Accuracy Report</title>
+<style>
+body    {{background:#0f0f23;color:#e0e0e0;font-family:monospace;margin:0;padding:20px}}
+h1      {{color:#a78bfa;margin-bottom:4px}}
+.sub    {{color:#6b7280;font-size:.85em;margin-bottom:24px}}
+.cards  {{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:32px}}
+.card   {{background:#1e1e3f;border:1px solid #2d2d5e;border-radius:8px;padding:16px 22px;min-width:150px}}
+.label  {{color:#9ca3af;font-size:.75em;text-transform:uppercase;letter-spacing:.05em}}
+.value  {{font-size:1.6em;font-weight:bold;color:#a78bfa;margin-top:4px}}
+.hint   {{color:#6b7280;font-size:.75em;margin-top:2px}}
+details {{margin-bottom:18px}}
+summary {{background:#1e1e3f;border:1px solid #2d2d5e;border-radius:6px;padding:11px 16px;
+          cursor:pointer;color:#c4b5fd;user-select:none}}
+summary:hover {{background:#252550}}
+.body   {{padding:16px;background:#12122a;border:1px solid #2d2d5e;border-top:none;
+          border-radius:0 0 6px 6px;overflow-x:auto}}
+table   {{border-collapse:collapse;width:100%;font-size:.9em}}
+th      {{color:#9ca3af;font-size:.78em;text-transform:uppercase;letter-spacing:.05em;
+          border-bottom:1px solid #2d2d5e;padding:8px 12px;text-align:right}}
+th:first-child {{text-align:left}}
+td      {{padding:7px 12px;border-bottom:1px solid #1a1a35;text-align:right}}
+td:first-child {{text-align:left}}
+tr:hover td {{background:#1a1a35}}
+.note   {{color:#9ca3af;font-size:.82em;margin-top:10px}}
+</style>
+</head>
+<body>
+<h1>MLB Accuracy Report</h1>
+<div class="sub">{date_range} &nbsp;·&nbsp; {total_picks:,} graded picks (after filters)</div>
+
+<div class="cards">
+  <div class="card">
+    <div class="label">Calibration</div>
+    <div class="value">{grade}</div>
+    <div class="hint">model prob vs actual</div>
+  </div>
+  <div class="card">
+    <div class="label">Best Book</div>
+    <div class="value" style="font-size:1.1em;padding-top:6px">{best_book}</div>
+    <div class="hint">ROI {best_book_roi}</div>
+  </div>
+  <div class="card">
+    <div class="label">Best Edge</div>
+    <div class="value" style="font-size:1.1em;padding-top:6px">{best_dir}</div>
+    <div class="hint">ROI {best_dir_roi}</div>
+  </div>
+</div>
+
+<details open>
+  <summary>Module 1 — Calibration Curve</summary>
+  <div class="body">
+    <table>
+      <tr><th>Bucket</th><th>N</th><th>Predicted</th><th>Actual</th><th>Gap</th><th></th></tr>
+      {cal_html or no_data}
+    </table>
+    <p class="note">Grade: <strong style="color:#a78bfa">{grade}</strong>
+    &nbsp;·&nbsp; A=&lt;3% avg gap &nbsp; B=3–6% &nbsp; C=6–10% &nbsp; D=&gt;10%
+    &nbsp;·&nbsp; ⚠ = fewer than 20 picks in bucket</p>
+  </div>
+</details>
+
+<details open>
+  <summary>Module 2 — Per-Book ROI</summary>
+  <div class="body">
+    <table>
+      <tr><th>Book</th><th>N</th><th>Win%</th><th>Profit</th><th>ROI</th></tr>
+      {book_html or no_data}
+    </table>
+  </div>
+</details>
+
+<details open>
+  <summary>Module 3 — Direction Edge (OVER vs UNDER by Stat)</summary>
+  <div class="body">
+    <table>
+      <tr><th>Stat + Side</th><th>N</th><th>Win%</th><th>Profit</th><th>ROI</th></tr>
+      {dir_html or no_data}
+    </table>
+    <p class="note">Only stat/side combinations with ≥10 graded picks shown. Sorted by ROI.</p>
+  </div>
+</details>
+
+</body>
+</html>"""
+
+
+def main() -> None:
     if not GRADED_FILE.exists():
-        print(f"Graded file not found: {GRADED_FILE}")
-        raise SystemExit(1)
+        print(f"Graded picks not found: {GRADED_FILE}")
+        return
 
     raw = pd.read_csv(GRADED_FILE)
-    df  = load_and_filter(raw)
-    print(f"Loaded {len(raw)} rows → {len(df)} after filtering")
+    raw.columns = [c.strip().lower() for c in raw.columns]
+    if "fair_prob" not in raw.columns:
+        raw["fair_prob"] = np.nan
+    else:
+        raw["fair_prob"] = pd.to_numeric(raw["fair_prob"], errors="coerce")
+
+    df = load_and_filter(raw)
+
+    date_range  = f"{raw['game_date'].min()} to {raw['game_date'].max()}"
+    total_picks = len(df)
+
+    print(f"\n{'=' * 62}")
+    print("  MLB ACCURACY ANALYSIS")
+    print(f"  {date_range}")
+    print(f"  {total_picks:,} graded picks after filters")
+    print(f"{'=' * 62}")
+
+    cal_rows  = calibration_curve(df)
+    book_rows = book_roi(df)
+    dir_rows  = direction_edge(df)
+
+    print_calibration(cal_rows)
+    print_book_roi(book_rows)
+    print_direction_edge(dir_rows)
+
+    html = build_html(cal_rows, book_rows, dir_rows, date_range, total_picks)
+    OUTPUT_HTML.parent.mkdir(parents=True, exist_ok=True)
+    OUTPUT_HTML.write_text(html, encoding="utf-8")
+    print(f"\n  HTML report -> {OUTPUT_HTML}")
+
+
+if __name__ == "__main__":
+    main()
