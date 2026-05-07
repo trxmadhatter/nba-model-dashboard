@@ -231,7 +231,8 @@ def build_html(
     book_html = "\n".join(money_row_html(r, "book") for r in book_rows)
     dir_html  = "\n".join(money_row_html(r, "stat_side") for r in dir_rows)
 
-    no_data = "<tr><td colspan='6' style='color:#6b7280;text-align:center'>No data</td></tr>"
+    no_data_6 = "<tr><td colspan='6' style='color:#6b7280;text-align:center'>No data</td></tr>"
+    no_data_5 = "<tr><td colspan='5' style='color:#6b7280;text-align:center'>No data</td></tr>"
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -290,7 +291,7 @@ tr:hover td {{background:#1a1a35}}
   <div class="body">
     <table>
       <tr><th>Bucket</th><th>N</th><th>Predicted</th><th>Actual</th><th>Gap</th><th></th></tr>
-      {cal_html or no_data}
+      {cal_html or no_data_6}
     </table>
     <p class="note">Grade: <strong style="color:#a78bfa">{grade}</strong>
     &nbsp;·&nbsp; A=&lt;3% avg gap &nbsp; B=3–6% &nbsp; C=6–10% &nbsp; D=&gt;10%
@@ -303,7 +304,7 @@ tr:hover td {{background:#1a1a35}}
   <div class="body">
     <table>
       <tr><th>Book</th><th>N</th><th>Win%</th><th>Profit</th><th>ROI</th></tr>
-      {book_html or no_data}
+      {book_html or no_data_5}
     </table>
   </div>
 </details>
@@ -313,7 +314,7 @@ tr:hover td {{background:#1a1a35}}
   <div class="body">
     <table>
       <tr><th>Stat + Side</th><th>N</th><th>Win%</th><th>Profit</th><th>ROI</th></tr>
-      {dir_html or no_data}
+      {dir_html or no_data_5}
     </table>
     <p class="note">Only stat/side combinations with ≥10 graded picks shown. Sorted by ROI.</p>
   </div>
