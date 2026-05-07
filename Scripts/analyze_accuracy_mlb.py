@@ -63,6 +63,59 @@ def load_and_filter(df: pd.DataFrame) -> pd.DataFrame:
     return df.reset_index(drop=True)
 
 
+def calibration_curve(df: pd.DataFrame) -> list[dict]:
+    rows = []
+    for lo, hi in CAL_BUCKETS:
+        bucket = df[(df["fair_prob"] >= lo) & (df["fair_prob"] < hi)]
+        n = len(bucket)
+        if n == 0:
+            continue
+        wins      = (bucket["hit_result"] == "WIN").sum()
+        actual    = wins / n
+        label_hi  = 1.00 if hi > 1.0 else hi
+        predicted = (lo + label_hi) / 2
+        rows.append({
+            "bucket":    f"{lo:.2f}–{label_hi:.2f}",
+            "n":         n,
+            "predicted": predicted,
+            "actual":    actual,
+            "gap":       actual - predicted,
+            "low_conf":  n < MIN_BUCKET,
+        })
+    return rows
+
+
+def calibration_grade(cal_rows: list[dict]) -> str:
+    valid = [r for r in cal_rows if not r["low_conf"]]
+    if not valid:
+        return "N/A"
+    mean_gap = float(np.mean([abs(r["gap"]) for r in valid]))
+    if mean_gap < 0.03:
+        return "A"
+    elif mean_gap < 0.06:
+        return "B"
+    elif mean_gap < 0.10:
+        return "C"
+    return "D"
+
+
+def print_calibration(cal_rows: list[dict]) -> None:
+    print(f"\n{'=' * 62}")
+    print("  MODULE 1 — CALIBRATION CURVE")
+    print(f"{'=' * 62}")
+    print(f"  {'Bucket':<12} {'N':>5}  {'Predicted':>9}  {'Actual':>7}  {'Gap':>7}  Note")
+    print(f"  {'-' * 58}")
+    for r in cal_rows:
+        note = "⚠ low-n" if r["low_conf"] else ""
+        print(
+            f"  {r['bucket']:<12} {r['n']:>5}  "
+            f"{r['predicted'] * 100:>8.1f}%  {r['actual'] * 100:>6.1f}%  "
+            f"{r['gap'] * 100:>+6.1f}%  {note}"
+        )
+    print(f"\n  Calibration grade: {calibration_grade(cal_rows)}")
+    print("  (A=<3% avg gap  B=3–6%  C=6–10%  D=>10%)")
+
+
 if __name__ == "__main__":
     if not GRADED_FILE.exists():
         print(f"Graded file not found: {GRADED_FILE}")

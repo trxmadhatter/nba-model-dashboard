@@ -4,7 +4,10 @@ import pandas as pd
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).parent.parent / "Scripts"))
-from analyze_accuracy_mlb import load_and_filter, american_to_profit, pnl
+from analyze_accuracy_mlb import (
+    load_and_filter, american_to_profit, pnl,
+    calibration_curve, calibration_grade,
+)
 
 
 def make_fixture():
@@ -65,6 +68,54 @@ def test_pnl_no_action():
     assert pnl(row) == 0.0
 
 
+def test_calibration_curve_bucket_values():
+    # 30 picks all in 0.60–0.65 bucket, 60% actual win rate
+    df = pd.DataFrame({
+        "stat":           ["k"] * 30,
+        "side":           ["OVER"] * 30,
+        "bet_odds":       [-110.0] * 30,
+        "hit_result":     ["WIN"] * 18 + ["LOSS"] * 12,
+        "fair_prob":      [0.62] * 30,
+        "pricing_source": ["bovada"] * 30,
+    })
+    rows = calibration_curve(df)
+    bucket = next(r for r in rows if r["bucket"] == "0.60–0.65")
+    assert bucket["n"] == 30
+    assert abs(bucket["actual"] - 0.60) < 0.001
+    assert abs(bucket["predicted"] - 0.625) < 0.001
+    assert not bucket["low_conf"]
+
+
+def test_calibration_curve_low_conf_flag():
+    # 10 picks in 0.70–0.75 bucket — below MIN_BUCKET=20
+    df = pd.DataFrame({
+        "stat":           ["k"] * 10,
+        "side":           ["OVER"] * 10,
+        "bet_odds":       [-110.0] * 10,
+        "hit_result":     ["WIN"] * 6 + ["LOSS"] * 4,
+        "fair_prob":      [0.72] * 10,
+        "pricing_source": ["bovada"] * 10,
+    })
+    rows = calibration_curve(df)
+    bucket = next(r for r in rows if "0.70" in r["bucket"])
+    assert bucket["low_conf"] is True
+
+
+def test_calibration_grade_A():
+    rows = [{"gap": 0.02, "low_conf": False}, {"gap": -0.01, "low_conf": False}]
+    assert calibration_grade(rows) == "A"
+
+
+def test_calibration_grade_D():
+    rows = [{"gap": 0.12, "low_conf": False}]
+    assert calibration_grade(rows) == "D"
+
+
+def test_calibration_grade_skips_low_conf():
+    rows = [{"gap": 0.20, "low_conf": True}]  # only low-conf buckets
+    assert calibration_grade(rows) == "N/A"
+
+
 if __name__ == "__main__":
     test_excludes_rbi()
     test_drops_heavy_juice()
@@ -75,4 +126,9 @@ if __name__ == "__main__":
     test_pnl_win()
     test_pnl_loss()
     test_pnl_no_action()
-    print("All Task 1 tests passed")
+    test_calibration_curve_bucket_values()
+    test_calibration_curve_low_conf_flag()
+    test_calibration_grade_A()
+    test_calibration_grade_D()
+    test_calibration_grade_skips_low_conf()
+    print("All tests passed (Task 1 + Task 2)")
