@@ -7,6 +7,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent / "Scripts"))
 from analyze_accuracy_mlb import (
     load_and_filter, american_to_profit, pnl,
     calibration_curve, calibration_grade,
+    book_roi,
 )
 
 
@@ -116,6 +117,50 @@ def test_calibration_grade_skips_low_conf():
     assert calibration_grade(rows) == "N/A"
 
 
+def test_book_roi_basic():
+    df = pd.DataFrame({
+        "stat":           ["k",      "k",      "k",         "k"       ],
+        "side":           ["OVER",   "OVER",   "OVER",      "OVER"    ],
+        "bet_odds":       [150.0,    150.0,    -110.0,      -110.0    ],
+        "hit_result":     ["WIN",    "WIN",    "LOSS",      "LOSS"    ],
+        "fair_prob":      [0.60] * 4,
+        "pricing_source": ["bovada", "bovada", "betonline", "betonline"],
+    })
+    rows = book_roi(df)
+    bovada    = next(r for r in rows if r["book"] == "bovada")
+    betonline = next(r for r in rows if r["book"] == "betonline")
+    assert bovada["n"] == 2
+    assert abs(bovada["profit"] - 300.0) < 0.01   # 2 × $100 × 1.5
+    assert abs(betonline["profit"] - (-200.0)) < 0.01
+    # sorted by ROI desc — bovada first
+    assert rows[0]["book"] == "bovada"
+
+
+def test_book_roi_skips_nan_source():
+    df = pd.DataFrame({
+        "stat":           ["k"],
+        "side":           ["OVER"],
+        "bet_odds":       [-110.0],
+        "hit_result":     ["WIN"],
+        "fair_prob":      [0.60],
+        "pricing_source": [np.nan],
+    })
+    rows = book_roi(df)
+    assert len(rows) == 0
+
+
+def test_book_roi_missing_column():
+    df = pd.DataFrame({
+        "stat":       ["k"],
+        "side":       ["OVER"],
+        "bet_odds":   [-110.0],
+        "hit_result": ["WIN"],
+        "fair_prob":  [0.60],
+    })
+    rows = book_roi(df)
+    assert rows == []
+
+
 if __name__ == "__main__":
     test_excludes_rbi()
     test_drops_heavy_juice()
@@ -131,4 +176,7 @@ if __name__ == "__main__":
     test_calibration_grade_A()
     test_calibration_grade_D()
     test_calibration_grade_skips_low_conf()
-    print("All tests passed (Task 1 + Task 2)")
+    test_book_roi_basic()
+    test_book_roi_skips_nan_source()
+    test_book_roi_missing_column()
+    print("All tests passed (Task 1 + Task 2 + Task 3)")

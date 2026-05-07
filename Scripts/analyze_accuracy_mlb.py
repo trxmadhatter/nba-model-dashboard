@@ -116,6 +116,44 @@ def print_calibration(cal_rows: list[dict]) -> None:
     print("  (A=<3% avg gap  B=3–6%  C=6–10%  D=>10%)")
 
 
+def book_roi(df: pd.DataFrame) -> list[dict]:
+    if "pricing_source" not in df.columns:
+        return []
+    rows = []
+    for source, group in df.groupby("pricing_source", dropna=True):
+        graded = group[group["hit_result"].isin(["WIN", "LOSS"])]
+        if graded.empty:
+            continue
+        wins   = (graded["hit_result"] == "WIN").sum()
+        n      = len(graded)
+        profit = graded.apply(pnl, axis=1).sum()
+        rows.append({
+            "book":     source,
+            "n":        n,
+            "win_rate": wins / n,
+            "profit":   profit,
+            "roi":      profit / (n * BET_SIZE) * 100,
+        })
+    return sorted(rows, key=lambda x: x["roi"], reverse=True)
+
+
+def print_book_roi(book_rows: list[dict]) -> None:
+    print(f"\n{'=' * 62}")
+    print("  MODULE 2 — PER-BOOK ROI")
+    print(f"{'=' * 62}")
+    if not book_rows:
+        print("  pricing_source column not present — skipping")
+        return
+    print(f"  {'Book':<20} {'N':>5}  {'Win%':>6}  {'Profit':>10}  {'ROI':>7}")
+    print(f"  {'-' * 56}")
+    for r in book_rows:
+        print(
+            f"  {r['book']:<20} {r['n']:>5}  "
+            f"{r['win_rate'] * 100:>5.1f}%  "
+            f"${r['profit']:>+9,.0f}  {r['roi']:>+6.1f}%"
+        )
+
+
 if __name__ == "__main__":
     if not GRADED_FILE.exists():
         print(f"Graded file not found: {GRADED_FILE}")
