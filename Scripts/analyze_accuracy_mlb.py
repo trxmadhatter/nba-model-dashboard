@@ -338,7 +338,8 @@ def main() -> None:
 
     df = load_and_filter(raw)
 
-    date_range  = f"{raw['game_date'].min()} to {raw['game_date'].max()}"
+    date_col   = "game_date" if "game_date" in raw.columns else "log_date" if "log_date" in raw.columns else None
+    date_range = f"{raw[date_col].min()} to {raw[date_col].max()}" if date_col else "unknown date range"
     total_picks = len(df)
 
     print(f"\n{'=' * 62}")
