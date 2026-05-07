@@ -92,7 +92,7 @@
 <body>
 <div class="topbar">
   <div class="logo">MLB<span>.</span>MODEL</div>
-  <div class="topbar-meta">Wednesday, May 06 2026<br>Updated 11:30 PM PT</div>
+  <div class="topbar-meta">Wednesday, May 06 2026<br>Updated 11:39 PM PT</div>
 </div>
 <div class="tabs">
   <button class="tab-btn active" onclick="showTab('today',this)">Today's Plays</button>
@@ -117,11 +117,11 @@
             </div>
             <div style="display:flex;align-items:center;gap:0.75rem">
               <div style="font-family:monospace;font-size:1.1rem;font-weight:700;color:rgb(245,166,35)">+203</div>
-              <select id="pu_66423" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+              <select id="pu_16996" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
                 <option value="0.1">0.1u</option><option value="0.5">0.5u</option>
                 <option value="1" selected>1u</option><option value="2">2u</option>
               </select>
-              <button onclick="trackParlay('Parlay of the Day','+203',['Detroit Tigers +1.5 (Spread) — Boston Red Sox @ Detroit Tigers','Freddy Peralta H_Allowed 4.5 UNDER'],parseFloat(document.getElementById('pu_66423').value))"
+              <button onclick="trackParlay('Parlay of the Day','+203',['Detroit Tigers +1.5 (Spread) — Boston Red Sox @ Detroit Tigers','Freddy Peralta H_Allowed 4.5 UNDER'],parseFloat(document.getElementById('pu_16996').value))"
                 style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace">
                 Track Parlay
               </button>
@@ -155,11 +155,11 @@
             </div>
             <div style="display:flex;align-items:center;gap:0.75rem">
               <div style="font-family:monospace;font-size:1.1rem;font-weight:700;color:rgb(180,100,255)">+10241</div>
-              <select id="pu_74251" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
+              <select id="pu_59809" style="background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.3rem;color:var(--text);font-size:0.72rem;font-family:monospace">
                 <option value="0.1">0.1u</option><option value="0.5">0.5u</option>
                 <option value="1" selected>1u</option><option value="2">2u</option>
               </select>
-              <button onclick="trackParlay('Shot in the Dark','+10241',['Martin Perez K 3.5 UNDER','Andre Pallante H_Allowed 5.5 OVER','Bailey Ober K 3.5 OVER','Eury Perez H_Allowed 4.5 OVER','Patrick Corbin H_Allowed 5.5 UNDER','Freddy Peralta H_Allowed 4.5 UNDER','Colin Rea H_Allowed 4.5 UNDER'],parseFloat(document.getElementById('pu_74251').value))"
+              <button onclick="trackParlay('Shot in the Dark','+10241',['Martin Perez K 3.5 UNDER','Andre Pallante H_Allowed 5.5 OVER','Bailey Ober K 3.5 OVER','Eury Perez H_Allowed 4.5 OVER','Patrick Corbin H_Allowed 5.5 UNDER','Freddy Peralta H_Allowed 4.5 UNDER','Colin Rea H_Allowed 4.5 UNDER'],parseFloat(document.getElementById('pu_59809').value))"
                 style="background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);color:#00e5a0;border-radius:4px;padding:0.2rem 0.5rem;font-size:0.7rem;cursor:pointer;font-family:monospace">
                 Track Parlay
               </button>
@@ -4811,7 +4811,7 @@
   }
   const UNIT_SIZE   = 10;
 
-  const SIM_INPUTS = [{"player": "Andre Pallante", "stat": "h_allowed", "stat_label": "H_ALLOWED", "line": 5.5, "side": "OVER", "odds": 134.0, "fair_prob": 0.769, "proj_mean": 7.597, "proj_std": 2.6589, "samples": [7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6], "stat_type": "poisson", "matchup": "Milwaukee Brewers @ St. Louis Cardinals"}, {"player": "Martin Perez", "stat": "k", "stat_label": "Strikeouts", "line": 3.5, "side": "UNDER", "odds": -110.0, "fair_prob": 0.7733, "proj_mean": 2.426, "proj_std": 0.8491, "samples": [2.43, 2.43, 2.43, 2.43, 2.43, 2.43, 2.43, 2.43, 2.43, 2.43], "stat_type": "poisson", "matchup": "Atlanta Braves @ Seattle Mariners"}, {"player": "Bailey Ober", "stat": "k", "stat_label": "Strikeouts", "line": 3.5, "side": "OVER", "odds": -135.0, "fair_prob": 0.7611, "proj_mean": 5.9435, "proj_std": 2.0802, "samples": [5.28, 5.28, 5.28, 5.28, 5.28, 5.28, 5.28, 5.28, 5.28, 5.28], "stat_type": "poisson", "matchup": "Minnesota Twins @ Washington Nationals"}, {"player": "Fernando Tatis Jr.", "stat": "tb", "stat_label": "Total Bases", "line": 1.5, "side": "UNDER", "odds": -120.0, "fair_prob": 0.7059, "proj_mean": 1.14, "proj_std": 2.1679, "samples": [0.0, 2.0, 0.0, 0.0, 5.0, 1.0, 0.0, 2.0, 1.0, 1.0, 1.0, 0.0, 2.0, 1.0, 2.0, 0.0, 1.0, 1.0, 2.0, 4.0, 0.0, 1.0, 1.0, 1.0, 0.0, 2.0, 2.0, 0.0, 1.0, 2.0], "stat_type": "normal", "matchup": "San Diego Padres @ San Francisco Giants"}, {"player": "Eury Perez", "stat": "h_allowed", "stat_label": "H_ALLOWED", "line": 4.5, "side": "OVER", "odds": -120.0, "fair_prob": 0.692, "proj_mean": 5.833, "proj_std": 2.0415, "samples": [5.83, 5.83, 5.83, 5.83, 5.83, 5.83, 5.83, 5.83, 5.83, 5.83], "stat_type": "poisson", "matchup": "Baltimore Orioles @ Miami Marlins"}];
+  const SIM_INPUTS = [{"player": "Andre Pallante", "stat": "h_allowed", "stat_label": "H_ALLOWED", "line": 5.5, "side": "OVER", "odds": 134.0, "fair_prob": 0.769, "proj_mean": 7.5968, "proj_std": 2.6589, "samples": [4.77, 4.77, 4.77, 4.77, 4.77, 4.77, 4.77, 4.77, 4.77, 4.77], "stat_type": "poisson", "matchup": "Milwaukee Brewers @ St. Louis Cardinals", "has_real_samples": false}, {"player": "Martin Perez", "stat": "k", "stat_label": "Strikeouts", "line": 3.5, "side": "UNDER", "odds": -110.0, "fair_prob": 0.7733, "proj_mean": 2.426, "proj_std": 0.8491, "samples": [2.43, 2.43, 2.43, 2.43, 2.43, 2.43, 2.43, 2.43, 2.43, 2.43], "stat_type": "poisson", "matchup": "Atlanta Braves @ Seattle Mariners", "has_real_samples": false}, {"player": "Bailey Ober", "stat": "k", "stat_label": "Strikeouts", "line": 3.5, "side": "OVER", "odds": -135.0, "fair_prob": 0.7611, "proj_mean": 5.9435, "proj_std": 2.0802, "samples": [5.28, 5.28, 5.28, 5.28, 5.28, 5.28, 5.28, 5.28, 5.28, 5.28], "stat_type": "poisson", "matchup": "Minnesota Twins @ Washington Nationals", "has_real_samples": false}, {"player": "Fernando Tatis Jr.", "stat": "tb", "stat_label": "Total Bases", "line": 1.5, "side": "UNDER", "odds": -120.0, "fair_prob": 0.7059, "proj_mean": 1.14, "proj_std": 2.1679, "samples": [0.0, 2.0, 0.0, 0.0, 5.0, 1.0, 0.0, 2.0, 1.0, 1.0, 1.0, 0.0, 2.0, 1.0, 2.0, 0.0, 1.0, 1.0, 2.0, 4.0, 0.0, 1.0, 1.0, 1.0, 0.0, 2.0, 2.0, 0.0, 1.0, 2.0], "stat_type": "normal", "matchup": "San Diego Padres @ San Francisco Giants", "has_real_samples": true}, {"player": "Eury Perez", "stat": "h_allowed", "stat_label": "H_ALLOWED", "line": 4.5, "side": "OVER", "odds": -120.0, "fair_prob": 0.692, "proj_mean": 5.833, "proj_std": 2.0415, "samples": [5.83, 5.83, 5.83, 5.83, 5.83, 5.83, 5.83, 5.83, 5.83, 5.83], "stat_type": "poisson", "matchup": "Baltimore Orioles @ Miami Marlins", "has_real_samples": false}];
   let _simDone = false;
 
   try {
@@ -5236,7 +5236,7 @@
     const results = inputs.map(inp => {
       const mcProb               = _monteCarlo(inp, N);
       const {prob: bsProb, ci_lo, ci_hi} = _bootstrap(inp, N);
-      const ensProb              = 0.6 * mcProb + 0.4 * bsProb;
+      const ensProb              = inp.has_real_samples ? 0.6 * mcProb + 0.4 * bsProb : mcProb;
       const ev                   = _ev(ensProb, inp.odds);
       const ciWidth              = ci_hi - ci_lo;
       const units                = _unitTier(ensProb, ciWidth);

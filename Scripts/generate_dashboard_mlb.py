@@ -268,11 +268,13 @@ def build_picks_json(df):
 _STAT_GAMELOG_COL = {
     "hits": "h", "hr": "hr", "tb": "tb", "runs": "r",
     "rbi": "rbi", "sb": "sb", "k": "k", "outs": "ip",
+    "h_allowed": "h_allowed",
 }
 _PROJ_COL = {
     "hits": "proj_h", "hr": "proj_hr", "tb": "proj_tb",
     "runs": "proj_r", "rbi": "proj_rbi", "sb": "proj_sb",
     "k": "proj_k", "outs": "proj_ip",
+    "h_allowed": "proj_h_allowed",
 }
 _STD_COL = {
     "hits": "h_std_5", "tb": "tb_std_5", "hr": "hr_std_5",
@@ -281,6 +283,7 @@ _SEASON_AVG_COL = {
     "hits": "h_season_avg", "hr": "hr_season_avg", "tb": "tb_season_avg",
     "runs": "r_season_avg",  "rbi": "rbi_season_avg", "sb": "sb_season_avg",
     "k": "k_season_avg",    "outs": "ip_season_avg",
+    "h_allowed": "h_allowed_season_avg",
 }
 _POISSON_STATS = {"hits", "hr", "k", "outs", "rbi", "runs", "sb"}
 _NORMAL_STATS  = {"tb"}
@@ -379,7 +382,7 @@ def build_sim_inputs(df):
         projection = safe_float(row.get("projection", line), line)
         matchup    = str(row.get("matchup", ""))
         stat_label = STAT_LABELS.get(stat, stat.upper())
-        is_pitcher = stat in ("k", "outs")
+        is_pitcher = stat in ("k", "outs", "h_allowed")
 
         proj_lookup = pit_idx if is_pitcher else bat_idx
         proj_row    = proj_lookup.get(player.lower(), {})
@@ -420,18 +423,19 @@ def build_sim_inputs(df):
                 samples.append(pad_val)
 
         results.append({
-            "player":     player,
-            "stat":       stat,
-            "stat_label": stat_label,
-            "line":       line,
-            "side":       side,
-            "odds":       odds_raw,
-            "fair_prob":  round(fair_prob, 4),
-            "proj_mean":  round(proj_mean, 4),
-            "proj_std":   round(max(0.1, proj_std), 4),
-            "samples":    [round(s, 2) for s in samples[:30]],
-            "stat_type":  "normal" if stat in _NORMAL_STATS else "poisson",
-            "matchup":    matchup,
+            "player":          player,
+            "stat":            stat,
+            "stat_label":      stat_label,
+            "line":            line,
+            "side":            side,
+            "odds":            odds_raw,
+            "fair_prob":       round(fair_prob, 4),
+            "proj_mean":       round(proj_mean, 4),
+            "proj_std":        round(max(0.1, proj_std), 4),
+            "samples":         [round(s, 2) for s in samples[:30]],
+            "stat_type":       "normal" if stat in _NORMAL_STATS else "poisson",
+            "matchup":         matchup,
+            "has_real_samples": len(raw_samples) > 0,
         })
 
     return json.dumps(results, ensure_ascii=False)
@@ -2404,7 +2408,7 @@ def main():
     const results = inputs.map(inp => {{
       const mcProb               = _monteCarlo(inp, N);
       const {{prob: bsProb, ci_lo, ci_hi}} = _bootstrap(inp, N);
-      const ensProb              = 0.6 * mcProb + 0.4 * bsProb;
+      const ensProb              = inp.has_real_samples ? 0.6 * mcProb + 0.4 * bsProb : mcProb;
       const ev                   = _ev(ensProb, inp.odds);
       const ciWidth              = ci_hi - ci_lo;
       const units                = _unitTier(ensProb, ciWidth);
