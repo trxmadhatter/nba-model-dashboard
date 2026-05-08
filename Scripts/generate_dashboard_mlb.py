@@ -1432,7 +1432,126 @@ def build_performance(df):
     else:
         by_rating = ""
 
-    return summary + f'<div class="perf-grid">{by_stat}{by_side}{by_rating}</div>'
+    weekly_cal = build_weekly_calibration(df)
+    return summary + f'<div class="perf-grid">{by_stat}{by_side}{by_rating}</div>' + weekly_cal
+
+
+def build_weekly_calibration(df: pd.DataFrame) -> str:
+    """
+    Returns a collapsible HTML panel showing per-week calibration stats.
+    Appended to the Performance tab by build_performance().
+    """
+    if df.empty:
+        return ""
+
+    needed = {"game_date", "hit_result", "bet_odds"}
+    if not needed.issubset(df.columns):
+        return ""
+
+    d = df.copy()
+    d["game_date"]  = pd.to_datetime(d["game_date"], errors="coerce")
+    d["hit_result"] = d["hit_result"].astype(str).str.upper().str.strip()
+    d = d[d["hit_result"].isin(["WIN", "LOSS"]) & d["game_date"].notna()]
+
+    if d.empty:
+        return ""
+
+    # Monday of each pick's week
+    d["week_start"] = d["game_date"] - pd.to_timedelta(d["game_date"].dt.dayofweek, unit="D")
+
+    MIN_WEEKLY_PICKS = 5
+
+    rows_html = ""
+    for week_start, group in sorted(d.groupby("week_start"), key=lambda x: x[0]):
+        week_end   = week_start + pd.Timedelta(days=6)
+        week_label = (
+            f"{week_start.strftime('%b')} {week_start.day}"
+            f" – "
+            f"{week_end.strftime('%b')} {week_end.day}"
+        )
+
+        wins   = int((group["hit_result"] == "WIN").sum())
+        losses = int((group["hit_result"] == "LOSS").sum())
+        picks  = wins + losses
+        win_rate = wins / picks if picks > 0 else 0.0
+
+        # Model% -- avg fair_prob_raw, excluding NaN rows
+        if "fair_prob_raw" in group.columns:
+            raw_vals = pd.to_numeric(group["fair_prob_raw"], errors="coerce").dropna()
+            model_avg = float(raw_vals.mean()) if len(raw_vals) > 0 else float("nan")
+        else:
+            model_avg = float("nan")
+
+        gap = win_rate - model_avg if not np.isnan(model_avg) else float("nan")
+
+        pnl  = calc_pnl(group)
+        sign = "+" if pnl >= 0 else ""
+        pnl_color = "#00e5a0" if pnl >= 0 else "#f04e4e"
+
+        # Trend dot color
+        if np.isnan(gap):
+            dot_color = "#6b7280"
+        elif abs(gap) < 0.05:
+            dot_color = "#00e5a0"
+        elif abs(gap) < 0.10:
+            dot_color = "#f59e0b"
+        else:
+            dot_color = "#f04e4e"
+
+        # Gap display
+        if np.isnan(gap):
+            gap_str   = "—"
+            gap_color = "#6b7280"
+        else:
+            gap_str   = f"{gap * 100:+.1f}%"
+            gap_color = dot_color
+
+        model_str = f"{model_avg * 100:.1f}%" if not np.isnan(model_avg) else "—"
+        row_style = ' style="opacity:0.45"' if picks < MIN_WEEKLY_PICKS else ""
+
+        rows_html += (
+            f"<tr{row_style}>"
+            f"<td>{week_label}</td>"
+            f"<td>{picks}</td>"
+            f"<td style='color:#00e5a0'>{wins}</td>"
+            f"<td style='color:#f04e4e'>{losses}</td>"
+            f"<td>{win_rate * 100:.1f}%</td>"
+            f"<td>{model_str}</td>"
+            f"<td style='color:{gap_color};font-family:monospace'>{gap_str}</td>"
+            f"<td style='color:{pnl_color};font-family:monospace'>{sign}${pnl:.2f}</td>"
+            f"<td><span style='display:inline-block;width:10px;height:10px;"
+            f"border-radius:50%;background:{dot_color}'></span></td>"
+            f"</tr>"
+        )
+
+    if not rows_html:
+        return ""
+
+    return (
+        '<details style="margin-top:1.5rem">'
+        '<summary style="background:#1a1a35;border:1px solid #2d2d5e;border-radius:6px;'
+        'padding:10px 14px;cursor:pointer;color:#c4b5fd;font-size:0.85rem;'
+        'user-select:none;list-style:none">'
+        'Weekly Calibration'
+        '</summary>'
+        '<div style="padding:14px;background:#12122a;border:1px solid #2d2d5e;'
+        'border-top:none;border-radius:0 0 6px 6px;overflow-x:auto">'
+        '<table class="data-table mini">'
+        '<thead><tr>'
+        '<th style="text-align:left">Week</th>'
+        '<th>Picks</th><th>W</th><th>L</th>'
+        '<th>Win%</th><th>Model%</th><th>Gap</th><th>P&amp;L</th><th></th>'
+        '</tr></thead>'
+        f'<tbody>{rows_html}</tbody>'
+        '</table>'
+        '<p style="font-size:0.75rem;color:#6b7280;margin-top:8px">'
+        'Model% = avg fair_prob_raw (pre-calibration Poisson output). '
+        'Gap = Win% &minus; Model% (negative = model was overconfident). '
+        'Dot: green &lt;5%, yellow 5&ndash;10%, red &gt;10%. Dimmed rows &lt;5 picks.'
+        '</p>'
+        '</div>'
+        '</details>'
+    )
 
 
 def build_4game_series(df):
