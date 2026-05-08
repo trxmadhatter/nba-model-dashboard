@@ -1343,6 +1343,7 @@ def build_performance(df):
     if df.empty:
         return '<p class="empty-msg">No graded picks yet.</p>'
 
+    df_orig = df  # unfiltered; passed to build_weekly_calibration
     df = df.copy()
     df["hit_result"] = df["hit_result"].astype(str).str.upper().str.strip()
     df = df[df["hit_result"].isin(["WIN","LOSS","PUSH"])].copy()
@@ -1432,7 +1433,7 @@ def build_performance(df):
     else:
         by_rating = ""
 
-    weekly_cal = build_weekly_calibration(df)
+    weekly_cal = build_weekly_calibration(df_orig)
     return summary + f'<div class="perf-grid">{by_stat}{by_side}{by_rating}</div>' + weekly_cal
 
 
