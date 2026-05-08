@@ -212,8 +212,8 @@ def test_retroactive_replaces_fair_prob(tmp_path):
         ("hits", "OVER", 0.80, 0.58),
     ])
     result = retroactive_calibration_curve(df, str(p))
-    # All fair_prob values should now differ from original 0.73
-    assert (result["fair_prob"] != 0.73).all()
+    expected = float(np.interp(0.73, [0.50, 0.80], [0.48, 0.58]))
+    assert np.allclose(result["fair_prob"], expected, atol=1e-6)
 
 
 def test_retroactive_missing_csv_returns_none(tmp_path):
@@ -231,6 +231,18 @@ def test_retroactive_preserves_other_columns(tmp_path):
     result = retroactive_calibration_curve(df, str(p))
     assert "hit_result" in result.columns
     assert "stat" in result.columns
+
+
+def test_retroactive_uses_both_fallback(tmp_path):
+    # No (hits, OVER) in CSV — only (hits, BOTH) — should use BOTH
+    df = _make_graded_df(30)
+    p = _make_iso_csv(tmp_path, [
+        ("hits", "BOTH", 0.50, 0.44),
+        ("hits", "BOTH", 0.80, 0.58),
+    ])
+    result = retroactive_calibration_curve(df, str(p))
+    expected = float(np.interp(0.73, [0.50, 0.80], [0.44, 0.58]))
+    assert np.allclose(result["fair_prob"], expected, atol=1e-6)
 
 
 if __name__ == "__main__":

@@ -12,6 +12,7 @@ Run:
     python Scripts/analyze_accuracy_mlb.py
 """
 
+import sys
 from pathlib import Path
 import pandas as pd
 import numpy as np
@@ -140,7 +141,8 @@ def retroactive_calibration_curve(df: pd.DataFrame, iso_csv_path: str | None = N
         for (stat, side), group in iso_df.groupby(["stat", "side"]):
             g = group.sort_values("x")
             iso_map[(str(stat), str(side))] = (g["x"].values, g["y"].values)
-    except Exception:
+    except Exception as e:
+        print(f"  [WARN] isotonic CSV load failed: {e}", file=sys.stderr)
         return None
 
     if not iso_map:
@@ -149,17 +151,36 @@ def retroactive_calibration_curve(df: pd.DataFrame, iso_csv_path: str | None = N
     result = df.copy()
     raw_col = "fair_prob_raw" if "fair_prob_raw" in df.columns else "fair_prob"
 
-    def _interpolate(row) -> float:
-        prob = float(row[raw_col]) if pd.notna(row[raw_col]) else float(row["fair_prob"])
-        stat_n = str(row["stat"]).strip().lower()
-        side_n = str(row["side"]).strip().upper()
-        for key in [(stat_n, side_n), (stat_n, "BOTH"), ("_global_", "_GLOBAL_")]:
-            if key in iso_map:
-                xs, ys = iso_map[key]
-                return float(np.interp(prob, xs, ys))
-        return float(row["fair_prob"])
+    probs = result[raw_col].where(result[raw_col].notna(), result["fair_prob"]).astype(float)
+    stats = result["stat"].astype(str).str.strip().str.lower()
+    sides = result["side"].astype(str).str.strip().str.upper()
+    updated = pd.Series(False, index=result.index)
 
-    result["fair_prob"] = result.apply(_interpolate, axis=1)
+    # Priority: exact (stat, side) first
+    for (s, d), (xs, ys) in iso_map.items():
+        if d in ("BOTH", "_GLOBAL_"):
+            continue
+        mask = (~updated) & (stats == s) & (sides == d)
+        if mask.any():
+            result.loc[mask, "fair_prob"] = np.interp(probs[mask], xs, ys)
+            updated |= mask
+
+    # Then (stat, BOTH) for remaining unmatched rows
+    for (s, d), (xs, ys) in iso_map.items():
+        if d != "BOTH":
+            continue
+        mask = (~updated) & (stats == s)
+        if mask.any():
+            result.loc[mask, "fair_prob"] = np.interp(probs[mask], xs, ys)
+            updated |= mask
+
+    # Then global fallback
+    if ("_global_", "_GLOBAL_") in iso_map:
+        xs, ys = iso_map[("_global_", "_GLOBAL_")]
+        mask = ~updated
+        if mask.any():
+            result.loc[mask, "fair_prob"] = np.interp(probs[mask], xs, ys)
+
     return result
 
 
