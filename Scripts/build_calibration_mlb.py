@@ -146,6 +146,9 @@ def fit_isotonic_curves(graded: pd.DataFrame) -> list[dict]:
     x_eval = np.linspace(0.45, 1.00, 100)
 
     def _fit_and_append(subset: pd.DataFrame, stat_key: str, side_key: str) -> None:
+        subset = subset.dropna(subset=["fair_prob"])
+        if subset.empty:
+            return
         X = subset["fair_prob"].values.reshape(-1, 1)
         y = (subset["hit_result"] == "WIN").astype(float).values
         iso = IsotonicRegression(out_of_bounds="clip")
@@ -248,7 +251,7 @@ def main() -> None:
     # Isotonic regression pass — fits continuous curves for all-pick calibration
     iso_rows = fit_isotonic_curves(graded)
     if iso_rows:
-        iso_df = pd.DataFrame(iso_rows)
+        iso_df = pd.DataFrame(iso_rows)[["stat", "side", "x", "y"]]
         iso_df.to_csv(ISOTONIC_FILE, index=False)
         n_curves = iso_df.groupby(["stat", "side"]).ngroups
         print(f"Isotonic calibration written: {n_curves} curves -> {ISOTONIC_FILE}")

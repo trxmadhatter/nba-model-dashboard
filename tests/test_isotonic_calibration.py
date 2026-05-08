@@ -37,6 +37,7 @@ def test_both_written_when_side_below_threshold():
     keys = {(r["stat"], r["side"]) for r in rows}
     assert ("hits", "BOTH") in keys
     assert ("hits", "UNDER") not in keys
+    assert ("hits", "OVER") in keys   # fat side still gets its own curve
 
 
 def test_global_always_written():
@@ -57,9 +58,20 @@ def test_x_range_and_count():
 
 
 def test_y_monotone():
-    df = _make_graded("k", "OVER", 60)
+    # Generate rows with varied fair_prob so the isotonic fit is non-trivial
+    rng = np.random.default_rng(42)
+    n = 80
+    probs = np.linspace(0.50, 0.95, n)
+    wins = (rng.random(n) < probs).astype(int)
+    df = pd.DataFrame({
+        "stat":       ["k"] * n,
+        "side":       ["OVER"] * n,
+        "fair_prob":  probs,
+        "hit_result": np.where(wins, "WIN", "LOSS"),
+    })
     rows = fit_isotonic_curves(df)
     ys = [r["y"] for r in rows if r["stat"] == "k" and r["side"] == "OVER"]
+    assert len(ys) == 100
     for i in range(len(ys) - 1):
         assert ys[i] <= ys[i + 1] + 1e-9, f"Non-monotone at index {i}: {ys[i]} > {ys[i+1]}"
 
@@ -71,6 +83,20 @@ def test_below_threshold_not_written():
     keys = {(r["stat"], r["side"]) for r in rows}
     assert ("rbi", "OVER") not in keys
     assert ("rbi", "BOTH") not in keys
+
+
+def test_both_not_written_when_both_sides_above_threshold():
+    # Both OVER and UNDER have 60 picks — both above MIN_STAT_PICKS(50)
+    # so BOTH should NOT appear
+    df = pd.concat([
+        _make_graded("hits", "OVER", 60),
+        _make_graded("hits", "UNDER", 60),
+    ])
+    rows = fit_isotonic_curves(df)
+    keys = {(r["stat"], r["side"]) for r in rows}
+    assert ("hits", "BOTH") not in keys
+    assert ("hits", "OVER") in keys
+    assert ("hits", "UNDER") in keys
 
 
 if __name__ == "__main__":
