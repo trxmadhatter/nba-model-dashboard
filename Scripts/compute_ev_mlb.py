@@ -291,7 +291,7 @@ def apply_calibration(fair_prob: float, stat: str, cal_df: pd.DataFrame,
     Priority:
       1. Isotonic: iso_map[(stat, side)]     — np.interp
       2. Isotonic: iso_map[(stat, "BOTH")]   — np.interp
-      3. Isotonic: iso_map[("_global_", "_global_")] — np.interp
+      3. Isotonic: iso_map[("_global_", "_GLOBAL_")] — np.interp
       4. Bucket: cal_df lookup (existing logic, unchanged)
     Falls back to raw fair_prob if nothing matches.
     """
