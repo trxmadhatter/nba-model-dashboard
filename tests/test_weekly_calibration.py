@@ -67,7 +67,7 @@ def test_thin_week_dimmed():
 
 
 def test_gap_color_green():
-    # win rate 60%, model 63% -> gap -3% -> |gap| < 5% -> green
+    # win rate 60%, model 63% -> gap = -3 pp; |gap| = 3 pp < 5 pp -> green
     df = _make_df(
         ["2026-04-07"] * 10,
         ["WIN"] * 6 + ["LOSS"] * 4,
@@ -102,6 +102,11 @@ def test_missing_fair_prob_raw_rows_excluded():
     # Should not crash; rows without fair_prob_raw excluded from Model% calc
     html = build_weekly_calibration(df)
     assert "<table" in html
+
+
+def test_missing_required_column_returns_empty():
+    df = pd.DataFrame({"game_date": ["2026-04-07"], "hit_result": ["WIN"]})  # no bet_odds
+    assert build_weekly_calibration(df) == ""
 
 
 if __name__ == "__main__":

@@ -1450,7 +1450,7 @@ def build_weekly_calibration(df: pd.DataFrame) -> str:
         return ""
 
     d = df.copy()
-    d["game_date"]  = pd.to_datetime(d["game_date"], errors="coerce")
+    d["game_date"]  = pd.to_datetime(d["game_date"], errors="coerce").dt.normalize()
     d["hit_result"] = d["hit_result"].astype(str).str.upper().str.strip()
     d = d[d["hit_result"].isin(["WIN", "LOSS"]) & d["game_date"].notna()]
 
