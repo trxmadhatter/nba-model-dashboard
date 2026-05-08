@@ -58,6 +58,28 @@ def test_global_always_written():
     assert ("_global_", "_GLOBAL_") in keys
 
 
+def test_global_not_written_when_total_below_threshold():
+    # Only 20 total picks — below MIN_STAT_PICKS(50) — global should not be written
+    df = _make_graded("hits", "OVER", 20)
+    rows = fit_isotonic_curves(df)
+    keys = {(r["stat"], r["side"]) for r in rows}
+    assert ("_global_", "_GLOBAL_") not in keys
+
+
+def test_constant_label_curve_not_written():
+    # All wins — should skip the fit and write nothing for this group
+    df = pd.DataFrame({
+        "stat":       ["k"] * 60,
+        "side":       ["OVER"] * 60,
+        "fair_prob":  list(np.linspace(0.50, 0.90, 60)),
+        "hit_result": ["WIN"] * 60,  # all wins
+    })
+    rows = fit_isotonic_curves(df)
+    # k/OVER should not appear (all same class)
+    keys = {(r["stat"], r["side"]) for r in rows}
+    assert ("k", "OVER") not in keys
+
+
 def test_x_range_and_count():
     df = _make_graded("k", "UNDER", 60)
     rows = fit_isotonic_curves(df)
@@ -164,8 +186,8 @@ def test_apply_calibration_falls_back_to_both(tmp_path):
 
 def test_apply_calibration_falls_back_to_global(tmp_path):
     p = _make_iso_csv(tmp_path, [
-        ("_global_", "_global_", 0.50, 0.43),
-        ("_global_", "_global_", 0.80, 0.57),
+        ("_global_", "_GLOBAL_", 0.50, 0.43),
+        ("_global_", "_GLOBAL_", 0.80, 0.57),
     ])
     iso = load_isotonic_calibration(str(p))
     cal_df = pd.DataFrame()

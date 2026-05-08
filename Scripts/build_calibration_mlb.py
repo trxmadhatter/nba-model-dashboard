@@ -151,6 +151,8 @@ def fit_isotonic_curves(graded: pd.DataFrame) -> list[dict]:
             return
         X = subset["fair_prob"].values.reshape(-1, 1)
         y = (subset["hit_result"] == "WIN").astype(float).values
+        if y.sum() == 0 or y.sum() == len(y):   # all same class — skip
+            return
         iso = IsotonicRegression(out_of_bounds="clip")
         iso.fit(X.ravel(), y)
         y_pred = iso.predict(x_eval)
@@ -175,8 +177,9 @@ def fit_isotonic_curves(graded: pd.DataFrame) -> list[dict]:
         if any_thin:
             _fit_and_append(stat_group, str(stat_str), "BOTH")
 
-    # Global fallback
-    _fit_and_append(graded, "_global_", "_GLOBAL_")
+    # Global fallback — only if enough total data
+    if len(graded) >= MIN_STAT_PICKS:
+        _fit_and_append(graded, "_global_", "_GLOBAL_")
 
     return rows
 
