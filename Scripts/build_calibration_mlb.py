@@ -176,7 +176,7 @@ def fit_isotonic_curves(graded: pd.DataFrame) -> list[dict]:
             _fit_and_append(stat_group, str(stat_str), "BOTH")
 
     # Global fallback
-    _fit_and_append(graded, "_global_", "_global_")
+    _fit_and_append(graded, "_global_", "_GLOBAL_")
 
     return rows
 

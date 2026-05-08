@@ -8,6 +8,7 @@ import pytest
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "Scripts"))
 
 from build_calibration_mlb import fit_isotonic_curves, MIN_STAT_PICKS
+from compute_ev_mlb import load_isotonic_calibration, apply_calibration
 
 
 def _make_graded(stat, side, n, win_frac=0.55, prob_val=0.70):
@@ -18,6 +19,16 @@ def _make_graded(stat, side, n, win_frac=0.55, prob_val=0.70):
         "hit_result": ["WIN"] * int(n * win_frac) + ["LOSS"] * (n - int(n * win_frac)),
     })
 
+
+def _make_iso_csv(tmp_path, rows):
+    """rows: list of (stat, side, x, y)"""
+    df = pd.DataFrame(rows, columns=["stat", "side", "x", "y"])
+    p = tmp_path / "calibration_isotonic_mlb.csv"
+    df.to_csv(p, index=False)
+    return p
+
+
+# ── fit_isotonic_curves tests ─────────────────────────────────────────────────
 
 def test_per_stat_side_written():
     df = _make_graded("hits", "OVER", 60)
@@ -44,7 +55,7 @@ def test_global_always_written():
     df = _make_graded("hits", "OVER", 60)
     rows = fit_isotonic_curves(df)
     keys = {(r["stat"], r["side"]) for r in rows}
-    assert ("_global_", "_global_") in keys
+    assert ("_global_", "_GLOBAL_") in keys
 
 
 def test_x_range_and_count():
@@ -99,23 +110,7 @@ def test_both_not_written_when_both_sides_above_threshold():
     assert ("hits", "UNDER") in keys
 
 
-if __name__ == "__main__":
-    import pytest
-    pytest.main([__file__, "-v"])
-
-
-# ── compute_ev_mlb tests ──────────────────────────────────────────────────────
-
-from compute_ev_mlb import load_isotonic_calibration, apply_calibration
-
-
-def _make_iso_csv(tmp_path, rows):
-    """rows: list of (stat, side, x, y)"""
-    df = pd.DataFrame(rows, columns=["stat", "side", "x", "y"])
-    p = tmp_path / "calibration_isotonic_mlb.csv"
-    df.to_csv(p, index=False)
-    return p
-
+# ── load_isotonic_calibration / apply_calibration tests ──────────────────────
 
 def test_load_isotonic_returns_dict(tmp_path):
     p = _make_iso_csv(tmp_path, [
@@ -130,6 +125,15 @@ def test_load_isotonic_returns_dict(tmp_path):
 
 def test_load_isotonic_missing_file_returns_empty():
     iso = load_isotonic_calibration("/nonexistent/path.csv")
+    assert iso == {}
+
+
+def test_load_isotonic_bad_columns_returns_empty(tmp_path):
+    # File exists but missing required columns
+    bad_df = pd.DataFrame([{"stat": "hits", "side": "OVER", "wrong_col": 0.5}])
+    p = tmp_path / "bad.csv"
+    bad_df.to_csv(p, index=False)
+    iso = load_isotonic_calibration(str(p))
     assert iso == {}
 
 
@@ -183,3 +187,7 @@ def test_apply_calibration_falls_through_to_bucket_when_no_iso():
 def test_apply_calibration_no_iso_no_bucket_returns_raw():
     result = apply_calibration(0.72, "tb", pd.DataFrame(), side="OVER", iso_map={})
     assert result == 0.72
+
+
+if __name__ == "__main__":
+    pytest.main([__file__, "-v"])
