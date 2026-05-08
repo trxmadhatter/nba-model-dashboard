@@ -27,6 +27,8 @@ EXCLUDED_STATS = {"rbi", "runs", "hr"}
 MIN_BUCKET     = 20
 MIN_DIRECTION  = 10
 
+ISOTONIC_FILE = _ROOT / "Data/mlb/processed/calibration_isotonic_mlb.csv"
+
 CAL_BUCKETS = [
     (0.50, 0.55), (0.55, 0.60), (0.60, 0.65),
     (0.65, 0.70), (0.70, 0.75), (0.75, 0.80), (0.80, 1.01),
@@ -106,14 +108,59 @@ def print_calibration(cal_rows: list[dict]) -> None:
     print(f"  {'Bucket':<12} {'N':>5}  {'Predicted':>9}  {'Actual':>7}  {'Gap':>7}  Note")
     print(f"  {'-' * 58}")
     for r in cal_rows:
-        note = "⚠ low-n" if r["low_conf"] else ""
+        note = "! low-n" if r["low_conf"] else ""
         print(
             f"  {r['bucket']:<12} {r['n']:>5}  "
             f"{r['predicted'] * 100:>8.1f}%  {r['actual'] * 100:>6.1f}%  "
             f"{r['gap'] * 100:>+6.1f}%  {note}"
         )
     print(f"\n  Calibration grade: {calibration_grade(cal_rows)}")
-    print("  (A=<3% avg gap  B=3–6%  C=6–10%  D=>10%)")
+    print("  (A=<3% avg gap  B=3-6%  C=6-10%  D=>10%)")
+
+
+def retroactive_calibration_curve(df: pd.DataFrame, iso_csv_path: str | None = None) -> pd.DataFrame | None:
+    """
+    Return a copy of df with fair_prob replaced by isotonic-calibrated values.
+    Uses priority: (stat, side) > (stat, BOTH) > (_global_, _GLOBAL_).
+    Returns None if the isotonic CSV doesn't exist or can't be loaded.
+    """
+    csv_path = Path(iso_csv_path) if iso_csv_path else ISOTONIC_FILE
+    if not csv_path.exists():
+        return None
+    try:
+        iso_df = pd.read_csv(csv_path)
+        if not {"stat", "side", "x", "y"}.issubset(iso_df.columns):
+            return None
+        iso_df["stat"] = iso_df["stat"].astype(str).str.strip().str.lower()
+        iso_df["side"] = iso_df["side"].astype(str).str.strip().str.upper()
+        iso_df["x"]    = pd.to_numeric(iso_df["x"], errors="coerce")
+        iso_df["y"]    = pd.to_numeric(iso_df["y"], errors="coerce")
+        iso_df = iso_df.dropna(subset=["x", "y"])
+        iso_map: dict = {}
+        for (stat, side), group in iso_df.groupby(["stat", "side"]):
+            g = group.sort_values("x")
+            iso_map[(str(stat), str(side))] = (g["x"].values, g["y"].values)
+    except Exception:
+        return None
+
+    if not iso_map:
+        return None
+
+    result = df.copy()
+    raw_col = "fair_prob_raw" if "fair_prob_raw" in df.columns else "fair_prob"
+
+    def _interpolate(row) -> float:
+        prob = float(row[raw_col]) if pd.notna(row[raw_col]) else float(row["fair_prob"])
+        stat_n = str(row["stat"]).strip().lower()
+        side_n = str(row["side"]).strip().upper()
+        for key in [(stat_n, side_n), (stat_n, "BOTH"), ("_global_", "_GLOBAL_")]:
+            if key in iso_map:
+                xs, ys = iso_map[key]
+                return float(np.interp(prob, xs, ys))
+        return float(row["fair_prob"])
+
+    result["fair_prob"] = result.apply(_interpolate, axis=1)
+    return result
 
 
 def book_roi(df: pd.DataFrame) -> list[dict]:
@@ -196,6 +243,7 @@ def build_html(
     dir_rows: list[dict],
     date_range: str,
     total_picks: int,
+    iso_cal_rows: list[dict] | None = None,
 ) -> str:
     grade     = calibration_grade(cal_rows)
     best_book = book_rows[0]["book"] if book_rows else "N/A"
@@ -204,7 +252,7 @@ def build_html(
     best_dir_roi  = f"{dir_rows[0]['roi']:+.1f}%" if dir_rows else "N/A"
 
     def cal_row_html(r: dict) -> str:
-        flag      = "⚠" if r["low_conf"] else ""
+        flag      = "&#9888;" if r["low_conf"] else ""
         gap_color = (
             "#e74c3c" if abs(r["gap"]) > 0.06
             else "#f39c12" if abs(r["gap"]) > 0.03
@@ -233,6 +281,22 @@ def build_html(
 
     no_data_6 = "<tr><td colspan='6' style='color:#6b7280;text-align:center'>No data</td></tr>"
     no_data_5 = "<tr><td colspan='5' style='color:#6b7280;text-align:center'>No data</td></tr>"
+
+    iso_section = ""
+    if iso_cal_rows:
+        iso_grade    = calibration_grade(iso_cal_rows)
+        iso_cal_html = "\n".join(cal_row_html(r) for r in iso_cal_rows)
+        iso_section  = (
+            '<p class="note" style="margin-top:16px;color:#f59e0b">'
+            'Module 1b &mdash; Retroactive Isotonic'
+            ' (in-sample fit &mdash; not out-of-sample accuracy)</p>'
+            '<table>'
+            '<tr><th>Bucket</th><th>N</th><th>Predicted</th><th>Actual</th><th>Gap</th><th></th></tr>'
+            f'{iso_cal_html or no_data_6}'
+            '</table>'
+            f'<p class="note">Grade: <strong style="color:#a78bfa">{iso_grade}</strong>'
+            ' &nbsp;&middot;&nbsp; [in-sample]</p>'
+        )
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -295,7 +359,8 @@ tr:hover td {{background:#1a1a35}}
     </table>
     <p class="note">Grade: <strong style="color:#a78bfa">{grade}</strong>
     &nbsp;·&nbsp; A=&lt;3% avg gap &nbsp; B=3–6% &nbsp; C=6–10% &nbsp; D=&gt;10%
-    &nbsp;·&nbsp; ⚠ = fewer than 20 picks in bucket</p>
+    &nbsp;·&nbsp; &#9888; = fewer than 20 picks in bucket</p>
+    {iso_section}
   </div>
 </details>
 
@@ -353,10 +418,32 @@ def main() -> None:
     dir_rows  = direction_edge(df)
 
     print_calibration(cal_rows)
+
+    # Module 1b — retroactive isotonic calibration (in-sample)
+    iso_df = retroactive_calibration_curve(df)
+    iso_cal_rows = None
+    if iso_df is not None:
+        iso_cal_rows = calibration_curve(iso_df)
+        print(f"\n{'=' * 62}")
+        print("  MODULE 1b — CALIBRATION CURVE (retroactive isotonic)")
+        print("  NOTE: in-sample fit — shows Grade A potential, not out-of-sample accuracy")
+        print(f"{'=' * 62}")
+        print(f"  {'Bucket':<12} {'N':>5}  {'Predicted':>9}  {'Actual':>7}  {'Gap':>7}  Note")
+        print(f"  {'-' * 58}")
+        for r in iso_cal_rows:
+            note = "! low-n" if r["low_conf"] else ""
+            print(
+                f"  {r['bucket']:<12} {r['n']:>5}  "
+                f"{r['predicted'] * 100:>8.1f}%  {r['actual'] * 100:>6.1f}%  "
+                f"{r['gap'] * 100:>+6.1f}%  {note}"
+            )
+        print(f"\n  Calibration grade: {calibration_grade(iso_cal_rows)}")
+        print("  (A=<3% avg gap  B=3-6%  C=6-10%  D=>10%)  [in-sample]")
+
     print_book_roi(book_rows)
     print_direction_edge(dir_rows)
 
-    html = build_html(cal_rows, book_rows, dir_rows, date_range, total_picks)
+    html = build_html(cal_rows, book_rows, dir_rows, date_range, total_picks, iso_cal_rows=iso_cal_rows)
     OUTPUT_HTML.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_HTML.write_text(html, encoding="utf-8")
     print(f"\n  HTML report -> {OUTPUT_HTML}")

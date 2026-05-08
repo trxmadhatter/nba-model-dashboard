@@ -189,5 +189,49 @@ def test_apply_calibration_no_iso_no_bucket_returns_raw():
     assert result == 0.72
 
 
+# ── analyze_accuracy_mlb tests ────────────────────────────────────────────────
+
+from analyze_accuracy_mlb import retroactive_calibration_curve, calibration_curve
+
+
+def _make_graded_df(n=60):
+    return pd.DataFrame({
+        "stat":          ["hits"] * n,
+        "side":          ["OVER"] * n,
+        "fair_prob":     [0.73] * n,
+        "fair_prob_raw": [0.73] * n,
+        "hit_result":    ["WIN"] * int(n * 0.55) + ["LOSS"] * (n - int(n * 0.55)),
+        "bet_odds":      [-110] * n,
+    })
+
+
+def test_retroactive_replaces_fair_prob(tmp_path):
+    df = _make_graded_df(60)
+    p = _make_iso_csv(tmp_path, [
+        ("hits", "OVER", 0.50, 0.48),
+        ("hits", "OVER", 0.80, 0.58),
+    ])
+    result = retroactive_calibration_curve(df, str(p))
+    # All fair_prob values should now differ from original 0.73
+    assert (result["fair_prob"] != 0.73).all()
+
+
+def test_retroactive_missing_csv_returns_none(tmp_path):
+    df = _make_graded_df(60)
+    result = retroactive_calibration_curve(df, str(tmp_path / "nonexistent.csv"))
+    assert result is None
+
+
+def test_retroactive_preserves_other_columns(tmp_path):
+    df = _make_graded_df(30)
+    p = _make_iso_csv(tmp_path, [
+        ("_global_", "_GLOBAL_", 0.50, 0.48),
+        ("_global_", "_GLOBAL_", 0.80, 0.56),
+    ])
+    result = retroactive_calibration_curve(df, str(p))
+    assert "hit_result" in result.columns
+    assert "stat" in result.columns
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])
