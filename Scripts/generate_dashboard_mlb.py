@@ -475,6 +475,10 @@ def build_parlay(props_df, game_lines_df):
         for _, r in pos.iterrows():
             side = str(r.get("side","")).upper()
             bov = r.get("bovada_over" if side=="OVER" else "bovada_under", np.nan)
+            if pd.isna(bov):
+                _fb = r.get("bet_odds", np.nan)
+                try: bov = float(_fb) if pd.notna(_fb) else np.nan
+                except: bov = np.nan
             if pd.isna(bov): continue
             dec = american_to_decimal(bov)
             if dec is None or dec <= 1: continue
@@ -736,15 +740,32 @@ def build_today(df, game_lines_df=None, player_team: dict | None = None):
         lm_signal    = str(r.get('line_move', 'NO_DATA')).strip().upper()
         lm_shift     = r.get('line_move_shift', np.nan)
 
-        # Bovada specific odds
+        # Offshore odds — Bovada preferred, BetOnline fallback
         if side == "OVER":
             bov_price = r.get("bovada_over", np.nan)
         else:
             bov_price = r.get("bovada_under", np.nan)
-        bov_str_display = fmt_odds(bov_price) if pd.notna(bov_price) else '<span style="color:var(--muted)">-</span>'
-        bov_str = fmt_odds(bov_price) if pd.notna(bov_price) else '-'  # plain for onclick (no HTML quotes)
-        has_bov = pd.notna(bov_price)
-        bov_color = "#00e5a0" if has_bov and float(bov_price) < 0 else "#f5a623" if has_bov else "var(--muted)"
+        bet_book_used = str(r.get("bet_book", "") or "").strip().lower()
+        # If Bovada doesn't have the line, fall back to displaying bet_odds with BOL label
+        if pd.notna(bov_price):
+            offshore_price  = bov_price
+            offshore_label  = ""
+            offshore_label_html = ""
+        else:
+            _fallback = r.get("bet_odds", np.nan)
+            try: offshore_price = float(_fallback) if pd.notna(_fallback) else np.nan
+            except: offshore_price = np.nan
+            if pd.notna(offshore_price) and bet_book_used:
+                _bk_short = {"betonlineag": "BOL", "mybookieag": "MYB"}.get(bet_book_used, bet_book_used.upper()[:4])
+                offshore_label = _bk_short
+                offshore_label_html = f' <span style="color:var(--muted);font-size:10px">{_bk_short}</span>'
+            else:
+                offshore_label = ""
+                offshore_label_html = ""
+        bov_str_display = (fmt_odds(offshore_price) + offshore_label_html) if pd.notna(offshore_price) else '<span style="color:var(--muted)">-</span>'
+        bov_str = fmt_odds(offshore_price) if pd.notna(offshore_price) else '-'  # plain for onclick (no HTML quotes)
+        has_bov = pd.notna(offshore_price)
+        bov_color = "#00e5a0" if has_bov and float(offshore_price) < 0 else "#f5a623" if has_bov else "var(--muted)"
 
         # Best-book line shopping
         best_bk       = str(r.get("best_book", "") or "").strip()
@@ -815,7 +836,7 @@ def build_today(df, game_lines_df=None, player_team: dict | None = None):
       No ELITE or STRONG picks today &mdash; showing model-based GOOD/AVERAGE plays. AVERAGE = model only (no sharp consensus). Smaller units or skip.
     </div>""" if fallback_mode else ""
     return parlay_html + fallback_banner + filter_bar + f"""
-    <p style="font-size:0.75rem;color:var(--muted);margin-bottom:0.75rem">{total_picks} picks today &nbsp;·&nbsp; Sorted by game time &nbsp;·&nbsp; Check Bovada odds before betting</p>
+    <p style="font-size:0.75rem;color:var(--muted);margin-bottom:0.75rem">{total_picks} picks today &nbsp;·&nbsp; Sorted by game time &nbsp;·&nbsp; BOV = Bovada · BOL = BetOnline fallback (Bovada doesn't carry that line)</p>
     <div class="table-wrap">
       <table class="data-table" id="mlb-table"><thead><tr>
         <th class="tt" data-tip="Overall bet quality based on EV% and probability">Rating</th>
@@ -826,7 +847,7 @@ def build_today(df, game_lines_df=None, player_team: dict | None = None):
         <th class="tt" data-tip="Model's projected stat value based on season averages">Projection</th>
         <th class="tt" data-tip="Projection minus line. Positive = model favors OVER, negative = model favors UNDER">Edge</th>
         <th class="tt" data-tip="Whether the model recommends OVER or UNDER">Pick</th>
-        <th class="tt" data-tip="Bovada's actual odds — this is what you can bet">Bovada</th>
+        <th class="tt" data-tip="Offshore odds (Bovada preferred; BOL = BetOnline fallback when Bovada doesn't carry the line)">Offshore</th>
         <th class="tt" data-tip="Model's estimated probability of winning after removing vig">Fair%</th>
         <th class="tt" data-tip="Expected Value % — how much profit per $100 wagered if the model is correct. 5% EV means +$5 per $100 bet long term">EV%</th>
         <th class="tt" data-tip="Key reasons the model likes this pick">Why</th>
